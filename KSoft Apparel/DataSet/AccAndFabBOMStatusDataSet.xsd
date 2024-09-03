@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccAndFabBOMStatusDataSet" targetNamespace="http://tempuri.org/AccAndFabBOMStatusDataSet.xsd" xmlns:mstns="http://tempuri.org/AccAndFabBOMStatusDataSet.xsd" xmlns="http://tempuri.org/AccAndFabBOMStatusDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccAndFabBOMStatusTableAdapter" GeneratorDataComponentClassName="AccAndFabBOMStatusTableAdapter" Name="AccAndFabBOMStatus" UserDataComponentName="AccAndFabBOMStatusTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccAndFabBOMStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderId, ProgramNo, BuyerName, StyleName, IsAccBOMComplete, OrderReceiveDate, USER_NAME, PO, IsConComplete, ConDate, FabricBookingDate, OrderQuantity, AmendmentNo, AmendmentDate, 
+                         FirstExDate, DivisionName AS Division, IsFabricBOMComplete
+FROM            AccAndFabBOMStatus</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="IsAccBOMComplete" DataSetColumn="IsAccBOMComplete" />
+              <Mapping SourceColumn="OrderReceiveDate" DataSetColumn="OrderReceiveDate" />
+              <Mapping SourceColumn="USER_NAME" DataSetColumn="USER_NAME" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="IsConComplete" DataSetColumn="IsConComplete" />
+              <Mapping SourceColumn="ConDate" DataSetColumn="ConDate" />
+              <Mapping SourceColumn="FabricBookingDate" DataSetColumn="FabricBookingDate" />
+              <Mapping SourceColumn="OrderQuantity" DataSetColumn="OrderQuantity" />
+              <Mapping SourceColumn="AmendmentNo" DataSetColumn="AmendmentNo" />
+              <Mapping SourceColumn="AmendmentDate" DataSetColumn="AmendmentDate" />
+              <Mapping SourceColumn="FirstExDate" DataSetColumn="FirstExDate" />
+              <Mapping SourceColumn="Division" DataSetColumn="Division" />
+              <Mapping SourceColumn="IsFabricBOMComplete" DataSetColumn="IsFabricBOMComplete" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccAndFabBOMStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByAccBOMPending" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAccBOMPending" GeneratorSourceName="FillByAccBOMPending" GetMethodModifier="Public" GetMethodName="GetDataByAccBOMPending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAccBOMPending" UserSourceName="FillByAccBOMPending">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AmendmentDate, AmendmentNo, BuyerName, ConDate, FabricBookingDate, FirstExDate, IsAccBOMComplete, IsConComplete, IsFabricBOMComplete, OrderId, OrderQuantity, OrderReceiveDate, PO, ProgramNo, StyleName, USER_NAME FROM AccAndFabBOMStatus WHERE (IsAccBOMComplete = 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccAndFabBOMStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByFabBOMPending" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFabBOMPending" GeneratorSourceName="FillByFabBOMPending" GetMethodModifier="Public" GetMethodName="GetDataByFabBOMPending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFabBOMPending" UserSourceName="FillByFabBOMPending">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AmendmentDate, AmendmentNo, BuyerName, ConDate, FabricBookingDate, FirstExDate, IsAccBOMComplete, IsConComplete, IsFabricBOMComplete, OrderId, OrderQuantity, OrderReceiveDate, PO, ProgramNo, StyleName, USER_NAME FROM AccAndFabBOMStatus WHERE (IsFabricBOMComplete = 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccAndFabBOMStatusDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AccAndFabBOMStatusDataSet" msprop:Generator_DataSetName="AccAndFabBOMStatusDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccAndFabBOMStatus" msprop:Generator_UserTableName="AccAndFabBOMStatus" msprop:Generator_RowDeletedName="AccAndFabBOMStatusRowDeleted" msprop:Generator_RowChangedName="AccAndFabBOMStatusRowChanged" msprop:Generator_RowClassName="AccAndFabBOMStatusRow" msprop:Generator_RowChangingName="AccAndFabBOMStatusRowChanging" msprop:Generator_RowEvArgName="AccAndFabBOMStatusRowChangeEvent" msprop:Generator_RowEvHandlerName="AccAndFabBOMStatusRowChangeEventHandler" msprop:Generator_TableClassName="AccAndFabBOMStatusDataTable" msprop:Generator_TableVarName="tableAccAndFabBOMStatus" msprop:Generator_RowDeletingName="AccAndFabBOMStatusRowDeleting" msprop:Generator_TablePropName="AccAndFabBOMStatus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msprop:Generator_UserColumnName="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerName" msprop:Generator_UserColumnName="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_UserColumnName="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsAccBOMComplete" msprop:Generator_UserColumnName="IsAccBOMComplete" msprop:Generator_ColumnVarNameInTable="columnIsAccBOMComplete" msprop:Generator_ColumnPropNameInRow="IsAccBOMComplete" msprop:Generator_ColumnPropNameInTable="IsAccBOMCompleteColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="OrderReceiveDate" msprop:Generator_UserColumnName="OrderReceiveDate" msprop:Generator_ColumnPropNameInRow="OrderReceiveDate" msprop:Generator_ColumnVarNameInTable="columnOrderReceiveDate" msprop:Generator_ColumnPropNameInTable="OrderReceiveDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="USER_NAME" msprop:Generator_UserColumnName="USER_NAME" msprop:Generator_ColumnPropNameInRow="USER_NAME" msprop:Generator_ColumnVarNameInTable="columnUSER_NAME" msprop:Generator_ColumnPropNameInTable="USER_NAMEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsConComplete" msprop:Generator_UserColumnName="IsConComplete" msprop:Generator_ColumnPropNameInRow="IsConComplete" msprop:Generator_ColumnVarNameInTable="columnIsConComplete" msprop:Generator_ColumnPropNameInTable="IsConCompleteColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ConDate" msprop:Generator_UserColumnName="ConDate" msprop:Generator_ColumnPropNameInRow="ConDate" msprop:Generator_ColumnVarNameInTable="columnConDate" msprop:Generator_ColumnPropNameInTable="ConDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FabricBookingDate" msprop:Generator_UserColumnName="FabricBookingDate" msprop:Generator_ColumnPropNameInRow="FabricBookingDate" msprop:Generator_ColumnVarNameInTable="columnFabricBookingDate" msprop:Generator_ColumnPropNameInTable="FabricBookingDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OrderQuantity" msprop:Generator_UserColumnName="OrderQuantity" msprop:Generator_ColumnVarNameInTable="columnOrderQuantity" msprop:Generator_ColumnPropNameInRow="OrderQuantity" msprop:Generator_ColumnPropNameInTable="OrderQuantityColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="AmendmentNo" msprop:Generator_UserColumnName="AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnAmendmentNo" msprop:Generator_ColumnPropNameInRow="AmendmentNo" msprop:Generator_ColumnPropNameInTable="AmendmentNoColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="AmendmentDate" msprop:Generator_UserColumnName="AmendmentDate" msprop:Generator_ColumnVarNameInTable="columnAmendmentDate" msprop:Generator_ColumnPropNameInRow="AmendmentDate" msprop:Generator_ColumnPropNameInTable="AmendmentDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstExDate" msprop:Generator_UserColumnName="FirstExDate" msprop:Generator_ColumnPropNameInRow="FirstExDate" msprop:Generator_ColumnVarNameInTable="columnFirstExDate" msprop:Generator_ColumnPropNameInTable="FirstExDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Division" msprop:Generator_UserColumnName="Division" msprop:Generator_ColumnPropNameInRow="Division" msprop:Generator_ColumnVarNameInTable="columnDivision" msprop:Generator_ColumnPropNameInTable="DivisionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsFabricBOMComplete" msdata:ReadOnly="true" msprop:Generator_UserColumnName="IsFabricBOMComplete" msprop:Generator_ColumnVarNameInTable="columnIsFabricBOMComplete" msprop:Generator_ColumnPropNameInRow="IsFabricBOMComplete" msprop:Generator_ColumnPropNameInTable="IsFabricBOMCompleteColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AccAndFabBOMStatus" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

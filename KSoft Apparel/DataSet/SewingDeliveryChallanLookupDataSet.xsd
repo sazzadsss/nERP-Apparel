@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SewingDeliveryChallanLookupDataSet" targetNamespace="http://tempuri.org/SewingDeliveryChallanLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/SewingDeliveryChallanLookupDataSet.xsd" xmlns="http://tempuri.org/SewingDeliveryChallanLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SewingDeliveryChallanLookupTableAdapter" GeneratorDataComponentClassName="SewingDeliveryChallanLookupTableAdapter" Name="SewingDeliveryChallanLookup" UserDataComponentName="SewingDeliveryChallanLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.SewingDeliveryChallanLookup" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SewingDeliveryId, ChallanNo, ChallanDate
+FROM            SewingDeliveryChallanLookup</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SewingDeliveryId" DataSetColumn="SewingDeliveryId" />
+              <Mapping SourceColumn="ChallanNo" DataSetColumn="ChallanNo" />
+              <Mapping SourceColumn="ChallanDate" DataSetColumn="ChallanDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SewingDeliveryChallanLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SewingDeliveryChallanLookupDataSet" msprop:Generator_UserDSName="SewingDeliveryChallanLookupDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SewingDeliveryChallanLookup" msprop:Generator_TableClassName="SewingDeliveryChallanLookupDataTable" msprop:Generator_TableVarName="tableSewingDeliveryChallanLookup" msprop:Generator_RowChangedName="SewingDeliveryChallanLookupRowChanged" msprop:Generator_TablePropName="SewingDeliveryChallanLookup" msprop:Generator_RowDeletingName="SewingDeliveryChallanLookupRowDeleting" msprop:Generator_RowChangingName="SewingDeliveryChallanLookupRowChanging" msprop:Generator_RowEvHandlerName="SewingDeliveryChallanLookupRowChangeEventHandler" msprop:Generator_RowDeletedName="SewingDeliveryChallanLookupRowDeleted" msprop:Generator_RowClassName="SewingDeliveryChallanLookupRow" msprop:Generator_UserTableName="SewingDeliveryChallanLookup" msprop:Generator_RowEvArgName="SewingDeliveryChallanLookupRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SewingDeliveryId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSewingDeliveryId" msprop:Generator_ColumnPropNameInRow="SewingDeliveryId" msprop:Generator_ColumnPropNameInTable="SewingDeliveryIdColumn" msprop:Generator_UserColumnName="SewingDeliveryId" type="xs:long" />
+              <xs:element name="ChallanNo" msprop:Generator_ColumnVarNameInTable="columnChallanNo" msprop:Generator_ColumnPropNameInRow="ChallanNo" msprop:Generator_ColumnPropNameInTable="ChallanNoColumn" msprop:Generator_UserColumnName="ChallanNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChallanDate" msprop:Generator_ColumnVarNameInTable="columnChallanDate" msprop:Generator_ColumnPropNameInRow="ChallanDate" msprop:Generator_ColumnPropNameInTable="ChallanDateColumn" msprop:Generator_UserColumnName="ChallanDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SewingDeliveryChallanLookup" />
+      <xs:field xpath="mstns:SewingDeliveryId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GreigeFabricDeliveryChallanLookupDataSet" targetNamespace="http://tempuri.org/GreigeFabricDeliveryChallanLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/GreigeFabricDeliveryChallanLookupDataSet.xsd" xmlns="http://tempuri.org/GreigeFabricDeliveryChallanLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GreyFabricDeliveryChallanLookupTableAdapter" GeneratorDataComponentClassName="GreyFabricDeliveryChallanLookupTableAdapter" Name="GreyFabricDeliveryChallanLookup" UserDataComponentName="GreyFabricDeliveryChallanLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.GreyFabricReceiveIssue" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ChallanNo, ChallanDate
+FROM            GreyFabricReceiveIssue
+WHERE        (ReceiveQuantity = 0) AND (ReceiveQuantity_Yrds = 0) AND (ReceiveQuantity_Pcs = 0) OR
+                         (ReceiveQuantity IS NULL) AND (ReceiveQuantity_Yrds IS NULL) AND (ReceiveQuantity_Pcs IS NULL)
+GROUP BY ChallanNo, ChallanDate</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ChallanNo" DataSetColumn="ChallanNo" />
+              <Mapping SourceColumn="ChallanDate" DataSetColumn="ChallanDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GreigeFabricDeliveryChallanLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GreigeFabricDeliveryChallanLookupDataSet" msprop:Generator_UserDSName="GreigeFabricDeliveryChallanLookupDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GreyFabricDeliveryChallanLookup" msprop:Generator_UserTableName="GreyFabricDeliveryChallanLookup" msprop:Generator_RowEvArgName="GreyFabricDeliveryChallanLookupRowChangeEvent" msprop:Generator_TableVarName="tableGreyFabricDeliveryChallanLookup" msprop:Generator_TablePropName="GreyFabricDeliveryChallanLookup" msprop:Generator_RowDeletingName="GreyFabricDeliveryChallanLookupRowDeleting" msprop:Generator_RowChangingName="GreyFabricDeliveryChallanLookupRowChanging" msprop:Generator_RowDeletedName="GreyFabricDeliveryChallanLookupRowDeleted" msprop:Generator_RowEvHandlerName="GreyFabricDeliveryChallanLookupRowChangeEventHandler" msprop:Generator_TableClassName="GreyFabricDeliveryChallanLookupDataTable" msprop:Generator_RowChangedName="GreyFabricDeliveryChallanLookupRowChanged" msprop:Generator_RowClassName="GreyFabricDeliveryChallanLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ChallanNo" msprop:Generator_ColumnVarNameInTable="columnChallanNo" msprop:Generator_ColumnPropNameInRow="ChallanNo" msprop:Generator_ColumnPropNameInTable="ChallanNoColumn" msprop:Generator_UserColumnName="ChallanNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChallanDate" msprop:Generator_ColumnVarNameInTable="columnChallanDate" msprop:Generator_ColumnPropNameInRow="ChallanDate" msprop:Generator_ColumnPropNameInTable="ChallanDateColumn" msprop:Generator_UserColumnName="ChallanDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

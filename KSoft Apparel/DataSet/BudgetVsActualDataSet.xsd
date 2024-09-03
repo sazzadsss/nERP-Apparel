@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BudgetVsActualDataSet" targetNamespace="http://tempuri.org/BudgetVsActualDataSet.xsd" xmlns:mstns="http://tempuri.org/BudgetVsActualDataSet.xsd" xmlns="http://tempuri.org/BudgetVsActualDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BudgetVSActualTableAdapter" GeneratorDataComponentClassName="BudgetVSActualTableAdapter" Name="BudgetVSActual" UserDataComponentName="BudgetVSActualTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT FirstExDate.OrderQuantity, FirstExDate.FirstExDate, FirstExDate.ProgramNo, BudgetVsActual.ABYarnCost, BudgetVsActual.AYarnCost, BudgetVsActual.ABKnittingCost, BudgetVsActual.AKnittingCost, BudgetVsActual.ABDyeingCost, 
+                  BudgetVsActual.ADyeingCost, BudgetVsActual.ABCM, BudgetVsActual.ACM, BudgetVsActual.ABAOPCost, BudgetVsActual.ABPrintCost, BudgetVsActual.ABEmbCost, BudgetVsActual.ABMiscCost, BudgetVsActual.ABTrimCost, 
+                  BudgetVsActual.AAOPCost, BudgetVsActual.APrintCost, BudgetVsActual.AEmbCost, BudgetVsActual.AMiscCost, BudgetVsActual.ATrimCost, BudgetVsActual.ABCost, BudgetVsActual.IsComplete, BudgetVsActual.FirstExDate AS Expr1, 
+                  BudgetVsActual.BuyerName, BudgetVsActual.StyleName, BudgetVsActual.OrderId, BudgetVsActual.ProgramNo AS Expr2
+FROM     BudgetVsActual INNER JOIN
+                  FirstExDate ON BudgetVsActual.OrderId = FirstExDate.OrderId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderQuantity" DataSetColumn="OrderQuantity" />
+              <Mapping SourceColumn="FirstExDate" DataSetColumn="FirstExDate" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="ABYarnCost" DataSetColumn="ABYarnCost" />
+              <Mapping SourceColumn="AYarnCost" DataSetColumn="AYarnCost" />
+              <Mapping SourceColumn="ABKnittingCost" DataSetColumn="ABKnittingCost" />
+              <Mapping SourceColumn="AKnittingCost" DataSetColumn="AKnittingCost" />
+              <Mapping SourceColumn="ABDyeingCost" DataSetColumn="ABDyeingCost" />
+              <Mapping SourceColumn="ADyeingCost" DataSetColumn="ADyeingCost" />
+              <Mapping SourceColumn="ABCM" DataSetColumn="ABCM" />
+              <Mapping SourceColumn="ACM" DataSetColumn="ACM" />
+              <Mapping SourceColumn="ABAOPCost" DataSetColumn="ABAOPCost" />
+              <Mapping SourceColumn="ABPrintCost" DataSetColumn="ABPrintCost" />
+              <Mapping SourceColumn="ABEmbCost" DataSetColumn="ABEmbCost" />
+              <Mapping SourceColumn="ABMiscCost" DataSetColumn="ABMiscCost" />
+              <Mapping SourceColumn="ABTrimCost" DataSetColumn="ABTrimCost" />
+              <Mapping SourceColumn="AAOPCost" DataSetColumn="AAOPCost" />
+              <Mapping SourceColumn="APrintCost" DataSetColumn="APrintCost" />
+              <Mapping SourceColumn="AEmbCost" DataSetColumn="AEmbCost" />
+              <Mapping SourceColumn="ABCost" DataSetColumn="ABCost" />
+              <Mapping SourceColumn="IsComplete" DataSetColumn="IsComplete" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="AMiscCost" DataSetColumn="AMiscCost" />
+              <Mapping SourceColumn="ATrimCost" DataSetColumn="ATrimCost" />
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BudgetVsActualDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BudgetVsActualDataSet" msprop:Generator_UserDSName="BudgetVsActualDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BudgetVSActual" msprop:Generator_TableClassName="BudgetVSActualDataTable" msprop:Generator_TableVarName="tableBudgetVSActual" msprop:Generator_RowChangedName="BudgetVSActualRowChanged" msprop:Generator_TablePropName="BudgetVSActual" msprop:Generator_RowDeletingName="BudgetVSActualRowDeleting" msprop:Generator_RowChangingName="BudgetVSActualRowChanging" msprop:Generator_RowEvHandlerName="BudgetVSActualRowChangeEventHandler" msprop:Generator_RowDeletedName="BudgetVSActualRowDeleted" msprop:Generator_RowClassName="BudgetVSActualRow" msprop:Generator_UserTableName="BudgetVSActual" msprop:Generator_RowEvArgName="BudgetVSActualRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderQuantity" msprop:Generator_ColumnVarNameInTable="columnOrderQuantity" msprop:Generator_ColumnPropNameInRow="OrderQuantity" msprop:Generator_ColumnPropNameInTable="OrderQuantityColumn" msprop:Generator_UserColumnName="OrderQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FirstExDate" msprop:Generator_ColumnVarNameInTable="columnFirstExDate" msprop:Generator_ColumnPropNameInRow="FirstExDate" msprop:Generator_ColumnPropNameInTable="FirstExDateColumn" msprop:Generator_UserColumnName="FirstExDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ABYarnCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnABYarnCost" msprop:Generator_ColumnPropNameInRow="ABYarnCost" msprop:Generator_ColumnPropNameInTable="ABYarnCostColumn" msprop:Generator_UserColumnName="ABYarnCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AYarnCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAYarnCost" msprop:Generator_ColumnPropNameInRow="AYarnCost" msprop:Generator_ColumnPropNameInTable="AYarnCostColumn" msprop:Generator_UserColumnName="AYarnCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ABKnittingCost" msprop:Generator_ColumnVarNameInTable="columnABKnittingCost" msprop:Generator_ColumnPropNameInRow="ABKnittingCost" msprop:Generator_ColumnPropNameInTable="ABKnittingCostColumn" msprop:Generator_UserColumnName="ABKnittingCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AKnittingCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAKnittingCost" msprop:Generator_ColumnPropNameInRow="AKnittingCost" msprop:Generator_ColumnPropNameInTable="AKnittingCostColumn" msprop:Generator_UserColumnName="AKnittingCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ABDyeingCost" msprop:Generator_ColumnVarNameInTable="columnABDyeingCost" msprop:Generator_ColumnPropNameInRow="ABDyeingCost" msprop:Generator_ColumnPropNameInTable="ABDyeingCostColumn" msprop:Generator_UserColumnName="ABDyeingCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ADyeingCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnADyeingCost" msprop:Generator_ColumnPropNameInRow="ADyeingCost" msprop:Generator_ColumnPropNameInTable="ADyeingCostColumn" msprop:Generator_UserColumnName="ADyeingCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ABCM" msprop:Generator_ColumnVarNameInTable="columnABCM" msprop:Generator_ColumnPropNameInRow="ABCM" msprop:Generator_ColumnPropNameInTable="ABCMColumn" msprop:Generator_UserColumnName="ABCM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ACM" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnACM" msprop:Generator_ColumnPropNameInRow="ACM" msprop:Generator_ColumnPropNameInTable="ACMColumn" msprop:Generator_UserColumnName="ACM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ABAOPCost" msprop:Generator_ColumnVarNameInTable="columnABAOPCost" msprop:Generator_ColumnPropNameInRow="ABAOPCost" msprop:Generator_ColumnPropNameInTable="ABAOPCostColumn" msprop:Generator_UserColumnName="ABAOPCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ABPrintCost" msprop:Generator_ColumnVarNameInTable="columnABPrintCost" msprop:Generator_ColumnPropNameInRow="ABPrintCost" msprop:Generator_ColumnPropNameInTable="ABPrintCostColumn" msprop:Generator_UserColumnName="ABPrintCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ABEmbCost" msprop:Generator_ColumnVarNameInTable="columnABEmbCost" msprop:Generator_ColumnPropNameInRow="ABEmbCost" msprop:Generator_ColumnPropNameInTable="ABEmbCostColumn" msprop:Generator_UserColumnName="ABEmbCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ABMiscCost" msprop:Generator_ColumnVarNameInTable="columnABMiscCost" msprop:Generator_ColumnPropNameInRow="ABMiscCost" msprop:Generator_ColumnPropNameInTable="ABMiscCostColumn" msprop:Generator_UserColumnName="ABMiscCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ABTrimCost" msprop:Generator_ColumnVarNameInTable="columnABTrimCost" msprop:Generator_ColumnPropNameInRow="ABTrimCost" msprop:Generator_ColumnPropNameInTable="ABTrimCostColumn" msprop:Generator_UserColumnName="ABTrimCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AAOPCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAAOPCost" msprop:Generator_ColumnPropNameInRow="AAOPCost" msprop:Generator_ColumnPropNameInTable="AAOPCostColumn" msprop:Generator_UserColumnName="AAOPCost" type="xs:int" minOccurs="0" />
+              <xs:element name="APrintCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAPrintCost" msprop:Generator_ColumnPropNameInRow="APrintCost" msprop:Generator_ColumnPropNameInTable="APrintCostColumn" msprop:Generator_UserColumnName="APrintCost" type="xs:int" minOccurs="0" />
+              <xs:element name="AEmbCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAEmbCost" msprop:Generator_ColumnPropNameInRow="AEmbCost" msprop:Generator_ColumnPropNameInTable="AEmbCostColumn" msprop:Generator_UserColumnName="AEmbCost" type="xs:int" minOccurs="0" />
+              <xs:element name="ABCost" msprop:Generator_ColumnVarNameInTable="columnABCost" msprop:Generator_ColumnPropNameInRow="ABCost" msprop:Generator_ColumnPropNameInTable="ABCostColumn" msprop:Generator_UserColumnName="ABCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ACost" msdata:ReadOnly="true" msdata:Expression="ISNULL(AYarnCost,0)+ISNULL(AKnittingCost,0)+ISNULL(ADyeingCost,0)+ISNULL(ACM,0)+ISNULL(AAOPCost,0)+ISNULL(APrintCost,0)+ISNULL(AEmbCost,0)+ISNULL(AMiscCost,0)" msprop:Generator_ColumnVarNameInTable="columnACost" msprop:Generator_ColumnPropNameInRow="ACost" msprop:Generator_ColumnPropNameInTable="ACostColumn" msprop:Generator_UserColumnName="ACost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IsComplete" msprop:Generator_ColumnVarNameInTable="columnIsComplete" msprop:Generator_ColumnPropNameInRow="IsComplete" msprop:Generator_ColumnPropNameInTable="IsCompleteColumn" msprop:Generator_UserColumnName="IsComplete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AMiscCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAMiscCost" msprop:Generator_ColumnPropNameInRow="AMiscCost" msprop:Generator_ColumnPropNameInTable="AMiscCostColumn" msprop:Generator_UserColumnName="AMiscCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ATrimCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnATrimCost" msprop:Generator_ColumnPropNameInRow="ATrimCost" msprop:Generator_ColumnPropNameInTable="ATrimCostColumn" msprop:Generator_UserColumnName="ATrimCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

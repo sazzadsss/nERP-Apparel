@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MasterOrderStatusDataSet" targetNamespace="http://tempuri.org/MasterOrderStatusDataSet.xsd" xmlns:mstns="http://tempuri.org/MasterOrderStatusDataSet.xsd" xmlns="http://tempuri.org/MasterOrderStatusDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MasterOrderStatusTableAdapter" GeneratorDataComponentClassName="MasterOrderStatusTableAdapter" Name="MasterOrderStatus" UserDataComponentName="MasterOrderStatusTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.MasterOrderStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AOP, BuyerCode, CartonQuantity, Color, Con, CuttingBalance, CuttingPercentage, EMB, ExcessCutting, FabricExcessReceive, FabricReceiveBalance, FabricReceived, FabricRequire, Fabrication, GarmentDescription, 
+                         InputBalance, InputPercentage, LastDayCutting, LastDayEmbReceived, LastDayEmdSend, LastDayFabricReceived, LastDayInput, LastDayPrintReceive, LastDayPrintSend, LastDaySewing, MaxEx, Merchandiser, MinEx, 
+                         OrderQty, OrderReceiveDate, PO, PolyQuantity, [Print], PrintReceiveBalance, PrintSupplier, ProgramAndStyle, ProgramNo, SewingBalance, SewingPercentage, SewingQuantity, ShipmentCartonQuantity, ShipmentQuantity, 
+                         StockInHand, Style, TotalCutting, TotalEmbReceived, TotalEmbSend, TotalInput, TotalPrintReceive, TotalPrintSend, Wash
+FROM            MasterOrderStatus</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="BuyerCode" DataSetColumn="BuyerCode" />
+              <Mapping SourceColumn="OrderReceiveDate" DataSetColumn="OrderReceiveDate" />
+              <Mapping SourceColumn="MinEx" DataSetColumn="MinEx" />
+              <Mapping SourceColumn="MaxEx" DataSetColumn="MaxEx" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="Con" DataSetColumn="Con" />
+              <Mapping SourceColumn="Style" DataSetColumn="Style" />
+              <Mapping SourceColumn="GarmentDescription" DataSetColumn="GarmentDescription" />
+              <Mapping SourceColumn="Fabrication" DataSetColumn="Fabrication" />
+              <Mapping SourceColumn="Color" DataSetColumn="Color" />
+              <Mapping SourceColumn="OrderQty" DataSetColumn="OrderQty" />
+              <Mapping SourceColumn="FabricRequire" DataSetColumn="FabricRequire" />
+              <Mapping SourceColumn="FabricReceived" DataSetColumn="FabricReceived" />
+              <Mapping SourceColumn="FabricReceiveBalance" DataSetColumn="FabricReceiveBalance" />
+              <Mapping SourceColumn="TotalCutting" DataSetColumn="TotalCutting" />
+              <Mapping SourceColumn="CuttingPercentage" DataSetColumn="CuttingPercentage" />
+              <Mapping SourceColumn="CuttingBalance" DataSetColumn="CuttingBalance" />
+              <Mapping SourceColumn="TotalPrintSend" DataSetColumn="TotalPrintSend" />
+              <Mapping SourceColumn="TotalPrintReceive" DataSetColumn="TotalPrintReceive" />
+              <Mapping SourceColumn="PrintReceiveBalance" DataSetColumn="PrintReceiveBalance" />
+              <Mapping SourceColumn="TotalInput" DataSetColumn="TotalInput" />
+              <Mapping SourceColumn="InputPercentage" DataSetColumn="InputPercentage" />
+              <Mapping SourceColumn="InputBalance" DataSetColumn="InputBalance" />
+              <Mapping SourceColumn="Merchandiser" DataSetColumn="Merchandiser" />
+              <Mapping SourceColumn="SewingQuantity" DataSetColumn="SewingQuantity" />
+              <Mapping SourceColumn="SewingPercentage" DataSetColumn="SewingPercentage" />
+              <Mapping SourceColumn="SewingBalance" DataSetColumn="SewingBalance" />
+              <Mapping SourceColumn="PolyQuantity" DataSetColumn="PolyQuantity" />
+              <Mapping SourceColumn="CartonQuantity" DataSetColumn="CartonQuantity" />
+              <Mapping SourceColumn="ShipmentQuantity" DataSetColumn="ShipmentQuantity" />
+              <Mapping SourceColumn="ShipmentCartonQuantity" DataSetColumn="ShipmentCartonQuantity" />
+              <Mapping SourceColumn="Print" DataSetColumn="Print" />
+              <Mapping SourceColumn="Wash" DataSetColumn="Wash" />
+              <Mapping SourceColumn="EMB" DataSetColumn="EMB" />
+              <Mapping SourceColumn="AOP" DataSetColumn="AOP" />
+              <Mapping SourceColumn="LastDayFabricReceived" DataSetColumn="LastDayFabricReceived" />
+              <Mapping SourceColumn="LastDayCutting" DataSetColumn="LastDayCutting" />
+              <Mapping SourceColumn="LastDayPrintReceive" DataSetColumn="LastDayPrintReceive" />
+              <Mapping SourceColumn="LastDaySewing" DataSetColumn="LastDaySewing" />
+              <Mapping SourceColumn="ProgramAndStyle" DataSetColumn="ProgramAndStyle" />
+              <Mapping SourceColumn="PrintSupplier" DataSetColumn="PrintSupplier" />
+              <Mapping SourceColumn="LastDayInput" DataSetColumn="LastDayInput" />
+              <Mapping SourceColumn="ExcessCutting" DataSetColumn="ExcessCutting" />
+              <Mapping SourceColumn="LastDayPrintSend" DataSetColumn="LastDayPrintSend" />
+              <Mapping SourceColumn="FabricExcessReceive" DataSetColumn="FabricExcessReceive" />
+              <Mapping SourceColumn="StockInHand" DataSetColumn="StockInHand" />
+              <Mapping SourceColumn="TotalEmbSend" DataSetColumn="TotalEmbSend" />
+              <Mapping SourceColumn="LastDayEmdSend" DataSetColumn="LastDayEmdSend" />
+              <Mapping SourceColumn="TotalEmbReceived" DataSetColumn="TotalEmbReceived" />
+              <Mapping SourceColumn="LastDayEmbReceived" DataSetColumn="LastDayEmbReceived" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.MasterOrderStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByAll" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAll" GeneratorSourceName="FillByAll" GetMethodModifier="Public" GetMethodName="GetDataByAll" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAll" UserSourceName="FillByAll">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AOP, BuyerCode, CartonQuantity, Color, Con, CuttingBalance, CuttingPercentage, EMB, ExcessCutting, FabricExcessReceive, FabricReceiveBalance, FabricReceived, FabricRequire, Fabrication, GarmentDescription, 
+                         InputBalance, InputPercentage, LastDayCutting, LastDayEmbReceived, LastDayEmdSend, LastDayFabricReceived, LastDayInput, LastDayPrintReceive, LastDayPrintSend, LastDaySewing, MaxEx, Merchandiser, MinEx, 
+                         OrderQty, OrderReceiveDate, PO, PolyQuantity, [Print], PrintReceiveBalance, PrintSupplier, ProgramAndStyle, ProgramNo, SewingBalance, SewingPercentage, SewingQuantity, ShipmentCartonQuantity, ShipmentQuantity, 
+                         StockInHand, Style, TotalCutting, TotalEmbReceived, TotalEmbSend, TotalInput, TotalPrintReceive, TotalPrintSend, Wash, IsCuttingRunning
+FROM            MasterOrderStatus</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db-live].dbo.MasterOrderStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByBuyer" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBuyer" GeneratorSourceName="FillByBuyer" GetMethodModifier="Public" GetMethodName="GetDataByBuyer" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBuyer" UserSourceName="FillByBuyer">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AOP, BuyerCode, CartonQuantity, Color, Con, CuttingBalance, CuttingPercentage, EMB, ExcessCutting, FabricExcessReceive, FabricReceiveBalance, FabricReceived, FabricRequire, Fabrication, GarmentDescription, InputBalance, InputPercentage, LastDayCutting, LastDayEmbReceived, LastDayEmdSend, LastDayFabricReceived, LastDayInput, LastDayPrintReceive, LastDayPrintSend, LastDaySewing, MaxEx, Merchandiser, MinEx, OrderQty, OrderReceiveDate, PO, PolyQuantity, [Print], PrintReceiveBalance, PrintSupplier, ProgramAndStyle, ProgramNo, SewingBalance, SewingPercentage, SewingQuantity, ShipmentCartonQuantity, ShipmentQuantity, StockInHand, Style, TotalCutting, TotalEmbReceived, TotalEmbSend, TotalInput, TotalPrintReceive, TotalPrintSend, Wash FROM MasterOrderStatus WHERE (BuyerCode = @BuyerCode)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="BuyerCode" ColumnName="BuyerCode" DataSourceName="[ncl-db].dbo.MasterOrderStatus" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@BuyerCode" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="BuyerCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.MasterOrderStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByMerchandiser" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByMerchandiser" GeneratorSourceName="FillByMerchandiser" GetMethodModifier="Public" GetMethodName="GetDataByMerchandiser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByMerchandiser" UserSourceName="FillByMerchandiser">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AOP, BuyerCode, CartonQuantity, Color, Con, CuttingBalance, CuttingPercentage, EMB, ExcessCutting, FabricExcessReceive, FabricReceiveBalance, FabricReceived, FabricRequire, Fabrication, GarmentDescription, 
+                         InputBalance, InputPercentage, LastDayCutting, LastDayEmbReceived, LastDayEmdSend, LastDayFabricReceived, LastDayInput, LastDayPrintReceive, LastDayPrintSend, LastDaySewing, MaxEx, Merchandiser, MinEx, 
+                         OrderQty, OrderReceiveDate, PO, PolyQuantity, [Print], PrintReceiveBalance, PrintSupplier, ProgramAndStyle, ProgramNo, SewingBalance, SewingPercentage, SewingQuantity, ShipmentCartonQuantity, ShipmentQuantity, 
+                         StockInHand, Style, TotalCutting, TotalEmbReceived, TotalEmbSend, TotalInput, TotalPrintReceive, TotalPrintSend, Wash, IsCuttingRunning
+FROM            MasterOrderStatus
+WHERE        (Merchandiser = @Merchandiser)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Merchandiser" ColumnName="Merchandiser" DataSourceName="[ncl-db].dbo.MasterOrderStatus" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@Merchandiser" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="Merchandiser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.MasterOrderStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByProgramAndStyle" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByProgramAndStyle" GeneratorSourceName="FillByProgramAndStyle" GetMethodModifier="Public" GetMethodName="GetDataByProgramAndStyle" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByProgramAndStyle" UserSourceName="FillByProgramAndStyle">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AOP, BuyerCode, CartonQuantity, Color, Con, CuttingBalance, CuttingPercentage, EMB, ExcessCutting, FabricExcessReceive, FabricReceiveBalance, FabricReceived, FabricRequire, Fabrication, GarmentDescription, 
+                         InputBalance, InputPercentage, LastDayCutting, LastDayEmbReceived, LastDayEmdSend, LastDayFabricReceived, LastDayInput, LastDayPrintReceive, LastDayPrintSend, LastDaySewing, MaxEx, Merchandiser, MinEx, 
+                         OrderQty, OrderReceiveDate, PO, PolyQuantity, [Print], PrintReceiveBalance, PrintSupplier, ProgramAndStyle, ProgramNo, SewingBalance, SewingPercentage, SewingQuantity, ShipmentCartonQuantity, ShipmentQuantity, 
+                         StockInHand, Style, TotalCutting, TotalEmbReceived, TotalEmbSend, TotalInput, TotalPrintReceive, TotalPrintSend, Wash, IsCuttingRunning
+FROM            MasterOrderStatus
+WHERE        (ProgramAndStyle LIKE '%' + @String + '%')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="String" ColumnName="ProgramAndStyle" DataSourceName="[ncl-db].dbo.MasterOrderStatus" DataTypeServer="varchar(252)" DbType="AnsiString" Direction="Input" ParameterName="@String" Precision="0" ProviderType="VarChar" Scale="0" Size="252" SourceColumn="ProgramAndStyle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.MasterOrderStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByRunning" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByRunning" GeneratorSourceName="FillByRunning" GetMethodModifier="Public" GetMethodName="GetDataByRunning" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByRunning" UserSourceName="FillByRunning">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AOP, BuyerCode, CartonQuantity, Color, Con, CuttingBalance, CuttingPercentage, EMB, ExcessCutting, FabricExcessReceive, FabricReceiveBalance, FabricReceived, FabricRequire, Fabrication, GarmentDescription, 
+                         InputBalance, InputPercentage, LastDayCutting, LastDayEmbReceived, LastDayEmdSend, LastDayFabricReceived, LastDayInput, LastDayPrintReceive, LastDayPrintSend, LastDaySewing, MaxEx, Merchandiser, MinEx, 
+                         OrderQty, OrderReceiveDate, PO, PolyQuantity, [Print], PrintReceiveBalance, PrintSupplier, ProgramAndStyle, ProgramNo, SewingBalance, SewingPercentage, SewingQuantity, ShipmentCartonQuantity, ShipmentQuantity, 
+                         StockInHand, Style, TotalCutting, TotalEmbReceived, TotalEmbSend, TotalInput, TotalPrintReceive, TotalPrintSend, Wash, IsCuttingRunning
+FROM            MasterOrderStatus
+WHERE        (IsCuttingRunning = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MasterOrderStatusDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MasterOrderStatusDataSet" msprop:Generator_UserDSName="MasterOrderStatusDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MasterOrderStatus" msprop:Generator_UserTableName="MasterOrderStatus" msprop:Generator_RowEvArgName="MasterOrderStatusRowChangeEvent" msprop:Generator_TableVarName="tableMasterOrderStatus" msprop:Generator_TablePropName="MasterOrderStatus" msprop:Generator_RowDeletingName="MasterOrderStatusRowDeleting" msprop:Generator_RowChangingName="MasterOrderStatusRowChanging" msprop:Generator_RowDeletedName="MasterOrderStatusRowDeleted" msprop:Generator_RowEvHandlerName="MasterOrderStatusRowChangeEventHandler" msprop:Generator_TableClassName="MasterOrderStatusDataTable" msprop:Generator_RowChangedName="MasterOrderStatusRowChanged" msprop:Generator_RowClassName="MasterOrderStatusRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerCode" msprop:Generator_ColumnVarNameInTable="columnBuyerCode" msprop:Generator_ColumnPropNameInRow="BuyerCode" msprop:Generator_ColumnPropNameInTable="BuyerCodeColumn" msprop:Generator_UserColumnName="BuyerCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderReceiveDate" msprop:Generator_ColumnVarNameInTable="columnOrderReceiveDate" msprop:Generator_ColumnPropNameInRow="OrderReceiveDate" msprop:Generator_ColumnPropNameInTable="OrderReceiveDateColumn" msprop:Generator_UserColumnName="OrderReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MinEx" msprop:Generator_ColumnVarNameInTable="columnMinEx" msprop:Generator_ColumnPropNameInRow="MinEx" msprop:Generator_ColumnPropNameInTable="MinExColumn" msprop:Generator_UserColumnName="MinEx" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MaxEx" msprop:Generator_ColumnVarNameInTable="columnMaxEx" msprop:Generator_ColumnPropNameInRow="MaxEx" msprop:Generator_ColumnPropNameInTable="MaxExColumn" msprop:Generator_UserColumnName="MaxEx" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Con" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCon" msprop:Generator_ColumnPropNameInRow="Con" msprop:Generator_ColumnPropNameInTable="ConColumn" msprop:Generator_UserColumnName="Con" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Style" msprop:Generator_ColumnVarNameInTable="columnStyle" msprop:Generator_ColumnPropNameInRow="Style" msprop:Generator_ColumnPropNameInTable="StyleColumn" msprop:Generator_UserColumnName="Style" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GarmentDescription" msprop:Generator_ColumnVarNameInTable="columnGarmentDescription" msprop:Generator_ColumnPropNameInRow="GarmentDescription" msprop:Generator_ColumnPropNameInTable="GarmentDescriptionColumn" msprop:Generator_UserColumnName="GarmentDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fabrication" msprop:Generator_ColumnVarNameInTable="columnFabrication" msprop:Generator_ColumnPropNameInRow="Fabrication" msprop:Generator_ColumnPropNameInTable="FabricationColumn" msprop:Generator_UserColumnName="Fabrication">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="616" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Color" msprop:Generator_ColumnVarNameInTable="columnColor" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_UserColumnName="Color" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderQty" msprop:Generator_ColumnVarNameInTable="columnOrderQty" msprop:Generator_ColumnPropNameInRow="OrderQty" msprop:Generator_ColumnPropNameInTable="OrderQtyColumn" msprop:Generator_UserColumnName="OrderQty" type="xs:long" minOccurs="0" />
+              <xs:element name="FabricRequire" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFabricRequire" msprop:Generator_ColumnPropNameInRow="FabricRequire" msprop:Generator_ColumnPropNameInTable="FabricRequireColumn" msprop:Generator_UserColumnName="FabricRequire" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FabricReceived" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFabricReceived" msprop:Generator_ColumnPropNameInRow="FabricReceived" msprop:Generator_ColumnPropNameInTable="FabricReceivedColumn" msprop:Generator_UserColumnName="FabricReceived" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FabricReceiveBalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFabricReceiveBalance" msprop:Generator_ColumnPropNameInRow="FabricReceiveBalance" msprop:Generator_ColumnPropNameInTable="FabricReceiveBalanceColumn" msprop:Generator_UserColumnName="FabricReceiveBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalCutting" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalCutting" msprop:Generator_ColumnPropNameInRow="TotalCutting" msprop:Generator_ColumnPropNameInTable="TotalCuttingColumn" msprop:Generator_UserColumnName="TotalCutting" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CuttingPercentage" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCuttingPercentage" msprop:Generator_ColumnPropNameInRow="CuttingPercentage" msprop:Generator_ColumnPropNameInTable="CuttingPercentageColumn" msprop:Generator_UserColumnName="CuttingPercentage" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CuttingBalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCuttingBalance" msprop:Generator_ColumnPropNameInRow="CuttingBalance" msprop:Generator_ColumnPropNameInTable="CuttingBalanceColumn" msprop:Generator_UserColumnName="CuttingBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalPrintSend" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalPrintSend" msprop:Generator_ColumnPropNameInRow="TotalPrintSend" msprop:Generator_ColumnPropNameInTable="TotalPrintSendColumn" msprop:Generator_UserColumnName="TotalPrintSend" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalPrintReceive" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalPrintReceive" msprop:Generator_ColumnPropNameInRow="TotalPrintReceive" msprop:Generator_ColumnPropNameInTable="TotalPrintReceiveColumn" msprop:Generator_UserColumnName="TotalPrintReceive" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PrintReceiveBalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPrintReceiveBalance" msprop:Generator_ColumnPropNameInRow="PrintReceiveBalance" msprop:Generator_ColumnPropNameInTable="PrintReceiveBalanceColumn" msprop:Generator_UserColumnName="PrintReceiveBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalInput" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalInput" msprop:Generator_ColumnPropNameInRow="TotalInput" msprop:Generator_ColumnPropNameInTable="TotalInputColumn" msprop:Generator_UserColumnName="TotalInput" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InputPercentage" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnInputPercentage" msprop:Generator_ColumnPropNameInRow="InputPercentage" msprop:Generator_ColumnPropNameInTable="InputPercentageColumn" msprop:Generator_UserColumnName="InputPercentage" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InputBalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnInputBalance" msprop:Generator_ColumnPropNameInRow="InputBalance" msprop:Generator_ColumnPropNameInTable="InputBalanceColumn" msprop:Generator_UserColumnName="InputBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Merchandiser" msprop:Generator_ColumnVarNameInTable="columnMerchandiser" msprop:Generator_ColumnPropNameInRow="Merchandiser" msprop:Generator_ColumnPropNameInTable="MerchandiserColumn" msprop:Generator_UserColumnName="Merchandiser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SewingQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSewingQuantity" msprop:Generator_ColumnPropNameInRow="SewingQuantity" msprop:Generator_ColumnPropNameInTable="SewingQuantityColumn" msprop:Generator_UserColumnName="SewingQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SewingPercentage" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSewingPercentage" msprop:Generator_ColumnPropNameInRow="SewingPercentage" msprop:Generator_ColumnPropNameInTable="SewingPercentageColumn" msprop:Generator_UserColumnName="SewingPercentage" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SewingBalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSewingBalance" msprop:Generator_ColumnPropNameInRow="SewingBalance" msprop:Generator_ColumnPropNameInTable="SewingBalanceColumn" msprop:Generator_UserColumnName="SewingBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PolyQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPolyQuantity" msprop:Generator_ColumnPropNameInRow="PolyQuantity" msprop:Generator_ColumnPropNameInTable="PolyQuantityColumn" msprop:Generator_UserColumnName="PolyQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CartonQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCartonQuantity" msprop:Generator_ColumnPropNameInRow="CartonQuantity" msprop:Generator_ColumnPropNameInTable="CartonQuantityColumn" msprop:Generator_UserColumnName="CartonQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ShipmentQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShipmentQuantity" msprop:Generator_ColumnPropNameInRow="ShipmentQuantity" msprop:Generator_ColumnPropNameInTable="ShipmentQuantityColumn" msprop:Generator_UserColumnName="ShipmentQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ShipmentCartonQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShipmentCartonQuantity" msprop:Generator_ColumnPropNameInRow="ShipmentCartonQuantity" msprop:Generator_ColumnPropNameInTable="ShipmentCartonQuantityColumn" msprop:Generator_UserColumnName="ShipmentCartonQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Print" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPrint" msprop:Generator_ColumnPropNameInRow="Print" msprop:Generator_ColumnPropNameInTable="PrintColumn" msprop:Generator_UserColumnName="Print" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Wash" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWash" msprop:Generator_ColumnPropNameInRow="Wash" msprop:Generator_ColumnPropNameInTable="WashColumn" msprop:Generator_UserColumnName="Wash" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EMB" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEMB" msprop:Generator_ColumnPropNameInRow="EMB" msprop:Generator_ColumnPropNameInTable="EMBColumn" msprop:Generator_UserColumnName="EMB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AOP" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAOP" msprop:Generator_ColumnPropNameInRow="AOP" msprop:Generator_ColumnPropNameInTable="AOPColumn" msprop:Generator_UserColumnName="AOP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastDayFabricReceived" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastDayFabricReceived" msprop:Generator_ColumnPropNameInRow="LastDayFabricReceived" msprop:Generator_ColumnPropNameInTable="LastDayFabricReceivedColumn" msprop:Generator_UserColumnName="LastDayFabricReceived" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LastDayCutting" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastDayCutting" msprop:Generator_ColumnPropNameInRow="LastDayCutting" msprop:Generator_ColumnPropNameInTable="LastDayCuttingColumn" msprop:Generator_UserColumnName="LastDayCutting" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LastDayPrintReceive" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastDayPrintReceive" msprop:Generator_ColumnPropNameInRow="LastDayPrintReceive" msprop:Generator_ColumnPropNameInTable="LastDayPrintReceiveColumn" msprop:Generator_UserColumnName="LastDayPrintReceive" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LastDaySewing" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastDaySewing" msprop:Generator_ColumnPropNameInRow="LastDaySewing" msprop:Generator_ColumnPropNameInTable="LastDaySewingColumn" msprop:Generator_UserColumnName="LastDaySewing" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ProgramAndStyle" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnProgramAndStyle" msprop:Generator_ColumnPropNameInRow="ProgramAndStyle" msprop:Generator_ColumnPropNameInTable="ProgramAndStyleColumn" msprop:Generator_UserColumnName="ProgramAndStyle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="252" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrintSupplier" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPrintSupplier" msprop:Generator_ColumnPropNameInRow="PrintSupplier" msprop:Generator_ColumnPropNameInTable="PrintSupplierColumn" msprop:Generator_UserColumnName="PrintSupplier" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastDayInput" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastDayInput" msprop:Generator_ColumnPropNameInRow="LastDayInput" msprop:Generator_ColumnPropNameInTable="LastDayInputColumn" msprop:Generator_UserColumnName="LastDayInput" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ExcessCutting" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnExcessCutting" msprop:Generator_ColumnPropNameInRow="ExcessCutting" msprop:Generator_ColumnPropNameInTable="ExcessCuttingColumn" msprop:Generator_UserColumnName="ExcessCutting" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LastDayPrintSend" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastDayPrintSend" msprop:Generator_ColumnPropNameInRow="LastDayPrintSend" msprop:Generator_ColumnPropNameInTable="LastDayPrintSendColumn" msprop:Generator_UserColumnName="LastDayPrintSend" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FabricExcessReceive" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFabricExcessReceive" msprop:Generator_ColumnPropNameInRow="FabricExcessReceive" msprop:Generator_ColumnPropNameInTable="FabricExcessReceiveColumn" msprop:Generator_UserColumnName="FabricExcessReceive" type="xs:decimal" minOccurs="0" />
+              <xs:element name="StockInHand" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnStockInHand" msprop:Generator_ColumnPropNameInRow="StockInHand" msprop:Generator_ColumnPropNameInTable="StockInHandColumn" msprop:Generator_UserColumnName="StockInHand" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalEmbSend" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalEmbSend" msprop:Generator_ColumnPropNameInRow="TotalEmbSend" msprop:Generator_ColumnPropNameInTable="TotalEmbSendColumn" msprop:Generator_UserColumnName="TotalEmbSend" type="xs:int" minOccurs="0" />
+              <xs:element name="LastDayEmdSend" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastDayEmdSend" msprop:Generator_ColumnPropNameInRow="LastDayEmdSend" msprop:Generator_ColumnPropNameInTable="LastDayEmdSendColumn" msprop:Generator_UserColumnName="LastDayEmdSend" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalEmbReceived" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalEmbReceived" msprop:Generator_ColumnPropNameInRow="TotalEmbReceived" msprop:Generator_ColumnPropNameInTable="TotalEmbReceivedColumn" msprop:Generator_UserColumnName="TotalEmbReceived" type="xs:int" minOccurs="0" />
+              <xs:element name="LastDayEmbReceived" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastDayEmbReceived" msprop:Generator_ColumnPropNameInRow="LastDayEmbReceived" msprop:Generator_ColumnPropNameInTable="LastDayEmbReceivedColumn" msprop:Generator_UserColumnName="LastDayEmbReceived" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

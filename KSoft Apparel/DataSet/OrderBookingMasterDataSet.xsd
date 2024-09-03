@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OrderBookingMasterDataSet" targetNamespace="http://tempuri.org/OrderBookingMasterDataSet.xsd" xmlns:mstns="http://tempuri.org/OrderBookingMasterDataSet.xsd" xmlns="http://tempuri.org/OrderBookingMasterDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderBookingMasterTableAdapter" GeneratorDataComponentClassName="OrderBookingMasterTableAdapter" Name="OrderBookingMaster" UserDataComponentName="OrderBookingMasterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderBookingMaster" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EX, Year, Month, BuyerCode, OrderQuantity, ProgramNo, StyleName, OrderReceiveDate, PrintDetails, TTLValue, Discontinue, BuyerName, IsPrint, IsWash, WashType, PrintTypeName, PartName, FirstEx, PrintPartId, 
+                         Merchandiser
+FROM            OrderBookingMaster</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EX" DataSetColumn="EX" />
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="Month" DataSetColumn="Month" />
+              <Mapping SourceColumn="BuyerCode" DataSetColumn="BuyerCode" />
+              <Mapping SourceColumn="OrderQuantity" DataSetColumn="OrderQuantity" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="OrderReceiveDate" DataSetColumn="OrderReceiveDate" />
+              <Mapping SourceColumn="PrintDetails" DataSetColumn="PrintDetails" />
+              <Mapping SourceColumn="TTLValue" DataSetColumn="TTLValue" />
+              <Mapping SourceColumn="Discontinue" DataSetColumn="Discontinue" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="IsPrint" DataSetColumn="IsPrint" />
+              <Mapping SourceColumn="IsWash" DataSetColumn="IsWash" />
+              <Mapping SourceColumn="WashType" DataSetColumn="WashType" />
+              <Mapping SourceColumn="PrintTypeName" DataSetColumn="PrintTypeName" />
+              <Mapping SourceColumn="PartName" DataSetColumn="PartName" />
+              <Mapping SourceColumn="FirstEx" DataSetColumn="FirstEx" />
+              <Mapping SourceColumn="PrintPartId" DataSetColumn="PrintPartId" />
+              <Mapping SourceColumn="Merchandiser" DataSetColumn="Merchandiser" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderBookingMaster" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByYear" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByYear" GeneratorSourceName="FillByYear" GetMethodModifier="Public" GetMethodName="GetDataByYear" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByYear" UserSourceName="FillByYear">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        BuyerCode, BuyerName, Discontinue, EX, FirstEx, IsPrint, IsWash, Merchandiser, Month, OrderReceiveDate, PartName, PrintDetails, PrintPartId, PrintTypeName, ProgramNo, StyleName, TTLValue, WashType, Year, 
+                         OrderQuantity
+FROM            OrderBookingMaster
+WHERE        (Year = YEAR(GETDATE()))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderBookingMasterByRcvDateTableAdapter" GeneratorDataComponentClassName="OrderBookingMasterByRcvDateTableAdapter" Name="OrderBookingMasterByRcvDate" UserDataComponentName="OrderBookingMasterByRcvDateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderBookingMasterByRcvDate" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderReceiveDate, Year, Month, BuyerCode, OrderQuantity, ProgramNo, StyleName, PrintDetails, TTLValue, Discontinue, BuyerName, IsPrint, IsWash, WashType, PrintTypeName, PartName, FirstEx, PrintPartId, Merchandiser, 
+                         BuyerId, StyleId, FirstExDate, IsAdvance
+FROM            OrderBookingMasterByRcvDate</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderReceiveDate" DataSetColumn="OrderReceiveDate" />
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="Month" DataSetColumn="Month" />
+              <Mapping SourceColumn="BuyerCode" DataSetColumn="BuyerCode" />
+              <Mapping SourceColumn="OrderQuantity" DataSetColumn="OrderQuantity" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="PrintDetails" DataSetColumn="PrintDetails" />
+              <Mapping SourceColumn="TTLValue" DataSetColumn="TTLValue" />
+              <Mapping SourceColumn="Discontinue" DataSetColumn="Discontinue" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="IsPrint" DataSetColumn="IsPrint" />
+              <Mapping SourceColumn="IsWash" DataSetColumn="IsWash" />
+              <Mapping SourceColumn="WashType" DataSetColumn="WashType" />
+              <Mapping SourceColumn="PrintTypeName" DataSetColumn="PrintTypeName" />
+              <Mapping SourceColumn="PartName" DataSetColumn="PartName" />
+              <Mapping SourceColumn="FirstEx" DataSetColumn="FirstEx" />
+              <Mapping SourceColumn="PrintPartId" DataSetColumn="PrintPartId" />
+              <Mapping SourceColumn="Merchandiser" DataSetColumn="Merchandiser" />
+              <Mapping SourceColumn="BuyerId" DataSetColumn="BuyerId" />
+              <Mapping SourceColumn="StyleId" DataSetColumn="StyleId" />
+              <Mapping SourceColumn="FirstExDate" DataSetColumn="FirstExDate" />
+              <Mapping SourceColumn="IsAdvance" DataSetColumn="IsAdvance" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderBookingMasterByRcvDate" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByYear" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByYear" GeneratorSourceName="FillByYear" GetMethodModifier="Public" GetMethodName="GetDataByYear" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByYear" UserSourceName="FillByYear">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT BuyerCode, BuyerId, BuyerName, Discontinue, FirstEx, FirstExDate, IsAdvance, IsPrint, IsWash, Merchandiser, Month, OrderQuantity, OrderReceiveDate, PartName, PrintDetails, PrintPartId, PrintTypeName, ProgramNo, StyleId, StyleName, TTLValue, WashType, Year FROM OrderBookingMasterByRcvDate WHERE (Year = @Year)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Year" ColumnName="Year" DataSourceName="[ncl-db].dbo.OrderBookingMasterByRcvDate" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Year" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderBookingMasterByRcvDate" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByYearAndWOAdv" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByYearAndWOAdv" GeneratorSourceName="FillByYearAndWOAdv" GetMethodModifier="Public" GetMethodName="GetDataByYearAndWOAdv" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByYearAndWOAdv" UserSourceName="FillByYearAndWOAdv">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        BuyerCode, BuyerId, BuyerName, Discontinue, FirstEx, FirstExDate, IsAdvance, IsPrint, IsWash, Merchandiser, Month, OrderQuantity, OrderReceiveDate, PartName, PrintDetails, PrintPartId, PrintTypeName, ProgramNo, StyleId, 
+                         StyleName, TTLValue, WashType, Year
+FROM            OrderBookingMasterByRcvDate
+WHERE        (Year = @Year) AND (IsAdvance = 0)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Year" ColumnName="Year" DataSourceName="[ncl-db].dbo.OrderBookingMasterByRcvDate" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Year" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderBookingMasterDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="OrderBookingMasterDataSet" msprop:Generator_UserDSName="OrderBookingMasterDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrderBookingMaster" msprop:Generator_UserTableName="OrderBookingMaster" msprop:Generator_RowEvArgName="OrderBookingMasterRowChangeEvent" msprop:Generator_TableVarName="tableOrderBookingMaster" msprop:Generator_TablePropName="OrderBookingMaster" msprop:Generator_RowDeletingName="OrderBookingMasterRowDeleting" msprop:Generator_RowChangingName="OrderBookingMasterRowChanging" msprop:Generator_RowDeletedName="OrderBookingMasterRowDeleted" msprop:Generator_RowEvHandlerName="OrderBookingMasterRowChangeEventHandler" msprop:Generator_TableClassName="OrderBookingMasterDataTable" msprop:Generator_RowChangedName="OrderBookingMasterRowChanged" msprop:Generator_RowClassName="OrderBookingMasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EX" msprop:Generator_ColumnVarNameInTable="columnEX" msprop:Generator_ColumnPropNameInRow="EX" msprop:Generator_ColumnPropNameInTable="EXColumn" msprop:Generator_UserColumnName="EX" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" minOccurs="0" />
+              <xs:element name="Month" msprop:Generator_ColumnVarNameInTable="columnMonth" msprop:Generator_ColumnPropNameInRow="Month" msprop:Generator_ColumnPropNameInTable="MonthColumn" msprop:Generator_UserColumnName="Month" type="xs:int" minOccurs="0" />
+              <xs:element name="BuyerCode" msprop:Generator_ColumnVarNameInTable="columnBuyerCode" msprop:Generator_ColumnPropNameInRow="BuyerCode" msprop:Generator_ColumnPropNameInTable="BuyerCodeColumn" msprop:Generator_UserColumnName="BuyerCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderQuantity" msprop:Generator_ColumnVarNameInTable="columnOrderQuantity" msprop:Generator_ColumnPropNameInRow="OrderQuantity" msprop:Generator_ColumnPropNameInTable="OrderQuantityColumn" msprop:Generator_UserColumnName="OrderQuantity" type="xs:long" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderReceiveDate" msprop:Generator_ColumnVarNameInTable="columnOrderReceiveDate" msprop:Generator_ColumnPropNameInRow="OrderReceiveDate" msprop:Generator_ColumnPropNameInTable="OrderReceiveDateColumn" msprop:Generator_UserColumnName="OrderReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PrintDetails" msprop:Generator_ColumnVarNameInTable="columnPrintDetails" msprop:Generator_ColumnPropNameInRow="PrintDetails" msprop:Generator_ColumnPropNameInTable="PrintDetailsColumn" msprop:Generator_UserColumnName="PrintDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TTLValue" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTTLValue" msprop:Generator_ColumnPropNameInRow="TTLValue" msprop:Generator_ColumnPropNameInTable="TTLValueColumn" msprop:Generator_UserColumnName="TTLValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Discontinue" msprop:Generator_ColumnVarNameInTable="columnDiscontinue" msprop:Generator_ColumnPropNameInRow="Discontinue" msprop:Generator_ColumnPropNameInTable="DiscontinueColumn" msprop:Generator_UserColumnName="Discontinue" type="xs:boolean" />
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsPrint" msprop:Generator_ColumnVarNameInTable="columnIsPrint" msprop:Generator_ColumnPropNameInRow="IsPrint" msprop:Generator_ColumnPropNameInTable="IsPrintColumn" msprop:Generator_UserColumnName="IsPrint" type="xs:boolean" />
+              <xs:element name="IsWash" msprop:Generator_ColumnVarNameInTable="columnIsWash" msprop:Generator_ColumnPropNameInRow="IsWash" msprop:Generator_ColumnPropNameInTable="IsWashColumn" msprop:Generator_UserColumnName="IsWash" type="xs:boolean" />
+              <xs:element name="WashType" msprop:Generator_ColumnVarNameInTable="columnWashType" msprop:Generator_ColumnPropNameInRow="WashType" msprop:Generator_ColumnPropNameInTable="WashTypeColumn" msprop:Generator_UserColumnName="WashType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrintTypeName" msprop:Generator_ColumnVarNameInTable="columnPrintTypeName" msprop:Generator_ColumnPropNameInRow="PrintTypeName" msprop:Generator_ColumnPropNameInTable="PrintTypeNameColumn" msprop:Generator_UserColumnName="PrintTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PartName" msprop:Generator_ColumnVarNameInTable="columnPartName" msprop:Generator_ColumnPropNameInRow="PartName" msprop:Generator_ColumnPropNameInTable="PartNameColumn" msprop:Generator_UserColumnName="PartName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstEx" msprop:Generator_ColumnVarNameInTable="columnFirstEx" msprop:Generator_ColumnPropNameInRow="FirstEx" msprop:Generator_ColumnPropNameInTable="FirstExColumn" msprop:Generator_UserColumnName="FirstEx" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PrintPartId" msprop:Generator_ColumnVarNameInTable="columnPrintPartId" msprop:Generator_ColumnPropNameInRow="PrintPartId" msprop:Generator_ColumnPropNameInTable="PrintPartIdColumn" msprop:Generator_UserColumnName="PrintPartId" type="xs:long" minOccurs="0" />
+              <xs:element name="Merchandiser" msprop:Generator_ColumnVarNameInTable="columnMerchandiser" msprop:Generator_ColumnPropNameInRow="Merchandiser" msprop:Generator_ColumnPropNameInTable="MerchandiserColumn" msprop:Generator_UserColumnName="Merchandiser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderBookingMasterByRcvDate" msprop:Generator_TableClassName="OrderBookingMasterByRcvDateDataTable" msprop:Generator_TableVarName="tableOrderBookingMasterByRcvDate" msprop:Generator_TablePropName="OrderBookingMasterByRcvDate" msprop:Generator_RowDeletingName="OrderBookingMasterByRcvDateRowDeleting" msprop:Generator_RowChangingName="OrderBookingMasterByRcvDateRowChanging" msprop:Generator_RowEvHandlerName="OrderBookingMasterByRcvDateRowChangeEventHandler" msprop:Generator_RowDeletedName="OrderBookingMasterByRcvDateRowDeleted" msprop:Generator_UserTableName="OrderBookingMasterByRcvDate" msprop:Generator_RowChangedName="OrderBookingMasterByRcvDateRowChanged" msprop:Generator_RowEvArgName="OrderBookingMasterByRcvDateRowChangeEvent" msprop:Generator_RowClassName="OrderBookingMasterByRcvDateRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderReceiveDate" msprop:Generator_ColumnVarNameInTable="columnOrderReceiveDate" msprop:Generator_ColumnPropNameInRow="OrderReceiveDate" msprop:Generator_ColumnPropNameInTable="OrderReceiveDateColumn" msprop:Generator_UserColumnName="OrderReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Year" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" minOccurs="0" />
+              <xs:element name="Month" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMonth" msprop:Generator_ColumnPropNameInRow="Month" msprop:Generator_ColumnPropNameInTable="MonthColumn" msprop:Generator_UserColumnName="Month" type="xs:int" minOccurs="0" />
+              <xs:element name="BuyerCode" msprop:Generator_ColumnVarNameInTable="columnBuyerCode" msprop:Generator_ColumnPropNameInRow="BuyerCode" msprop:Generator_ColumnPropNameInTable="BuyerCodeColumn" msprop:Generator_UserColumnName="BuyerCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderQuantity" msprop:Generator_ColumnVarNameInTable="columnOrderQuantity" msprop:Generator_ColumnPropNameInRow="OrderQuantity" msprop:Generator_ColumnPropNameInTable="OrderQuantityColumn" msprop:Generator_UserColumnName="OrderQuantity" type="xs:long" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrintDetails" msprop:Generator_ColumnVarNameInTable="columnPrintDetails" msprop:Generator_ColumnPropNameInRow="PrintDetails" msprop:Generator_ColumnPropNameInTable="PrintDetailsColumn" msprop:Generator_UserColumnName="PrintDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TTLValue" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTTLValue" msprop:Generator_ColumnPropNameInRow="TTLValue" msprop:Generator_ColumnPropNameInTable="TTLValueColumn" msprop:Generator_UserColumnName="TTLValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Discontinue" msprop:Generator_ColumnVarNameInTable="columnDiscontinue" msprop:Generator_ColumnPropNameInRow="Discontinue" msprop:Generator_ColumnPropNameInTable="DiscontinueColumn" msprop:Generator_UserColumnName="Discontinue" type="xs:boolean" />
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsPrint" msprop:Generator_ColumnVarNameInTable="columnIsPrint" msprop:Generator_ColumnPropNameInRow="IsPrint" msprop:Generator_ColumnPropNameInTable="IsPrintColumn" msprop:Generator_UserColumnName="IsPrint" type="xs:boolean" />
+              <xs:element name="IsWash" msprop:Generator_ColumnVarNameInTable="columnIsWash" msprop:Generator_ColumnPropNameInRow="IsWash" msprop:Generator_ColumnPropNameInTable="IsWashColumn" msprop:Generator_UserColumnName="IsWash" type="xs:boolean" />
+              <xs:element name="WashType" msprop:Generator_ColumnVarNameInTable="columnWashType" msprop:Generator_ColumnPropNameInRow="WashType" msprop:Generator_ColumnPropNameInTable="WashTypeColumn" msprop:Generator_UserColumnName="WashType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrintTypeName" msprop:Generator_ColumnVarNameInTable="columnPrintTypeName" msprop:Generator_ColumnPropNameInRow="PrintTypeName" msprop:Generator_ColumnPropNameInTable="PrintTypeNameColumn" msprop:Generator_UserColumnName="PrintTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PartName" msprop:Generator_ColumnVarNameInTable="columnPartName" msprop:Generator_ColumnPropNameInRow="PartName" msprop:Generator_ColumnPropNameInTable="PartNameColumn" msprop:Generator_UserColumnName="PartName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstEx" msprop:Generator_ColumnVarNameInTable="columnFirstEx" msprop:Generator_ColumnPropNameInRow="FirstEx" msprop:Generator_ColumnPropNameInTable="FirstExColumn" msprop:Generator_UserColumnName="FirstEx" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PrintPartId" msprop:Generator_ColumnVarNameInTable="columnPrintPartId" msprop:Generator_ColumnPropNameInRow="PrintPartId" msprop:Generator_ColumnPropNameInTable="PrintPartIdColumn" msprop:Generator_UserColumnName="PrintPartId" type="xs:long" minOccurs="0" />
+              <xs:element name="Merchandiser" msprop:Generator_ColumnVarNameInTable="columnMerchandiser" msprop:Generator_ColumnPropNameInRow="Merchandiser" msprop:Generator_ColumnPropNameInTable="MerchandiserColumn" msprop:Generator_UserColumnName="Merchandiser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerId" msprop:Generator_ColumnVarNameInTable="columnBuyerId" msprop:Generator_ColumnPropNameInRow="BuyerId" msprop:Generator_ColumnPropNameInTable="BuyerIdColumn" msprop:Generator_UserColumnName="BuyerId" type="xs:long" minOccurs="0" />
+              <xs:element name="StyleId" msprop:Generator_ColumnVarNameInTable="columnStyleId" msprop:Generator_ColumnPropNameInRow="StyleId" msprop:Generator_ColumnPropNameInTable="StyleIdColumn" msprop:Generator_UserColumnName="StyleId" type="xs:long" minOccurs="0" />
+              <xs:element name="FirstExDate" msprop:Generator_ColumnVarNameInTable="columnFirstExDate" msprop:Generator_ColumnPropNameInRow="FirstExDate" msprop:Generator_ColumnPropNameInTable="FirstExDateColumn" msprop:Generator_UserColumnName="FirstExDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsAdvance" msprop:Generator_ColumnVarNameInTable="columnIsAdvance" msprop:Generator_ColumnPropNameInRow="IsAdvance" msprop:Generator_ColumnPropNameInTable="IsAdvanceColumn" msprop:Generator_UserColumnName="IsAdvance" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:OrderBookingMaster" />
+      <xs:field xpath="mstns:PrintPartId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

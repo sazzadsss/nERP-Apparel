@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ReferencePath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\</ReferencePath>
+    <PublishUrlHistory>D:\Published Files\nERP Apparel\|E:\Published Files\nERP Apparel\|E:\Published Files\HAL Apparel\|\\192.168.0.100\nERP Solutions\nERP Apparel\|http://192.168.0.100/nERP-Apparel/</PublishUrlHistory>
+    <InstallUrlHistory>http://192.168.0.100/nERP-Apparel/|http://localhost:53651/|http://192.168.0.100/HAL-Apparel/|http://192.168.0.100/Hal-Apparel/|http://192.168.0.100/hal-apparel/</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory>http://192.168.0.100/nERP-Apparel/|http://192.168.0.100/HAL-Apparel/|http://192.168.0.100/Hal-Apparel/|http://192.168.0.100/hal-apparel/|\\192.168.0.100\nERP Solutions\nERP Apparel\</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <ProjectView>ShowAllFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

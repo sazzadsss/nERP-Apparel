@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ExportBillReporterDataSet" targetNamespace="http://tempuri.org/ExportBillReporterDataSet.xsd" xmlns:mstns="http://tempuri.org/ExportBillReporterDataSet.xsd" xmlns="http://tempuri.org/ExportBillReporterDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ExportBillReporterTableAdapter" GeneratorDataComponentClassName="ExportBillReporterTableAdapter" Name="ExportBillReporter" UserDataComponentName="ExportBillReporterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.ExportBillReporter" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT BillNo, BillDate, BillAmount, RealisedAmount, RealisedDate, NegociateAmount, DFCDeposit, PC, LACommission, FACommission, FDBP, ECC, ODInterest, FCAmount, MarginFDocs, HC, Postage, CD4354, MLCNO, MLCDate, Buyer2Name, MLCValue, BTBOpen, BTBAlreadyOpen, BTBBalance, MerchandiserReferenceNo FROM dbo.ExportBillReporter</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BillNo" DataSetColumn="BillNo" />
+              <Mapping SourceColumn="BillDate" DataSetColumn="BillDate" />
+              <Mapping SourceColumn="BillAmount" DataSetColumn="BillAmount" />
+              <Mapping SourceColumn="RealisedAmount" DataSetColumn="RealisedAmount" />
+              <Mapping SourceColumn="RealisedDate" DataSetColumn="RealisedDate" />
+              <Mapping SourceColumn="NegociateAmount" DataSetColumn="NegociateAmount" />
+              <Mapping SourceColumn="DFCDeposit" DataSetColumn="DFCDeposit" />
+              <Mapping SourceColumn="PC" DataSetColumn="PC" />
+              <Mapping SourceColumn="LACommission" DataSetColumn="LACommission" />
+              <Mapping SourceColumn="FACommission" DataSetColumn="FACommission" />
+              <Mapping SourceColumn="FDBP" DataSetColumn="FDBP" />
+              <Mapping SourceColumn="ECC" DataSetColumn="ECC" />
+              <Mapping SourceColumn="ODInterest" DataSetColumn="ODInterest" />
+              <Mapping SourceColumn="FCAmount" DataSetColumn="FCAmount" />
+              <Mapping SourceColumn="MarginFDocs" DataSetColumn="MarginFDocs" />
+              <Mapping SourceColumn="HC" DataSetColumn="HC" />
+              <Mapping SourceColumn="Postage" DataSetColumn="Postage" />
+              <Mapping SourceColumn="CD4354" DataSetColumn="CD4354" />
+              <Mapping SourceColumn="MLCNO" DataSetColumn="MLCNO" />
+              <Mapping SourceColumn="MLCDate" DataSetColumn="MLCDate" />
+              <Mapping SourceColumn="Buyer2Name" DataSetColumn="Buyer2Name" />
+              <Mapping SourceColumn="MLCValue" DataSetColumn="MLCValue" />
+              <Mapping SourceColumn="BTBOpen" DataSetColumn="BTBOpen" />
+              <Mapping SourceColumn="BTBAlreadyOpen" DataSetColumn="BTBAlreadyOpen" />
+              <Mapping SourceColumn="BTBBalance" DataSetColumn="BTBBalance" />
+              <Mapping SourceColumn="MerchandiserReferenceNo" DataSetColumn="MerchandiserReferenceNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ExportBillReporterDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ExportBillReporterDataSet" msprop:Generator_DataSetName="ExportBillReporterDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ExportBillReporter" msprop:Generator_UserTableName="ExportBillReporter" msprop:Generator_RowDeletedName="ExportBillReporterRowDeleted" msprop:Generator_RowChangedName="ExportBillReporterRowChanged" msprop:Generator_RowClassName="ExportBillReporterRow" msprop:Generator_RowChangingName="ExportBillReporterRowChanging" msprop:Generator_RowEvArgName="ExportBillReporterRowChangeEvent" msprop:Generator_RowEvHandlerName="ExportBillReporterRowChangeEventHandler" msprop:Generator_TableClassName="ExportBillReporterDataTable" msprop:Generator_TableVarName="tableExportBillReporter" msprop:Generator_RowDeletingName="ExportBillReporterRowDeleting" msprop:Generator_TablePropName="ExportBillReporter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BillNo" msprop:Generator_UserColumnName="BillNo" msprop:Generator_ColumnVarNameInTable="columnBillNo" msprop:Generator_ColumnPropNameInRow="BillNo" msprop:Generator_ColumnPropNameInTable="BillNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BillDate" msprop:Generator_UserColumnName="BillDate" msprop:Generator_ColumnVarNameInTable="columnBillDate" msprop:Generator_ColumnPropNameInRow="BillDate" msprop:Generator_ColumnPropNameInTable="BillDateColumn" type="xs:dateTime" />
+              <xs:element name="BillAmount" msprop:Generator_UserColumnName="BillAmount" msprop:Generator_ColumnVarNameInTable="columnBillAmount" msprop:Generator_ColumnPropNameInRow="BillAmount" msprop:Generator_ColumnPropNameInTable="BillAmountColumn" type="xs:decimal" />
+              <xs:element name="RealisedAmount" msprop:Generator_UserColumnName="RealisedAmount" msprop:Generator_ColumnVarNameInTable="columnRealisedAmount" msprop:Generator_ColumnPropNameInRow="RealisedAmount" msprop:Generator_ColumnPropNameInTable="RealisedAmountColumn" type="xs:decimal" />
+              <xs:element name="RealisedDate" msprop:Generator_UserColumnName="RealisedDate" msprop:Generator_ColumnVarNameInTable="columnRealisedDate" msprop:Generator_ColumnPropNameInRow="RealisedDate" msprop:Generator_ColumnPropNameInTable="RealisedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NegociateAmount" msprop:Generator_UserColumnName="NegociateAmount" msprop:Generator_ColumnVarNameInTable="columnNegociateAmount" msprop:Generator_ColumnPropNameInRow="NegociateAmount" msprop:Generator_ColumnPropNameInTable="NegociateAmountColumn" type="xs:decimal" />
+              <xs:element name="DFCDeposit" msprop:Generator_UserColumnName="DFCDeposit" msprop:Generator_ColumnVarNameInTable="columnDFCDeposit" msprop:Generator_ColumnPropNameInRow="DFCDeposit" msprop:Generator_ColumnPropNameInTable="DFCDepositColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PC" msprop:Generator_UserColumnName="PC" msprop:Generator_ColumnVarNameInTable="columnPC" msprop:Generator_ColumnPropNameInRow="PC" msprop:Generator_ColumnPropNameInTable="PCColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LACommission" msprop:Generator_UserColumnName="LACommission" msprop:Generator_ColumnVarNameInTable="columnLACommission" msprop:Generator_ColumnPropNameInRow="LACommission" msprop:Generator_ColumnPropNameInTable="LACommissionColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FACommission" msprop:Generator_UserColumnName="FACommission" msprop:Generator_ColumnVarNameInTable="columnFACommission" msprop:Generator_ColumnPropNameInRow="FACommission" msprop:Generator_ColumnPropNameInTable="FACommissionColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FDBP" msprop:Generator_UserColumnName="FDBP" msprop:Generator_ColumnVarNameInTable="columnFDBP" msprop:Generator_ColumnPropNameInRow="FDBP" msprop:Generator_ColumnPropNameInTable="FDBPColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ECC" msprop:Generator_UserColumnName="ECC" msprop:Generator_ColumnVarNameInTable="columnECC" msprop:Generator_ColumnPropNameInRow="ECC" msprop:Generator_ColumnPropNameInTable="ECCColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ODInterest" msprop:Generator_UserColumnName="ODInterest" msprop:Generator_ColumnVarNameInTable="columnODInterest" msprop:Generator_ColumnPropNameInRow="ODInterest" msprop:Generator_ColumnPropNameInTable="ODInterestColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FCAmount" msprop:Generator_UserColumnName="FCAmount" msprop:Generator_ColumnVarNameInTable="columnFCAmount" msprop:Generator_ColumnPropNameInRow="FCAmount" msprop:Generator_ColumnPropNameInTable="FCAmountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MarginFDocs" msprop:Generator_UserColumnName="MarginFDocs" msprop:Generator_ColumnVarNameInTable="columnMarginFDocs" msprop:Generator_ColumnPropNameInRow="MarginFDocs" msprop:Generator_ColumnPropNameInTable="MarginFDocsColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="HC" msprop:Generator_UserColumnName="HC" msprop:Generator_ColumnVarNameInTable="columnHC" msprop:Generator_ColumnPropNameInRow="HC" msprop:Generator_ColumnPropNameInTable="HCColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Postage" msprop:Generator_UserColumnName="Postage" msprop:Generator_ColumnVarNameInTable="columnPostage" msprop:Generator_ColumnPropNameInRow="Postage" msprop:Generator_ColumnPropNameInTable="PostageColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CD4354" msprop:Generator_UserColumnName="CD4354" msprop:Generator_ColumnVarNameInTable="columnCD4354" msprop:Generator_ColumnPropNameInRow="CD4354" msprop:Generator_ColumnPropNameInTable="CD4354Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MLCNO" msprop:Generator_UserColumnName="MLCNO" msprop:Generator_ColumnVarNameInTable="columnMLCNO" msprop:Generator_ColumnPropNameInRow="MLCNO" msprop:Generator_ColumnPropNameInTable="MLCNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MLCDate" msprop:Generator_UserColumnName="MLCDate" msprop:Generator_ColumnVarNameInTable="columnMLCDate" msprop:Generator_ColumnPropNameInRow="MLCDate" msprop:Generator_ColumnPropNameInTable="MLCDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Buyer2Name" msprop:Generator_UserColumnName="Buyer2Name" msprop:Generator_ColumnVarNameInTable="columnBuyer2Name" msprop:Generator_ColumnPropNameInRow="Buyer2Name" msprop:Generator_ColumnPropNameInTable="Buyer2NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MLCValue" msprop:Generator_UserColumnName="MLCValue" msprop:Generator_ColumnVarNameInTable="columnMLCValue" msprop:Generator_ColumnPropNameInRow="MLCValue" msprop:Generator_ColumnPropNameInTable="MLCValueColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BTBOpen" msprop:Generator_UserColumnName="BTBOpen" msprop:Generator_ColumnVarNameInTable="columnBTBOpen" msprop:Generator_ColumnPropNameInRow="BTBOpen" msprop:Generator_ColumnPropNameInTable="BTBOpenColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BTBAlreadyOpen" msprop:Generator_UserColumnName="BTBAlreadyOpen" msprop:Generator_ColumnVarNameInTable="columnBTBAlreadyOpen" msprop:Generator_ColumnPropNameInRow="BTBAlreadyOpen" msprop:Generator_ColumnPropNameInTable="BTBAlreadyOpenColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BTBBalance" msprop:Generator_UserColumnName="BTBBalance" msprop:Generator_ColumnVarNameInTable="columnBTBBalance" msprop:Generator_ColumnPropNameInRow="BTBBalance" msprop:Generator_ColumnPropNameInTable="BTBBalanceColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MerchandiserReferenceNo" msprop:Generator_UserColumnName="MerchandiserReferenceNo" msprop:Generator_ColumnVarNameInTable="columnMerchandiserReferenceNo" msprop:Generator_ColumnPropNameInRow="MerchandiserReferenceNo" msprop:Generator_ColumnPropNameInTable="MerchandiserReferenceNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

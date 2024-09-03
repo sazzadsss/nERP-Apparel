@@ -1,0 +1,977 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SampleRequestStatusDataSet" targetNamespace="http://tempuri.org/SampleRequestStatusDataSet.xsd" xmlns:mstns="http://tempuri.org/SampleRequestStatusDataSet.xsd" xmlns="http://tempuri.org/SampleRequestStatusDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SampleRequestStatusTableAdapter" GeneratorDataComponentClassName="SampleRequestStatusTableAdapter" Name="SampleRequestStatus" UserDataComponentName="SampleRequestStatusTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.SampleRequestStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SampleRequestId, RequestNo, Style, Description, GarmentsDescription, WashType, Buyer, SampleTypeReq, SendPhotoStrikeOff, RequestDate, ExDate, ArtworkLocation, SpecialBackNeckReference, Status, Application, 
+                         CuttOffDate, OrderSent, BDRequestDate, PrintSize, Width, Height, PrintPosition, Mesurement, Remarks, IsEmbroidery, EmbroideryDetails, IsTrim, TrimDetails, Picture, PrintType, IsPrint, IsFabricAvailable, ExFabricRcvDate, 
+                         IsTrimAvailable, ExTrimRcvDate, DevType, IsAOP, IsYds, SampleSendDate, NLD, IsSealed, SealedDate, AgreedLeadTime, Department, Color, GSM, SampleUpdate, IsWash, IsPeachFinish, IsBrush, MasterProgramNo, 
+                         SendingInfo, CommentsReceiveDate, ApprovalStatus, IsComplete, StyleType, SampleQuantity, CompletedOn, FileReceiveDate, FabricReceiveDate, AccReceiveDate, SampleStatus, SampleDeliveryQuantity, 
+                         SampleExDeliveryDate, StatusRemarks, SampleRequireDate, FileReceiveDetails, FabricReceiveQty, AccReceiveDetails, SampleCuttingStartDate, SampleCuttingEndDate, SamplePrintSendDate, samplePrintReceiveDate, 
+                         SamplePrintSendQty, SamplePrintReceiveQty, SampleEmbSendDate, SampleEmbReceiveDate, SampleEmbSendQty, SampleEmbReceiveQty, SampleSewingStartDate, SampleSewingEndDate, SamplePreparedBy, 
+                         SampleDeliveryDate, IsSublimation, IsSequence, Season, FabricBookingDate, FabricRequireDate, RevisedNo, RevisedDate, SampleFabricBookingRemarks, Attention, CC, IsReceivedByDyeing, IsBookingComplete, 
+                         IsBookingCompleteOn, Division, Brand, KnittingType, Composition, FabricDetails, FabricColorName, Size, FinishQuantity, GreyQuantity, SampleDeliveryQuantity2, FirstSampleDeliveryDate, LastSampleDeliveryDate, 
+                         Merchandiser, GatePassType, FFDeliveryQuantity, FirstChallanDate, LastChallanDate, CauseOfRevised, ProgramNo, YarnIssueQuantity, YarnRequisitonNo, LotNo, YarnBrand, YarnName, MCDia, MCGauge, StitchLength, 
+                         KnittingProduction, FirstGFIDate, LastGFIDate, GFIDeliveryQty, GFIChallanNo, FirstYarnRequisitonDate, LastYarnRequisitonDate, FirstGFSReceiveChallanDate, LastGFSReceiveChallanDate, GFReceiveChallanNo, 
+                         TTLGFIssueQuantity, FirstGFSIssueChallanDate, LastGFSIssueChallanDate, GFIssueChallanNo, TTLGFReceiveQuantity, YarnDelChallanNo, FirstYarnDelChallanDate, LastYarnDelChallanDate, BatchNo, BatchQuantity, 
+                         FirstBatchDate, LastBatchDate, LDRecipeNo, LastLDApprovedDate, FirstLDApprovedDate, LastLDReceivedDate, FirstLDReceivedDate, DyeingQuantity, FirstDyeingDate, LastDyeingDate, TTLDyeingFinishingQuantity, 
+                         LastFinishingDate, FirstFinishingDate, FinishingProcessed, FFIChallanNo, FirstFFIDate, LastFFIDate, TTLFFIDeliveryQuantity, FirstLDSentForAppDate, LastLDSentForAppDate, FirstApprovedDate, LastApprovedDate, 
+                         FirstSwatchReceivedDate, LastSwatchReceivedDate, FirstLabPreparedDate, LastLabPreparedDate, FirstLabFabricDate, LastLabFabricDate, LDStatus, LDCost, FirstFabricTestDate, LastFabricTestDate, 
+                         FirstFabricTestReceiveDate, LastFabricTestReceiveDate, FirstSubmitDate, LastSubmitDate, FirstFabricTestApprovedDate, LastFabricTestApprovedDate, FabricTestNo, FabricTestStatus, TTLFFReceiveQuantity, 
+                         TTLFFIssueQuantity, FFReceiveChallanNo, FirstFFRcvChallanDate, LastFFRcvChallanDate, FFIssueChallanNo, FirstFFIssChallanDate, LastFFIssChallanDate, YarnIssueBalance, GFReceiveBalance, GFIssueBalance, 
+                         FFReceiveBalance, FFIssueBalance, Enzyme, DLBatchNo, Shade, Softner, UserId, CommentStatus, SampleSendingInfo, QADStatus, FirstLDSenttoFloorDate, LastLDSenttoFloorDate
+FROM            SampleRequestStatus
+ORDER BY RequestNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SampleRequestId" DataSetColumn="SampleRequestId" />
+              <Mapping SourceColumn="RequestNo" DataSetColumn="RequestNo" />
+              <Mapping SourceColumn="Style" DataSetColumn="Style" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="GarmentsDescription" DataSetColumn="GarmentsDescription" />
+              <Mapping SourceColumn="WashType" DataSetColumn="WashType" />
+              <Mapping SourceColumn="Buyer" DataSetColumn="Buyer" />
+              <Mapping SourceColumn="SampleTypeReq" DataSetColumn="SampleTypeReq" />
+              <Mapping SourceColumn="SendPhotoStrikeOff" DataSetColumn="SendPhotoStrikeOff" />
+              <Mapping SourceColumn="RequestDate" DataSetColumn="RequestDate" />
+              <Mapping SourceColumn="ExDate" DataSetColumn="ExDate" />
+              <Mapping SourceColumn="ArtworkLocation" DataSetColumn="ArtworkLocation" />
+              <Mapping SourceColumn="SpecialBackNeckReference" DataSetColumn="SpecialBackNeckReference" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="Application" DataSetColumn="Application" />
+              <Mapping SourceColumn="CuttOffDate" DataSetColumn="CuttOffDate" />
+              <Mapping SourceColumn="OrderSent" DataSetColumn="OrderSent" />
+              <Mapping SourceColumn="BDRequestDate" DataSetColumn="BDRequestDate" />
+              <Mapping SourceColumn="PrintSize" DataSetColumn="PrintSize" />
+              <Mapping SourceColumn="Width" DataSetColumn="Width" />
+              <Mapping SourceColumn="Height" DataSetColumn="Height" />
+              <Mapping SourceColumn="PrintPosition" DataSetColumn="PrintPosition" />
+              <Mapping SourceColumn="Mesurement" DataSetColumn="Mesurement" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="IsEmbroidery" DataSetColumn="IsEmbroidery" />
+              <Mapping SourceColumn="EmbroideryDetails" DataSetColumn="EmbroideryDetails" />
+              <Mapping SourceColumn="IsTrim" DataSetColumn="IsTrim" />
+              <Mapping SourceColumn="TrimDetails" DataSetColumn="TrimDetails" />
+              <Mapping SourceColumn="Picture" DataSetColumn="Picture" />
+              <Mapping SourceColumn="PrintType" DataSetColumn="PrintType" />
+              <Mapping SourceColumn="IsPrint" DataSetColumn="IsPrint" />
+              <Mapping SourceColumn="IsFabricAvailable" DataSetColumn="IsFabricAvailable" />
+              <Mapping SourceColumn="ExFabricRcvDate" DataSetColumn="ExFabricRcvDate" />
+              <Mapping SourceColumn="IsTrimAvailable" DataSetColumn="IsTrimAvailable" />
+              <Mapping SourceColumn="ExTrimRcvDate" DataSetColumn="ExTrimRcvDate" />
+              <Mapping SourceColumn="DevType" DataSetColumn="DevType" />
+              <Mapping SourceColumn="IsAOP" DataSetColumn="IsAOP" />
+              <Mapping SourceColumn="IsYds" DataSetColumn="IsYds" />
+              <Mapping SourceColumn="SampleSendDate" DataSetColumn="SampleSendDate" />
+              <Mapping SourceColumn="NLD" DataSetColumn="NLD" />
+              <Mapping SourceColumn="IsSealed" DataSetColumn="IsSealed" />
+              <Mapping SourceColumn="SealedDate" DataSetColumn="SealedDate" />
+              <Mapping SourceColumn="AgreedLeadTime" DataSetColumn="AgreedLeadTime" />
+              <Mapping SourceColumn="Department" DataSetColumn="Department" />
+              <Mapping SourceColumn="Color" DataSetColumn="Color" />
+              <Mapping SourceColumn="GSM" DataSetColumn="GSM" />
+              <Mapping SourceColumn="SampleUpdate" DataSetColumn="SampleUpdate" />
+              <Mapping SourceColumn="IsWash" DataSetColumn="IsWash" />
+              <Mapping SourceColumn="IsPeachFinish" DataSetColumn="IsPeachFinish" />
+              <Mapping SourceColumn="IsBrush" DataSetColumn="IsBrush" />
+              <Mapping SourceColumn="MasterProgramNo" DataSetColumn="MasterProgramNo" />
+              <Mapping SourceColumn="SendingInfo" DataSetColumn="SendingInfo" />
+              <Mapping SourceColumn="CommentsReceiveDate" DataSetColumn="CommentsReceiveDate" />
+              <Mapping SourceColumn="ApprovalStatus" DataSetColumn="ApprovalStatus" />
+              <Mapping SourceColumn="IsComplete" DataSetColumn="IsComplete" />
+              <Mapping SourceColumn="StyleType" DataSetColumn="StyleType" />
+              <Mapping SourceColumn="SampleQuantity" DataSetColumn="SampleQuantity" />
+              <Mapping SourceColumn="CompletedOn" DataSetColumn="CompletedOn" />
+              <Mapping SourceColumn="FileReceiveDate" DataSetColumn="FileReceiveDate" />
+              <Mapping SourceColumn="FabricReceiveDate" DataSetColumn="FabricReceiveDate" />
+              <Mapping SourceColumn="AccReceiveDate" DataSetColumn="AccReceiveDate" />
+              <Mapping SourceColumn="SampleStatus" DataSetColumn="SampleStatus" />
+              <Mapping SourceColumn="SampleDeliveryQuantity" DataSetColumn="SampleDeliveryQuantity" />
+              <Mapping SourceColumn="SampleExDeliveryDate" DataSetColumn="SampleExDeliveryDate" />
+              <Mapping SourceColumn="StatusRemarks" DataSetColumn="StatusRemarks" />
+              <Mapping SourceColumn="SampleRequireDate" DataSetColumn="SampleRequireDate" />
+              <Mapping SourceColumn="FileReceiveDetails" DataSetColumn="FileReceiveDetails" />
+              <Mapping SourceColumn="FabricReceiveQty" DataSetColumn="FabricReceiveQty" />
+              <Mapping SourceColumn="AccReceiveDetails" DataSetColumn="AccReceiveDetails" />
+              <Mapping SourceColumn="SampleCuttingStartDate" DataSetColumn="SampleCuttingStartDate" />
+              <Mapping SourceColumn="SampleCuttingEndDate" DataSetColumn="SampleCuttingEndDate" />
+              <Mapping SourceColumn="SamplePrintSendDate" DataSetColumn="SamplePrintSendDate" />
+              <Mapping SourceColumn="samplePrintReceiveDate" DataSetColumn="samplePrintReceiveDate" />
+              <Mapping SourceColumn="SamplePrintSendQty" DataSetColumn="SamplePrintSendQty" />
+              <Mapping SourceColumn="SamplePrintReceiveQty" DataSetColumn="SamplePrintReceiveQty" />
+              <Mapping SourceColumn="SampleEmbSendDate" DataSetColumn="SampleEmbSendDate" />
+              <Mapping SourceColumn="SampleEmbReceiveDate" DataSetColumn="SampleEmbReceiveDate" />
+              <Mapping SourceColumn="SampleEmbSendQty" DataSetColumn="SampleEmbSendQty" />
+              <Mapping SourceColumn="SampleEmbReceiveQty" DataSetColumn="SampleEmbReceiveQty" />
+              <Mapping SourceColumn="SampleSewingStartDate" DataSetColumn="SampleSewingStartDate" />
+              <Mapping SourceColumn="SampleSewingEndDate" DataSetColumn="SampleSewingEndDate" />
+              <Mapping SourceColumn="SamplePreparedBy" DataSetColumn="SamplePreparedBy" />
+              <Mapping SourceColumn="SampleDeliveryDate" DataSetColumn="SampleDeliveryDate" />
+              <Mapping SourceColumn="IsSublimation" DataSetColumn="IsSublimation" />
+              <Mapping SourceColumn="IsSequence" DataSetColumn="IsSequence" />
+              <Mapping SourceColumn="Season" DataSetColumn="Season" />
+              <Mapping SourceColumn="FabricBookingDate" DataSetColumn="FabricBookingDate" />
+              <Mapping SourceColumn="FabricRequireDate" DataSetColumn="FabricRequireDate" />
+              <Mapping SourceColumn="RevisedNo" DataSetColumn="RevisedNo" />
+              <Mapping SourceColumn="RevisedDate" DataSetColumn="RevisedDate" />
+              <Mapping SourceColumn="SampleFabricBookingRemarks" DataSetColumn="SampleFabricBookingRemarks" />
+              <Mapping SourceColumn="Attention" DataSetColumn="Attention" />
+              <Mapping SourceColumn="CC" DataSetColumn="CC" />
+              <Mapping SourceColumn="IsReceivedByDyeing" DataSetColumn="IsReceivedByDyeing" />
+              <Mapping SourceColumn="IsBookingComplete" DataSetColumn="IsBookingComplete" />
+              <Mapping SourceColumn="IsBookingCompleteOn" DataSetColumn="IsBookingCompleteOn" />
+              <Mapping SourceColumn="Division" DataSetColumn="Division" />
+              <Mapping SourceColumn="Brand" DataSetColumn="Brand" />
+              <Mapping SourceColumn="KnittingType" DataSetColumn="KnittingType" />
+              <Mapping SourceColumn="Composition" DataSetColumn="Composition" />
+              <Mapping SourceColumn="FabricDetails" DataSetColumn="FabricDetails" />
+              <Mapping SourceColumn="FabricColorName" DataSetColumn="FabricColorName" />
+              <Mapping SourceColumn="Size" DataSetColumn="Size" />
+              <Mapping SourceColumn="FinishQuantity" DataSetColumn="FinishQuantity" />
+              <Mapping SourceColumn="GreyQuantity" DataSetColumn="GreyQuantity" />
+              <Mapping SourceColumn="SampleDeliveryQuantity2" DataSetColumn="SampleDeliveryQuantity2" />
+              <Mapping SourceColumn="FirstSampleDeliveryDate" DataSetColumn="FirstSampleDeliveryDate" />
+              <Mapping SourceColumn="LastSampleDeliveryDate" DataSetColumn="LastSampleDeliveryDate" />
+              <Mapping SourceColumn="Merchandiser" DataSetColumn="Merchandiser" />
+              <Mapping SourceColumn="GatePassType" DataSetColumn="GatePassType" />
+              <Mapping SourceColumn="FFDeliveryQuantity" DataSetColumn="FFDeliveryQuantity" />
+              <Mapping SourceColumn="FirstChallanDate" DataSetColumn="FirstChallanDate" />
+              <Mapping SourceColumn="LastChallanDate" DataSetColumn="LastChallanDate" />
+              <Mapping SourceColumn="CauseOfRevised" DataSetColumn="CauseOfRevised" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="YarnIssueQuantity" DataSetColumn="YarnIssueQuantity" />
+              <Mapping SourceColumn="YarnRequisitonNo" DataSetColumn="YarnRequisitonNo" />
+              <Mapping SourceColumn="LotNo" DataSetColumn="LotNo" />
+              <Mapping SourceColumn="YarnBrand" DataSetColumn="YarnBrand" />
+              <Mapping SourceColumn="YarnName" DataSetColumn="YarnName" />
+              <Mapping SourceColumn="MCDia" DataSetColumn="MCDia" />
+              <Mapping SourceColumn="MCGauge" DataSetColumn="MCGauge" />
+              <Mapping SourceColumn="StitchLength" DataSetColumn="StitchLength" />
+              <Mapping SourceColumn="KnittingProduction" DataSetColumn="KnittingProduction" />
+              <Mapping SourceColumn="FirstGFIDate" DataSetColumn="FirstGFIDate" />
+              <Mapping SourceColumn="LastGFIDate" DataSetColumn="LastGFIDate" />
+              <Mapping SourceColumn="GFIDeliveryQty" DataSetColumn="GFIDeliveryQty" />
+              <Mapping SourceColumn="GFIChallanNo" DataSetColumn="GFIChallanNo" />
+              <Mapping SourceColumn="FirstYarnRequisitonDate" DataSetColumn="FirstYarnRequisitonDate" />
+              <Mapping SourceColumn="LastYarnRequisitonDate" DataSetColumn="LastYarnRequisitonDate" />
+              <Mapping SourceColumn="FirstGFSReceiveChallanDate" DataSetColumn="FirstGFSReceiveChallanDate" />
+              <Mapping SourceColumn="LastGFSReceiveChallanDate" DataSetColumn="LastGFSReceiveChallanDate" />
+              <Mapping SourceColumn="GFReceiveChallanNo" DataSetColumn="GFReceiveChallanNo" />
+              <Mapping SourceColumn="TTLGFIssueQuantity" DataSetColumn="TTLGFIssueQuantity" />
+              <Mapping SourceColumn="FirstGFSIssueChallanDate" DataSetColumn="FirstGFSIssueChallanDate" />
+              <Mapping SourceColumn="LastGFSIssueChallanDate" DataSetColumn="LastGFSIssueChallanDate" />
+              <Mapping SourceColumn="GFIssueChallanNo" DataSetColumn="GFIssueChallanNo" />
+              <Mapping SourceColumn="TTLGFReceiveQuantity" DataSetColumn="TTLGFReceiveQuantity" />
+              <Mapping SourceColumn="YarnDelChallanNo" DataSetColumn="YarnDelChallanNo" />
+              <Mapping SourceColumn="FirstYarnDelChallanDate" DataSetColumn="FirstYarnDelChallanDate" />
+              <Mapping SourceColumn="LastYarnDelChallanDate" DataSetColumn="LastYarnDelChallanDate" />
+              <Mapping SourceColumn="BatchNo" DataSetColumn="BatchNo" />
+              <Mapping SourceColumn="BatchQuantity" DataSetColumn="BatchQuantity" />
+              <Mapping SourceColumn="FirstBatchDate" DataSetColumn="FirstBatchDate" />
+              <Mapping SourceColumn="LastBatchDate" DataSetColumn="LastBatchDate" />
+              <Mapping SourceColumn="LDRecipeNo" DataSetColumn="LDRecipeNo" />
+              <Mapping SourceColumn="LastLDApprovedDate" DataSetColumn="LastLDApprovedDate" />
+              <Mapping SourceColumn="FirstLDApprovedDate" DataSetColumn="FirstLDApprovedDate" />
+              <Mapping SourceColumn="LastLDReceivedDate" DataSetColumn="LastLDReceivedDate" />
+              <Mapping SourceColumn="FirstLDReceivedDate" DataSetColumn="FirstLDReceivedDate" />
+              <Mapping SourceColumn="DyeingQuantity" DataSetColumn="DyeingQuantity" />
+              <Mapping SourceColumn="FirstDyeingDate" DataSetColumn="FirstDyeingDate" />
+              <Mapping SourceColumn="LastDyeingDate" DataSetColumn="LastDyeingDate" />
+              <Mapping SourceColumn="TTLDyeingFinishingQuantity" DataSetColumn="TTLDyeingFinishingQuantity" />
+              <Mapping SourceColumn="LastFinishingDate" DataSetColumn="LastFinishingDate" />
+              <Mapping SourceColumn="FirstFinishingDate" DataSetColumn="FirstFinishingDate" />
+              <Mapping SourceColumn="FinishingProcessed" DataSetColumn="FinishingProcessed" />
+              <Mapping SourceColumn="FFIChallanNo" DataSetColumn="FFIChallanNo" />
+              <Mapping SourceColumn="FirstFFIDate" DataSetColumn="FirstFFIDate" />
+              <Mapping SourceColumn="LastFFIDate" DataSetColumn="LastFFIDate" />
+              <Mapping SourceColumn="TTLFFIDeliveryQuantity" DataSetColumn="TTLFFIDeliveryQuantity" />
+              <Mapping SourceColumn="FirstLDSentForAppDate" DataSetColumn="FirstLDSentForAppDate" />
+              <Mapping SourceColumn="LastLDSentForAppDate" DataSetColumn="LastLDSentForAppDate" />
+              <Mapping SourceColumn="FirstApprovedDate" DataSetColumn="FirstApprovedDate" />
+              <Mapping SourceColumn="LastApprovedDate" DataSetColumn="LastApprovedDate" />
+              <Mapping SourceColumn="FirstSwatchReceivedDate" DataSetColumn="FirstSwatchReceivedDate" />
+              <Mapping SourceColumn="LastSwatchReceivedDate" DataSetColumn="LastSwatchReceivedDate" />
+              <Mapping SourceColumn="FirstLabPreparedDate" DataSetColumn="FirstLabPreparedDate" />
+              <Mapping SourceColumn="LastLabPreparedDate" DataSetColumn="LastLabPreparedDate" />
+              <Mapping SourceColumn="FirstLabFabricDate" DataSetColumn="FirstLabFabricDate" />
+              <Mapping SourceColumn="LastLabFabricDate" DataSetColumn="LastLabFabricDate" />
+              <Mapping SourceColumn="LDStatus" DataSetColumn="LDStatus" />
+              <Mapping SourceColumn="LDCost" DataSetColumn="LDCost" />
+              <Mapping SourceColumn="FirstFabricTestDate" DataSetColumn="FirstFabricTestDate" />
+              <Mapping SourceColumn="LastFabricTestDate" DataSetColumn="LastFabricTestDate" />
+              <Mapping SourceColumn="FirstFabricTestReceiveDate" DataSetColumn="FirstFabricTestReceiveDate" />
+              <Mapping SourceColumn="LastFabricTestReceiveDate" DataSetColumn="LastFabricTestReceiveDate" />
+              <Mapping SourceColumn="FirstSubmitDate" DataSetColumn="FirstSubmitDate" />
+              <Mapping SourceColumn="LastSubmitDate" DataSetColumn="LastSubmitDate" />
+              <Mapping SourceColumn="FirstFabricTestApprovedDate" DataSetColumn="FirstFabricTestApprovedDate" />
+              <Mapping SourceColumn="LastFabricTestApprovedDate" DataSetColumn="LastFabricTestApprovedDate" />
+              <Mapping SourceColumn="FabricTestNo" DataSetColumn="FabricTestNo" />
+              <Mapping SourceColumn="FabricTestStatus" DataSetColumn="FabricTestStatus" />
+              <Mapping SourceColumn="TTLFFReceiveQuantity" DataSetColumn="TTLFFReceiveQuantity" />
+              <Mapping SourceColumn="TTLFFIssueQuantity" DataSetColumn="TTLFFIssueQuantity" />
+              <Mapping SourceColumn="FFReceiveChallanNo" DataSetColumn="FFReceiveChallanNo" />
+              <Mapping SourceColumn="FirstFFRcvChallanDate" DataSetColumn="FirstFFRcvChallanDate" />
+              <Mapping SourceColumn="LastFFRcvChallanDate" DataSetColumn="LastFFRcvChallanDate" />
+              <Mapping SourceColumn="FFIssueChallanNo" DataSetColumn="FFIssueChallanNo" />
+              <Mapping SourceColumn="FirstFFIssChallanDate" DataSetColumn="FirstFFIssChallanDate" />
+              <Mapping SourceColumn="LastFFIssChallanDate" DataSetColumn="LastFFIssChallanDate" />
+              <Mapping SourceColumn="YarnIssueBalance" DataSetColumn="YarnIssueBalance" />
+              <Mapping SourceColumn="GFReceiveBalance" DataSetColumn="GFReceiveBalance" />
+              <Mapping SourceColumn="GFIssueBalance" DataSetColumn="GFIssueBalance" />
+              <Mapping SourceColumn="FFReceiveBalance" DataSetColumn="FFReceiveBalance" />
+              <Mapping SourceColumn="FFIssueBalance" DataSetColumn="FFIssueBalance" />
+              <Mapping SourceColumn="Enzyme" DataSetColumn="Enzyme" />
+              <Mapping SourceColumn="DLBatchNo" DataSetColumn="DLBatchNo" />
+              <Mapping SourceColumn="Shade" DataSetColumn="Shade" />
+              <Mapping SourceColumn="Softner" DataSetColumn="Softner" />
+              <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
+              <Mapping SourceColumn="CommentStatus" DataSetColumn="CommentStatus" />
+              <Mapping SourceColumn="SampleSendingInfo" DataSetColumn="SampleSendingInfo" />
+              <Mapping SourceColumn="QADStatus" DataSetColumn="QADStatus" />
+              <Mapping SourceColumn="FirstLDSenttoFloorDate" DataSetColumn="FirstLDSenttoFloorDate" />
+              <Mapping SourceColumn="LastLDSenttoFloorDate" DataSetColumn="LastLDSenttoFloorDate" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.SampleRequestStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByAllAndUser" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAllAndUser" GeneratorSourceName="FillByAllAndUser" GetMethodModifier="Public" GetMethodName="GetDataByAllAndUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAllAndUser" UserSourceName="FillByAllAndUser">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccReceiveDate, AccReceiveDetails, AgreedLeadTime, Application, ApprovalStatus, ArtworkLocation, Attention, BDRequestDate, BatchNo, BatchQuantity, Brand, Buyer, CC, CauseOfRevised, Color, CommentStatus, CommentsReceiveDate, CompletedOn, Composition, CuttOffDate, DLBatchNo, Department, Description, DevType, Division, DyeingQuantity, EmbroideryDetails, Enzyme, ExDate, ExFabricRcvDate, ExTrimRcvDate, FFDeliveryQuantity, FFIChallanNo, FFIssueBalance, FFIssueChallanNo, FFReceiveBalance, FFReceiveChallanNo, FabricBookingDate, FabricColorName, FabricDetails, FabricReceiveDate, FabricReceiveQty, FabricRequireDate, FabricTestNo, FabricTestStatus, FileReceiveDate, FileReceiveDetails, FinishQuantity, FinishingProcessed, FirstApprovedDate, FirstBatchDate, FirstChallanDate, FirstDyeingDate, FirstFFIDate, FirstFFIssChallanDate, FirstFFRcvChallanDate, FirstFabricTestApprovedDate, FirstFabricTestDate, FirstFabricTestReceiveDate, FirstFinishingDate, FirstGFIDate, FirstGFSIssueChallanDate, FirstGFSReceiveChallanDate, FirstLDApprovedDate, FirstLDReceivedDate, FirstLDSentForAppDate, FirstLDSenttoFloorDate, FirstLabFabricDate, FirstLabPreparedDate, FirstSampleDeliveryDate, FirstSubmitDate, FirstSwatchReceivedDate, FirstYarnDelChallanDate, FirstYarnRequisitonDate, GFIChallanNo, GFIDeliveryQty, GFIssueBalance, GFIssueChallanNo, GFReceiveBalance, GFReceiveChallanNo, GSM, GarmentsDescription, GatePassType, GreyQuantity, Height, IsAOP, IsBookingComplete, IsBookingCompleteOn, IsBrush, IsComplete, IsEmbroidery, IsFabricAvailable, IsPeachFinish, IsPrint, IsReceivedByDyeing, IsSealed, IsSequence, IsSublimation, IsTrim, IsTrimAvailable, IsWash, IsYds, KnittingProduction, KnittingType, LDCost, LDRecipeNo, LDStatus, LastApprovedDate, LastBatchDate, LastChallanDate, LastDyeingDate, LastFFIDate, LastFFIssChallanDate, LastFFRcvChallanDate, LastFabricTestApprovedDate, LastFabricTestDate, LastFabricTestReceiveDate, LastFinishingDate, LastGFIDate, LastGFSIssueChallanDate, LastGFSReceiveChallanDate, LastLDApprovedDate, LastLDReceivedDate, LastLDSentForAppDate, LastLDSenttoFloorDate, LastLabFabricDate, LastLabPreparedDate, LastSampleDeliveryDate, LastSubmitDate, LastSwatchReceivedDate, LastYarnDelChallanDate, LastYarnRequisitonDate, LotNo, MCDia, MCGauge, MasterProgramNo, Merchandiser, Mesurement, NLD, OrderSent, Picture, PrintPosition, PrintSize, PrintType, ProgramNo, QADStatus, Remarks, RequestDate, RequestNo, RevisedDate, RevisedNo, SampleCuttingEndDate, SampleCuttingStartDate, SampleDeliveryDate, SampleDeliveryQuantity, SampleDeliveryQuantity2, SampleEmbReceiveDate, SampleEmbReceiveQty, SampleEmbSendDate, SampleEmbSendQty, SampleExDeliveryDate, SampleFabricBookingRemarks, SamplePreparedBy, SamplePrintReceiveQty, SamplePrintSendDate, SamplePrintSendQty, SampleQuantity, SampleRequestId, SampleRequireDate, SampleSendDate, SampleSendingInfo, SampleSewingEndDate, SampleSewingStartDate, SampleStatus, SampleTypeReq, SampleUpdate, SealedDate, Season, SendPhotoStrikeOff, SendingInfo, Shade, Size, Softner, SpecialBackNeckReference, Status, StatusRemarks, StitchLength, Style, StyleType, TTLDyeingFinishingQuantity, TTLFFIDeliveryQuantity, TTLFFIssueQuantity, TTLFFReceiveQuantity, TTLGFIssueQuantity, TTLGFReceiveQuantity, TrimDetails, UserId, WashType, Width, YarnBrand, YarnDelChallanNo, YarnIssueBalance, YarnIssueQuantity, YarnName, YarnRequisitonNo, samplePrintReceiveDate FROM SampleRequestStatus WHERE (UserId = @UserId) ORDER BY RequestNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserId" ColumnName="UserId" DataSourceName="[ncl-db].dbo.SampleRequestStatus" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.SampleRequestStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByRunning" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByRunning" GeneratorSourceName="FillByRunning" GetMethodModifier="Public" GetMethodName="GetDataByRunning" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByRunning" UserSourceName="FillByRunning">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccReceiveDate, AccReceiveDetails, AgreedLeadTime, Application, ApprovalStatus, ArtworkLocation, Attention, BDRequestDate, BatchNo, BatchQuantity, Brand, Buyer, CC, CauseOfRevised, Color, CommentStatus, CommentsReceiveDate, CompletedOn, Composition, CuttOffDate, DLBatchNo, Department, Description, DevType, Division, DyeingQuantity, EmbroideryDetails, Enzyme, ExDate, ExFabricRcvDate, ExTrimRcvDate, FFDeliveryQuantity, FFIChallanNo, FFIssueBalance, FFIssueChallanNo, FFReceiveBalance, FFReceiveChallanNo, FabricBookingDate, FabricColorName, FabricDetails, FabricReceiveDate, FabricReceiveQty, FabricRequireDate, FabricTestNo, FabricTestStatus, FileReceiveDate, FileReceiveDetails, FinishQuantity, FinishingProcessed, FirstApprovedDate, FirstBatchDate, FirstChallanDate, FirstDyeingDate, FirstFFIDate, FirstFFIssChallanDate, FirstFFRcvChallanDate, FirstFabricTestApprovedDate, FirstFabricTestDate, FirstFabricTestReceiveDate, FirstFinishingDate, FirstGFIDate, FirstGFSIssueChallanDate, FirstGFSReceiveChallanDate, FirstLDApprovedDate, FirstLDReceivedDate, FirstLDSentForAppDate, FirstLDSenttoFloorDate, FirstLabFabricDate, FirstLabPreparedDate, FirstSampleDeliveryDate, FirstSubmitDate, FirstSwatchReceivedDate, FirstYarnDelChallanDate, FirstYarnRequisitonDate, GFIChallanNo, GFIDeliveryQty, GFIssueBalance, GFIssueChallanNo, GFReceiveBalance, GFReceiveChallanNo, GSM, GarmentsDescription, GatePassType, GreyQuantity, Height, IsAOP, IsBookingComplete, IsBookingCompleteOn, IsBrush, IsComplete, IsEmbroidery, IsFabricAvailable, IsPeachFinish, IsPrint, IsReceivedByDyeing, IsSealed, IsSequence, IsSublimation, IsTrim, IsTrimAvailable, IsWash, IsYds, KnittingProduction, KnittingType, LDCost, LDRecipeNo, LDStatus, LastApprovedDate, LastBatchDate, LastChallanDate, LastDyeingDate, LastFFIDate, LastFFIssChallanDate, LastFFRcvChallanDate, LastFabricTestApprovedDate, LastFabricTestDate, LastFabricTestReceiveDate, LastFinishingDate, LastGFIDate, LastGFSIssueChallanDate, LastGFSReceiveChallanDate, LastLDApprovedDate, LastLDReceivedDate, LastLDSentForAppDate, LastLDSenttoFloorDate, LastLabFabricDate, LastLabPreparedDate, LastSampleDeliveryDate, LastSubmitDate, LastSwatchReceivedDate, LastYarnDelChallanDate, LastYarnRequisitonDate, LotNo, MCDia, MCGauge, MasterProgramNo, Merchandiser, Mesurement, NLD, OrderSent, Picture, PrintPosition, PrintSize, PrintType, ProgramNo, QADStatus, Remarks, RequestDate, RequestNo, RevisedDate, RevisedNo, SampleCuttingEndDate, SampleCuttingStartDate, SampleDeliveryDate, SampleDeliveryQuantity, SampleDeliveryQuantity2, SampleEmbReceiveDate, SampleEmbReceiveQty, SampleEmbSendDate, SampleEmbSendQty, SampleExDeliveryDate, SampleFabricBookingRemarks, SamplePreparedBy, SamplePrintReceiveQty, SamplePrintSendDate, SamplePrintSendQty, SampleQuantity, SampleRequestId, SampleRequireDate, SampleSendDate, SampleSendingInfo, SampleSewingEndDate, SampleSewingStartDate, SampleStatus, SampleTypeReq, SampleUpdate, SealedDate, Season, SendPhotoStrikeOff, SendingInfo, Shade, Size, Softner, SpecialBackNeckReference, Status, StatusRemarks, StitchLength, Style, StyleType, TTLDyeingFinishingQuantity, TTLFFIDeliveryQuantity, TTLFFIssueQuantity, TTLFFReceiveQuantity, TTLGFIssueQuantity, TTLGFReceiveQuantity, TrimDetails, UserId, WashType, Width, YarnBrand, YarnDelChallanNo, YarnIssueBalance, YarnIssueQuantity, YarnName, YarnRequisitonNo, samplePrintReceiveDate FROM SampleRequestStatus WHERE (IsComplete = 0) ORDER BY RequestNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.SampleRequestStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByRunningAndUser" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByRunningAndUser" GeneratorSourceName="FillByRunningAndUser" GetMethodModifier="Public" GetMethodName="GetDataByRunningAndUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByRunningAndUser" UserSourceName="FillByRunningAndUser">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccReceiveDate, AccReceiveDetails, AgreedLeadTime, Application, ApprovalStatus, ArtworkLocation, Attention, BDRequestDate, BatchNo, BatchQuantity, Brand, Buyer, CC, CauseOfRevised, Color, CommentStatus, CommentsReceiveDate, CompletedOn, Composition, CuttOffDate, DLBatchNo, Department, Description, DevType, Division, DyeingQuantity, EmbroideryDetails, Enzyme, ExDate, ExFabricRcvDate, ExTrimRcvDate, FFDeliveryQuantity, FFIChallanNo, FFIssueBalance, FFIssueChallanNo, FFReceiveBalance, FFReceiveChallanNo, FabricBookingDate, FabricColorName, FabricDetails, FabricReceiveDate, FabricReceiveQty, FabricRequireDate, FabricTestNo, FabricTestStatus, FileReceiveDate, FileReceiveDetails, FinishQuantity, FinishingProcessed, FirstApprovedDate, FirstBatchDate, FirstChallanDate, FirstDyeingDate, FirstFFIDate, FirstFFIssChallanDate, FirstFFRcvChallanDate, FirstFabricTestApprovedDate, FirstFabricTestDate, FirstFabricTestReceiveDate, FirstFinishingDate, FirstGFIDate, FirstGFSIssueChallanDate, FirstGFSReceiveChallanDate, FirstLDApprovedDate, FirstLDReceivedDate, FirstLDSentForAppDate, FirstLDSenttoFloorDate, FirstLabFabricDate, FirstLabPreparedDate, FirstSampleDeliveryDate, FirstSubmitDate, FirstSwatchReceivedDate, FirstYarnDelChallanDate, FirstYarnRequisitonDate, GFIChallanNo, GFIDeliveryQty, GFIssueBalance, GFIssueChallanNo, GFReceiveBalance, GFReceiveChallanNo, GSM, GarmentsDescription, GatePassType, GreyQuantity, Height, IsAOP, IsBookingComplete, IsBookingCompleteOn, IsBrush, IsComplete, IsEmbroidery, IsFabricAvailable, IsPeachFinish, IsPrint, IsReceivedByDyeing, IsSealed, IsSequence, IsSublimation, IsTrim, IsTrimAvailable, IsWash, IsYds, KnittingProduction, KnittingType, LDCost, LDRecipeNo, LDStatus, LastApprovedDate, LastBatchDate, LastChallanDate, LastDyeingDate, LastFFIDate, LastFFIssChallanDate, LastFFRcvChallanDate, LastFabricTestApprovedDate, LastFabricTestDate, LastFabricTestReceiveDate, LastFinishingDate, LastGFIDate, LastGFSIssueChallanDate, LastGFSReceiveChallanDate, LastLDApprovedDate, LastLDReceivedDate, LastLDSentForAppDate, LastLDSenttoFloorDate, LastLabFabricDate, LastLabPreparedDate, LastSampleDeliveryDate, LastSubmitDate, LastSwatchReceivedDate, LastYarnDelChallanDate, LastYarnRequisitonDate, LotNo, MCDia, MCGauge, MasterProgramNo, Merchandiser, Mesurement, NLD, OrderSent, Picture, PrintPosition, PrintSize, PrintType, ProgramNo, QADStatus, Remarks, RequestDate, RequestNo, RevisedDate, RevisedNo, SampleCuttingEndDate, SampleCuttingStartDate, SampleDeliveryDate, SampleDeliveryQuantity, SampleDeliveryQuantity2, SampleEmbReceiveDate, SampleEmbReceiveQty, SampleEmbSendDate, SampleEmbSendQty, SampleExDeliveryDate, SampleFabricBookingRemarks, SamplePreparedBy, SamplePrintReceiveQty, SamplePrintSendDate, SamplePrintSendQty, SampleQuantity, SampleRequestId, SampleRequireDate, SampleSendDate, SampleSendingInfo, SampleSewingEndDate, SampleSewingStartDate, SampleStatus, SampleTypeReq, SampleUpdate, SealedDate, Season, SendPhotoStrikeOff, SendingInfo, Shade, Size, Softner, SpecialBackNeckReference, Status, StatusRemarks, StitchLength, Style, StyleType, TTLDyeingFinishingQuantity, TTLFFIDeliveryQuantity, TTLFFIssueQuantity, TTLFFReceiveQuantity, TTLGFIssueQuantity, TTLGFReceiveQuantity, TrimDetails, UserId, WashType, Width, YarnBrand, YarnDelChallanNo, YarnIssueBalance, YarnIssueQuantity, YarnName, YarnRequisitonNo, samplePrintReceiveDate FROM SampleRequestStatus WHERE (IsComplete = 0) AND (UserId = @UserId) ORDER BY RequestNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserId" ColumnName="UserId" DataSourceName="[ncl-db].dbo.SampleRequestStatus" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.SampleRequestStatus" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBySampleRequestId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySampleRequestId" GeneratorSourceName="FillBySampleRequestId" GetMethodModifier="Public" GetMethodName="GetDataBySampleRequestId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySampleRequestId" UserSourceName="FillBySampleRequestId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccReceiveDate, AccReceiveDetails, AgreedLeadTime, Application, ApprovalStatus, ArtworkLocation, Attention, BDRequestDate, BatchNo, BatchQuantity, Brand, Buyer, CC, CauseOfRevised, Color, CommentStatus, CommentsReceiveDate, CompletedOn, Composition, CuttOffDate, DLBatchNo, Department, Description, DevType, Division, DyeingQuantity, EmbroideryDetails, Enzyme, ExDate, ExFabricRcvDate, ExTrimRcvDate, FFDeliveryQuantity, FFIChallanNo, FFIssueBalance, FFIssueChallanNo, FFReceiveBalance, FFReceiveChallanNo, FabricBookingDate, FabricColorName, FabricDetails, FabricReceiveDate, FabricReceiveQty, FabricRequireDate, FabricTestNo, FabricTestStatus, FileReceiveDate, FileReceiveDetails, FinishQuantity, FinishingProcessed, FirstApprovedDate, FirstBatchDate, FirstChallanDate, FirstDyeingDate, FirstFFIDate, FirstFFIssChallanDate, FirstFFRcvChallanDate, FirstFabricTestApprovedDate, FirstFabricTestDate, FirstFabricTestReceiveDate, FirstFinishingDate, FirstGFIDate, FirstGFSIssueChallanDate, FirstGFSReceiveChallanDate, FirstLDApprovedDate, FirstLDReceivedDate, FirstLDSentForAppDate, FirstLDSenttoFloorDate, FirstLabFabricDate, FirstLabPreparedDate, FirstSampleDeliveryDate, FirstSubmitDate, FirstSwatchReceivedDate, FirstYarnDelChallanDate, FirstYarnRequisitonDate, GFIChallanNo, GFIDeliveryQty, GFIssueBalance, GFIssueChallanNo, GFReceiveBalance, GFReceiveChallanNo, GSM, GarmentsDescription, GatePassType, GreyQuantity, Height, IsAOP, IsBookingComplete, IsBookingCompleteOn, IsBrush, IsComplete, IsEmbroidery, IsFabricAvailable, IsPeachFinish, IsPrint, IsReceivedByDyeing, IsSealed, IsSequence, IsSublimation, IsTrim, IsTrimAvailable, IsWash, IsYds, KnittingProduction, KnittingType, LDCost, LDRecipeNo, LDStatus, LastApprovedDate, LastBatchDate, LastChallanDate, LastDyeingDate, LastFFIDate, LastFFIssChallanDate, LastFFRcvChallanDate, LastFabricTestApprovedDate, LastFabricTestDate, LastFabricTestReceiveDate, LastFinishingDate, LastGFIDate, LastGFSIssueChallanDate, LastGFSReceiveChallanDate, LastLDApprovedDate, LastLDReceivedDate, LastLDSentForAppDate, LastLDSenttoFloorDate, LastLabFabricDate, LastLabPreparedDate, LastSampleDeliveryDate, LastSubmitDate, LastSwatchReceivedDate, LastYarnDelChallanDate, LastYarnRequisitonDate, LotNo, MCDia, MCGauge, MasterProgramNo, Merchandiser, Mesurement, NLD, OrderSent, Picture, PrintPosition, PrintSize, PrintType, ProgramNo, QADStatus, Remarks, RequestDate, RequestNo, RevisedDate, RevisedNo, SampleCuttingEndDate, SampleCuttingStartDate, SampleDeliveryDate, SampleDeliveryQuantity, SampleDeliveryQuantity2, SampleEmbReceiveDate, SampleEmbReceiveQty, SampleEmbSendDate, SampleEmbSendQty, SampleExDeliveryDate, SampleFabricBookingRemarks, SamplePreparedBy, SamplePrintReceiveQty, SamplePrintSendDate, SamplePrintSendQty, SampleQuantity, SampleRequestId, SampleRequireDate, SampleSendDate, SampleSendingInfo, SampleSewingEndDate, SampleSewingStartDate, SampleStatus, SampleTypeReq, SampleUpdate, SealedDate, Season, SendPhotoStrikeOff, SendingInfo, Shade, Size, Softner, SpecialBackNeckReference, Status, StatusRemarks, StitchLength, Style, StyleType, TTLDyeingFinishingQuantity, TTLFFIDeliveryQuantity, TTLFFIssueQuantity, TTLFFReceiveQuantity, TTLGFIssueQuantity, TTLGFReceiveQuantity, TrimDetails, UserId, WashType, Width, YarnBrand, YarnDelChallanNo, YarnIssueBalance, YarnIssueQuantity, YarnName, YarnRequisitonNo, samplePrintReceiveDate FROM SampleRequestStatus WHERE (SampleRequestId = @SampleRequestId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="SampleRequestId" ColumnName="SampleRequestId" DataSourceName="[ncl-db].dbo.SampleRequestStatus" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@SampleRequestId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="SampleRequestId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SampleRequestStatusDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SampleRequestStatusDataSet" msprop:Generator_UserDSName="SampleRequestStatusDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SampleRequestStatus" msprop:Generator_TableClassName="SampleRequestStatusDataTable" msprop:Generator_TableVarName="tableSampleRequestStatus" msprop:Generator_TablePropName="SampleRequestStatus" msprop:Generator_RowDeletingName="SampleRequestStatusRowDeleting" msprop:Generator_RowChangingName="SampleRequestStatusRowChanging" msprop:Generator_RowEvHandlerName="SampleRequestStatusRowChangeEventHandler" msprop:Generator_RowDeletedName="SampleRequestStatusRowDeleted" msprop:Generator_UserTableName="SampleRequestStatus" msprop:Generator_RowChangedName="SampleRequestStatusRowChanged" msprop:Generator_RowEvArgName="SampleRequestStatusRowChangeEvent" msprop:Generator_RowClassName="SampleRequestStatusRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SampleRequestId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSampleRequestId" msprop:Generator_ColumnPropNameInRow="SampleRequestId" msprop:Generator_ColumnPropNameInTable="SampleRequestIdColumn" msprop:Generator_UserColumnName="SampleRequestId" type="xs:long" />
+              <xs:element name="RequestNo" msprop:Generator_ColumnVarNameInTable="columnRequestNo" msprop:Generator_ColumnPropNameInRow="RequestNo" msprop:Generator_ColumnPropNameInTable="RequestNoColumn" msprop:Generator_UserColumnName="RequestNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Style" msprop:Generator_ColumnVarNameInTable="columnStyle" msprop:Generator_ColumnPropNameInRow="Style" msprop:Generator_ColumnPropNameInTable="StyleColumn" msprop:Generator_UserColumnName="Style" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GarmentsDescription" msprop:Generator_ColumnVarNameInTable="columnGarmentsDescription" msprop:Generator_ColumnPropNameInRow="GarmentsDescription" msprop:Generator_ColumnPropNameInTable="GarmentsDescriptionColumn" msprop:Generator_UserColumnName="GarmentsDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WashType" msprop:Generator_ColumnVarNameInTable="columnWashType" msprop:Generator_ColumnPropNameInRow="WashType" msprop:Generator_ColumnPropNameInTable="WashTypeColumn" msprop:Generator_UserColumnName="WashType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Buyer" msprop:Generator_ColumnVarNameInTable="columnBuyer" msprop:Generator_ColumnPropNameInRow="Buyer" msprop:Generator_ColumnPropNameInTable="BuyerColumn" msprop:Generator_UserColumnName="Buyer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SampleTypeReq" msprop:Generator_ColumnVarNameInTable="columnSampleTypeReq" msprop:Generator_ColumnPropNameInRow="SampleTypeReq" msprop:Generator_ColumnPropNameInTable="SampleTypeReqColumn" msprop:Generator_UserColumnName="SampleTypeReq" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SendPhotoStrikeOff" msprop:Generator_ColumnVarNameInTable="columnSendPhotoStrikeOff" msprop:Generator_ColumnPropNameInRow="SendPhotoStrikeOff" msprop:Generator_ColumnPropNameInTable="SendPhotoStrikeOffColumn" msprop:Generator_UserColumnName="SendPhotoStrikeOff" type="xs:boolean" minOccurs="0" />
+              <xs:element name="RequestDate" msprop:Generator_ColumnVarNameInTable="columnRequestDate" msprop:Generator_ColumnPropNameInRow="RequestDate" msprop:Generator_ColumnPropNameInTable="RequestDateColumn" msprop:Generator_UserColumnName="RequestDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExDate" msprop:Generator_ColumnVarNameInTable="columnExDate" msprop:Generator_ColumnPropNameInRow="ExDate" msprop:Generator_ColumnPropNameInTable="ExDateColumn" msprop:Generator_UserColumnName="ExDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ArtworkLocation" msprop:Generator_ColumnVarNameInTable="columnArtworkLocation" msprop:Generator_ColumnPropNameInRow="ArtworkLocation" msprop:Generator_ColumnPropNameInTable="ArtworkLocationColumn" msprop:Generator_UserColumnName="ArtworkLocation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SpecialBackNeckReference" msprop:Generator_ColumnVarNameInTable="columnSpecialBackNeckReference" msprop:Generator_ColumnPropNameInRow="SpecialBackNeckReference" msprop:Generator_ColumnPropNameInTable="SpecialBackNeckReferenceColumn" msprop:Generator_UserColumnName="SpecialBackNeckReference" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Application" msprop:Generator_ColumnVarNameInTable="columnApplication" msprop:Generator_ColumnPropNameInRow="Application" msprop:Generator_ColumnPropNameInTable="ApplicationColumn" msprop:Generator_UserColumnName="Application" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CuttOffDate" msprop:Generator_ColumnVarNameInTable="columnCuttOffDate" msprop:Generator_ColumnPropNameInRow="CuttOffDate" msprop:Generator_ColumnPropNameInTable="CuttOffDateColumn" msprop:Generator_UserColumnName="CuttOffDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OrderSent" msprop:Generator_ColumnVarNameInTable="columnOrderSent" msprop:Generator_ColumnPropNameInRow="OrderSent" msprop:Generator_ColumnPropNameInTable="OrderSentColumn" msprop:Generator_UserColumnName="OrderSent" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BDRequestDate" msprop:Generator_ColumnVarNameInTable="columnBDRequestDate" msprop:Generator_ColumnPropNameInRow="BDRequestDate" msprop:Generator_ColumnPropNameInTable="BDRequestDateColumn" msprop:Generator_UserColumnName="BDRequestDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PrintSize" msprop:Generator_ColumnVarNameInTable="columnPrintSize" msprop:Generator_ColumnPropNameInRow="PrintSize" msprop:Generator_ColumnPropNameInTable="PrintSizeColumn" msprop:Generator_UserColumnName="PrintSize" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Width" msprop:Generator_ColumnVarNameInTable="columnWidth" msprop:Generator_ColumnPropNameInRow="Width" msprop:Generator_ColumnPropNameInTable="WidthColumn" msprop:Generator_UserColumnName="Width" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Height" msprop:Generator_ColumnVarNameInTable="columnHeight" msprop:Generator_ColumnPropNameInRow="Height" msprop:Generator_ColumnPropNameInTable="HeightColumn" msprop:Generator_UserColumnName="Height" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PrintPosition" msprop:Generator_ColumnVarNameInTable="columnPrintPosition" msprop:Generator_ColumnPropNameInRow="PrintPosition" msprop:Generator_ColumnPropNameInTable="PrintPositionColumn" msprop:Generator_UserColumnName="PrintPosition" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mesurement" msprop:Generator_ColumnVarNameInTable="columnMesurement" msprop:Generator_ColumnPropNameInRow="Mesurement" msprop:Generator_ColumnPropNameInTable="MesurementColumn" msprop:Generator_UserColumnName="Mesurement" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsEmbroidery" msprop:Generator_ColumnVarNameInTable="columnIsEmbroidery" msprop:Generator_ColumnPropNameInRow="IsEmbroidery" msprop:Generator_ColumnPropNameInTable="IsEmbroideryColumn" msprop:Generator_UserColumnName="IsEmbroidery" type="xs:boolean" minOccurs="0" />
+              <xs:element name="EmbroideryDetails" msprop:Generator_ColumnVarNameInTable="columnEmbroideryDetails" msprop:Generator_ColumnPropNameInRow="EmbroideryDetails" msprop:Generator_ColumnPropNameInTable="EmbroideryDetailsColumn" msprop:Generator_UserColumnName="EmbroideryDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsTrim" msprop:Generator_ColumnVarNameInTable="columnIsTrim" msprop:Generator_ColumnPropNameInRow="IsTrim" msprop:Generator_ColumnPropNameInTable="IsTrimColumn" msprop:Generator_UserColumnName="IsTrim" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TrimDetails" msprop:Generator_ColumnVarNameInTable="columnTrimDetails" msprop:Generator_ColumnPropNameInRow="TrimDetails" msprop:Generator_ColumnPropNameInTable="TrimDetailsColumn" msprop:Generator_UserColumnName="TrimDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Picture" msprop:Generator_ColumnVarNameInTable="columnPicture" msprop:Generator_ColumnPropNameInRow="Picture" msprop:Generator_ColumnPropNameInTable="PictureColumn" msprop:Generator_UserColumnName="Picture" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="PrintType" msprop:Generator_ColumnVarNameInTable="columnPrintType" msprop:Generator_ColumnPropNameInRow="PrintType" msprop:Generator_ColumnPropNameInTable="PrintTypeColumn" msprop:Generator_UserColumnName="PrintType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsPrint" msprop:Generator_ColumnVarNameInTable="columnIsPrint" msprop:Generator_ColumnPropNameInRow="IsPrint" msprop:Generator_ColumnPropNameInTable="IsPrintColumn" msprop:Generator_UserColumnName="IsPrint" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsFabricAvailable" msprop:Generator_ColumnVarNameInTable="columnIsFabricAvailable" msprop:Generator_ColumnPropNameInRow="IsFabricAvailable" msprop:Generator_ColumnPropNameInTable="IsFabricAvailableColumn" msprop:Generator_UserColumnName="IsFabricAvailable" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ExFabricRcvDate" msprop:Generator_ColumnVarNameInTable="columnExFabricRcvDate" msprop:Generator_ColumnPropNameInRow="ExFabricRcvDate" msprop:Generator_ColumnPropNameInTable="ExFabricRcvDateColumn" msprop:Generator_UserColumnName="ExFabricRcvDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsTrimAvailable" msprop:Generator_ColumnVarNameInTable="columnIsTrimAvailable" msprop:Generator_ColumnPropNameInRow="IsTrimAvailable" msprop:Generator_ColumnPropNameInTable="IsTrimAvailableColumn" msprop:Generator_UserColumnName="IsTrimAvailable" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ExTrimRcvDate" msprop:Generator_ColumnVarNameInTable="columnExTrimRcvDate" msprop:Generator_ColumnPropNameInRow="ExTrimRcvDate" msprop:Generator_ColumnPropNameInTable="ExTrimRcvDateColumn" msprop:Generator_UserColumnName="ExTrimRcvDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DevType" msprop:Generator_ColumnVarNameInTable="columnDevType" msprop:Generator_ColumnPropNameInRow="DevType" msprop:Generator_ColumnPropNameInTable="DevTypeColumn" msprop:Generator_UserColumnName="DevType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsAOP" msprop:Generator_ColumnVarNameInTable="columnIsAOP" msprop:Generator_ColumnPropNameInRow="IsAOP" msprop:Generator_ColumnPropNameInTable="IsAOPColumn" msprop:Generator_UserColumnName="IsAOP" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsYds" msprop:Generator_ColumnVarNameInTable="columnIsYds" msprop:Generator_ColumnPropNameInRow="IsYds" msprop:Generator_ColumnPropNameInTable="IsYdsColumn" msprop:Generator_UserColumnName="IsYds" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SampleSendDate" msprop:Generator_ColumnVarNameInTable="columnSampleSendDate" msprop:Generator_ColumnPropNameInRow="SampleSendDate" msprop:Generator_ColumnPropNameInTable="SampleSendDateColumn" msprop:Generator_UserColumnName="SampleSendDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NLD" msprop:Generator_ColumnVarNameInTable="columnNLD" msprop:Generator_ColumnPropNameInRow="NLD" msprop:Generator_ColumnPropNameInTable="NLDColumn" msprop:Generator_UserColumnName="NLD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsSealed" msprop:Generator_ColumnVarNameInTable="columnIsSealed" msprop:Generator_ColumnPropNameInRow="IsSealed" msprop:Generator_ColumnPropNameInTable="IsSealedColumn" msprop:Generator_UserColumnName="IsSealed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SealedDate" msprop:Generator_ColumnVarNameInTable="columnSealedDate" msprop:Generator_ColumnPropNameInRow="SealedDate" msprop:Generator_ColumnPropNameInTable="SealedDateColumn" msprop:Generator_UserColumnName="SealedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AgreedLeadTime" msprop:Generator_ColumnVarNameInTable="columnAgreedLeadTime" msprop:Generator_ColumnPropNameInRow="AgreedLeadTime" msprop:Generator_ColumnPropNameInTable="AgreedLeadTimeColumn" msprop:Generator_UserColumnName="AgreedLeadTime" type="xs:int" minOccurs="0" />
+              <xs:element name="Department" msprop:Generator_ColumnVarNameInTable="columnDepartment" msprop:Generator_ColumnPropNameInRow="Department" msprop:Generator_ColumnPropNameInTable="DepartmentColumn" msprop:Generator_UserColumnName="Department" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Color" msprop:Generator_ColumnVarNameInTable="columnColor" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_UserColumnName="Color" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GSM" msprop:Generator_ColumnVarNameInTable="columnGSM" msprop:Generator_ColumnPropNameInRow="GSM" msprop:Generator_ColumnPropNameInTable="GSMColumn" msprop:Generator_UserColumnName="GSM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SampleUpdate" msprop:Generator_ColumnVarNameInTable="columnSampleUpdate" msprop:Generator_ColumnPropNameInRow="SampleUpdate" msprop:Generator_ColumnPropNameInTable="SampleUpdateColumn" msprop:Generator_UserColumnName="SampleUpdate" type="xs:boolean" />
+              <xs:element name="IsWash" msprop:Generator_ColumnVarNameInTable="columnIsWash" msprop:Generator_ColumnPropNameInRow="IsWash" msprop:Generator_ColumnPropNameInTable="IsWashColumn" msprop:Generator_UserColumnName="IsWash" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsPeachFinish" msprop:Generator_ColumnVarNameInTable="columnIsPeachFinish" msprop:Generator_ColumnPropNameInRow="IsPeachFinish" msprop:Generator_ColumnPropNameInTable="IsPeachFinishColumn" msprop:Generator_UserColumnName="IsPeachFinish" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsBrush" msprop:Generator_ColumnVarNameInTable="columnIsBrush" msprop:Generator_ColumnPropNameInRow="IsBrush" msprop:Generator_ColumnPropNameInTable="IsBrushColumn" msprop:Generator_UserColumnName="IsBrush" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MasterProgramNo" msprop:Generator_ColumnVarNameInTable="columnMasterProgramNo" msprop:Generator_ColumnPropNameInRow="MasterProgramNo" msprop:Generator_ColumnPropNameInTable="MasterProgramNoColumn" msprop:Generator_UserColumnName="MasterProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SendingInfo" msprop:Generator_ColumnVarNameInTable="columnSendingInfo" msprop:Generator_ColumnPropNameInRow="SendingInfo" msprop:Generator_ColumnPropNameInTable="SendingInfoColumn" msprop:Generator_UserColumnName="SendingInfo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommentsReceiveDate" msprop:Generator_ColumnVarNameInTable="columnCommentsReceiveDate" msprop:Generator_ColumnPropNameInRow="CommentsReceiveDate" msprop:Generator_ColumnPropNameInTable="CommentsReceiveDateColumn" msprop:Generator_UserColumnName="CommentsReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ApprovalStatus" msprop:Generator_ColumnVarNameInTable="columnApprovalStatus" msprop:Generator_ColumnPropNameInRow="ApprovalStatus" msprop:Generator_ColumnPropNameInTable="ApprovalStatusColumn" msprop:Generator_UserColumnName="ApprovalStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsComplete" msprop:Generator_ColumnVarNameInTable="columnIsComplete" msprop:Generator_ColumnPropNameInRow="IsComplete" msprop:Generator_ColumnPropNameInTable="IsCompleteColumn" msprop:Generator_UserColumnName="IsComplete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="StyleType" msprop:Generator_ColumnVarNameInTable="columnStyleType" msprop:Generator_ColumnPropNameInRow="StyleType" msprop:Generator_ColumnPropNameInTable="StyleTypeColumn" msprop:Generator_UserColumnName="StyleType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SampleQuantity" msprop:Generator_ColumnVarNameInTable="columnSampleQuantity" msprop:Generator_ColumnPropNameInRow="SampleQuantity" msprop:Generator_ColumnPropNameInTable="SampleQuantityColumn" msprop:Generator_UserColumnName="SampleQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="CompletedOn" msprop:Generator_ColumnVarNameInTable="columnCompletedOn" msprop:Generator_ColumnPropNameInRow="CompletedOn" msprop:Generator_ColumnPropNameInTable="CompletedOnColumn" msprop:Generator_UserColumnName="CompletedOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FileReceiveDate" msprop:Generator_ColumnVarNameInTable="columnFileReceiveDate" msprop:Generator_ColumnPropNameInRow="FileReceiveDate" msprop:Generator_ColumnPropNameInTable="FileReceiveDateColumn" msprop:Generator_UserColumnName="FileReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FabricReceiveDate" msprop:Generator_ColumnVarNameInTable="columnFabricReceiveDate" msprop:Generator_ColumnPropNameInRow="FabricReceiveDate" msprop:Generator_ColumnPropNameInTable="FabricReceiveDateColumn" msprop:Generator_UserColumnName="FabricReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AccReceiveDate" msprop:Generator_ColumnVarNameInTable="columnAccReceiveDate" msprop:Generator_ColumnPropNameInRow="AccReceiveDate" msprop:Generator_ColumnPropNameInTable="AccReceiveDateColumn" msprop:Generator_UserColumnName="AccReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SampleStatus" msprop:Generator_ColumnVarNameInTable="columnSampleStatus" msprop:Generator_ColumnPropNameInRow="SampleStatus" msprop:Generator_ColumnPropNameInTable="SampleStatusColumn" msprop:Generator_UserColumnName="SampleStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SampleDeliveryQuantity" msprop:Generator_ColumnVarNameInTable="columnSampleDeliveryQuantity" msprop:Generator_ColumnPropNameInRow="SampleDeliveryQuantity" msprop:Generator_ColumnPropNameInTable="SampleDeliveryQuantityColumn" msprop:Generator_UserColumnName="SampleDeliveryQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="SampleExDeliveryDate" msprop:Generator_ColumnVarNameInTable="columnSampleExDeliveryDate" msprop:Generator_ColumnPropNameInRow="SampleExDeliveryDate" msprop:Generator_ColumnPropNameInTable="SampleExDeliveryDateColumn" msprop:Generator_UserColumnName="SampleExDeliveryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="StatusRemarks" msprop:Generator_ColumnVarNameInTable="columnStatusRemarks" msprop:Generator_ColumnPropNameInRow="StatusRemarks" msprop:Generator_ColumnPropNameInTable="StatusRemarksColumn" msprop:Generator_UserColumnName="StatusRemarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SampleRequireDate" msprop:Generator_ColumnVarNameInTable="columnSampleRequireDate" msprop:Generator_ColumnPropNameInRow="SampleRequireDate" msprop:Generator_ColumnPropNameInTable="SampleRequireDateColumn" msprop:Generator_UserColumnName="SampleRequireDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FileReceiveDetails" msprop:Generator_ColumnVarNameInTable="columnFileReceiveDetails" msprop:Generator_ColumnPropNameInRow="FileReceiveDetails" msprop:Generator_ColumnPropNameInTable="FileReceiveDetailsColumn" msprop:Generator_UserColumnName="FileReceiveDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricReceiveQty" msprop:Generator_ColumnVarNameInTable="columnFabricReceiveQty" msprop:Generator_ColumnPropNameInRow="FabricReceiveQty" msprop:Generator_ColumnPropNameInTable="FabricReceiveQtyColumn" msprop:Generator_UserColumnName="FabricReceiveQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AccReceiveDetails" msprop:Generator_ColumnVarNameInTable="columnAccReceiveDetails" msprop:Generator_ColumnPropNameInRow="AccReceiveDetails" msprop:Generator_ColumnPropNameInTable="AccReceiveDetailsColumn" msprop:Generator_UserColumnName="AccReceiveDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SampleCuttingStartDate" msprop:Generator_ColumnVarNameInTable="columnSampleCuttingStartDate" msprop:Generator_ColumnPropNameInRow="SampleCuttingStartDate" msprop:Generator_ColumnPropNameInTable="SampleCuttingStartDateColumn" msprop:Generator_UserColumnName="SampleCuttingStartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SampleCuttingEndDate" msprop:Generator_ColumnVarNameInTable="columnSampleCuttingEndDate" msprop:Generator_ColumnPropNameInRow="SampleCuttingEndDate" msprop:Generator_ColumnPropNameInTable="SampleCuttingEndDateColumn" msprop:Generator_UserColumnName="SampleCuttingEndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SamplePrintSendDate" msprop:Generator_ColumnVarNameInTable="columnSamplePrintSendDate" msprop:Generator_ColumnPropNameInRow="SamplePrintSendDate" msprop:Generator_ColumnPropNameInTable="SamplePrintSendDateColumn" msprop:Generator_UserColumnName="SamplePrintSendDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="samplePrintReceiveDate" msprop:Generator_ColumnVarNameInTable="columnsamplePrintReceiveDate" msprop:Generator_ColumnPropNameInRow="samplePrintReceiveDate" msprop:Generator_ColumnPropNameInTable="samplePrintReceiveDateColumn" msprop:Generator_UserColumnName="samplePrintReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SamplePrintSendQty" msprop:Generator_ColumnVarNameInTable="columnSamplePrintSendQty" msprop:Generator_ColumnPropNameInRow="SamplePrintSendQty" msprop:Generator_ColumnPropNameInTable="SamplePrintSendQtyColumn" msprop:Generator_UserColumnName="SamplePrintSendQty" type="xs:int" minOccurs="0" />
+              <xs:element name="SamplePrintReceiveQty" msprop:Generator_ColumnVarNameInTable="columnSamplePrintReceiveQty" msprop:Generator_ColumnPropNameInRow="SamplePrintReceiveQty" msprop:Generator_ColumnPropNameInTable="SamplePrintReceiveQtyColumn" msprop:Generator_UserColumnName="SamplePrintReceiveQty" type="xs:int" minOccurs="0" />
+              <xs:element name="SampleEmbSendDate" msprop:Generator_ColumnVarNameInTable="columnSampleEmbSendDate" msprop:Generator_ColumnPropNameInRow="SampleEmbSendDate" msprop:Generator_ColumnPropNameInTable="SampleEmbSendDateColumn" msprop:Generator_UserColumnName="SampleEmbSendDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SampleEmbReceiveDate" msprop:Generator_ColumnVarNameInTable="columnSampleEmbReceiveDate" msprop:Generator_ColumnPropNameInRow="SampleEmbReceiveDate" msprop:Generator_ColumnPropNameInTable="SampleEmbReceiveDateColumn" msprop:Generator_UserColumnName="SampleEmbReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SampleEmbSendQty" msprop:Generator_ColumnVarNameInTable="columnSampleEmbSendQty" msprop:Generator_ColumnPropNameInRow="SampleEmbSendQty" msprop:Generator_ColumnPropNameInTable="SampleEmbSendQtyColumn" msprop:Generator_UserColumnName="SampleEmbSendQty" type="xs:int" minOccurs="0" />
+              <xs:element name="SampleEmbReceiveQty" msprop:Generator_ColumnVarNameInTable="columnSampleEmbReceiveQty" msprop:Generator_ColumnPropNameInRow="SampleEmbReceiveQty" msprop:Generator_ColumnPropNameInTable="SampleEmbReceiveQtyColumn" msprop:Generator_UserColumnName="SampleEmbReceiveQty" type="xs:int" minOccurs="0" />
+              <xs:element name="SampleSewingStartDate" msprop:Generator_ColumnVarNameInTable="columnSampleSewingStartDate" msprop:Generator_ColumnPropNameInRow="SampleSewingStartDate" msprop:Generator_ColumnPropNameInTable="SampleSewingStartDateColumn" msprop:Generator_UserColumnName="SampleSewingStartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SampleSewingEndDate" msprop:Generator_ColumnVarNameInTable="columnSampleSewingEndDate" msprop:Generator_ColumnPropNameInRow="SampleSewingEndDate" msprop:Generator_ColumnPropNameInTable="SampleSewingEndDateColumn" msprop:Generator_UserColumnName="SampleSewingEndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SamplePreparedBy" msprop:Generator_ColumnVarNameInTable="columnSamplePreparedBy" msprop:Generator_ColumnPropNameInRow="SamplePreparedBy" msprop:Generator_ColumnPropNameInTable="SamplePreparedByColumn" msprop:Generator_UserColumnName="SamplePreparedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SampleDeliveryDate" msprop:Generator_ColumnVarNameInTable="columnSampleDeliveryDate" msprop:Generator_ColumnPropNameInRow="SampleDeliveryDate" msprop:Generator_ColumnPropNameInTable="SampleDeliveryDateColumn" msprop:Generator_UserColumnName="SampleDeliveryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsSublimation" msprop:Generator_ColumnVarNameInTable="columnIsSublimation" msprop:Generator_ColumnPropNameInRow="IsSublimation" msprop:Generator_ColumnPropNameInTable="IsSublimationColumn" msprop:Generator_UserColumnName="IsSublimation" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsSequence" msprop:Generator_ColumnVarNameInTable="columnIsSequence" msprop:Generator_ColumnPropNameInRow="IsSequence" msprop:Generator_ColumnPropNameInTable="IsSequenceColumn" msprop:Generator_UserColumnName="IsSequence" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Season" msprop:Generator_ColumnVarNameInTable="columnSeason" msprop:Generator_ColumnPropNameInRow="Season" msprop:Generator_ColumnPropNameInTable="SeasonColumn" msprop:Generator_UserColumnName="Season" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricBookingDate" msprop:Generator_ColumnVarNameInTable="columnFabricBookingDate" msprop:Generator_ColumnPropNameInRow="FabricBookingDate" msprop:Generator_ColumnPropNameInTable="FabricBookingDateColumn" msprop:Generator_UserColumnName="FabricBookingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FabricRequireDate" msprop:Generator_ColumnVarNameInTable="columnFabricRequireDate" msprop:Generator_ColumnPropNameInRow="FabricRequireDate" msprop:Generator_ColumnPropNameInTable="FabricRequireDateColumn" msprop:Generator_UserColumnName="FabricRequireDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RevisedNo" msprop:Generator_ColumnVarNameInTable="columnRevisedNo" msprop:Generator_ColumnPropNameInRow="RevisedNo" msprop:Generator_ColumnPropNameInTable="RevisedNoColumn" msprop:Generator_UserColumnName="RevisedNo" type="xs:int" minOccurs="0" />
+              <xs:element name="RevisedDate" msprop:Generator_ColumnVarNameInTable="columnRevisedDate" msprop:Generator_ColumnPropNameInRow="RevisedDate" msprop:Generator_ColumnPropNameInTable="RevisedDateColumn" msprop:Generator_UserColumnName="RevisedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SampleFabricBookingRemarks" msprop:Generator_ColumnVarNameInTable="columnSampleFabricBookingRemarks" msprop:Generator_ColumnPropNameInRow="SampleFabricBookingRemarks" msprop:Generator_ColumnPropNameInTable="SampleFabricBookingRemarksColumn" msprop:Generator_UserColumnName="SampleFabricBookingRemarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Attention" msprop:Generator_ColumnVarNameInTable="columnAttention" msprop:Generator_ColumnPropNameInRow="Attention" msprop:Generator_ColumnPropNameInTable="AttentionColumn" msprop:Generator_UserColumnName="Attention" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CC" msprop:Generator_ColumnVarNameInTable="columnCC" msprop:Generator_ColumnPropNameInRow="CC" msprop:Generator_ColumnPropNameInTable="CCColumn" msprop:Generator_UserColumnName="CC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsReceivedByDyeing" msprop:Generator_ColumnVarNameInTable="columnIsReceivedByDyeing" msprop:Generator_ColumnPropNameInRow="IsReceivedByDyeing" msprop:Generator_ColumnPropNameInTable="IsReceivedByDyeingColumn" msprop:Generator_UserColumnName="IsReceivedByDyeing" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsBookingComplete" msprop:Generator_ColumnVarNameInTable="columnIsBookingComplete" msprop:Generator_ColumnPropNameInRow="IsBookingComplete" msprop:Generator_ColumnPropNameInTable="IsBookingCompleteColumn" msprop:Generator_UserColumnName="IsBookingComplete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsBookingCompleteOn" msprop:Generator_ColumnVarNameInTable="columnIsBookingCompleteOn" msprop:Generator_ColumnPropNameInRow="IsBookingCompleteOn" msprop:Generator_ColumnPropNameInTable="IsBookingCompleteOnColumn" msprop:Generator_UserColumnName="IsBookingCompleteOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Division" msprop:Generator_ColumnVarNameInTable="columnDivision" msprop:Generator_ColumnPropNameInRow="Division" msprop:Generator_ColumnPropNameInTable="DivisionColumn" msprop:Generator_UserColumnName="Division" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Brand" msprop:Generator_ColumnVarNameInTable="columnBrand" msprop:Generator_ColumnPropNameInRow="Brand" msprop:Generator_ColumnPropNameInTable="BrandColumn" msprop:Generator_UserColumnName="Brand" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KnittingType" msprop:Generator_ColumnVarNameInTable="columnKnittingType" msprop:Generator_ColumnPropNameInRow="KnittingType" msprop:Generator_ColumnPropNameInTable="KnittingTypeColumn" msprop:Generator_UserColumnName="KnittingType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Composition" msprop:Generator_ColumnVarNameInTable="columnComposition" msprop:Generator_ColumnPropNameInRow="Composition" msprop:Generator_ColumnPropNameInTable="CompositionColumn" msprop:Generator_UserColumnName="Composition" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricDetails" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFabricDetails" msprop:Generator_ColumnPropNameInRow="FabricDetails" msprop:Generator_ColumnPropNameInTable="FabricDetailsColumn" msprop:Generator_UserColumnName="FabricDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricColorName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFabricColorName" msprop:Generator_ColumnPropNameInRow="FabricColorName" msprop:Generator_ColumnPropNameInTable="FabricColorNameColumn" msprop:Generator_UserColumnName="FabricColorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Size" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSize" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnPropNameInTable="SizeColumn" msprop:Generator_UserColumnName="Size" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FinishQuantity" msprop:Generator_ColumnVarNameInTable="columnFinishQuantity" msprop:Generator_ColumnPropNameInRow="FinishQuantity" msprop:Generator_ColumnPropNameInTable="FinishQuantityColumn" msprop:Generator_UserColumnName="FinishQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GreyQuantity" msprop:Generator_ColumnVarNameInTable="columnGreyQuantity" msprop:Generator_ColumnPropNameInRow="GreyQuantity" msprop:Generator_ColumnPropNameInTable="GreyQuantityColumn" msprop:Generator_UserColumnName="GreyQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SampleDeliveryQuantity2" msprop:Generator_ColumnVarNameInTable="columnSampleDeliveryQuantity2" msprop:Generator_ColumnPropNameInRow="SampleDeliveryQuantity2" msprop:Generator_ColumnPropNameInTable="SampleDeliveryQuantity2Column" msprop:Generator_UserColumnName="SampleDeliveryQuantity2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FirstSampleDeliveryDate" msprop:Generator_ColumnVarNameInTable="columnFirstSampleDeliveryDate" msprop:Generator_ColumnPropNameInRow="FirstSampleDeliveryDate" msprop:Generator_ColumnPropNameInTable="FirstSampleDeliveryDateColumn" msprop:Generator_UserColumnName="FirstSampleDeliveryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastSampleDeliveryDate" msprop:Generator_ColumnVarNameInTable="columnLastSampleDeliveryDate" msprop:Generator_ColumnPropNameInRow="LastSampleDeliveryDate" msprop:Generator_ColumnPropNameInTable="LastSampleDeliveryDateColumn" msprop:Generator_UserColumnName="LastSampleDeliveryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Merchandiser" msprop:Generator_ColumnVarNameInTable="columnMerchandiser" msprop:Generator_ColumnPropNameInRow="Merchandiser" msprop:Generator_ColumnPropNameInTable="MerchandiserColumn" msprop:Generator_UserColumnName="Merchandiser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GatePassType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGatePassType" msprop:Generator_ColumnPropNameInRow="GatePassType" msprop:Generator_ColumnPropNameInTable="GatePassTypeColumn" msprop:Generator_UserColumnName="GatePassType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FFDeliveryQuantity" msprop:Generator_ColumnVarNameInTable="columnFFDeliveryQuantity" msprop:Generator_ColumnPropNameInRow="FFDeliveryQuantity" msprop:Generator_ColumnPropNameInTable="FFDeliveryQuantityColumn" msprop:Generator_UserColumnName="FFDeliveryQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FirstChallanDate" msprop:Generator_ColumnVarNameInTable="columnFirstChallanDate" msprop:Generator_ColumnPropNameInRow="FirstChallanDate" msprop:Generator_ColumnPropNameInTable="FirstChallanDateColumn" msprop:Generator_UserColumnName="FirstChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastChallanDate" msprop:Generator_ColumnVarNameInTable="columnLastChallanDate" msprop:Generator_ColumnPropNameInRow="LastChallanDate" msprop:Generator_ColumnPropNameInTable="LastChallanDateColumn" msprop:Generator_UserColumnName="LastChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CauseOfRevised" msprop:Generator_ColumnVarNameInTable="columnCauseOfRevised" msprop:Generator_ColumnPropNameInRow="CauseOfRevised" msprop:Generator_ColumnPropNameInTable="CauseOfRevisedColumn" msprop:Generator_UserColumnName="CauseOfRevised" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgramNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YarnIssueQuantity" msprop:Generator_ColumnVarNameInTable="columnYarnIssueQuantity" msprop:Generator_ColumnPropNameInRow="YarnIssueQuantity" msprop:Generator_ColumnPropNameInTable="YarnIssueQuantityColumn" msprop:Generator_UserColumnName="YarnIssueQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YarnRequisitonNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYarnRequisitonNo" msprop:Generator_ColumnPropNameInRow="YarnRequisitonNo" msprop:Generator_ColumnPropNameInTable="YarnRequisitonNoColumn" msprop:Generator_UserColumnName="YarnRequisitonNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LotNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLotNo" msprop:Generator_ColumnPropNameInRow="LotNo" msprop:Generator_ColumnPropNameInTable="LotNoColumn" msprop:Generator_UserColumnName="LotNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YarnBrand" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYarnBrand" msprop:Generator_ColumnPropNameInRow="YarnBrand" msprop:Generator_ColumnPropNameInTable="YarnBrandColumn" msprop:Generator_UserColumnName="YarnBrand" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YarnName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYarnName" msprop:Generator_ColumnPropNameInRow="YarnName" msprop:Generator_ColumnPropNameInTable="YarnNameColumn" msprop:Generator_UserColumnName="YarnName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MCDia" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMCDia" msprop:Generator_ColumnPropNameInRow="MCDia" msprop:Generator_ColumnPropNameInTable="MCDiaColumn" msprop:Generator_UserColumnName="MCDia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MCGauge" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMCGauge" msprop:Generator_ColumnPropNameInRow="MCGauge" msprop:Generator_ColumnPropNameInTable="MCGaugeColumn" msprop:Generator_UserColumnName="MCGauge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StitchLength" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnStitchLength" msprop:Generator_ColumnPropNameInRow="StitchLength" msprop:Generator_ColumnPropNameInTable="StitchLengthColumn" msprop:Generator_UserColumnName="StitchLength" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KnittingProduction" msprop:Generator_ColumnVarNameInTable="columnKnittingProduction" msprop:Generator_ColumnPropNameInRow="KnittingProduction" msprop:Generator_ColumnPropNameInTable="KnittingProductionColumn" msprop:Generator_UserColumnName="KnittingProduction" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FirstGFIDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstGFIDate" msprop:Generator_ColumnPropNameInRow="FirstGFIDate" msprop:Generator_ColumnPropNameInTable="FirstGFIDateColumn" msprop:Generator_UserColumnName="FirstGFIDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastGFIDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastGFIDate" msprop:Generator_ColumnPropNameInRow="LastGFIDate" msprop:Generator_ColumnPropNameInTable="LastGFIDateColumn" msprop:Generator_UserColumnName="LastGFIDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GFIDeliveryQty" msprop:Generator_ColumnVarNameInTable="columnGFIDeliveryQty" msprop:Generator_ColumnPropNameInRow="GFIDeliveryQty" msprop:Generator_ColumnPropNameInTable="GFIDeliveryQtyColumn" msprop:Generator_UserColumnName="GFIDeliveryQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GFIChallanNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGFIChallanNo" msprop:Generator_ColumnPropNameInRow="GFIChallanNo" msprop:Generator_ColumnPropNameInTable="GFIChallanNoColumn" msprop:Generator_UserColumnName="GFIChallanNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstYarnRequisitonDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstYarnRequisitonDate" msprop:Generator_ColumnPropNameInRow="FirstYarnRequisitonDate" msprop:Generator_ColumnPropNameInTable="FirstYarnRequisitonDateColumn" msprop:Generator_UserColumnName="FirstYarnRequisitonDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastYarnRequisitonDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastYarnRequisitonDate" msprop:Generator_ColumnPropNameInRow="LastYarnRequisitonDate" msprop:Generator_ColumnPropNameInTable="LastYarnRequisitonDateColumn" msprop:Generator_UserColumnName="LastYarnRequisitonDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstGFSReceiveChallanDate" msprop:Generator_ColumnVarNameInTable="columnFirstGFSReceiveChallanDate" msprop:Generator_ColumnPropNameInRow="FirstGFSReceiveChallanDate" msprop:Generator_ColumnPropNameInTable="FirstGFSReceiveChallanDateColumn" msprop:Generator_UserColumnName="FirstGFSReceiveChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastGFSReceiveChallanDate" msprop:Generator_ColumnVarNameInTable="columnLastGFSReceiveChallanDate" msprop:Generator_ColumnPropNameInRow="LastGFSReceiveChallanDate" msprop:Generator_ColumnPropNameInTable="LastGFSReceiveChallanDateColumn" msprop:Generator_UserColumnName="LastGFSReceiveChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GFReceiveChallanNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGFReceiveChallanNo" msprop:Generator_ColumnPropNameInRow="GFReceiveChallanNo" msprop:Generator_ColumnPropNameInTable="GFReceiveChallanNoColumn" msprop:Generator_UserColumnName="GFReceiveChallanNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TTLGFIssueQuantity" msprop:Generator_ColumnVarNameInTable="columnTTLGFIssueQuantity" msprop:Generator_ColumnPropNameInRow="TTLGFIssueQuantity" msprop:Generator_ColumnPropNameInTable="TTLGFIssueQuantityColumn" msprop:Generator_UserColumnName="TTLGFIssueQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FirstGFSIssueChallanDate" msprop:Generator_ColumnVarNameInTable="columnFirstGFSIssueChallanDate" msprop:Generator_ColumnPropNameInRow="FirstGFSIssueChallanDate" msprop:Generator_ColumnPropNameInTable="FirstGFSIssueChallanDateColumn" msprop:Generator_UserColumnName="FirstGFSIssueChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastGFSIssueChallanDate" msprop:Generator_ColumnVarNameInTable="columnLastGFSIssueChallanDate" msprop:Generator_ColumnPropNameInRow="LastGFSIssueChallanDate" msprop:Generator_ColumnPropNameInTable="LastGFSIssueChallanDateColumn" msprop:Generator_UserColumnName="LastGFSIssueChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GFIssueChallanNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGFIssueChallanNo" msprop:Generator_ColumnPropNameInRow="GFIssueChallanNo" msprop:Generator_ColumnPropNameInTable="GFIssueChallanNoColumn" msprop:Generator_UserColumnName="GFIssueChallanNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TTLGFReceiveQuantity" msprop:Generator_ColumnVarNameInTable="columnTTLGFReceiveQuantity" msprop:Generator_ColumnPropNameInRow="TTLGFReceiveQuantity" msprop:Generator_ColumnPropNameInTable="TTLGFReceiveQuantityColumn" msprop:Generator_UserColumnName="TTLGFReceiveQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YarnDelChallanNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYarnDelChallanNo" msprop:Generator_ColumnPropNameInRow="YarnDelChallanNo" msprop:Generator_ColumnPropNameInTable="YarnDelChallanNoColumn" msprop:Generator_UserColumnName="YarnDelChallanNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstYarnDelChallanDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstYarnDelChallanDate" msprop:Generator_ColumnPropNameInRow="FirstYarnDelChallanDate" msprop:Generator_ColumnPropNameInTable="FirstYarnDelChallanDateColumn" msprop:Generator_UserColumnName="FirstYarnDelChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastYarnDelChallanDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastYarnDelChallanDate" msprop:Generator_ColumnPropNameInRow="LastYarnDelChallanDate" msprop:Generator_ColumnPropNameInTable="LastYarnDelChallanDateColumn" msprop:Generator_UserColumnName="LastYarnDelChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BatchNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBatchNo" msprop:Generator_ColumnPropNameInRow="BatchNo" msprop:Generator_ColumnPropNameInTable="BatchNoColumn" msprop:Generator_UserColumnName="BatchNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BatchQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBatchQuantity" msprop:Generator_ColumnPropNameInRow="BatchQuantity" msprop:Generator_ColumnPropNameInTable="BatchQuantityColumn" msprop:Generator_UserColumnName="BatchQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FirstBatchDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstBatchDate" msprop:Generator_ColumnPropNameInRow="FirstBatchDate" msprop:Generator_ColumnPropNameInTable="FirstBatchDateColumn" msprop:Generator_UserColumnName="FirstBatchDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastBatchDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastBatchDate" msprop:Generator_ColumnPropNameInRow="LastBatchDate" msprop:Generator_ColumnPropNameInTable="LastBatchDateColumn" msprop:Generator_UserColumnName="LastBatchDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LDRecipeNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLDRecipeNo" msprop:Generator_ColumnPropNameInRow="LDRecipeNo" msprop:Generator_ColumnPropNameInTable="LDRecipeNoColumn" msprop:Generator_UserColumnName="LDRecipeNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastLDApprovedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastLDApprovedDate" msprop:Generator_ColumnPropNameInRow="LastLDApprovedDate" msprop:Generator_ColumnPropNameInTable="LastLDApprovedDateColumn" msprop:Generator_UserColumnName="LastLDApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstLDApprovedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstLDApprovedDate" msprop:Generator_ColumnPropNameInRow="FirstLDApprovedDate" msprop:Generator_ColumnPropNameInTable="FirstLDApprovedDateColumn" msprop:Generator_UserColumnName="FirstLDApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastLDReceivedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastLDReceivedDate" msprop:Generator_ColumnPropNameInRow="LastLDReceivedDate" msprop:Generator_ColumnPropNameInTable="LastLDReceivedDateColumn" msprop:Generator_UserColumnName="LastLDReceivedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstLDReceivedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstLDReceivedDate" msprop:Generator_ColumnPropNameInRow="FirstLDReceivedDate" msprop:Generator_ColumnPropNameInTable="FirstLDReceivedDateColumn" msprop:Generator_UserColumnName="FirstLDReceivedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DyeingQuantity" msprop:Generator_ColumnVarNameInTable="columnDyeingQuantity" msprop:Generator_ColumnPropNameInRow="DyeingQuantity" msprop:Generator_ColumnPropNameInTable="DyeingQuantityColumn" msprop:Generator_UserColumnName="DyeingQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FirstDyeingDate" msprop:Generator_ColumnVarNameInTable="columnFirstDyeingDate" msprop:Generator_ColumnPropNameInRow="FirstDyeingDate" msprop:Generator_ColumnPropNameInTable="FirstDyeingDateColumn" msprop:Generator_UserColumnName="FirstDyeingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastDyeingDate" msprop:Generator_ColumnVarNameInTable="columnLastDyeingDate" msprop:Generator_ColumnPropNameInRow="LastDyeingDate" msprop:Generator_ColumnPropNameInTable="LastDyeingDateColumn" msprop:Generator_UserColumnName="LastDyeingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TTLDyeingFinishingQuantity" msprop:Generator_ColumnVarNameInTable="columnTTLDyeingFinishingQuantity" msprop:Generator_ColumnPropNameInRow="TTLDyeingFinishingQuantity" msprop:Generator_ColumnPropNameInTable="TTLDyeingFinishingQuantityColumn" msprop:Generator_UserColumnName="TTLDyeingFinishingQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LastFinishingDate" msprop:Generator_ColumnVarNameInTable="columnLastFinishingDate" msprop:Generator_ColumnPropNameInRow="LastFinishingDate" msprop:Generator_ColumnPropNameInTable="LastFinishingDateColumn" msprop:Generator_UserColumnName="LastFinishingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstFinishingDate" msprop:Generator_ColumnVarNameInTable="columnFirstFinishingDate" msprop:Generator_ColumnPropNameInRow="FirstFinishingDate" msprop:Generator_ColumnPropNameInTable="FirstFinishingDateColumn" msprop:Generator_UserColumnName="FirstFinishingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FinishingProcessed" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFinishingProcessed" msprop:Generator_ColumnPropNameInRow="FinishingProcessed" msprop:Generator_ColumnPropNameInTable="FinishingProcessedColumn" msprop:Generator_UserColumnName="FinishingProcessed" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FFIChallanNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFFIChallanNo" msprop:Generator_ColumnPropNameInRow="FFIChallanNo" msprop:Generator_ColumnPropNameInTable="FFIChallanNoColumn" msprop:Generator_UserColumnName="FFIChallanNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstFFIDate" msprop:Generator_ColumnVarNameInTable="columnFirstFFIDate" msprop:Generator_ColumnPropNameInRow="FirstFFIDate" msprop:Generator_ColumnPropNameInTable="FirstFFIDateColumn" msprop:Generator_UserColumnName="FirstFFIDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastFFIDate" msprop:Generator_ColumnVarNameInTable="columnLastFFIDate" msprop:Generator_ColumnPropNameInRow="LastFFIDate" msprop:Generator_ColumnPropNameInTable="LastFFIDateColumn" msprop:Generator_UserColumnName="LastFFIDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TTLFFIDeliveryQuantity" msprop:Generator_ColumnVarNameInTable="columnTTLFFIDeliveryQuantity" msprop:Generator_ColumnPropNameInRow="TTLFFIDeliveryQuantity" msprop:Generator_ColumnPropNameInTable="TTLFFIDeliveryQuantityColumn" msprop:Generator_UserColumnName="TTLFFIDeliveryQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FirstLDSentForAppDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstLDSentForAppDate" msprop:Generator_ColumnPropNameInRow="FirstLDSentForAppDate" msprop:Generator_ColumnPropNameInTable="FirstLDSentForAppDateColumn" msprop:Generator_UserColumnName="FirstLDSentForAppDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastLDSentForAppDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastLDSentForAppDate" msprop:Generator_ColumnPropNameInRow="LastLDSentForAppDate" msprop:Generator_ColumnPropNameInTable="LastLDSentForAppDateColumn" msprop:Generator_UserColumnName="LastLDSentForAppDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstApprovedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstApprovedDate" msprop:Generator_ColumnPropNameInRow="FirstApprovedDate" msprop:Generator_ColumnPropNameInTable="FirstApprovedDateColumn" msprop:Generator_UserColumnName="FirstApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastApprovedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastApprovedDate" msprop:Generator_ColumnPropNameInRow="LastApprovedDate" msprop:Generator_ColumnPropNameInTable="LastApprovedDateColumn" msprop:Generator_UserColumnName="LastApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstSwatchReceivedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstSwatchReceivedDate" msprop:Generator_ColumnPropNameInRow="FirstSwatchReceivedDate" msprop:Generator_ColumnPropNameInTable="FirstSwatchReceivedDateColumn" msprop:Generator_UserColumnName="FirstSwatchReceivedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastSwatchReceivedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastSwatchReceivedDate" msprop:Generator_ColumnPropNameInRow="LastSwatchReceivedDate" msprop:Generator_ColumnPropNameInTable="LastSwatchReceivedDateColumn" msprop:Generator_UserColumnName="LastSwatchReceivedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstLabPreparedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstLabPreparedDate" msprop:Generator_ColumnPropNameInRow="FirstLabPreparedDate" msprop:Generator_ColumnPropNameInTable="FirstLabPreparedDateColumn" msprop:Generator_UserColumnName="FirstLabPreparedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastLabPreparedDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastLabPreparedDate" msprop:Generator_ColumnPropNameInRow="LastLabPreparedDate" msprop:Generator_ColumnPropNameInTable="LastLabPreparedDateColumn" msprop:Generator_UserColumnName="LastLabPreparedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstLabFabricDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstLabFabricDate" msprop:Generator_ColumnPropNameInRow="FirstLabFabricDate" msprop:Generator_ColumnPropNameInTable="FirstLabFabricDateColumn" msprop:Generator_UserColumnName="FirstLabFabricDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastLabFabricDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastLabFabricDate" msprop:Generator_ColumnPropNameInRow="LastLabFabricDate" msprop:Generator_ColumnPropNameInTable="LastLabFabricDateColumn" msprop:Generator_UserColumnName="LastLabFabricDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LDStatus" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLDStatus" msprop:Generator_ColumnPropNameInRow="LDStatus" msprop:Generator_ColumnPropNameInTable="LDStatusColumn" msprop:Generator_UserColumnName="LDStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LDCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLDCost" msprop:Generator_ColumnPropNameInRow="LDCost" msprop:Generator_ColumnPropNameInTable="LDCostColumn" msprop:Generator_UserColumnName="LDCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FirstFabricTestDate" msprop:Generator_ColumnVarNameInTable="columnFirstFabricTestDate" msprop:Generator_ColumnPropNameInRow="FirstFabricTestDate" msprop:Generator_ColumnPropNameInTable="FirstFabricTestDateColumn" msprop:Generator_UserColumnName="FirstFabricTestDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastFabricTestDate" msprop:Generator_ColumnVarNameInTable="columnLastFabricTestDate" msprop:Generator_ColumnPropNameInRow="LastFabricTestDate" msprop:Generator_ColumnPropNameInTable="LastFabricTestDateColumn" msprop:Generator_UserColumnName="LastFabricTestDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstFabricTestReceiveDate" msprop:Generator_ColumnVarNameInTable="columnFirstFabricTestReceiveDate" msprop:Generator_ColumnPropNameInRow="FirstFabricTestReceiveDate" msprop:Generator_ColumnPropNameInTable="FirstFabricTestReceiveDateColumn" msprop:Generator_UserColumnName="FirstFabricTestReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastFabricTestReceiveDate" msprop:Generator_ColumnVarNameInTable="columnLastFabricTestReceiveDate" msprop:Generator_ColumnPropNameInRow="LastFabricTestReceiveDate" msprop:Generator_ColumnPropNameInTable="LastFabricTestReceiveDateColumn" msprop:Generator_UserColumnName="LastFabricTestReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstSubmitDate" msprop:Generator_ColumnVarNameInTable="columnFirstSubmitDate" msprop:Generator_ColumnPropNameInRow="FirstSubmitDate" msprop:Generator_ColumnPropNameInTable="FirstSubmitDateColumn" msprop:Generator_UserColumnName="FirstSubmitDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastSubmitDate" msprop:Generator_ColumnVarNameInTable="columnLastSubmitDate" msprop:Generator_ColumnPropNameInRow="LastSubmitDate" msprop:Generator_ColumnPropNameInTable="LastSubmitDateColumn" msprop:Generator_UserColumnName="LastSubmitDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FirstFabricTestApprovedDate" msprop:Generator_ColumnVarNameInTable="columnFirstFabricTestApprovedDate" msprop:Generator_ColumnPropNameInRow="FirstFabricTestApprovedDate" msprop:Generator_ColumnPropNameInTable="FirstFabricTestApprovedDateColumn" msprop:Generator_UserColumnName="FirstFabricTestApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastFabricTestApprovedDate" msprop:Generator_ColumnVarNameInTable="columnLastFabricTestApprovedDate" msprop:Generator_ColumnPropNameInRow="LastFabricTestApprovedDate" msprop:Generator_ColumnPropNameInTable="LastFabricTestApprovedDateColumn" msprop:Generator_UserColumnName="LastFabricTestApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FabricTestNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFabricTestNo" msprop:Generator_ColumnPropNameInRow="FabricTestNo" msprop:Generator_ColumnPropNameInTable="FabricTestNoColumn" msprop:Generator_UserColumnName="FabricTestNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricTestStatus" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFabricTestStatus" msprop:Generator_ColumnPropNameInRow="FabricTestStatus" msprop:Generator_ColumnPropNameInTable="FabricTestStatusColumn" msprop:Generator_UserColumnName="FabricTestStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TTLFFReceiveQuantity" msprop:Generator_ColumnVarNameInTable="columnTTLFFReceiveQuantity" msprop:Generator_ColumnPropNameInRow="TTLFFReceiveQuantity" msprop:Generator_ColumnPropNameInTable="TTLFFReceiveQuantityColumn" msprop:Generator_UserColumnName="TTLFFReceiveQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TTLFFIssueQuantity" msprop:Generator_ColumnVarNameInTable="columnTTLFFIssueQuantity" msprop:Generator_ColumnPropNameInRow="TTLFFIssueQuantity" msprop:Generator_ColumnPropNameInTable="TTLFFIssueQuantityColumn" msprop:Generator_UserColumnName="TTLFFIssueQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FFReceiveChallanNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFFReceiveChallanNo" msprop:Generator_ColumnPropNameInRow="FFReceiveChallanNo" msprop:Generator_ColumnPropNameInTable="FFReceiveChallanNoColumn" msprop:Generator_UserColumnName="FFReceiveChallanNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstFFRcvChallanDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstFFRcvChallanDate" msprop:Generator_ColumnPropNameInRow="FirstFFRcvChallanDate" msprop:Generator_ColumnPropNameInTable="FirstFFRcvChallanDateColumn" msprop:Generator_UserColumnName="FirstFFRcvChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastFFRcvChallanDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastFFRcvChallanDate" msprop:Generator_ColumnPropNameInRow="LastFFRcvChallanDate" msprop:Generator_ColumnPropNameInTable="LastFFRcvChallanDateColumn" msprop:Generator_UserColumnName="LastFFRcvChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FFIssueChallanNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFFIssueChallanNo" msprop:Generator_ColumnPropNameInRow="FFIssueChallanNo" msprop:Generator_ColumnPropNameInTable="FFIssueChallanNoColumn" msprop:Generator_UserColumnName="FFIssueChallanNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstFFIssChallanDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstFFIssChallanDate" msprop:Generator_ColumnPropNameInRow="FirstFFIssChallanDate" msprop:Generator_ColumnPropNameInTable="FirstFFIssChallanDateColumn" msprop:Generator_UserColumnName="FirstFFIssChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastFFIssChallanDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastFFIssChallanDate" msprop:Generator_ColumnPropNameInRow="LastFFIssChallanDate" msprop:Generator_ColumnPropNameInTable="LastFFIssChallanDateColumn" msprop:Generator_UserColumnName="LastFFIssChallanDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="YarnIssueBalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYarnIssueBalance" msprop:Generator_ColumnPropNameInRow="YarnIssueBalance" msprop:Generator_ColumnPropNameInTable="YarnIssueBalanceColumn" msprop:Generator_UserColumnName="YarnIssueBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GFReceiveBalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGFReceiveBalance" msprop:Generator_ColumnPropNameInRow="GFReceiveBalance" msprop:Generator_ColumnPropNameInTable="GFReceiveBalanceColumn" msprop:Generator_UserColumnName="GFReceiveBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GFIssueBalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGFIssueBalance" msprop:Generator_ColumnPropNameInRow="GFIssueBalance" msprop:Generator_ColumnPropNameInTable="GFIssueBalanceColumn" msprop:Generator_UserColumnName="GFIssueBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FFReceiveBalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFFReceiveBalance" msprop:Generator_ColumnPropNameInRow="FFReceiveBalance" msprop:Generator_ColumnPropNameInTable="FFReceiveBalanceColumn" msprop:Generator_UserColumnName="FFReceiveBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FFIssueBalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFFIssueBalance" msprop:Generator_ColumnPropNameInRow="FFIssueBalance" msprop:Generator_ColumnPropNameInTable="FFIssueBalanceColumn" msprop:Generator_UserColumnName="FFIssueBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Enzyme" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEnzyme" msprop:Generator_ColumnPropNameInRow="Enzyme" msprop:Generator_ColumnPropNameInTable="EnzymeColumn" msprop:Generator_UserColumnName="Enzyme" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DLBatchNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDLBatchNo" msprop:Generator_ColumnPropNameInRow="DLBatchNo" msprop:Generator_ColumnPropNameInTable="DLBatchNoColumn" msprop:Generator_UserColumnName="DLBatchNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shade" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShade" msprop:Generator_ColumnPropNameInRow="Shade" msprop:Generator_ColumnPropNameInTable="ShadeColumn" msprop:Generator_UserColumnName="Shade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Softner" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSoftner" msprop:Generator_ColumnPropNameInRow="Softner" msprop:Generator_ColumnPropNameInTable="SoftnerColumn" msprop:Generator_UserColumnName="Softner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:long" minOccurs="0" />
+              <xs:element name="CommentStatus" msprop:Generator_ColumnVarNameInTable="columnCommentStatus" msprop:Generator_ColumnPropNameInRow="CommentStatus" msprop:Generator_ColumnPropNameInTable="CommentStatusColumn" msprop:Generator_UserColumnName="CommentStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SampleSendingInfo" msprop:Generator_ColumnVarNameInTable="columnSampleSendingInfo" msprop:Generator_ColumnPropNameInRow="SampleSendingInfo" msprop:Generator_ColumnPropNameInTable="SampleSendingInfoColumn" msprop:Generator_UserColumnName="SampleSendingInfo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QADStatus" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQADStatus" msprop:Generator_ColumnPropNameInRow="QADStatus" msprop:Generator_ColumnPropNameInTable="QADStatusColumn" msprop:Generator_UserColumnName="QADStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstLDSenttoFloorDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirstLDSenttoFloorDate" msprop:Generator_ColumnPropNameInRow="FirstLDSenttoFloorDate" msprop:Generator_ColumnPropNameInTable="FirstLDSenttoFloorDateColumn" msprop:Generator_UserColumnName="FirstLDSenttoFloorDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastLDSenttoFloorDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLastLDSenttoFloorDate" msprop:Generator_ColumnPropNameInRow="LastLDSenttoFloorDate" msprop:Generator_ColumnPropNameInTable="LastLDSenttoFloorDateColumn" msprop:Generator_UserColumnName="LastLDSenttoFloorDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SampleRequestStatus" />
+      <xs:field xpath="mstns:SampleRequestId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

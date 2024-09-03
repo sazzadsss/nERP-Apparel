@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EmbOrderLookupDataSet" targetNamespace="http://tempuri.org/EmbOrderLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/EmbOrderLookupDataSet.xsd" xmlns="http://tempuri.org/EmbOrderLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmbOrderLookupTableAdapter" GeneratorDataComponentClassName="EmbOrderLookupTableAdapter" Name="EmbOrderLookup" UserDataComponentName="EmbOrderLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.EmbOrderLookup" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EmbOrderId, EMBOrderNo, ProgramNo, StyleName, Buyer, Details, OrderId
+FROM            EmbOrderLookup</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EmbOrderId" DataSetColumn="EmbOrderId" />
+              <Mapping SourceColumn="EMBOrderNo" DataSetColumn="EMBOrderNo" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="Buyer" DataSetColumn="Buyer" />
+              <Mapping SourceColumn="Details" DataSetColumn="Details" />
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[mscl-db].dbo.EmbOrderLookup" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByDivAsign" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAsign" GeneratorSourceName="FillByDivAsign" GetMethodModifier="Public" GetMethodName="GetDataByAsign" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAsign" UserSourceName="FillByDivAsign">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EmbOrderId, EMBOrderNo, ProgramNo, StyleName, Buyer, Details, OrderId
+FROM            EmbOrderLookup
+WHERE        (OrderId IN
+                             (SELECT        OrderId
+                               FROM            [Order]
+                               WHERE        (DivisionId IN
+                                                             (SELECT        DivisionId
+                                                               FROM            BuyerAsign
+                                                               WHERE        (UserId = @UserId))) AND (BuyerId IN
+                                                             (SELECT        BuyerId
+                                                               FROM            BuyerAsign AS BuyerAsign_1
+                                                               WHERE        (UserId = @UserId)))))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="UserId" ColumnName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.EmbOrderLookup" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByOrderId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOrderId" GeneratorSourceName="FillByOrderId" GetMethodModifier="Public" GetMethodName="GetDataByOrderId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOrderId" UserSourceName="FillByOrderId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Buyer, Details, EMBOrderNo, EmbOrderId, OrderId, ProgramNo, StyleName FROM EmbOrderLookup WHERE (OrderId = @OrderId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="OrderId" ColumnName="OrderId" DataSourceName="[ncl-db].dbo.EmbOrderLookup" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[mscl-db].dbo.EmbOrderLookup" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByOutSide" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOutSide" GeneratorSourceName="FillByOutSide" GetMethodModifier="Public" GetMethodName="GetDataByOutSide" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOutSide" UserSourceName="FillByOutSide">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EmbOrderId, EMBOrderNo, ProgramNo, StyleName, Buyer, Details, OrderId
+FROM            EmbOrderLookup
+WHERE        (OrderId IS NULL)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EmbOrderLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="EmbOrderLookupDataSet" msprop:Generator_UserDSName="EmbOrderLookupDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EmbOrderLookup" msprop:Generator_UserTableName="EmbOrderLookup" msprop:Generator_RowEvArgName="EmbOrderLookupRowChangeEvent" msprop:Generator_TableVarName="tableEmbOrderLookup" msprop:Generator_TablePropName="EmbOrderLookup" msprop:Generator_RowDeletingName="EmbOrderLookupRowDeleting" msprop:Generator_RowChangingName="EmbOrderLookupRowChanging" msprop:Generator_RowDeletedName="EmbOrderLookupRowDeleted" msprop:Generator_RowEvHandlerName="EmbOrderLookupRowChangeEventHandler" msprop:Generator_TableClassName="EmbOrderLookupDataTable" msprop:Generator_RowChangedName="EmbOrderLookupRowChanged" msprop:Generator_RowClassName="EmbOrderLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmbOrderId" msprop:Generator_ColumnVarNameInTable="columnEmbOrderId" msprop:Generator_ColumnPropNameInRow="EmbOrderId" msprop:Generator_ColumnPropNameInTable="EmbOrderIdColumn" msprop:Generator_UserColumnName="EmbOrderId" type="xs:long" />
+              <xs:element name="EMBOrderNo" msprop:Generator_ColumnVarNameInTable="columnEMBOrderNo" msprop:Generator_ColumnPropNameInRow="EMBOrderNo" msprop:Generator_ColumnPropNameInTable="EMBOrderNoColumn" msprop:Generator_UserColumnName="EMBOrderNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Buyer" msprop:Generator_ColumnVarNameInTable="columnBuyer" msprop:Generator_ColumnPropNameInRow="Buyer" msprop:Generator_ColumnPropNameInTable="BuyerColumn" msprop:Generator_UserColumnName="Buyer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Details" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="206" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EmbOrderLookup" />
+      <xs:field xpath="mstns:EmbOrderId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

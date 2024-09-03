@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OrderSizeLookupDataSet" targetNamespace="http://tempuri.org/OrderSizeLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/OrderSizeLookupDataSet.xsd" xmlns="http://tempuri.org/OrderSizeLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderSizeLookupTableAdapter" GeneratorDataComponentClassName="OrderSizeLookupTableAdapter" Name="OrderSizeLookup" UserDataComponentName="OrderSizeLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.OrderSizeLookup" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT OrderId, SizeId, SizeCode, OrderQuantity FROM dbo.OrderSizeLookup</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderSizeLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="OrderSizeLookupDataSet" msprop:Generator_UserDSName="OrderSizeLookupDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrderSizeLookup" msprop:Generator_UserTableName="OrderSizeLookup" msprop:Generator_RowDeletedName="OrderSizeLookupRowDeleted" msprop:Generator_TableClassName="OrderSizeLookupDataTable" msprop:Generator_RowChangedName="OrderSizeLookupRowChanged" msprop:Generator_RowClassName="OrderSizeLookupRow" msprop:Generator_RowChangingName="OrderSizeLookupRowChanging" msprop:Generator_RowEvArgName="OrderSizeLookupRowChangeEvent" msprop:Generator_RowEvHandlerName="OrderSizeLookupRowChangeEventHandler" msprop:Generator_TablePropName="OrderSizeLookup" msprop:Generator_TableVarName="tableOrderSizeLookup" msprop:Generator_RowDeletingName="OrderSizeLookupRowDeleting">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

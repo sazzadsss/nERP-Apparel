@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SampleFabricBookingLookupDataSet" targetNamespace="http://tempuri.org/SampleFabricBookingLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/SampleFabricBookingLookupDataSet.xsd" xmlns="http://tempuri.org/SampleFabricBookingLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SampleFabricBookingLookupTableAdapter" GeneratorDataComponentClassName="SampleFabricBookingLookupTableAdapter" Name="SampleFabricBookingLookup" UserDataComponentName="SampleFabricBookingLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SampleFabricBooking.SampleFabricBookingId, ISNULL(SampleFabricBooking.BookingNo, 'N/A') AS BookingNo, SampleFabricBooking.SampleRequestId, SampleFabricBooking.FabricBookingDate, 
+                         SampleRequestFinal.RequestNo, Style.StyleName AS Style, Buyer.BuyerName
+FROM            Style INNER JOIN
+                         SampleRequestFinal ON Style.StyleId = SampleRequestFinal.StyleId INNER JOIN
+                         Buyer ON SampleRequestFinal.BuyerId = Buyer.BuyerId INNER JOIN
+                         SampleFabricBooking ON SampleRequestFinal.SampleRequestId = SampleFabricBooking.SampleRequestId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SampleFabricBookingId" DataSetColumn="SampleFabricBookingId" />
+              <Mapping SourceColumn="BookingNo" DataSetColumn="BookingNo" />
+              <Mapping SourceColumn="SampleRequestId" DataSetColumn="SampleRequestId" />
+              <Mapping SourceColumn="FabricBookingDate" DataSetColumn="FabricBookingDate" />
+              <Mapping SourceColumn="RequestNo" DataSetColumn="RequestNo" />
+              <Mapping SourceColumn="Style" DataSetColumn="Style" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SFBLookupByDivUserTableAdapter" GeneratorDataComponentClassName="SFBLookupByDivUserTableAdapter" Name="SFBLookupByDivUser" UserDataComponentName="SFBLookupByDivUserTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.SFBLookupByDivUser" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SFBLookupByDivUser</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="19" ProviderType="BigInt" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SampleFabricBookingId" DataSetColumn="SampleFabricBookingId" />
+              <Mapping SourceColumn="Details" DataSetColumn="Details" />
+              <Mapping SourceColumn="FabricBookingDate" DataSetColumn="FabricBookingDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SampleFabricBookingLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SampleFabricBookingLookupDataSet" msprop:Generator_UserDSName="SampleFabricBookingLookupDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SampleFabricBookingLookup" msprop:Generator_UserTableName="SampleFabricBookingLookup" msprop:Generator_RowEvArgName="SampleFabricBookingLookupRowChangeEvent" msprop:Generator_TableVarName="tableSampleFabricBookingLookup" msprop:Generator_TablePropName="SampleFabricBookingLookup" msprop:Generator_RowDeletingName="SampleFabricBookingLookupRowDeleting" msprop:Generator_RowChangingName="SampleFabricBookingLookupRowChanging" msprop:Generator_RowDeletedName="SampleFabricBookingLookupRowDeleted" msprop:Generator_RowEvHandlerName="SampleFabricBookingLookupRowChangeEventHandler" msprop:Generator_TableClassName="SampleFabricBookingLookupDataTable" msprop:Generator_RowChangedName="SampleFabricBookingLookupRowChanged" msprop:Generator_RowClassName="SampleFabricBookingLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SampleFabricBookingId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSampleFabricBookingId" msprop:Generator_ColumnPropNameInRow="SampleFabricBookingId" msprop:Generator_ColumnPropNameInTable="SampleFabricBookingIdColumn" msprop:Generator_UserColumnName="SampleFabricBookingId" type="xs:long" />
+              <xs:element name="BookingNo" msprop:Generator_ColumnVarNameInTable="columnBookingNo" msprop:Generator_ColumnPropNameInRow="BookingNo" msprop:Generator_ColumnPropNameInTable="BookingNoColumn" msprop:Generator_UserColumnName="BookingNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SampleRequestId" msprop:Generator_ColumnVarNameInTable="columnSampleRequestId" msprop:Generator_ColumnPropNameInRow="SampleRequestId" msprop:Generator_ColumnPropNameInTable="SampleRequestIdColumn" msprop:Generator_UserColumnName="SampleRequestId" type="xs:long" minOccurs="0" />
+              <xs:element name="FabricBookingDate" msprop:Generator_ColumnVarNameInTable="columnFabricBookingDate" msprop:Generator_ColumnPropNameInRow="FabricBookingDate" msprop:Generator_ColumnPropNameInTable="FabricBookingDateColumn" msprop:Generator_UserColumnName="FabricBookingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RequestNo" msprop:Generator_ColumnVarNameInTable="columnRequestNo" msprop:Generator_ColumnPropNameInRow="RequestNo" msprop:Generator_ColumnPropNameInTable="RequestNoColumn" msprop:Generator_UserColumnName="RequestNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Style" msprop:Generator_ColumnVarNameInTable="columnStyle" msprop:Generator_ColumnPropNameInRow="Style" msprop:Generator_ColumnPropNameInTable="StyleColumn" msprop:Generator_UserColumnName="Style">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Details" msdata:ReadOnly="true" msdata:Expression="BookingNo +'::'+RequestNo + '::' + Style" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="DetailsNew" msdata:ReadOnly="true" msdata:Expression="RequestNo+ '::' +BookingNo+'::'+ Style + '::' + BuyerName" msprop:Generator_ColumnVarNameInTable="columnDetailsNew" msprop:Generator_ColumnPropNameInRow="DetailsNew" msprop:Generator_ColumnPropNameInTable="DetailsNewColumn" msprop:Generator_UserColumnName="DetailsNew" type="xs:string" minOccurs="0" />
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFBLookupByDivUser" msprop:Generator_TableClassName="SFBLookupByDivUserDataTable" msprop:Generator_TableVarName="tableSFBLookupByDivUser" msprop:Generator_RowChangedName="SFBLookupByDivUserRowChanged" msprop:Generator_TablePropName="SFBLookupByDivUser" msprop:Generator_RowDeletingName="SFBLookupByDivUserRowDeleting" msprop:Generator_RowChangingName="SFBLookupByDivUserRowChanging" msprop:Generator_RowEvHandlerName="SFBLookupByDivUserRowChangeEventHandler" msprop:Generator_RowDeletedName="SFBLookupByDivUserRowDeleted" msprop:Generator_RowClassName="SFBLookupByDivUserRow" msprop:Generator_UserTableName="SFBLookupByDivUser" msprop:Generator_RowEvArgName="SFBLookupByDivUserRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SampleFabricBookingId" msprop:Generator_ColumnVarNameInTable="columnSampleFabricBookingId" msprop:Generator_ColumnPropNameInRow="SampleFabricBookingId" msprop:Generator_ColumnPropNameInTable="SampleFabricBookingIdColumn" msprop:Generator_UserColumnName="SampleFabricBookingId" type="xs:long" />
+              <xs:element name="Details" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="356" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricBookingDate" msprop:Generator_ColumnVarNameInTable="columnFabricBookingDate" msprop:Generator_ColumnPropNameInRow="FabricBookingDate" msprop:Generator_ColumnPropNameInTable="FabricBookingDateColumn" msprop:Generator_UserColumnName="FabricBookingDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SampleFabricBookingLookup" />
+      <xs:field xpath="mstns:SampleFabricBookingId" />
+    </xs:unique>
+    <xs:unique name="SFBLookupByDivUser_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SFBLookupByDivUser" />
+      <xs:field xpath="mstns:SampleFabricBookingId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

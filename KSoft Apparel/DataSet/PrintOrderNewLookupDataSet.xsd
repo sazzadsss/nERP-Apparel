@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PrintOrderNewLookupDataSet" targetNamespace="http://tempuri.org/PrintOrderNewLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/PrintOrderNewLookupDataSet.xsd" xmlns="http://tempuri.org/PrintOrderNewLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PrintOrderNewLookupTableAdapter" GeneratorDataComponentClassName="PrintOrderNewLookupTableAdapter" Name="PrintOrderNewLookup" UserDataComponentName="PrintOrderNewLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.PrintOrderNew" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PrintOrderNew.PrintOrderNewId, PrintOrderNew.ProgramNo, PrintOrderNew.OrderId, PrintOrderNew.PrintOrderNo, PrintOrderNew.StyleName
+FROM            PrintOrderNew LEFT OUTER JOIN
+                         Style ON PrintOrderNew.StyleId = Style.StyleId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PrintOrderNewId" DataSetColumn="PrintOrderNewId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="PrintOrderNo" DataSetColumn="PrintOrderNo" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[mscl-db].dbo.PrintOrderNew" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByDivAsign" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDivAsign" GeneratorSourceName="FillByDivAsign" GetMethodModifier="Public" GetMethodName="GetDataByDivAsign" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDivAsign" UserSourceName="FillByDivAsign">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PrintOrderNew.PrintOrderNewId, PrintOrderNew.ProgramNo, PrintOrderNew.OrderId, PrintOrderNew.PrintOrderNo, PrintOrderNew.StyleName, PrintOrderNew.IsGMT
+FROM            PrintOrderNew LEFT OUTER JOIN
+                         Style ON PrintOrderNew.StyleId = Style.StyleId
+WHERE        (PrintOrderNew.OrderId IN
+                             (SELECT        OrderId
+                               FROM            [Order]
+                               WHERE        (DivisionId IN
+                                                             (SELECT        DivisionId
+                                                               FROM            BuyerAsign
+                                                               WHERE        (UserId = @UserId))) AND (BuyerId IN
+                                                             (SELECT        BuyerId
+                                                               FROM            BuyerAsign AS BuyerAsign_1
+                                                               WHERE        (UserId = @UserId)))))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="UserId" ColumnName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.PrintOrderNew" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByOrderId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOrderId" GeneratorSourceName="FillByOrderId" GetMethodModifier="Public" GetMethodName="GetDataByOrderId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOrderId" UserSourceName="FillByOrderId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PrintOrderNew.PrintOrderNewId, PrintOrderNew.ProgramNo, PrintOrderNew.OrderId, PrintOrderNew.PrintOrderNo, PrintOrderNew.StyleName
+FROM            PrintOrderNew LEFT OUTER JOIN
+                         Style ON PrintOrderNew.StyleId = Style.StyleId
+WHERE        (PrintOrderNew.OrderId = @OrderId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="OrderId" ColumnName="OrderId" DataSourceName="[ncl-db].dbo.PrintOrderNew" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[mscl-db].dbo.PrintOrderNew" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByOutSide" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOutSide" GeneratorSourceName="FillByOutSide" GetMethodModifier="Public" GetMethodName="GetDataByOutSide" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOutSide" UserSourceName="FillByOutSide">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PrintOrderNew.PrintOrderNewId, PrintOrderNew.ProgramNo, PrintOrderNew.OrderId, PrintOrderNew.PrintOrderNo, PrintOrderNew.StyleName, PrintOrderNew.IsGMT
+FROM            PrintOrderNew LEFT OUTER JOIN
+                         Style ON PrintOrderNew.StyleId = Style.StyleId
+WHERE        (PrintOrderNew.IsGMT = 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PrintOrderNewLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PrintOrderNewLookupDataSet" msprop:Generator_UserDSName="PrintOrderNewLookupDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PrintOrderNewLookup" msprop:Generator_UserTableName="PrintOrderNewLookup" msprop:Generator_RowEvArgName="PrintOrderNewLookupRowChangeEvent" msprop:Generator_TableVarName="tablePrintOrderNewLookup" msprop:Generator_TablePropName="PrintOrderNewLookup" msprop:Generator_RowDeletingName="PrintOrderNewLookupRowDeleting" msprop:Generator_RowChangingName="PrintOrderNewLookupRowChanging" msprop:Generator_RowDeletedName="PrintOrderNewLookupRowDeleted" msprop:Generator_RowEvHandlerName="PrintOrderNewLookupRowChangeEventHandler" msprop:Generator_TableClassName="PrintOrderNewLookupDataTable" msprop:Generator_RowChangedName="PrintOrderNewLookupRowChanged" msprop:Generator_RowClassName="PrintOrderNewLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PrintOrderNewId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPrintOrderNewId" msprop:Generator_ColumnPropNameInRow="PrintOrderNewId" msprop:Generator_ColumnPropNameInTable="PrintOrderNewIdColumn" msprop:Generator_UserColumnName="PrintOrderNewId" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" minOccurs="0" />
+              <xs:element name="PrintOrderNo" msprop:Generator_ColumnVarNameInTable="columnPrintOrderNo" msprop:Generator_ColumnPropNameInRow="PrintOrderNo" msprop:Generator_ColumnPropNameInTable="PrintOrderNoColumn" msprop:Generator_UserColumnName="PrintOrderNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Details" msdata:ReadOnly="true" msdata:Expression="IsNULL(ProgramNo,'N/A') +' :: '+ IsNULL(StyleName,'N/a') + '::' + IsNULL(PrintOrderNo ,'N/A')" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" type="xs:string" minOccurs="0" />
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PrintOrderNewLookup" />
+      <xs:field xpath="mstns:PrintOrderNewId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

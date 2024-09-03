@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccBOMApprovalDataSet" targetNamespace="http://tempuri.org/AccBOMApprovalDataSet.xsd" xmlns:mstns="http://tempuri.org/AccBOMApprovalDataSet.xsd" xmlns="http://tempuri.org/AccBOMApprovalDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccBOMApprovalTableAdapter" GeneratorDataComponentClassName="AccBOMApprovalTableAdapter" Name="AccBOMApproval" UserDataComponentName="AccBOMApprovalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccBOMApproval" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesBookingId, OrderId, BookingDate, IsComplete, IsApproved, AmendmentNo, AmendmentDate, Remarks, ProgramNo, FullComplete, ModifiedOn, Buyer, StyleNo
+FROM            AccBOMApproval
+WHERE        (ProgramNo IS NOT NULL)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccessoriesBookingId" DataSetColumn="AccessoriesBookingId" />
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="BookingDate" DataSetColumn="BookingDate" />
+              <Mapping SourceColumn="IsComplete" DataSetColumn="IsComplete" />
+              <Mapping SourceColumn="IsApproved" DataSetColumn="IsApproved" />
+              <Mapping SourceColumn="AmendmentNo" DataSetColumn="AmendmentNo" />
+              <Mapping SourceColumn="AmendmentDate" DataSetColumn="AmendmentDate" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="FullComplete" DataSetColumn="FullComplete" />
+              <Mapping SourceColumn="ModifiedOn" DataSetColumn="ModifiedOn" />
+              <Mapping SourceColumn="Buyer" DataSetColumn="Buyer" />
+              <Mapping SourceColumn="StyleNo" DataSetColumn="StyleNo" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByApproved" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByApproved" GeneratorSourceName="FillByApproved" GetMethodModifier="Public" GetMethodName="GetDataByApproved" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByApproved" UserSourceName="FillByApproved">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT 
+                         AccBOMApproval.AccessoriesBookingId, AccBOMApproval.OrderId, AccBOMApproval.BookingDate, AccBOMApproval.IsComplete, AccBOMApproval.IsApproved, AccBOMApproval.AmendmentNo, 
+                         AccBOMApproval.AmendmentDate, AccBOMApproval.Remarks, AccBOMApproval.ProgramNo, AccBOMApproval.FullComplete, AccBOMApproval.ModifiedOn, AccBOMApproval.Buyer, AccBOMApproval.StyleNo, 
+                         [Order].IsRunning
+FROM            AccBOMApproval LEFT OUTER JOIN
+                         [Order] ON AccBOMApproval.OrderId = [Order].OrderId
+WHERE        (AccBOMApproval.IsComplete = 1) AND (AccBOMApproval.IsApproved = 1) AND ([Order].IsRunning = 1) AND (AccBOMApproval.ProgramNo IS NOT NULL)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByPending" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPending" GeneratorSourceName="FillByPending" GetMethodModifier="Public" GetMethodName="GetDataByPending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPending" UserSourceName="FillByPending">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT 
+                         AccBOMApproval.AccessoriesBookingId, AccBOMApproval.OrderId, AccBOMApproval.BookingDate, AccBOMApproval.IsComplete, AccBOMApproval.IsApproved, AccBOMApproval.AmendmentNo, 
+                         AccBOMApproval.AmendmentDate, AccBOMApproval.Remarks, AccBOMApproval.ProgramNo, AccBOMApproval.FullComplete, AccBOMApproval.ModifiedOn, AccBOMApproval.Buyer, AccBOMApproval.StyleNo, 
+                         [Order].IsRunning
+FROM            AccBOMApproval LEFT OUTER JOIN
+                         [Order] ON AccBOMApproval.OrderId = [Order].OrderId
+WHERE        (AccBOMApproval.IsComplete = 1) AND( (AccBOMApproval.IsApproved = 0) OR
+                         (AccBOMApproval.IsApproved IS NULL) ) AND ([Order].IsRunning = 1)  AND (AccBOMApproval.ProgramNo IS NOT NULL)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccBOMApprovalDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AccBOMApprovalDataSet" msprop:Generator_UserDSName="AccBOMApprovalDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccBOMApproval" msprop:Generator_UserTableName="AccBOMApproval" msprop:Generator_RowEvArgName="AccBOMApprovalRowChangeEvent" msprop:Generator_TableVarName="tableAccBOMApproval" msprop:Generator_TablePropName="AccBOMApproval" msprop:Generator_RowDeletingName="AccBOMApprovalRowDeleting" msprop:Generator_RowChangingName="AccBOMApprovalRowChanging" msprop:Generator_RowDeletedName="AccBOMApprovalRowDeleted" msprop:Generator_RowEvHandlerName="AccBOMApprovalRowChangeEventHandler" msprop:Generator_TableClassName="AccBOMApprovalDataTable" msprop:Generator_RowChangedName="AccBOMApprovalRowChanged" msprop:Generator_RowClassName="AccBOMApprovalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccessoriesBookingId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingIdColumn" msprop:Generator_UserColumnName="AccessoriesBookingId" type="xs:long" />
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" minOccurs="0" />
+              <xs:element name="BookingDate" msprop:Generator_ColumnVarNameInTable="columnBookingDate" msprop:Generator_ColumnPropNameInRow="BookingDate" msprop:Generator_ColumnPropNameInTable="BookingDateColumn" msprop:Generator_UserColumnName="BookingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsComplete" msprop:Generator_ColumnVarNameInTable="columnIsComplete" msprop:Generator_ColumnPropNameInRow="IsComplete" msprop:Generator_ColumnPropNameInTable="IsCompleteColumn" msprop:Generator_UserColumnName="IsComplete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsApproved" msprop:Generator_ColumnVarNameInTable="columnIsApproved" msprop:Generator_ColumnPropNameInRow="IsApproved" msprop:Generator_ColumnPropNameInTable="IsApprovedColumn" msprop:Generator_UserColumnName="IsApproved" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnAmendmentNo" msprop:Generator_ColumnPropNameInRow="AmendmentNo" msprop:Generator_ColumnPropNameInTable="AmendmentNoColumn" msprop:Generator_UserColumnName="AmendmentNo" type="xs:int" minOccurs="0" />
+              <xs:element name="AmendmentDate" msprop:Generator_ColumnVarNameInTable="columnAmendmentDate" msprop:Generator_ColumnPropNameInRow="AmendmentDate" msprop:Generator_ColumnPropNameInTable="AmendmentDateColumn" msprop:Generator_UserColumnName="AmendmentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FullComplete" msprop:Generator_ColumnVarNameInTable="columnFullComplete" msprop:Generator_ColumnPropNameInRow="FullComplete" msprop:Generator_ColumnPropNameInTable="FullCompleteColumn" msprop:Generator_UserColumnName="FullComplete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ModifiedOn" msprop:Generator_ColumnVarNameInTable="columnModifiedOn" msprop:Generator_ColumnPropNameInRow="ModifiedOn" msprop:Generator_ColumnPropNameInTable="ModifiedOnColumn" msprop:Generator_UserColumnName="ModifiedOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Buyer" msprop:Generator_ColumnVarNameInTable="columnBuyer" msprop:Generator_ColumnPropNameInRow="Buyer" msprop:Generator_ColumnPropNameInTable="BuyerColumn" msprop:Generator_UserColumnName="Buyer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleNo" msprop:Generator_ColumnVarNameInTable="columnStyleNo" msprop:Generator_ColumnPropNameInRow="StyleNo" msprop:Generator_ColumnPropNameInTable="StyleNoColumn" msprop:Generator_UserColumnName="StyleNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

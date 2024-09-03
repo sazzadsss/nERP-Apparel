@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OrderExportForFRDataSet" targetNamespace="http://tempuri.org/OrderExportForFRDataSet.xsd" xmlns:mstns="http://tempuri.org/OrderExportForFRDataSet.xsd" xmlns="http://tempuri.org/OrderExportForFRDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrdersExportForFRTableAdapter" GeneratorDataComponentClassName="OrdersExportForFRTableAdapter" Name="OrdersExportForFR" UserDataComponentName="OrdersExportForFRTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.OrdersExportForFR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SynFR, [O.CODE], [O.PROD], [O.CUST], [O^DQ:1], OrderDetailsId, [O^DD:1]
+FROM            OrdersExportForFR
+WHERE        (SynFR = 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SynFR" DataSetColumn="SynFR" />
+              <Mapping SourceColumn="O.CODE" DataSetColumn="O_CODE" />
+              <Mapping SourceColumn="O.PROD" DataSetColumn="O_PROD" />
+              <Mapping SourceColumn="O.CUST" DataSetColumn="O_CUST" />
+              <Mapping SourceColumn="O^DQ:1" DataSetColumn="O^DQ:1" />
+              <Mapping SourceColumn="OrderDetailsId" DataSetColumn="OrderDetailsId" />
+              <Mapping SourceColumn="O^DD:1" DataSetColumn="O^DD:1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderExportForFRDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="OrderExportForFRDataSet" msprop:Generator_DataSetName="OrderExportForFRDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrdersExportForFR" msprop:Generator_UserTableName="OrdersExportForFR" msprop:Generator_RowDeletedName="OrdersExportForFRRowDeleted" msprop:Generator_RowChangedName="OrdersExportForFRRowChanged" msprop:Generator_RowClassName="OrdersExportForFRRow" msprop:Generator_RowChangingName="OrdersExportForFRRowChanging" msprop:Generator_RowEvArgName="OrdersExportForFRRowChangeEvent" msprop:Generator_RowEvHandlerName="OrdersExportForFRRowChangeEventHandler" msprop:Generator_TableClassName="OrdersExportForFRDataTable" msprop:Generator_TableVarName="tableOrdersExportForFR" msprop:Generator_RowDeletingName="OrdersExportForFRRowDeleting" msprop:Generator_TablePropName="OrdersExportForFR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SynFR" msprop:Generator_UserColumnName="SynFR" msprop:Generator_ColumnVarNameInTable="columnSynFR" msprop:Generator_ColumnPropNameInRow="SynFR" msprop:Generator_ColumnPropNameInTable="SynFRColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="O_CODE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="O_CODE" msprop:Generator_ColumnVarNameInTable="columnO_CODE" msprop:Generator_ColumnPropNameInRow="O_CODE" msprop:Generator_ColumnPropNameInTable="O_CODEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="O_PROD" msdata:ReadOnly="true" msprop:Generator_UserColumnName="O_PROD" msprop:Generator_ColumnVarNameInTable="columnO_PROD" msprop:Generator_ColumnPropNameInRow="O_PROD" msprop:Generator_ColumnPropNameInTable="O_PRODColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="102" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="O_CUST" msprop:Generator_UserColumnName="O_CUST" msprop:Generator_ColumnVarNameInTable="columnO_CUST" msprop:Generator_ColumnPropNameInRow="O_CUST" msprop:Generator_ColumnPropNameInTable="O_CUSTColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="O_x005E_DQ_x003A_1" msprop:Generator_UserColumnName="O^DQ:1" msprop:Generator_ColumnVarNameInTable="_columnO_DQ_1" msprop:Generator_ColumnPropNameInRow="_O_DQ_1" msprop:Generator_ColumnPropNameInTable="_O_DQ_1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OrderDetailsId" msprop:Generator_UserColumnName="OrderDetailsId" msprop:Generator_ColumnPropNameInRow="OrderDetailsId" msprop:Generator_ColumnVarNameInTable="columnOrderDetailsId" msprop:Generator_ColumnPropNameInTable="OrderDetailsIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="O_x005E_DD_x003A_1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="O^DD:1" msprop:Generator_ColumnPropNameInRow="_O_DD_1" msprop:Generator_ColumnVarNameInTable="_columnO_DD_1" msprop:Generator_ColumnPropNameInTable="_O_DD_1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:OrdersExportForFR" />
+      <xs:field xpath="mstns:OrderDetailsId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

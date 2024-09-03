@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProgramLookupEmbDataSet" targetNamespace="http://tempuri.org/ProgramLookupEmbDataSet.xsd" xmlns:mstns="http://tempuri.org/ProgramLookupEmbDataSet.xsd" xmlns="http://tempuri.org/ProgramLookupEmbDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProgramNoLookupEmbTableAdapter" GeneratorDataComponentClassName="ProgramNoLookupEmbTableAdapter" Name="ProgramNoLookupEmb" UserDataComponentName="ProgramNoLookupEmbTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.ProgramNoLookupEmb" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderId, ProgramNo, IsEmbroidery, StyleName, Details
+FROM            ProgramNoLookupEmb</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="IsEmbroidery" DataSetColumn="IsEmbroidery" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="Details" DataSetColumn="Details" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProgramLookupEmbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ProgramLookupEmbDataSet" msprop:Generator_DataSetName="ProgramLookupEmbDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ProgramNoLookupEmb" msprop:Generator_UserTableName="ProgramNoLookupEmb" msprop:Generator_RowDeletedName="ProgramNoLookupEmbRowDeleted" msprop:Generator_RowChangedName="ProgramNoLookupEmbRowChanged" msprop:Generator_RowClassName="ProgramNoLookupEmbRow" msprop:Generator_RowChangingName="ProgramNoLookupEmbRowChanging" msprop:Generator_RowEvArgName="ProgramNoLookupEmbRowChangeEvent" msprop:Generator_RowEvHandlerName="ProgramNoLookupEmbRowChangeEventHandler" msprop:Generator_TableClassName="ProgramNoLookupEmbDataTable" msprop:Generator_TableVarName="tableProgramNoLookupEmb" msprop:Generator_RowDeletingName="ProgramNoLookupEmbRowDeleting" msprop:Generator_TablePropName="ProgramNoLookupEmb">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="OrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsEmbroidery" msprop:Generator_UserColumnName="IsEmbroidery" msprop:Generator_ColumnPropNameInRow="IsEmbroidery" msprop:Generator_ColumnVarNameInTable="columnIsEmbroidery" msprop:Generator_ColumnPropNameInTable="IsEmbroideryColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="StyleName" msprop:Generator_UserColumnName="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Details" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Details" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="252" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProgramNoLookupEmb" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

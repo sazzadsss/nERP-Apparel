@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OrderActivitiesViewDataSet" targetNamespace="http://tempuri.org/OrderActivitiesViewDataSet.xsd" xmlns:mstns="http://tempuri.org/OrderActivitiesViewDataSet.xsd" xmlns="http://tempuri.org/OrderActivitiesViewDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderActivitiesViewTableAdapter" GeneratorDataComponentClassName="OrderActivitiesViewTableAdapter" Name="OrderActivitiesView" UserDataComponentName="OrderActivitiesViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderActivitiesView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT OrderId, ProgramNo, BuyerName, StyleName, PO, FabricColorName, EX, SL, Activities, Duration, ES, EF, LS, LF, Slack, StartDate, EndDate, Unit, TaskComplete, USER_ID, USER_NAME, DepartmentName, OrderActivitiesId, ActivitiesListId, IsProgramComplete, ProductionQuantity, TaskComments, OrderQuantity, OffDay FROM OrderActivitiesView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="FabricColorName" DataSetColumn="FabricColorName" />
+              <Mapping SourceColumn="EX" DataSetColumn="EX" />
+              <Mapping SourceColumn="SL" DataSetColumn="SL" />
+              <Mapping SourceColumn="Activities" DataSetColumn="Activities" />
+              <Mapping SourceColumn="Duration" DataSetColumn="Duration" />
+              <Mapping SourceColumn="ES" DataSetColumn="ES" />
+              <Mapping SourceColumn="EF" DataSetColumn="EF" />
+              <Mapping SourceColumn="LS" DataSetColumn="LS" />
+              <Mapping SourceColumn="LF" DataSetColumn="LF" />
+              <Mapping SourceColumn="Slack" DataSetColumn="Slack" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="EndDate" DataSetColumn="EndDate" />
+              <Mapping SourceColumn="Unit" DataSetColumn="Unit" />
+              <Mapping SourceColumn="TaskComplete" DataSetColumn="TaskComplete" />
+              <Mapping SourceColumn="USER_ID" DataSetColumn="USER_ID" />
+              <Mapping SourceColumn="USER_NAME" DataSetColumn="USER_NAME" />
+              <Mapping SourceColumn="DepartmentName" DataSetColumn="DepartmentName" />
+              <Mapping SourceColumn="OrderActivitiesId" DataSetColumn="OrderActivitiesId" />
+              <Mapping SourceColumn="ActivitiesListId" DataSetColumn="ActivitiesListId" />
+              <Mapping SourceColumn="IsProgramComplete" DataSetColumn="IsProgramComplete" />
+              <Mapping SourceColumn="ProductionQuantity" DataSetColumn="ProductionQuantity" />
+              <Mapping SourceColumn="TaskComments" DataSetColumn="TaskComments" />
+              <Mapping SourceColumn="OrderQuantity" DataSetColumn="OrderQuantity" />
+              <Mapping SourceColumn="OffDay" DataSetColumn="OffDay" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderActivitiesView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByOrderId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOrderId" GeneratorSourceName="FillByOrderId" GetMethodModifier="Public" GetMethodName="GetDataByOrderId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOrderId" UserSourceName="FillByOrderId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT OrderId, ProgramNo, BuyerName, StyleName, PO, FabricColorName, EX, SL, Activities, Duration, ES, EF, LS, LF, Slack, StartDate, EndDate, Unit, TaskComplete, USER_ID, USER_NAME, DepartmentName, OrderActivitiesId, ActivitiesListId, IsProgramComplete, ProductionQuantity, TaskComments, OrderQuantity, OffDay FROM OrderActivitiesView WHERE (OrderId = @OrderId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="OrderId" ColumnName="OrderId" DataSourceName="[ncl-db].dbo.OrderActivitiesView" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderActivitiesView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByProgramNo" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByProgramNo" GeneratorSourceName="FillByProgramNo" GetMethodModifier="Public" GetMethodName="GetDataByProgramNo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByProgramNo" UserSourceName="FillByProgramNo">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT OrderId, ProgramNo, BuyerName, StyleName, PO, FabricColorName, EX, SL, Activities, Duration, ES, EF, LS, LF, Slack, StartDate, EndDate, Unit, TaskComplete, USER_ID, USER_NAME, DepartmentName, OrderActivitiesId, ActivitiesListId, IsProgramComplete, ProductionQuantity, TaskComments, OrderQuantity, OffDay FROM OrderActivitiesView WHERE (ProgramNo = @ProgramNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="ProgramNo" ColumnName="ProgramNo" DataSourceName="[fareast-data].dbo.OrderActivitiesView" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@ProgramNo" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="ProgramNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderActivitiesView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByStartDate" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySartDate" GeneratorSourceName="FillByStartDate" GetMethodModifier="Public" GetMethodName="GetDataBySartDate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySartDate" UserSourceName="FillByStartDate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Activities, ActivitiesListId, BuyerName, DepartmentName, Duration, EF, ES, EX, EndDate, FabricColorName, IsProgramComplete, LF, LS, OffDay, OrderActivitiesId, OrderId, OrderQuantity, PO, ProductionQuantity, ProgramNo, SL, Slack, StartDate, StyleName, TaskComments, TaskComplete, USER_ID, USER_NAME, Unit FROM OrderActivitiesView WHERE (ES &gt;= @FromDate) AND (EF &lt;= @ToDate) OR (ES &lt;= @ToDate) AND (EF &gt;= @FromDate) AND (TaskComplete = 0)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="FromDate" ColumnName="ES" DataSourceName="[fareast-data].dbo.OrderActivitiesView" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@FromDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ES" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="ToDate" ColumnName="EF" DataSourceName="[fareast-data].dbo.OrderActivitiesView" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@ToDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="EF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderActivitiesView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByStartDateAndUser" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStartDateAndUser" GeneratorSourceName="FillByStartDateAndUser" GetMethodModifier="Public" GetMethodName="GetDataByStartDateAndUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStartDateAndUser" UserSourceName="FillByStartDateAndUser">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Activities, ActivitiesListId, BuyerName, DepartmentName, Duration, EF, ES, EX, EndDate, FabricColorName, IsProgramComplete, LF, LS, OffDay, OrderActivitiesId, OrderId, OrderQuantity, PO, ProductionQuantity, ProgramNo, SL, Slack, StartDate, StyleName, TaskComments, TaskComplete, USER_ID, USER_NAME, Unit FROM OrderActivitiesView WHERE (ES &gt;= @FromDate) AND (TaskComplete = 0) AND (USER_ID = @UserId) AND (EF &lt;= @ToDate) OR (ES &lt;= @ToDate) AND (TaskComplete = 0) AND (USER_ID = @UserId) AND (EF &gt;= @FromDate)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="FromDate" ColumnName="ES" DataSourceName="[fareast-data].dbo.OrderActivitiesView" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@FromDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ES" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserId" ColumnName="USER_ID" DataSourceName="[fareast-data].dbo.OrderActivitiesView" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="USER_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="ToDate" ColumnName="EF" DataSourceName="[fareast-data].dbo.OrderActivitiesView" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@ToDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="EF" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderActivitiesView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByUserAndPending" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAndPending" GeneratorSourceName="FillByUserAndPending" GetMethodModifier="Public" GetMethodName="GetDataByAndPending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAndPending" UserSourceName="FillByUserAndPending">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Activities, ActivitiesListId, BuyerName, DepartmentName, Duration, EF, ES, EX, EndDate, FabricColorName, IsProgramComplete, LF, LS, OffDay, OrderActivitiesId, OrderId, OrderQuantity, PO, ProductionQuantity, ProgramNo, SL, Slack, StartDate, StyleName, TaskComments, TaskComplete, USER_ID, USER_NAME, Unit FROM OrderActivitiesView WHERE (USER_ID = @UserId) AND (TaskComplete = 0) OR (USER_ID = @UserId) AND (TaskComplete IS NULL)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserId" ColumnName="USER_ID" DataSourceName="[fareast-data].dbo.OrderActivitiesView" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="USER_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderActivitiesPredecessorViewTableAdapter" GeneratorDataComponentClassName="OrderActivitiesPredecessorViewTableAdapter" Name="OrderActivitiesPredecessorView" UserDataComponentName="OrderActivitiesPredecessorViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderActivitiesPredecessorView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT OrderActivitiesId, ProgramNo, BuyerName, StyleName, PO, FabricColorName, EX, SL, Activities, Duration, ES, EF, LS, LF, Slack, StartDate, EndDate, Unit, TaskComplete, USER_NAME, DepartmentName, IsProgramComplete, ProductionQuantity, TaskComments, OrderQuantity, OffDay FROM OrderActivitiesPredecessorView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderActivitiesId" DataSetColumn="OrderActivitiesId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="FabricColorName" DataSetColumn="FabricColorName" />
+              <Mapping SourceColumn="EX" DataSetColumn="EX" />
+              <Mapping SourceColumn="SL" DataSetColumn="SL" />
+              <Mapping SourceColumn="Activities" DataSetColumn="Activities" />
+              <Mapping SourceColumn="Duration" DataSetColumn="Duration" />
+              <Mapping SourceColumn="ES" DataSetColumn="ES" />
+              <Mapping SourceColumn="EF" DataSetColumn="EF" />
+              <Mapping SourceColumn="LS" DataSetColumn="LS" />
+              <Mapping SourceColumn="LF" DataSetColumn="LF" />
+              <Mapping SourceColumn="Slack" DataSetColumn="Slack" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="EndDate" DataSetColumn="EndDate" />
+              <Mapping SourceColumn="Unit" DataSetColumn="Unit" />
+              <Mapping SourceColumn="TaskComplete" DataSetColumn="TaskComplete" />
+              <Mapping SourceColumn="USER_NAME" DataSetColumn="USER_NAME" />
+              <Mapping SourceColumn="DepartmentName" DataSetColumn="DepartmentName" />
+              <Mapping SourceColumn="IsProgramComplete" DataSetColumn="IsProgramComplete" />
+              <Mapping SourceColumn="ProductionQuantity" DataSetColumn="ProductionQuantity" />
+              <Mapping SourceColumn="TaskComments" DataSetColumn="TaskComments" />
+              <Mapping SourceColumn="OrderQuantity" DataSetColumn="OrderQuantity" />
+              <Mapping SourceColumn="OffDay" DataSetColumn="OffDay" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.OrderActivitiesPredecessorView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByOrderActivitiesId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOrderActivitiesId" GeneratorSourceName="FillByOrderActivitiesId" GetMethodModifier="Public" GetMethodName="GetDataByOrderActivitiesId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOrderActivitiesId" UserSourceName="FillByOrderActivitiesId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Activities, BuyerName, DepartmentName, Duration, EF, ES, EX, EndDate, FabricColorName, IsProgramComplete, LF, LS, OffDay, OrderActivitiesId, OrderQuantity, PO, ProductionQuantity, ProgramNo, SL, Slack, StartDate, StyleName, TaskComments, TaskComplete, USER_NAME, Unit FROM OrderActivitiesPredecessorView WHERE (OrderActivitiesId = @OrderActivitiesId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="OrderActivitiesId" ColumnName="OrderActivitiesId" DataSourceName="[fareast-data].dbo.OrderActivitiesPredecessorView" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@OrderActivitiesId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="OrderActivitiesId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderActivitiesViewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="OrderActivitiesViewDataSet" msprop:Generator_UserDSName="OrderActivitiesViewDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrderActivitiesView" msprop:Generator_UserTableName="OrderActivitiesView" msprop:Generator_RowEvArgName="OrderActivitiesViewRowChangeEvent" msprop:Generator_TableVarName="tableOrderActivitiesView" msprop:Generator_TablePropName="OrderActivitiesView" msprop:Generator_RowDeletingName="OrderActivitiesViewRowDeleting" msprop:Generator_RowChangingName="OrderActivitiesViewRowChanging" msprop:Generator_RowDeletedName="OrderActivitiesViewRowDeleted" msprop:Generator_RowEvHandlerName="OrderActivitiesViewRowChangeEventHandler" msprop:Generator_TableClassName="OrderActivitiesViewDataTable" msprop:Generator_RowChangedName="OrderActivitiesViewRowChanged" msprop:Generator_RowClassName="OrderActivitiesViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricColorName" msprop:Generator_ColumnVarNameInTable="columnFabricColorName" msprop:Generator_ColumnPropNameInRow="FabricColorName" msprop:Generator_ColumnPropNameInTable="FabricColorNameColumn" msprop:Generator_UserColumnName="FabricColorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EX" msprop:Generator_ColumnVarNameInTable="columnEX" msprop:Generator_ColumnPropNameInRow="EX" msprop:Generator_ColumnPropNameInTable="EXColumn" msprop:Generator_UserColumnName="EX" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SL" msprop:Generator_ColumnVarNameInTable="columnSL" msprop:Generator_ColumnPropNameInRow="SL" msprop:Generator_ColumnPropNameInTable="SLColumn" msprop:Generator_UserColumnName="SL" type="xs:int" minOccurs="0" />
+              <xs:element name="Activities" msprop:Generator_ColumnVarNameInTable="columnActivities" msprop:Generator_ColumnPropNameInRow="Activities" msprop:Generator_ColumnPropNameInTable="ActivitiesColumn" msprop:Generator_UserColumnName="Activities" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Duration" msprop:Generator_ColumnVarNameInTable="columnDuration" msprop:Generator_ColumnPropNameInRow="Duration" msprop:Generator_ColumnPropNameInTable="DurationColumn" msprop:Generator_UserColumnName="Duration" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ES" msprop:Generator_ColumnVarNameInTable="columnES" msprop:Generator_ColumnPropNameInRow="ES" msprop:Generator_ColumnPropNameInTable="ESColumn" msprop:Generator_UserColumnName="ES" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EF" msprop:Generator_ColumnVarNameInTable="columnEF" msprop:Generator_ColumnPropNameInRow="EF" msprop:Generator_ColumnPropNameInTable="EFColumn" msprop:Generator_UserColumnName="EF" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LS" msprop:Generator_ColumnVarNameInTable="columnLS" msprop:Generator_ColumnPropNameInRow="LS" msprop:Generator_ColumnPropNameInTable="LSColumn" msprop:Generator_UserColumnName="LS" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LF" msprop:Generator_ColumnVarNameInTable="columnLF" msprop:Generator_ColumnPropNameInRow="LF" msprop:Generator_ColumnPropNameInTable="LFColumn" msprop:Generator_UserColumnName="LF" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Slack" msprop:Generator_ColumnVarNameInTable="columnSlack" msprop:Generator_ColumnPropNameInRow="Slack" msprop:Generator_ColumnPropNameInTable="SlackColumn" msprop:Generator_UserColumnName="Slack" type="xs:int" minOccurs="0" />
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" msprop:Generator_UserColumnName="EndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn" msprop:Generator_UserColumnName="Unit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TaskComplete" msprop:Generator_ColumnVarNameInTable="columnTaskComplete" msprop:Generator_ColumnPropNameInRow="TaskComplete" msprop:Generator_ColumnPropNameInTable="TaskCompleteColumn" msprop:Generator_UserColumnName="TaskComplete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="USER_ID" msprop:Generator_ColumnVarNameInTable="columnUSER_ID" msprop:Generator_ColumnPropNameInRow="USER_ID" msprop:Generator_ColumnPropNameInTable="USER_IDColumn" msprop:Generator_UserColumnName="USER_ID" type="xs:long" minOccurs="0" />
+              <xs:element name="USER_NAME" msprop:Generator_ColumnVarNameInTable="columnUSER_NAME" msprop:Generator_ColumnPropNameInRow="USER_NAME" msprop:Generator_ColumnPropNameInTable="USER_NAMEColumn" msprop:Generator_UserColumnName="USER_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentName" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_UserColumnName="DepartmentName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderActivitiesId" msprop:Generator_ColumnVarNameInTable="columnOrderActivitiesId" msprop:Generator_ColumnPropNameInRow="OrderActivitiesId" msprop:Generator_ColumnPropNameInTable="OrderActivitiesIdColumn" msprop:Generator_UserColumnName="OrderActivitiesId" type="xs:long" />
+              <xs:element name="ActivitiesListId" msprop:Generator_ColumnVarNameInTable="columnActivitiesListId" msprop:Generator_ColumnPropNameInRow="ActivitiesListId" msprop:Generator_ColumnPropNameInTable="ActivitiesListIdColumn" msprop:Generator_UserColumnName="ActivitiesListId" type="xs:long" />
+              <xs:element name="IsProgramComplete" msprop:Generator_ColumnVarNameInTable="columnIsProgramComplete" msprop:Generator_ColumnPropNameInRow="IsProgramComplete" msprop:Generator_ColumnPropNameInTable="IsProgramCompleteColumn" msprop:Generator_UserColumnName="IsProgramComplete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ProductionQuantity" msprop:Generator_ColumnVarNameInTable="columnProductionQuantity" msprop:Generator_ColumnPropNameInRow="ProductionQuantity" msprop:Generator_ColumnPropNameInTable="ProductionQuantityColumn" msprop:Generator_UserColumnName="ProductionQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="TaskComments" msprop:Generator_ColumnVarNameInTable="columnTaskComments" msprop:Generator_ColumnPropNameInRow="TaskComments" msprop:Generator_ColumnPropNameInTable="TaskCommentsColumn" msprop:Generator_UserColumnName="TaskComments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderQuantity" msprop:Generator_ColumnVarNameInTable="columnOrderQuantity" msprop:Generator_ColumnPropNameInRow="OrderQuantity" msprop:Generator_ColumnPropNameInTable="OrderQuantityColumn" msprop:Generator_UserColumnName="OrderQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="OffDay" msprop:Generator_ColumnVarNameInTable="columnOffDay" msprop:Generator_ColumnPropNameInRow="OffDay" msprop:Generator_ColumnPropNameInTable="OffDayColumn" msprop:Generator_UserColumnName="OffDay" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderActivitiesPredecessorView" msprop:Generator_UserTableName="OrderActivitiesPredecessorView" msprop:Generator_RowEvArgName="OrderActivitiesPredecessorViewRowChangeEvent" msprop:Generator_TableVarName="tableOrderActivitiesPredecessorView" msprop:Generator_TablePropName="OrderActivitiesPredecessorView" msprop:Generator_RowDeletingName="OrderActivitiesPredecessorViewRowDeleting" msprop:Generator_RowChangingName="OrderActivitiesPredecessorViewRowChanging" msprop:Generator_RowDeletedName="OrderActivitiesPredecessorViewRowDeleted" msprop:Generator_RowEvHandlerName="OrderActivitiesPredecessorViewRowChangeEventHandler" msprop:Generator_TableClassName="OrderActivitiesPredecessorViewDataTable" msprop:Generator_RowChangedName="OrderActivitiesPredecessorViewRowChanged" msprop:Generator_RowClassName="OrderActivitiesPredecessorViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderActivitiesId" msprop:Generator_ColumnVarNameInTable="columnOrderActivitiesId" msprop:Generator_ColumnPropNameInRow="OrderActivitiesId" msprop:Generator_ColumnPropNameInTable="OrderActivitiesIdColumn" msprop:Generator_UserColumnName="OrderActivitiesId" type="xs:long" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricColorName" msprop:Generator_ColumnVarNameInTable="columnFabricColorName" msprop:Generator_ColumnPropNameInRow="FabricColorName" msprop:Generator_ColumnPropNameInTable="FabricColorNameColumn" msprop:Generator_UserColumnName="FabricColorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EX" msprop:Generator_ColumnVarNameInTable="columnEX" msprop:Generator_ColumnPropNameInRow="EX" msprop:Generator_ColumnPropNameInTable="EXColumn" msprop:Generator_UserColumnName="EX" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SL" msprop:Generator_ColumnVarNameInTable="columnSL" msprop:Generator_ColumnPropNameInRow="SL" msprop:Generator_ColumnPropNameInTable="SLColumn" msprop:Generator_UserColumnName="SL" type="xs:int" minOccurs="0" />
+              <xs:element name="Activities" msprop:Generator_ColumnVarNameInTable="columnActivities" msprop:Generator_ColumnPropNameInRow="Activities" msprop:Generator_ColumnPropNameInTable="ActivitiesColumn" msprop:Generator_UserColumnName="Activities" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Duration" msprop:Generator_ColumnVarNameInTable="columnDuration" msprop:Generator_ColumnPropNameInRow="Duration" msprop:Generator_ColumnPropNameInTable="DurationColumn" msprop:Generator_UserColumnName="Duration" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ES" msprop:Generator_ColumnVarNameInTable="columnES" msprop:Generator_ColumnPropNameInRow="ES" msprop:Generator_ColumnPropNameInTable="ESColumn" msprop:Generator_UserColumnName="ES" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EF" msprop:Generator_ColumnVarNameInTable="columnEF" msprop:Generator_ColumnPropNameInRow="EF" msprop:Generator_ColumnPropNameInTable="EFColumn" msprop:Generator_UserColumnName="EF" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LS" msprop:Generator_ColumnVarNameInTable="columnLS" msprop:Generator_ColumnPropNameInRow="LS" msprop:Generator_ColumnPropNameInTable="LSColumn" msprop:Generator_UserColumnName="LS" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LF" msprop:Generator_ColumnVarNameInTable="columnLF" msprop:Generator_ColumnPropNameInRow="LF" msprop:Generator_ColumnPropNameInTable="LFColumn" msprop:Generator_UserColumnName="LF" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Slack" msprop:Generator_ColumnVarNameInTable="columnSlack" msprop:Generator_ColumnPropNameInRow="Slack" msprop:Generator_ColumnPropNameInTable="SlackColumn" msprop:Generator_UserColumnName="Slack" type="xs:int" minOccurs="0" />
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" msprop:Generator_UserColumnName="EndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn" msprop:Generator_UserColumnName="Unit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TaskComplete" msprop:Generator_ColumnVarNameInTable="columnTaskComplete" msprop:Generator_ColumnPropNameInRow="TaskComplete" msprop:Generator_ColumnPropNameInTable="TaskCompleteColumn" msprop:Generator_UserColumnName="TaskComplete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="USER_NAME" msprop:Generator_ColumnVarNameInTable="columnUSER_NAME" msprop:Generator_ColumnPropNameInRow="USER_NAME" msprop:Generator_ColumnPropNameInTable="USER_NAMEColumn" msprop:Generator_UserColumnName="USER_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentName" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_UserColumnName="DepartmentName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsProgramComplete" msprop:Generator_ColumnVarNameInTable="columnIsProgramComplete" msprop:Generator_ColumnPropNameInRow="IsProgramComplete" msprop:Generator_ColumnPropNameInTable="IsProgramCompleteColumn" msprop:Generator_UserColumnName="IsProgramComplete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ProductionQuantity" msprop:Generator_ColumnVarNameInTable="columnProductionQuantity" msprop:Generator_ColumnPropNameInRow="ProductionQuantity" msprop:Generator_ColumnPropNameInTable="ProductionQuantityColumn" msprop:Generator_UserColumnName="ProductionQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="TaskComments" msprop:Generator_ColumnVarNameInTable="columnTaskComments" msprop:Generator_ColumnPropNameInRow="TaskComments" msprop:Generator_ColumnPropNameInTable="TaskCommentsColumn" msprop:Generator_UserColumnName="TaskComments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderQuantity" msprop:Generator_ColumnVarNameInTable="columnOrderQuantity" msprop:Generator_ColumnPropNameInRow="OrderQuantity" msprop:Generator_ColumnPropNameInTable="OrderQuantityColumn" msprop:Generator_UserColumnName="OrderQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="OffDay" msprop:Generator_ColumnVarNameInTable="columnOffDay" msprop:Generator_ColumnPropNameInRow="OffDay" msprop:Generator_ColumnPropNameInTable="OffDayColumn" msprop:Generator_UserColumnName="OffDay" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

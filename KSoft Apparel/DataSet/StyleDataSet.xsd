@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StyleDataSet" targetNamespace="http://tempuri.org/StyleDataSet.xsd" xmlns:mstns="http://tempuri.org/StyleDataSet.xsd" xmlns="http://tempuri.org/StyleDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StyleTableAdapter" GeneratorDataComponentClassName="StyleTableAdapter" Name="Style" UserDataComponentName="StyleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.Style" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Style] WHERE (([StyleId] = @Original_StyleId) AND ([StyleName] = @Original_StyleName) AND ((@IsNull_BuyerId = 1 AND [BuyerId] IS NULL) OR ([BuyerId] = @Original_BuyerId)) AND ((@IsNull_DefaultTarget = 1 AND [DefaultTarget] IS NULL) OR ([DefaultTarget] = @Original_DefaultTarget)) AND ((@IsNull_SMV = 1 AND [SMV] IS NULL) OR ([SMV] = @Original_SMV)) AND ((@IsNull_IsPrint = 1 AND [IsPrint] IS NULL) OR ([IsPrint] = @Original_IsPrint)) AND ((@IsNull_PrintDetails = 1 AND [PrintDetails] IS NULL) OR ([PrintDetails] = @Original_PrintDetails)) AND ((@IsNull_PrintTypeId = 1 AND [PrintTypeId] IS NULL) OR ([PrintTypeId] = @Original_PrintTypeId)) AND ((@IsNull_StyleName2 = 1 AND [StyleName2] IS NULL) OR ([StyleName2] = @Original_StyleName2)) AND ((@IsNull_StyleNameId = 1 AND [StyleNameId] IS NULL) OR ([StyleNameId] = @Original_StyleNameId)) AND ((@IsNull_GMDepartment = 1 AND [GMDepartment] IS NULL) OR ([GMDepartment] = @Original_GMDepartment)) AND ((@IsNull_GMDescription = 1 AND [GMDescription] IS NULL) OR ([GMDescription] = @Original_GMDescription)) AND ((@IsNull_KnittingTypeId = 1 AND [KnittingTypeId] IS NULL) OR ([KnittingTypeId] = @Original_KnittingTypeId)) AND ((@IsNull_CompositionId = 1 AND [CompositionId] IS NULL) OR ([CompositionId] = @Original_CompositionId)) AND ((@IsNull_GSM = 1 AND [GSM] IS NULL) OR ([GSM] = @Original_GSM)) AND ((@IsNull_Remarks = 1 AND [Remarks] IS NULL) OR ([Remarks] = @Original_Remarks)) AND ((@IsNull_GMDepartmentId = 1 AND [GMDepartmentId] IS NULL) OR ([GMDepartmentId] = @Original_GMDepartmentId)) AND ((@IsNull_UserId = 1 AND [UserId] IS NULL) OR ([UserId] = @Original_UserId)) AND ((@IsNull_ModifiedOn = 1 AND [ModifiedOn] IS NULL) OR ([ModifiedOn] = @Original_ModifiedOn)) AND ((@IsNull_IsEmbroidery = 1 AND [IsEmbroidery] IS NULL) OR ([IsEmbroidery] = @Original_IsEmbroidery)) AND ((@IsNull_IsAOP = 1 AND [IsAOP] IS NULL) OR ([IsAOP] = @Original_IsAOP)) AND ((@IsNull_IsYDS = 1 AND [IsYDS] IS NULL) OR ([IsYDS] = @Original_IsYDS)) AND ((@IsNull_PrintPartId = 1 AND [PrintPartId] IS NULL) OR ([PrintPartId] = @Original_PrintPartId)) AND ((@IsNull_StyleType = 1 AND [StyleType] IS NULL) OR ([StyleType] = @Original_StyleType)) AND ((@IsNull_DivisionId = 1 AND [DivisionId] IS NULL) OR ([DivisionId] = @Original_DivisionId)) AND ((@IsNull_Dia = 1 AND [Dia] IS NULL) OR ([Dia] = @Original_Dia)) AND ((@IsNull_IsPeachFinish = 1 AND [IsPeachFinish] IS NULL) OR ([IsPeachFinish] = @Original_IsPeachFinish)) AND ((@IsNull_IsBrush = 1 AND [IsBrush] IS NULL) OR ([IsBrush] = @Original_IsBrush)) AND ((@IsNull_WashTypeId = 1 AND [WashTypeId] IS NULL) OR ([WashTypeId] = @Original_WashTypeId)) AND ((@IsNull_IsWash = 1 AND [IsWash] IS NULL) OR ([IsWash] = @Original_IsWash)) AND ((@IsNull_GMTBrandId = 1 AND [GMTBrandId] IS NULL) OR ([GMTBrandId] = @Original_GMTBrandId)) AND ((@IsNull_Gauge = 1 AND [Gauge] IS NULL) OR ([Gauge] = @Original_Gauge)) AND ((@IsNull_EmbDetails = 1 AND [EmbDetails] IS NULL) OR ([EmbDetails] = @Original_EmbDetails)) AND ((@IsNull_SeasonId = 1 AND [SeasonId] IS NULL) OR ([SeasonId] = @Original_SeasonId)) AND ((@IsNull_CostingCM = 1 AND [CostingCM] IS NULL) OR ([CostingCM] = @Original_CostingCM)) AND ((@IsNull_MCQty = 1 AND [MCQty] IS NULL) OR ([MCQty] = @Original_MCQty)) AND ((@IsNull_IsSublimation = 1 AND [IsSublimation] IS NULL) OR ([IsSublimation] = @Original_IsSublimation)) AND ((@IsNull_IsSequence = 1 AND [IsSequence] IS NULL) OR ([IsSequence] = @Original_IsSequence)) AND ((@IsNull_IsSpecialYarn = 1 AND [IsSpecialYarn] IS NULL) OR ([IsSpecialYarn] = @Original_IsSpecialYarn)) AND ((@IsNull_YarnDyeingTypeId = 1 AND [YarnDyeingTypeId] IS NULL) OR ([YarnDyeingTypeId] = @Original_YarnDyeingTypeId)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StyleName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BuyerId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BuyerId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_BuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BuyerId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DefaultTarget" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DefaultTarget" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_DefaultTarget" Precision="18" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="DefaultTarget" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SMV" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SMV" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_SMV" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="SMV" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsPrint" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPrint" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PrintDetails" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PrintDetails" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PrintDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PrintDetails" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PrintTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PrintTypeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_PrintTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PrintTypeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StyleName2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StyleName2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StyleName2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StyleNameId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StyleNameId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_StyleNameId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleNameId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMDepartment" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMDepartment" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GMDepartment" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMDepartment" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GMDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_KnittingTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KnittingTypeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_KnittingTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="KnittingTypeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CompositionId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CompositionId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_CompositionId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CompositionId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GSM" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GSM" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_GSM" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="GSM" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remarks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMDepartmentId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMDepartmentId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_GMDepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="GMDepartmentId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModifiedOn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsEmbroidery" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsEmbroidery" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsEmbroidery" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsEmbroidery" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsAOP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsAOP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsAOP" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsAOP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsYDS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsYDS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsYDS" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsYDS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PrintPartId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PrintPartId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_PrintPartId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PrintPartId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StyleType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StyleType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StyleType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DivisionId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DivisionId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_DivisionId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DivisionId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Dia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Dia" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Dia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Dia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsPeachFinish" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsPeachFinish" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPeachFinish" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPeachFinish" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsBrush" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsBrush" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsBrush" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsBrush" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WashTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WashTypeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_WashTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WashTypeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsWash" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsWash" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsWash" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsWash" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMTBrandId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMTBrandId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GMTBrandId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMTBrandId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Gauge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gauge" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Gauge" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Gauge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EmbDetails" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EmbDetails" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_EmbDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EmbDetails" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SeasonId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SeasonId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_SeasonId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SeasonId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CostingCM" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CostingCM" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CostingCM" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostingCM" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MCQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MCQty" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MCQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MCQty" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsSublimation" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsSublimation" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsSublimation" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSublimation" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsSequence" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsSequence" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsSequence" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSequence" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsSpecialYarn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsSpecialYarn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsSpecialYarn" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSpecialYarn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YarnDyeingTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnDyeingTypeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_YarnDyeingTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnDyeingTypeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Style] ([StyleName], [BuyerId], [DefaultTarget], [SMV], [Picture], [IsPrint], [PrintDetails], [PrintTypeId], [StyleName2], [StyleNameId], [GMDepartment], [GMDescription], [KnittingTypeId], [CompositionId], [GSM], [Remarks], [GMDepartmentId], [UserId], [ModifiedOn], [IsEmbroidery], [IsAOP], [IsYDS], [PrintPartId], [StyleType], [DivisionId], [Dia], [IsPeachFinish], [IsBrush], [WashTypeId], [IsWash], [GMTBrandId], [Gauge], [EmbDetails], [SeasonId], [CostingCM], [MCQty], [IsSublimation], [IsSequence], [IsSpecialYarn], [YarnDyeingTypeId]) VALUES (@StyleName, @BuyerId, @DefaultTarget, @SMV, @Picture, @IsPrint, @PrintDetails, @PrintTypeId, @StyleName2, @StyleNameId, @GMDepartment, @GMDescription, @KnittingTypeId, @CompositionId, @GSM, @Remarks, @GMDepartmentId, @UserId, @ModifiedOn, @IsEmbroidery, @IsAOP, @IsYDS, @PrintPartId, @StyleType, @DivisionId, @Dia, @IsPeachFinish, @IsBrush, @WashTypeId, @IsWash, @GMTBrandId, @Gauge, @EmbDetails, @SeasonId, @CostingCM, @MCQty, @IsSublimation, @IsSequence, @IsSpecialYarn, @YarnDyeingTypeId);
+SELECT StyleId, StyleName, BuyerId, DefaultTarget, SMV, Picture, IsPrint, PrintDetails, PrintTypeId, StyleName2, StyleNameId, GMDepartment, GMDescription, KnittingTypeId, CompositionId, GSM, Remarks, GMDepartmentId, UserId, ModifiedOn, IsEmbroidery, IsAOP, IsYDS, PrintPartId, StyleType, DivisionId, Dia, IsPeachFinish, IsBrush, WashTypeId, IsWash, GMTBrandId, Gauge, EmbDetails, SeasonId, CostingCM, MCQty, IsSublimation, IsSequence, IsSpecialYarn, YarnDyeingTypeId FROM Style WHERE (StyleId = SCOPE_IDENTITY()) ORDER BY StyleName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StyleName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@BuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BuyerId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@DefaultTarget" Precision="18" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="DefaultTarget" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@SMV" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="SMV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Picture" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Picture" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsPrint" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PrintDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PrintDetails" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@PrintTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PrintTypeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StyleName2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@StyleNameId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleNameId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GMDepartment" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMDepartment" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GMDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@KnittingTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="KnittingTypeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@CompositionId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CompositionId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@GSM" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="GSM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@GMDepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="GMDepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsEmbroidery" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsEmbroidery" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsAOP" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsAOP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsYDS" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsYDS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@PrintPartId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PrintPartId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StyleType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@DivisionId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DivisionId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Dia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Dia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsPeachFinish" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPeachFinish" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsBrush" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsBrush" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@WashTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WashTypeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsWash" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsWash" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@GMTBrandId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMTBrandId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Gauge" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Gauge" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@EmbDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EmbDetails" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@SeasonId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SeasonId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CostingCM" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostingCM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MCQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MCQty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsSublimation" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSublimation" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsSequence" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSequence" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsSpecialYarn" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSpecialYarn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@YarnDyeingTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnDyeingTypeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        StyleId, StyleName, BuyerId, DefaultTarget, SMV, Picture, IsPrint, PrintDetails, PrintTypeId, StyleName2, StyleNameId, GMDepartment, GMDescription, KnittingTypeId, CompositionId, GSM, Remarks, GMDepartmentId, UserId, 
+                         ModifiedOn, IsEmbroidery, IsAOP, IsYDS, PrintPartId, StyleType, DivisionId, Dia, IsPeachFinish, IsBrush, WashTypeId, IsWash, GMTBrandId, Gauge, EmbDetails, SeasonId, CostingCM, MCQty, IsSublimation, IsSequence, 
+                         IsSpecialYarn, YarnDyeingTypeId
+FROM            Style
+ORDER BY StyleName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Style] SET [StyleName] = @StyleName, [BuyerId] = @BuyerId, [DefaultTarget] = @DefaultTarget, [SMV] = @SMV, [Picture] = @Picture, [IsPrint] = @IsPrint, [PrintDetails] = @PrintDetails, [PrintTypeId] = @PrintTypeId, [StyleName2] = @StyleName2, [StyleNameId] = @StyleNameId, [GMDepartment] = @GMDepartment, [GMDescription] = @GMDescription, [KnittingTypeId] = @KnittingTypeId, [CompositionId] = @CompositionId, [GSM] = @GSM, [Remarks] = @Remarks, [GMDepartmentId] = @GMDepartmentId, [UserId] = @UserId, [ModifiedOn] = @ModifiedOn, [IsEmbroidery] = @IsEmbroidery, [IsAOP] = @IsAOP, [IsYDS] = @IsYDS, [PrintPartId] = @PrintPartId, [StyleType] = @StyleType, [DivisionId] = @DivisionId, [Dia] = @Dia, [IsPeachFinish] = @IsPeachFinish, [IsBrush] = @IsBrush, [WashTypeId] = @WashTypeId, [IsWash] = @IsWash, [GMTBrandId] = @GMTBrandId, [Gauge] = @Gauge, [EmbDetails] = @EmbDetails, [SeasonId] = @SeasonId, [CostingCM] = @CostingCM, [MCQty] = @MCQty, [IsSublimation] = @IsSublimation, [IsSequence] = @IsSequence, [IsSpecialYarn] = @IsSpecialYarn, [YarnDyeingTypeId] = @YarnDyeingTypeId WHERE (([StyleId] = @Original_StyleId) AND ([StyleName] = @Original_StyleName) AND ((@IsNull_BuyerId = 1 AND [BuyerId] IS NULL) OR ([BuyerId] = @Original_BuyerId)) AND ((@IsNull_DefaultTarget = 1 AND [DefaultTarget] IS NULL) OR ([DefaultTarget] = @Original_DefaultTarget)) AND ((@IsNull_SMV = 1 AND [SMV] IS NULL) OR ([SMV] = @Original_SMV)) AND ((@IsNull_IsPrint = 1 AND [IsPrint] IS NULL) OR ([IsPrint] = @Original_IsPrint)) AND ((@IsNull_PrintDetails = 1 AND [PrintDetails] IS NULL) OR ([PrintDetails] = @Original_PrintDetails)) AND ((@IsNull_PrintTypeId = 1 AND [PrintTypeId] IS NULL) OR ([PrintTypeId] = @Original_PrintTypeId)) AND ((@IsNull_StyleName2 = 1 AND [StyleName2] IS NULL) OR ([StyleName2] = @Original_StyleName2)) AND ((@IsNull_StyleNameId = 1 AND [StyleNameId] IS NULL) OR ([StyleNameId] = @Original_StyleNameId)) AND ((@IsNull_GMDepartment = 1 AND [GMDepartment] IS NULL) OR ([GMDepartment] = @Original_GMDepartment)) AND ((@IsNull_GMDescription = 1 AND [GMDescription] IS NULL) OR ([GMDescription] = @Original_GMDescription)) AND ((@IsNull_KnittingTypeId = 1 AND [KnittingTypeId] IS NULL) OR ([KnittingTypeId] = @Original_KnittingTypeId)) AND ((@IsNull_CompositionId = 1 AND [CompositionId] IS NULL) OR ([CompositionId] = @Original_CompositionId)) AND ((@IsNull_GSM = 1 AND [GSM] IS NULL) OR ([GSM] = @Original_GSM)) AND ((@IsNull_Remarks = 1 AND [Remarks] IS NULL) OR ([Remarks] = @Original_Remarks)) AND ((@IsNull_GMDepartmentId = 1 AND [GMDepartmentId] IS NULL) OR ([GMDepartmentId] = @Original_GMDepartmentId)) AND ((@IsNull_UserId = 1 AND [UserId] IS NULL) OR ([UserId] = @Original_UserId)) AND ((@IsNull_ModifiedOn = 1 AND [ModifiedOn] IS NULL) OR ([ModifiedOn] = @Original_ModifiedOn)) AND ((@IsNull_IsEmbroidery = 1 AND [IsEmbroidery] IS NULL) OR ([IsEmbroidery] = @Original_IsEmbroidery)) AND ((@IsNull_IsAOP = 1 AND [IsAOP] IS NULL) OR ([IsAOP] = @Original_IsAOP)) AND ((@IsNull_IsYDS = 1 AND [IsYDS] IS NULL) OR ([IsYDS] = @Original_IsYDS)) AND ((@IsNull_PrintPartId = 1 AND [PrintPartId] IS NULL) OR ([PrintPartId] = @Original_PrintPartId)) AND ((@IsNull_StyleType = 1 AND [StyleType] IS NULL) OR ([StyleType] = @Original_StyleType)) AND ((@IsNull_DivisionId = 1 AND [DivisionId] IS NULL) OR ([DivisionId] = @Original_DivisionId)) AND ((@IsNull_Dia = 1 AND [Dia] IS NULL) OR ([Dia] = @Original_Dia)) AND ((@IsNull_IsPeachFinish = 1 AND [IsPeachFinish] IS NULL) OR ([IsPeachFinish] = @Original_IsPeachFinish)) AND ((@IsNull_IsBrush = 1 AND [IsBrush] IS NULL) OR ([IsBrush] = @Original_IsBrush)) AND ((@IsNull_WashTypeId = 1 AND [WashTypeId] IS NULL) OR ([WashTypeId] = @Original_WashTypeId)) AND ((@IsNull_IsWash = 1 AND [IsWash] IS NULL) OR ([IsWash] = @Original_IsWash)) AND ((@IsNull_GMTBrandId = 1 AND [GMTBrandId] IS NULL) OR ([GMTBrandId] = @Original_GMTBrandId)) AND ((@IsNull_Gauge = 1 AND [Gauge] IS NULL) OR ([Gauge] = @Original_Gauge)) AND ((@IsNull_EmbDetails = 1 AND [EmbDetails] IS NULL) OR ([EmbDetails] = @Original_EmbDetails)) AND ((@IsNull_SeasonId = 1 AND [SeasonId] IS NULL) OR ([SeasonId] = @Original_SeasonId)) AND ((@IsNull_CostingCM = 1 AND [CostingCM] IS NULL) OR ([CostingCM] = @Original_CostingCM)) AND ((@IsNull_MCQty = 1 AND [MCQty] IS NULL) OR ([MCQty] = @Original_MCQty)) AND ((@IsNull_IsSublimation = 1 AND [IsSublimation] IS NULL) OR ([IsSublimation] = @Original_IsSublimation)) AND ((@IsNull_IsSequence = 1 AND [IsSequence] IS NULL) OR ([IsSequence] = @Original_IsSequence)) AND ((@IsNull_IsSpecialYarn = 1 AND [IsSpecialYarn] IS NULL) OR ([IsSpecialYarn] = @Original_IsSpecialYarn)) AND ((@IsNull_YarnDyeingTypeId = 1 AND [YarnDyeingTypeId] IS NULL) OR ([YarnDyeingTypeId] = @Original_YarnDyeingTypeId)));
+SELECT StyleId, StyleName, BuyerId, DefaultTarget, SMV, Picture, IsPrint, PrintDetails, PrintTypeId, StyleName2, StyleNameId, GMDepartment, GMDescription, KnittingTypeId, CompositionId, GSM, Remarks, GMDepartmentId, UserId, ModifiedOn, IsEmbroidery, IsAOP, IsYDS, PrintPartId, StyleType, DivisionId, Dia, IsPeachFinish, IsBrush, WashTypeId, IsWash, GMTBrandId, Gauge, EmbDetails, SeasonId, CostingCM, MCQty, IsSublimation, IsSequence, IsSpecialYarn, YarnDyeingTypeId FROM Style WHERE (StyleId = @StyleId) ORDER BY StyleName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StyleName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@BuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BuyerId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@DefaultTarget" Precision="18" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="DefaultTarget" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@SMV" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="SMV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Picture" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Picture" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsPrint" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PrintDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PrintDetails" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@PrintTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PrintTypeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StyleName2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@StyleNameId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleNameId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GMDepartment" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMDepartment" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GMDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@KnittingTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="KnittingTypeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@CompositionId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CompositionId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@GSM" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="GSM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@GMDepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="GMDepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsEmbroidery" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsEmbroidery" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsAOP" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsAOP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsYDS" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsYDS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@PrintPartId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PrintPartId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StyleType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@DivisionId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DivisionId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Dia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Dia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsPeachFinish" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPeachFinish" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsBrush" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsBrush" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@WashTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WashTypeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsWash" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsWash" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@GMTBrandId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMTBrandId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Gauge" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Gauge" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@EmbDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EmbDetails" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@SeasonId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SeasonId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CostingCM" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostingCM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MCQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MCQty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsSublimation" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSublimation" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsSequence" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSequence" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsSpecialYarn" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSpecialYarn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@YarnDyeingTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnDyeingTypeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StyleName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BuyerId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BuyerId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_BuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BuyerId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DefaultTarget" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DefaultTarget" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_DefaultTarget" Precision="18" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="DefaultTarget" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SMV" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SMV" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_SMV" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="SMV" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsPrint" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPrint" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PrintDetails" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PrintDetails" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PrintDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PrintDetails" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PrintTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PrintTypeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_PrintTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PrintTypeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StyleName2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StyleName2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StyleName2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StyleNameId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StyleNameId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_StyleNameId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleNameId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMDepartment" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMDepartment" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GMDepartment" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMDepartment" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GMDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_KnittingTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KnittingTypeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_KnittingTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="KnittingTypeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CompositionId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CompositionId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_CompositionId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CompositionId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GSM" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GSM" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_GSM" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="GSM" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remarks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMDepartmentId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMDepartmentId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_GMDepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="GMDepartmentId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModifiedOn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsEmbroidery" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsEmbroidery" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsEmbroidery" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsEmbroidery" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsAOP" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsAOP" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsAOP" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsAOP" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsYDS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsYDS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsYDS" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsYDS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PrintPartId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PrintPartId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_PrintPartId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PrintPartId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StyleType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StyleType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StyleType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DivisionId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DivisionId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_DivisionId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DivisionId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Dia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Dia" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Dia" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Dia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsPeachFinish" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsPeachFinish" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPeachFinish" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPeachFinish" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsBrush" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsBrush" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsBrush" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsBrush" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WashTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WashTypeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_WashTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WashTypeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsWash" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsWash" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsWash" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsWash" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMTBrandId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMTBrandId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GMTBrandId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMTBrandId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Gauge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gauge" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Gauge" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Gauge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EmbDetails" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EmbDetails" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_EmbDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EmbDetails" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SeasonId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SeasonId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_SeasonId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SeasonId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CostingCM" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CostingCM" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CostingCM" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostingCM" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MCQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MCQty" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MCQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MCQty" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsSublimation" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsSublimation" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsSublimation" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSublimation" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsSequence" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsSequence" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsSequence" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSequence" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsSpecialYarn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsSpecialYarn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsSpecialYarn" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsSpecialYarn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YarnDyeingTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnDyeingTypeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_YarnDyeingTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnDyeingTypeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="StyleId" ColumnName="StyleId" DataSourceName="[ncl-db].dbo.Style" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StyleId" DataSetColumn="StyleId" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="BuyerId" DataSetColumn="BuyerId" />
+              <Mapping SourceColumn="DefaultTarget" DataSetColumn="DefaultTarget" />
+              <Mapping SourceColumn="SMV" DataSetColumn="SMV" />
+              <Mapping SourceColumn="Picture" DataSetColumn="Picture" />
+              <Mapping SourceColumn="IsPrint" DataSetColumn="IsPrint" />
+              <Mapping SourceColumn="PrintDetails" DataSetColumn="PrintDetails" />
+              <Mapping SourceColumn="PrintTypeId" DataSetColumn="PrintTypeId" />
+              <Mapping SourceColumn="StyleName2" DataSetColumn="StyleName2" />
+              <Mapping SourceColumn="StyleNameId" DataSetColumn="StyleNameId" />
+              <Mapping SourceColumn="GMDepartment" DataSetColumn="GMDepartment" />
+              <Mapping SourceColumn="GMDescription" DataSetColumn="GMDescription" />
+              <Mapping SourceColumn="KnittingTypeId" DataSetColumn="KnittingTypeId" />
+              <Mapping SourceColumn="CompositionId" DataSetColumn="CompositionId" />
+              <Mapping SourceColumn="GSM" DataSetColumn="GSM" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="GMDepartmentId" DataSetColumn="GMDepartmentId" />
+              <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
+              <Mapping SourceColumn="ModifiedOn" DataSetColumn="ModifiedOn" />
+              <Mapping SourceColumn="IsEmbroidery" DataSetColumn="IsEmbroidery" />
+              <Mapping SourceColumn="IsAOP" DataSetColumn="IsAOP" />
+              <Mapping SourceColumn="IsYDS" DataSetColumn="IsYDS" />
+              <Mapping SourceColumn="PrintPartId" DataSetColumn="PrintPartId" />
+              <Mapping SourceColumn="StyleType" DataSetColumn="StyleType" />
+              <Mapping SourceColumn="DivisionId" DataSetColumn="DivisionId" />
+              <Mapping SourceColumn="Dia" DataSetColumn="Dia" />
+              <Mapping SourceColumn="IsPeachFinish" DataSetColumn="IsPeachFinish" />
+              <Mapping SourceColumn="IsBrush" DataSetColumn="IsBrush" />
+              <Mapping SourceColumn="WashTypeId" DataSetColumn="WashTypeId" />
+              <Mapping SourceColumn="IsWash" DataSetColumn="IsWash" />
+              <Mapping SourceColumn="GMTBrandId" DataSetColumn="GMTBrandId" />
+              <Mapping SourceColumn="Gauge" DataSetColumn="Gauge" />
+              <Mapping SourceColumn="EmbDetails" DataSetColumn="EmbDetails" />
+              <Mapping SourceColumn="SeasonId" DataSetColumn="SeasonId" />
+              <Mapping SourceColumn="CostingCM" DataSetColumn="CostingCM" />
+              <Mapping SourceColumn="MCQty" DataSetColumn="MCQty" />
+              <Mapping SourceColumn="IsSublimation" DataSetColumn="IsSublimation" />
+              <Mapping SourceColumn="IsSequence" DataSetColumn="IsSequence" />
+              <Mapping SourceColumn="IsSpecialYarn" DataSetColumn="IsSpecialYarn" />
+              <Mapping SourceColumn="YarnDyeingTypeId" DataSetColumn="YarnDyeingTypeId" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.Style" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByStyleId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStyleId" GeneratorSourceName="FillByStyleId" GetMethodModifier="Public" GetMethodName="GetDataByStyleId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStyleId" UserSourceName="FillByStyleId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT BuyerId, CompositionId, CostingCM, DefaultTarget, Dia, DivisionId, EmbDetails, GMDepartment, GMDepartmentId, GMDescription, GMTBrandId, GSM, Gauge, IsAOP, IsBrush, IsEmbroidery, IsPeachFinish, IsPrint, IsSequence, IsSpecialYarn, IsSublimation, IsWash, IsYDS, KnittingTypeId, MCQty, ModifiedOn, Picture, PrintDetails, PrintPartId, PrintTypeId, Remarks, SMV, SeasonId, StyleId, StyleName, StyleName2, StyleNameId, StyleType, UserId, WashTypeId, YarnDyeingTypeId FROM Style WHERE (StyleId = @StyleId) ORDER BY StyleName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="StyleId" ColumnName="StyleId" DataSourceName="[ncl-db].dbo.Style" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.Style" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByStyleName" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByStyleName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByStyleName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT BuyerId, CompositionId, CostingCM, DefaultTarget, Dia, DivisionId, EmbDetails, GMDepartment, GMDepartmentId, GMDescription, GMTBrandId, GSM, Gauge, IsAOP, IsBrush, IsEmbroidery, IsPeachFinish, IsPrint, IsSequence, IsSpecialYarn, IsSublimation, IsWash, IsYDS, KnittingTypeId, MCQty, ModifiedOn, Picture, PrintDetails, PrintPartId, PrintTypeId, Remarks, SMV, SeasonId, StyleId, StyleName, StyleName2, StyleNameId, StyleType, UserId, WashTypeId, YarnDyeingTypeId FROM Style WHERE (StyleName LIKE '%' + @Style + '%')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Style" ColumnName="StyleName" DataSourceName="[ncl-db].dbo.Style" DataTypeServer="varchar(200)" DbType="AnsiString" Direction="Input" ParameterName="@Style" Precision="0" ProviderType="VarChar" Scale="0" Size="200" SourceColumn="StyleName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StyleNameMstTableAdapter" GeneratorDataComponentClassName="StyleNameMstTableAdapter" Name="StyleNameMst" UserDataComponentName="StyleNameMstTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.StyleNameMst" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [StyleNameMst] WHERE (([StyleNameId] = @Original_StyleNameId) AND ((@IsNull_StyleName = 1 AND [StyleName] IS NULL) OR ([StyleName] = @Original_StyleName)) AND ((@IsNull_StyleNameGroup = 1 AND [StyleNameGroup] IS NULL) OR ([StyleNameGroup] = @Original_StyleNameGroup)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_StyleNameId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleNameId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StyleName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StyleName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StyleName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StyleNameGroup" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StyleNameGroup" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StyleNameGroup" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleNameGroup" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [StyleNameMst] ([StyleName], [StyleNameGroup]) VALUES (@StyleName, @StyleNameGroup);
+SELECT StyleNameId, StyleName, StyleNameGroup FROM StyleNameMst WHERE (StyleNameId = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StyleName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StyleNameGroup" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleNameGroup" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        StyleNameId, StyleName, StyleNameGroup
+FROM            StyleNameMst</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [StyleNameMst] SET [StyleName] = @StyleName, [StyleNameGroup] = @StyleNameGroup WHERE (([StyleNameId] = @Original_StyleNameId) AND ((@IsNull_StyleName = 1 AND [StyleName] IS NULL) OR ([StyleName] = @Original_StyleName)) AND ((@IsNull_StyleNameGroup = 1 AND [StyleNameGroup] IS NULL) OR ([StyleNameGroup] = @Original_StyleNameGroup)));
+SELECT StyleNameId, StyleName, StyleNameGroup FROM StyleNameMst WHERE (StyleNameId = @StyleNameId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StyleName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StyleNameGroup" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleNameGroup" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_StyleNameId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleNameId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StyleName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StyleName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StyleName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StyleNameGroup" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StyleNameGroup" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StyleNameGroup" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StyleNameGroup" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="StyleNameId" ColumnName="StyleNameId" DataSourceName="[echo-printing].dbo.StyleNameMst" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@StyleNameId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="StyleNameId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StyleNameId" DataSetColumn="StyleNameId" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="StyleNameGroup" DataSetColumn="StyleNameGroup" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.StyleNameMst" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByStyleName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStyleName" GeneratorSourceName="FillByStyleName" GetMethodModifier="Public" GetMethodName="GetDataByStyleName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStyleName" UserSourceName="FillByStyleName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT StyleName, StyleNameGroup, StyleNameId FROM StyleNameMst WHERE (StyleName LIKE '%' + @StyleName + '%')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="StyleName" ColumnName="StyleName" DataSourceName="[echo-printing].dbo.StyleNameMst" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@StyleName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="StyleName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.StyleNameMst" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByStyleNameId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStyleNameId" GeneratorSourceName="FillByStyleNameId" GetMethodModifier="Public" GetMethodName="GetDataByStyleNameId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStyleNameId" UserSourceName="FillByStyleNameId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        StyleNameId, StyleName, StyleNameGroup
+FROM            StyleNameMst
+WHERE        (StyleNameId = @StyleNameId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="StyleNameId" ColumnName="StyleNameId" DataSourceName="[echo-printing].dbo.StyleNameMst" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@StyleNameId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="StyleNameId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FRStyleProcessTableAdapter" GeneratorDataComponentClassName="FRStyleProcessTableAdapter" Name="FRStyleProcess" UserDataComponentName="FRStyleProcessTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.FRStyleProcess" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [FRStyleProcess] WHERE (([StyleId] = @Original_StyleId) AND ((@IsNull_FRProcessId = 1 AND [FRProcessId] IS NULL) OR ([FRProcessId] = @Original_FRProcessId)) AND ([SMV] = @Original_SMV) AND ([FRStyleProcessId] = @Original_FRStyleProcessId) AND ((@IsNull_Factor = 1 AND [Factor] IS NULL) OR ([Factor] = @Original_Factor)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FRProcessId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FRProcessId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_FRProcessId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FRProcessId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_SMV" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="SMV" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_FRStyleProcessId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="FRStyleProcessId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Factor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Factor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Factor" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="Factor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [FRStyleProcess] ([StyleId], [FRProcessId], [SMV], [Factor]) VALUES (@StyleId, @FRProcessId, @SMV, @Factor);
+SELECT StyleId, FRProcessId, SMV, FRStyleProcessId, Factor FROM FRStyleProcess WHERE (FRStyleProcessId = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@FRProcessId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FRProcessId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@SMV" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="SMV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Factor" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="Factor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        StyleId, FRProcessId, SMV, FRStyleProcessId, Factor
+FROM            FRStyleProcess</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [FRStyleProcess] SET [StyleId] = @StyleId, [FRProcessId] = @FRProcessId, [SMV] = @SMV, [Factor] = @Factor WHERE (([StyleId] = @Original_StyleId) AND ((@IsNull_FRProcessId = 1 AND [FRProcessId] IS NULL) OR ([FRProcessId] = @Original_FRProcessId)) AND ([SMV] = @Original_SMV) AND ([FRStyleProcessId] = @Original_FRStyleProcessId) AND ((@IsNull_Factor = 1 AND [Factor] IS NULL) OR ([Factor] = @Original_Factor)));
+SELECT StyleId, FRProcessId, SMV, FRStyleProcessId, Factor FROM FRStyleProcess WHERE (FRStyleProcessId = @FRStyleProcessId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@FRProcessId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FRProcessId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@SMV" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="SMV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Factor" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="Factor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FRProcessId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FRProcessId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_FRProcessId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FRProcessId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_SMV" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="SMV" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_FRStyleProcessId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="FRStyleProcessId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Factor" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Factor" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Factor" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="Factor" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="FRStyleProcessId" ColumnName="FRStyleProcessId" DataSourceName="[fareast-data].dbo.FRStyleProcess" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@FRStyleProcessId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="FRStyleProcessId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FRStyleProcessId" DataSetColumn="FRStyleProcessId" />
+              <Mapping SourceColumn="StyleId" DataSetColumn="StyleId" />
+              <Mapping SourceColumn="FRProcessId" DataSetColumn="FRProcessId" />
+              <Mapping SourceColumn="SMV" DataSetColumn="SMV" />
+              <Mapping SourceColumn="Factor" DataSetColumn="Factor" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StyleLookupTableAdapter" GeneratorDataComponentClassName="StyleLookupTableAdapter" Name="StyleLookup" UserDataComponentName="StyleLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Style.StyleId, Style.StyleName, StylewiseTarget.TotalTargetQuantity AS Target, StylewiseTarget.MachineQuantity AS Machine, StylewiseTarget.SMV, Buyer.BuyerName AS Buyer
+FROM            Buyer RIGHT OUTER JOIN
+                         Style ON Buyer.BuyerId = Style.BuyerId LEFT OUTER JOIN
+                         StylewiseTarget ON Style.StyleId = StylewiseTarget.StyleId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StyleId" DataSetColumn="StyleId" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="Target" DataSetColumn="Target" />
+              <Mapping SourceColumn="Machine" DataSetColumn="Machine" />
+              <Mapping SourceColumn="SMV" DataSetColumn="SMV" />
+              <Mapping SourceColumn="Buyer" DataSetColumn="Buyer" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StyleDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="StyleDataSet" msprop:Generator_UserDSName="StyleDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Style" msprop:Generator_UserTableName="Style" msprop:Generator_RowEvArgName="StyleRowChangeEvent" msprop:Generator_TableVarName="tableStyle" msprop:Generator_TablePropName="Style" msprop:Generator_RowDeletingName="StyleRowDeleting" msprop:Generator_RowChangingName="StyleRowChanging" msprop:Generator_RowDeletedName="StyleRowDeleted" msprop:Generator_RowEvHandlerName="StyleRowChangeEventHandler" msprop:Generator_TableClassName="StyleDataTable" msprop:Generator_RowChangedName="StyleRowChanged" msprop:Generator_RowClassName="StyleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StyleId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnStyleId" msprop:Generator_ColumnPropNameInRow="StyleId" msprop:Generator_ColumnPropNameInTable="StyleIdColumn" msprop:Generator_UserColumnName="StyleId" type="xs:long" />
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerId" msprop:Generator_ColumnVarNameInTable="columnBuyerId" msprop:Generator_ColumnPropNameInRow="BuyerId" msprop:Generator_ColumnPropNameInTable="BuyerIdColumn" msprop:Generator_UserColumnName="BuyerId" type="xs:long" minOccurs="0" />
+              <xs:element name="DefaultTarget" msprop:Generator_ColumnVarNameInTable="columnDefaultTarget" msprop:Generator_ColumnPropNameInRow="DefaultTarget" msprop:Generator_ColumnPropNameInTable="DefaultTargetColumn" msprop:Generator_UserColumnName="DefaultTarget" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SMV" msprop:Generator_ColumnVarNameInTable="columnSMV" msprop:Generator_ColumnPropNameInRow="SMV" msprop:Generator_ColumnPropNameInTable="SMVColumn" msprop:Generator_UserColumnName="SMV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Picture" msprop:Generator_ColumnVarNameInTable="columnPicture" msprop:Generator_ColumnPropNameInRow="Picture" msprop:Generator_ColumnPropNameInTable="PictureColumn" msprop:Generator_UserColumnName="Picture" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="IsPrint" msprop:Generator_ColumnVarNameInTable="columnIsPrint" msprop:Generator_ColumnPropNameInRow="IsPrint" msprop:Generator_ColumnPropNameInTable="IsPrintColumn" msprop:Generator_UserColumnName="IsPrint" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="PrintDetails" msprop:Generator_ColumnVarNameInTable="columnPrintDetails" msprop:Generator_ColumnPropNameInRow="PrintDetails" msprop:Generator_ColumnPropNameInTable="PrintDetailsColumn" msprop:Generator_UserColumnName="PrintDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrintTypeId" msprop:Generator_ColumnVarNameInTable="columnPrintTypeId" msprop:Generator_ColumnPropNameInRow="PrintTypeId" msprop:Generator_ColumnPropNameInTable="PrintTypeIdColumn" msprop:Generator_UserColumnName="PrintTypeId" type="xs:long" minOccurs="0" />
+              <xs:element name="StyleName2" msprop:Generator_ColumnVarNameInTable="columnStyleName2" msprop:Generator_ColumnPropNameInRow="StyleName2" msprop:Generator_ColumnPropNameInTable="StyleName2Column" msprop:Generator_UserColumnName="StyleName2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleNameId" msprop:Generator_ColumnVarNameInTable="columnStyleNameId" msprop:Generator_ColumnPropNameInRow="StyleNameId" msprop:Generator_ColumnPropNameInTable="StyleNameIdColumn" msprop:Generator_UserColumnName="StyleNameId" type="xs:long" minOccurs="0" />
+              <xs:element name="GMDepartment" msprop:Generator_ColumnVarNameInTable="columnGMDepartment" msprop:Generator_ColumnPropNameInRow="GMDepartment" msprop:Generator_ColumnPropNameInTable="GMDepartmentColumn" msprop:Generator_UserColumnName="GMDepartment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GMDescription" msprop:Generator_ColumnVarNameInTable="columnGMDescription" msprop:Generator_ColumnPropNameInRow="GMDescription" msprop:Generator_ColumnPropNameInTable="GMDescriptionColumn" msprop:Generator_UserColumnName="GMDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KnittingTypeId" msprop:Generator_ColumnVarNameInTable="columnKnittingTypeId" msprop:Generator_ColumnPropNameInRow="KnittingTypeId" msprop:Generator_ColumnPropNameInTable="KnittingTypeIdColumn" msprop:Generator_UserColumnName="KnittingTypeId" type="xs:long" minOccurs="0" />
+              <xs:element name="CompositionId" msprop:Generator_ColumnVarNameInTable="columnCompositionId" msprop:Generator_ColumnPropNameInRow="CompositionId" msprop:Generator_ColumnPropNameInTable="CompositionIdColumn" msprop:Generator_UserColumnName="CompositionId" type="xs:long" minOccurs="0" />
+              <xs:element name="GSM" msprop:Generator_ColumnVarNameInTable="columnGSM" msprop:Generator_ColumnPropNameInRow="GSM" msprop:Generator_ColumnPropNameInTable="GSMColumn" msprop:Generator_UserColumnName="GSM" type="xs:long" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GMDepartmentId" msprop:Generator_ColumnVarNameInTable="columnGMDepartmentId" msprop:Generator_ColumnPropNameInRow="GMDepartmentId" msprop:Generator_ColumnPropNameInTable="GMDepartmentIdColumn" msprop:Generator_UserColumnName="GMDepartmentId" type="xs:long" minOccurs="0" />
+              <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:long" minOccurs="0" />
+              <xs:element name="ModifiedOn" msprop:Generator_ColumnVarNameInTable="columnModifiedOn" msprop:Generator_ColumnPropNameInRow="ModifiedOn" msprop:Generator_ColumnPropNameInTable="ModifiedOnColumn" msprop:Generator_UserColumnName="ModifiedOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsEmbroidery" msprop:Generator_ColumnVarNameInTable="columnIsEmbroidery" msprop:Generator_ColumnPropNameInRow="IsEmbroidery" msprop:Generator_ColumnPropNameInTable="IsEmbroideryColumn" msprop:Generator_UserColumnName="IsEmbroidery" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="IsAOP" msprop:Generator_ColumnVarNameInTable="columnIsAOP" msprop:Generator_ColumnPropNameInRow="IsAOP" msprop:Generator_ColumnPropNameInTable="IsAOPColumn" msprop:Generator_UserColumnName="IsAOP" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="IsYDS" msprop:Generator_ColumnVarNameInTable="columnIsYDS" msprop:Generator_ColumnPropNameInRow="IsYDS" msprop:Generator_ColumnPropNameInTable="IsYDSColumn" msprop:Generator_UserColumnName="IsYDS" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="PrintPartId" msprop:Generator_ColumnVarNameInTable="columnPrintPartId" msprop:Generator_ColumnPropNameInRow="PrintPartId" msprop:Generator_ColumnPropNameInTable="PrintPartIdColumn" msprop:Generator_UserColumnName="PrintPartId" type="xs:long" minOccurs="0" />
+              <xs:element name="StyleType" msprop:Generator_ColumnVarNameInTable="columnStyleType" msprop:Generator_ColumnPropNameInRow="StyleType" msprop:Generator_ColumnPropNameInTable="StyleTypeColumn" msprop:Generator_UserColumnName="StyleType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DivisionId" msprop:Generator_ColumnVarNameInTable="columnDivisionId" msprop:Generator_ColumnPropNameInRow="DivisionId" msprop:Generator_ColumnPropNameInTable="DivisionIdColumn" msprop:Generator_UserColumnName="DivisionId" type="xs:long" minOccurs="0" />
+              <xs:element name="Dia" msprop:Generator_ColumnVarNameInTable="columnDia" msprop:Generator_ColumnPropNameInRow="Dia" msprop:Generator_ColumnPropNameInTable="DiaColumn" msprop:Generator_UserColumnName="Dia" type="xs:int" minOccurs="0" />
+              <xs:element name="IsPeachFinish" msprop:Generator_ColumnVarNameInTable="columnIsPeachFinish" msprop:Generator_ColumnPropNameInRow="IsPeachFinish" msprop:Generator_ColumnPropNameInTable="IsPeachFinishColumn" msprop:Generator_UserColumnName="IsPeachFinish" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsBrush" msprop:Generator_ColumnVarNameInTable="columnIsBrush" msprop:Generator_ColumnPropNameInRow="IsBrush" msprop:Generator_ColumnPropNameInTable="IsBrushColumn" msprop:Generator_UserColumnName="IsBrush" type="xs:boolean" minOccurs="0" />
+              <xs:element name="WashTypeId" msprop:Generator_ColumnVarNameInTable="columnWashTypeId" msprop:Generator_ColumnPropNameInRow="WashTypeId" msprop:Generator_ColumnPropNameInTable="WashTypeIdColumn" msprop:Generator_UserColumnName="WashTypeId" type="xs:int" minOccurs="0" />
+              <xs:element name="IsWash" msprop:Generator_ColumnVarNameInTable="columnIsWash" msprop:Generator_ColumnPropNameInRow="IsWash" msprop:Generator_ColumnPropNameInTable="IsWashColumn" msprop:Generator_UserColumnName="IsWash" type="xs:boolean" minOccurs="0" />
+              <xs:element name="GMTBrandId" msprop:Generator_ColumnVarNameInTable="columnGMTBrandId" msprop:Generator_ColumnPropNameInRow="GMTBrandId" msprop:Generator_ColumnPropNameInTable="GMTBrandIdColumn" msprop:Generator_UserColumnName="GMTBrandId" type="xs:int" minOccurs="0" />
+              <xs:element name="Gauge" msprop:Generator_ColumnVarNameInTable="columnGauge" msprop:Generator_ColumnPropNameInRow="Gauge" msprop:Generator_ColumnPropNameInTable="GaugeColumn" msprop:Generator_UserColumnName="Gauge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmbDetails" msprop:Generator_ColumnVarNameInTable="columnEmbDetails" msprop:Generator_ColumnPropNameInRow="EmbDetails" msprop:Generator_ColumnPropNameInTable="EmbDetailsColumn" msprop:Generator_UserColumnName="EmbDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SeasonId" msprop:Generator_ColumnVarNameInTable="columnSeasonId" msprop:Generator_ColumnPropNameInRow="SeasonId" msprop:Generator_ColumnPropNameInTable="SeasonIdColumn" msprop:Generator_UserColumnName="SeasonId" type="xs:long" minOccurs="0" />
+              <xs:element name="CostingCM" msprop:Generator_ColumnVarNameInTable="columnCostingCM" msprop:Generator_ColumnPropNameInRow="CostingCM" msprop:Generator_ColumnPropNameInTable="CostingCMColumn" msprop:Generator_UserColumnName="CostingCM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MCQty" msprop:Generator_ColumnVarNameInTable="columnMCQty" msprop:Generator_ColumnPropNameInRow="MCQty" msprop:Generator_ColumnPropNameInTable="MCQtyColumn" msprop:Generator_UserColumnName="MCQty" type="xs:int" minOccurs="0" />
+              <xs:element name="IsSublimation" msprop:Generator_ColumnVarNameInTable="columnIsSublimation" msprop:Generator_ColumnPropNameInRow="IsSublimation" msprop:Generator_ColumnPropNameInTable="IsSublimationColumn" msprop:Generator_UserColumnName="IsSublimation" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsSequence" msprop:Generator_ColumnVarNameInTable="columnIsSequence" msprop:Generator_ColumnPropNameInRow="IsSequence" msprop:Generator_ColumnPropNameInTable="IsSequenceColumn" msprop:Generator_UserColumnName="IsSequence" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsSpecialYarn" msprop:Generator_ColumnVarNameInTable="columnIsSpecialYarn" msprop:Generator_ColumnPropNameInRow="IsSpecialYarn" msprop:Generator_ColumnPropNameInTable="IsSpecialYarnColumn" msprop:Generator_UserColumnName="IsSpecialYarn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="YarnDyeingTypeId" msprop:Generator_ColumnVarNameInTable="columnYarnDyeingTypeId" msprop:Generator_ColumnPropNameInRow="YarnDyeingTypeId" msprop:Generator_ColumnPropNameInTable="YarnDyeingTypeIdColumn" msprop:Generator_UserColumnName="YarnDyeingTypeId" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StyleNameMst" msprop:Generator_UserTableName="StyleNameMst" msprop:Generator_RowEvArgName="StyleNameMstRowChangeEvent" msprop:Generator_TableVarName="tableStyleNameMst" msprop:Generator_TablePropName="StyleNameMst" msprop:Generator_RowDeletingName="StyleNameMstRowDeleting" msprop:Generator_RowChangingName="StyleNameMstRowChanging" msprop:Generator_RowDeletedName="StyleNameMstRowDeleted" msprop:Generator_RowEvHandlerName="StyleNameMstRowChangeEventHandler" msprop:Generator_TableClassName="StyleNameMstDataTable" msprop:Generator_RowChangedName="StyleNameMstRowChanged" msprop:Generator_RowClassName="StyleNameMstRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StyleNameId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnStyleNameId" msprop:Generator_ColumnPropNameInRow="StyleNameId" msprop:Generator_ColumnPropNameInTable="StyleNameIdColumn" msprop:Generator_UserColumnName="StyleNameId" type="xs:long" />
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleNameGroup" msprop:Generator_ColumnVarNameInTable="columnStyleNameGroup" msprop:Generator_ColumnPropNameInRow="StyleNameGroup" msprop:Generator_ColumnPropNameInTable="StyleNameGroupColumn" msprop:Generator_UserColumnName="StyleNameGroup" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FRStyleProcess" msprop:Generator_UserTableName="FRStyleProcess" msprop:Generator_RowEvArgName="FRStyleProcessRowChangeEvent" msprop:Generator_TableVarName="tableFRStyleProcess" msprop:Generator_TablePropName="FRStyleProcess" msprop:Generator_RowDeletingName="FRStyleProcessRowDeleting" msprop:Generator_RowChangingName="FRStyleProcessRowChanging" msprop:Generator_RowDeletedName="FRStyleProcessRowDeleted" msprop:Generator_RowEvHandlerName="FRStyleProcessRowChangeEventHandler" msprop:Generator_TableClassName="FRStyleProcessDataTable" msprop:Generator_RowChangedName="FRStyleProcessRowChanged" msprop:Generator_RowClassName="FRStyleProcessRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FRStyleProcessId" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFRStyleProcessId" msprop:Generator_ColumnPropNameInRow="FRStyleProcessId" msprop:Generator_ColumnPropNameInTable="FRStyleProcessIdColumn" msprop:Generator_UserColumnName="FRStyleProcessId" type="xs:long" />
+              <xs:element name="StyleId" msprop:Generator_ColumnVarNameInTable="columnStyleId" msprop:Generator_ColumnPropNameInRow="StyleId" msprop:Generator_ColumnPropNameInTable="StyleIdColumn" msprop:Generator_UserColumnName="StyleId" type="xs:long" />
+              <xs:element name="FRProcessId" msprop:Generator_ColumnVarNameInTable="columnFRProcessId" msprop:Generator_ColumnPropNameInRow="FRProcessId" msprop:Generator_ColumnPropNameInTable="FRProcessIdColumn" msprop:Generator_UserColumnName="FRProcessId" type="xs:int" minOccurs="0" />
+              <xs:element name="SMV" msprop:Generator_ColumnVarNameInTable="columnSMV" msprop:Generator_ColumnPropNameInRow="SMV" msprop:Generator_ColumnPropNameInTable="SMVColumn" msprop:Generator_UserColumnName="SMV" type="xs:decimal" />
+              <xs:element name="Factor" msprop:Generator_ColumnVarNameInTable="columnFactor" msprop:Generator_ColumnPropNameInRow="Factor" msprop:Generator_ColumnPropNameInTable="FactorColumn" msprop:Generator_UserColumnName="Factor" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StyleLookup" msprop:Generator_TableClassName="StyleLookupDataTable" msprop:Generator_TableVarName="tableStyleLookup" msprop:Generator_TablePropName="StyleLookup" msprop:Generator_RowDeletingName="StyleLookupRowDeleting" msprop:Generator_RowChangingName="StyleLookupRowChanging" msprop:Generator_RowEvHandlerName="StyleLookupRowChangeEventHandler" msprop:Generator_RowDeletedName="StyleLookupRowDeleted" msprop:Generator_UserTableName="StyleLookup" msprop:Generator_RowChangedName="StyleLookupRowChanged" msprop:Generator_RowEvArgName="StyleLookupRowChangeEvent" msprop:Generator_RowClassName="StyleLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StyleId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnStyleId" msprop:Generator_ColumnPropNameInRow="StyleId" msprop:Generator_ColumnPropNameInTable="StyleIdColumn" msprop:Generator_UserColumnName="StyleId" type="xs:long" />
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Target" msprop:Generator_ColumnVarNameInTable="columnTarget" msprop:Generator_ColumnPropNameInRow="Target" msprop:Generator_ColumnPropNameInTable="TargetColumn" msprop:Generator_UserColumnName="Target" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Machine" msprop:Generator_ColumnVarNameInTable="columnMachine" msprop:Generator_ColumnPropNameInRow="Machine" msprop:Generator_ColumnPropNameInTable="MachineColumn" msprop:Generator_UserColumnName="Machine" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SMV" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSMV" msprop:Generator_ColumnPropNameInRow="SMV" msprop:Generator_ColumnPropNameInTable="SMVColumn" msprop:Generator_UserColumnName="SMV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Buyer" msprop:Generator_ColumnVarNameInTable="columnBuyer" msprop:Generator_ColumnPropNameInRow="Buyer" msprop:Generator_ColumnPropNameInTable="BuyerColumn" msprop:Generator_UserColumnName="Buyer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Style" />
+      <xs:field xpath="mstns:StyleId" />
+    </xs:unique>
+    <xs:unique name="StyleNameMst_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:StyleNameMst" />
+      <xs:field xpath="mstns:StyleNameId" />
+    </xs:unique>
+    <xs:unique name="FRStyleProcess_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FRStyleProcess" />
+      <xs:field xpath="mstns:FRStyleProcessId" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_FRStyleProcess_Style" msdata:parent="Style" msdata:child="FRStyleProcess" msdata:parentkey="StyleId" msdata:childkey="StyleId" msprop:Generator_UserChildTable="FRStyleProcess" msprop:Generator_ChildPropName="GetFRStyleProcessRows" msprop:Generator_UserRelationName="FK_FRStyleProcess_Style" msprop:Generator_RelationVarName="relationFK_FRStyleProcess_Style" msprop:Generator_UserParentTable="Style" msprop:Generator_ParentPropName="StyleRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

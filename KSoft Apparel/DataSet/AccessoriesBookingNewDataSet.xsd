@@ -1,0 +1,930 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccessoriesBookingNewDataSet" targetNamespace="http://tempuri.org/AccessoriesBookingNewDataSet.xsd" xmlns:mstns="http://tempuri.org/AccessoriesBookingNewDataSet.xsd" xmlns="http://tempuri.org/AccessoriesBookingNewDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccessoresBookingDetailsTableAdapter" GeneratorDataComponentClassName="AccessoresBookingDetailsTableAdapter" Name="AccessoresBookingDetails" UserDataComponentName="AccessoresBookingDetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccessoresBookingDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [AccessoresBookingDetails] WHERE (([AccessoriesBookingDetailsId] = @Original_AccessoriesBookingDetailsId) AND ((@IsNull_AccessoriesBookingId = 1 AND [AccessoriesBookingId] IS NULL) OR ([AccessoriesBookingId] = @Original_AccessoriesBookingId)) AND ((@IsNull_FabricColorId = 1 AND [FabricColorId] IS NULL) OR ([FabricColorId] = @Original_FabricColorId)) AND ((@IsNull_ConsumptionUnitId = 1 AND [ConsumptionUnitId] IS NULL) OR ([ConsumptionUnitId] = @Original_ConsumptionUnitId)) AND ((@IsNull_BookingUnitId = 1 AND [BookingUnitId] IS NULL) OR ([BookingUnitId] = @Original_BookingUnitId)) AND ((@IsNull_SupplierId = 1 AND [SupplierId] IS NULL) OR ([SupplierId] = @Original_SupplierId)) AND ((@IsNull_Remarks = 1 AND [Remarks] IS NULL) OR ([Remarks] = @Original_Remarks)) AND ((@IsNull_AccessoriesId = 1 AND [AccessoriesId] IS NULL) OR ([AccessoriesId] = @Original_AccessoriesId)) AND ((@IsNull_ConsumptionForPcs = 1 AND [ConsumptionForPcs] IS NULL) OR ([ConsumptionForPcs] = @Original_ConsumptionForPcs)) AND ((@IsNull_SLNo = 1 AND [SLNo] IS NULL) OR ([SLNo] = @Original_SLNo)) AND ((@IsNull_SizeId = 1 AND [SizeId] IS NULL) OR ([SizeId] = @Original_SizeId)) AND ((@IsNull_DestinationId = 1 AND [DestinationId] IS NULL) OR ([DestinationId] = @Original_DestinationId)) AND ((@IsNull_PackType = 1 AND [PackType] IS NULL) OR ([PackType] = @Original_PackType)) AND ((@IsNull_ItemId = 1 AND [ItemId] IS NULL) OR ([ItemId] = @Original_ItemId)) AND ((@IsNull_ColorCode = 1 AND [ColorCode] IS NULL) OR ([ColorCode] = @Original_ColorCode)) AND ((@IsNull_SKU = 1 AND [SKU] IS NULL) OR ([SKU] = @Original_SKU)) AND ((@IsNull_IsComplete = 1 AND [IsComplete] IS NULL) OR ([IsComplete] = @Original_IsComplete)) AND ((@IsNull_IsApproved = 1 AND [IsApproved] IS NULL) OR ([IsApproved] = @Original_IsApproved)) AND ((@IsNull_CompleteOn = 1 AND [CompleteOn] IS NULL) OR ([CompleteOn] = @Original_CompleteOn)) AND ((@IsNull_ApprovedOn = 1 AND [ApprovedOn] IS NULL) OR ([ApprovedOn] = @Original_ApprovedOn)) AND ((@IsNull_CompletedBy = 1 AND [CompletedBy] IS NULL) OR ([CompletedBy] = @Original_CompletedBy)) AND ((@IsNull_ApprovedBy = 1 AND [ApprovedBy] IS NULL) OR ([ApprovedBy] = @Original_ApprovedBy)) AND ((@IsNull_ItemCode = 1 AND [ItemCode] IS NULL) OR ([ItemCode] = @Original_ItemCode)) AND ((@IsNull_PO = 1 AND [PO] IS NULL) OR ([PO] = @Original_PO)) AND ((@IsNull_OrderNO = 1 AND [OrderNO] IS NULL) OR ([OrderNO] = @Original_OrderNO)) AND ((@IsNull_KimballNo = 1 AND [KimballNo] IS NULL) OR ([KimballNo] = @Original_KimballNo)) AND ((@IsNull_Fabrication = 1 AND [Fabrication] IS NULL) OR ([Fabrication] = @Original_Fabrication)) AND ((@IsNull_BuyerDepartment = 1 AND [BuyerDepartment] IS NULL) OR ([BuyerDepartment] = @Original_BuyerDepartment)) AND ((@IsNull_Consumption = 1 AND [Consumption] IS NULL) OR ([Consumption] = @Original_Consumption)) AND ((@IsNull_BookingQuantity = 1 AND [BookingQuantity] IS NULL) OR ([BookingQuantity] = @Original_BookingQuantity)) AND ((@IsNull_UnitPrice = 1 AND [UnitPrice] IS NULL) OR ([UnitPrice] = @Original_UnitPrice)) AND ((@IsNull_AdditionalQuantity = 1 AND [AdditionalQuantity] IS NULL) OR ([AdditionalQuantity] = @Original_AdditionalQuantity)) AND ((@IsNull_OrderQuantity = 1 AND [OrderQuantity] IS NULL) OR ([OrderQuantity] = @Original_OrderQuantity)) AND ((@IsNull_GenerationType = 1 AND [GenerationType] IS NULL) OR ([GenerationType] = @Original_GenerationType)) AND ((@IsNull_WastagePercentage = 1 AND [WastagePercentage] IS NULL) OR ([WastagePercentage] = @Original_WastagePercentage)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingDetailsId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesBookingId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FabricColorId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FabricColorId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_FabricColorId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="FabricColorId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ConsumptionUnitId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ConsumptionUnitId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ConsumptionUnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ConsumptionUnitId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BookingUnitId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BookingUnitId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_BookingUnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BookingUnitId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SupplierId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_SupplierId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remarks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ConsumptionForPcs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ConsumptionForPcs" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ConsumptionForPcs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ConsumptionForPcs" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SLNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SLNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SizeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SizeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_SizeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SizeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DestinationId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DestinationId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_DestinationId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DestinationId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PackType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PackType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ColorCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ColorCode" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ColorCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ColorCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SKU" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SKU" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SKU" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SKU" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsComplete" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsComplete" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsApproved" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsApproved" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CompleteOn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CompleteOn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_CompleteOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="CompleteOn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApprovedOn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApprovedOn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ApprovedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ApprovedOn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CompletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CompletedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_CompletedBy" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CompletedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApprovedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ApprovedBy" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemCode" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OrderNO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderNO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_OrderNO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="OrderNO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_KimballNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KimballNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_KimballNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="KimballNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fabrication" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fabrication" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Fabrication" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Fabrication" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BuyerDepartment" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BuyerDepartment" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_BuyerDepartment" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="BuyerDepartment" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Consumption" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Consumption" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Consumption" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="Consumption" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BookingQuantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BookingQuantity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_BookingQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="BookingQuantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UnitPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_UnitPrice" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdditionalQuantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdditionalQuantity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_AdditionalQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="AdditionalQuantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OrderQuantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderQuantity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_OrderQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="OrderQuantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GenerationType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GenerationType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GenerationType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GenerationType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WastagePercentage" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WastagePercentage" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_WastagePercentage" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="WastagePercentage" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [AccessoresBookingDetails] ([AccessoriesBookingId], [FabricColorId], [ConsumptionUnitId], [BookingUnitId], [SupplierId], [Remarks], [AccessoriesId], [ConsumptionForPcs], [SLNo], [SizeId], [DestinationId], [PackType], [ItemId], [ColorCode], [SKU], [IsComplete], [IsApproved], [CompleteOn], [ApprovedOn], [CompletedBy], [ApprovedBy], [Picture], [ItemCode], [PO], [OrderNO], [KimballNo], [Fabrication], [BuyerDepartment], [Consumption], [BookingQuantity], [UnitPrice], [AdditionalQuantity], [OrderQuantity], [GenerationType], [WastagePercentage]) VALUES (@AccessoriesBookingId, @FabricColorId, @ConsumptionUnitId, @BookingUnitId, @SupplierId, @Remarks, @AccessoriesId, @ConsumptionForPcs, @SLNo, @SizeId, @DestinationId, @PackType, @ItemId, @ColorCode, @SKU, @IsComplete, @IsApproved, @CompleteOn, @ApprovedOn, @CompletedBy, @ApprovedBy, @Picture, @ItemCode, @PO, @OrderNO, @KimballNo, @Fabrication, @BuyerDepartment, @Consumption, @BookingQuantity, @UnitPrice, @AdditionalQuantity, @OrderQuantity, @GenerationType, @WastagePercentage);
+SELECT AccessoriesBookingDetailsId, AccessoriesBookingId, FabricColorId, ConsumptionUnitId, BookingUnitId, SupplierId, Remarks, AccessoriesId, ConsumptionForPcs, SLNo, SizeId, DestinationId, PackType, ItemId, ColorCode, SKU, IsComplete, IsApproved, CompleteOn, ApprovedOn, CompletedBy, ApprovedBy, Picture, ItemCode, PO, OrderNO, KimballNo, Fabrication, BuyerDepartment, Consumption, BookingQuantity, UnitPrice, AdditionalQuantity, OrderQuantity, GenerationType, WastagePercentage FROM AccessoresBookingDetails WHERE (AccessoriesBookingDetailsId = SCOPE_IDENTITY()) ORDER BY SLNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@FabricColorId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="FabricColorId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ConsumptionUnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ConsumptionUnitId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@BookingUnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BookingUnitId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@SupplierId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ConsumptionForPcs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ConsumptionForPcs" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SLNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@SizeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SizeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@DestinationId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DestinationId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PackType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ColorCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ColorCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SKU" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SKU" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsComplete" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsApproved" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CompleteOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="CompleteOn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ApprovedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ApprovedOn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@CompletedBy" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CompletedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ApprovedBy" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Picture" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Picture" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@OrderNO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="OrderNO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@KimballNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="KimballNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Fabrication" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Fabrication" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@BuyerDepartment" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="BuyerDepartment" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Consumption" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="Consumption" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@BookingQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="BookingQuantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@UnitPrice" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@AdditionalQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="AdditionalQuantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@OrderQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="OrderQuantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GenerationType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GenerationType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@WastagePercentage" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="WastagePercentage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesBookingDetailsId, AccessoriesBookingId, FabricColorId, ConsumptionUnitId, BookingUnitId, SupplierId, Remarks, AccessoriesId, ConsumptionForPcs, SLNo, SizeId, DestinationId, PackType, ItemId, ColorCode, SKU, 
+                         IsComplete, IsApproved, CompleteOn, ApprovedOn, CompletedBy, ApprovedBy, Picture, ItemCode, PO, OrderNO, KimballNo, Fabrication, BuyerDepartment, Consumption, BookingQuantity, UnitPrice, AdditionalQuantity, 
+                         OrderQuantity, GenerationType, WastagePercentage
+FROM            AccessoresBookingDetails
+ORDER BY SLNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [AccessoresBookingDetails] SET [AccessoriesBookingId] = @AccessoriesBookingId, [FabricColorId] = @FabricColorId, [ConsumptionUnitId] = @ConsumptionUnitId, [BookingUnitId] = @BookingUnitId, [SupplierId] = @SupplierId, [Remarks] = @Remarks, [AccessoriesId] = @AccessoriesId, [ConsumptionForPcs] = @ConsumptionForPcs, [SLNo] = @SLNo, [SizeId] = @SizeId, [DestinationId] = @DestinationId, [PackType] = @PackType, [ItemId] = @ItemId, [ColorCode] = @ColorCode, [SKU] = @SKU, [IsComplete] = @IsComplete, [IsApproved] = @IsApproved, [CompleteOn] = @CompleteOn, [ApprovedOn] = @ApprovedOn, [CompletedBy] = @CompletedBy, [ApprovedBy] = @ApprovedBy, [Picture] = @Picture, [ItemCode] = @ItemCode, [PO] = @PO, [OrderNO] = @OrderNO, [KimballNo] = @KimballNo, [Fabrication] = @Fabrication, [BuyerDepartment] = @BuyerDepartment, [Consumption] = @Consumption, [BookingQuantity] = @BookingQuantity, [UnitPrice] = @UnitPrice, [AdditionalQuantity] = @AdditionalQuantity, [OrderQuantity] = @OrderQuantity, [GenerationType] = @GenerationType, [WastagePercentage] = @WastagePercentage WHERE (([AccessoriesBookingDetailsId] = @Original_AccessoriesBookingDetailsId) AND ((@IsNull_AccessoriesBookingId = 1 AND [AccessoriesBookingId] IS NULL) OR ([AccessoriesBookingId] = @Original_AccessoriesBookingId)) AND ((@IsNull_FabricColorId = 1 AND [FabricColorId] IS NULL) OR ([FabricColorId] = @Original_FabricColorId)) AND ((@IsNull_ConsumptionUnitId = 1 AND [ConsumptionUnitId] IS NULL) OR ([ConsumptionUnitId] = @Original_ConsumptionUnitId)) AND ((@IsNull_BookingUnitId = 1 AND [BookingUnitId] IS NULL) OR ([BookingUnitId] = @Original_BookingUnitId)) AND ((@IsNull_SupplierId = 1 AND [SupplierId] IS NULL) OR ([SupplierId] = @Original_SupplierId)) AND ((@IsNull_Remarks = 1 AND [Remarks] IS NULL) OR ([Remarks] = @Original_Remarks)) AND ((@IsNull_AccessoriesId = 1 AND [AccessoriesId] IS NULL) OR ([AccessoriesId] = @Original_AccessoriesId)) AND ((@IsNull_ConsumptionForPcs = 1 AND [ConsumptionForPcs] IS NULL) OR ([ConsumptionForPcs] = @Original_ConsumptionForPcs)) AND ((@IsNull_SLNo = 1 AND [SLNo] IS NULL) OR ([SLNo] = @Original_SLNo)) AND ((@IsNull_SizeId = 1 AND [SizeId] IS NULL) OR ([SizeId] = @Original_SizeId)) AND ((@IsNull_DestinationId = 1 AND [DestinationId] IS NULL) OR ([DestinationId] = @Original_DestinationId)) AND ((@IsNull_PackType = 1 AND [PackType] IS NULL) OR ([PackType] = @Original_PackType)) AND ((@IsNull_ItemId = 1 AND [ItemId] IS NULL) OR ([ItemId] = @Original_ItemId)) AND ((@IsNull_ColorCode = 1 AND [ColorCode] IS NULL) OR ([ColorCode] = @Original_ColorCode)) AND ((@IsNull_SKU = 1 AND [SKU] IS NULL) OR ([SKU] = @Original_SKU)) AND ((@IsNull_IsComplete = 1 AND [IsComplete] IS NULL) OR ([IsComplete] = @Original_IsComplete)) AND ((@IsNull_IsApproved = 1 AND [IsApproved] IS NULL) OR ([IsApproved] = @Original_IsApproved)) AND ((@IsNull_CompleteOn = 1 AND [CompleteOn] IS NULL) OR ([CompleteOn] = @Original_CompleteOn)) AND ((@IsNull_ApprovedOn = 1 AND [ApprovedOn] IS NULL) OR ([ApprovedOn] = @Original_ApprovedOn)) AND ((@IsNull_CompletedBy = 1 AND [CompletedBy] IS NULL) OR ([CompletedBy] = @Original_CompletedBy)) AND ((@IsNull_ApprovedBy = 1 AND [ApprovedBy] IS NULL) OR ([ApprovedBy] = @Original_ApprovedBy)) AND ((@IsNull_ItemCode = 1 AND [ItemCode] IS NULL) OR ([ItemCode] = @Original_ItemCode)) AND ((@IsNull_PO = 1 AND [PO] IS NULL) OR ([PO] = @Original_PO)) AND ((@IsNull_OrderNO = 1 AND [OrderNO] IS NULL) OR ([OrderNO] = @Original_OrderNO)) AND ((@IsNull_KimballNo = 1 AND [KimballNo] IS NULL) OR ([KimballNo] = @Original_KimballNo)) AND ((@IsNull_Fabrication = 1 AND [Fabrication] IS NULL) OR ([Fabrication] = @Original_Fabrication)) AND ((@IsNull_BuyerDepartment = 1 AND [BuyerDepartment] IS NULL) OR ([BuyerDepartment] = @Original_BuyerDepartment)) AND ((@IsNull_Consumption = 1 AND [Consumption] IS NULL) OR ([Consumption] = @Original_Consumption)) AND ((@IsNull_BookingQuantity = 1 AND [BookingQuantity] IS NULL) OR ([BookingQuantity] = @Original_BookingQuantity)) AND ((@IsNull_UnitPrice = 1 AND [UnitPrice] IS NULL) OR ([UnitPrice] = @Original_UnitPrice)) AND ((@IsNull_AdditionalQuantity = 1 AND [AdditionalQuantity] IS NULL) OR ([AdditionalQuantity] = @Original_AdditionalQuantity)) AND ((@IsNull_OrderQuantity = 1 AND [OrderQuantity] IS NULL) OR ([OrderQuantity] = @Original_OrderQuantity)) AND ((@IsNull_GenerationType = 1 AND [GenerationType] IS NULL) OR ([GenerationType] = @Original_GenerationType)) AND ((@IsNull_WastagePercentage = 1 AND [WastagePercentage] IS NULL) OR ([WastagePercentage] = @Original_WastagePercentage)));
+SELECT AccessoriesBookingDetailsId, AccessoriesBookingId, FabricColorId, ConsumptionUnitId, BookingUnitId, SupplierId, Remarks, AccessoriesId, ConsumptionForPcs, SLNo, SizeId, DestinationId, PackType, ItemId, ColorCode, SKU, IsComplete, IsApproved, CompleteOn, ApprovedOn, CompletedBy, ApprovedBy, Picture, ItemCode, PO, OrderNO, KimballNo, Fabrication, BuyerDepartment, Consumption, BookingQuantity, UnitPrice, AdditionalQuantity, OrderQuantity, GenerationType, WastagePercentage FROM AccessoresBookingDetails WHERE (AccessoriesBookingDetailsId = @AccessoriesBookingDetailsId) ORDER BY SLNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@FabricColorId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="FabricColorId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ConsumptionUnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ConsumptionUnitId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@BookingUnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BookingUnitId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@SupplierId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ConsumptionForPcs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ConsumptionForPcs" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@SLNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@SizeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SizeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@DestinationId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DestinationId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PackType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ColorCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ColorCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SKU" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SKU" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsComplete" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsApproved" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CompleteOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="CompleteOn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ApprovedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ApprovedOn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@CompletedBy" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CompletedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ApprovedBy" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Picture" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Picture" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@OrderNO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="OrderNO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@KimballNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="KimballNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Fabrication" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Fabrication" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@BuyerDepartment" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="BuyerDepartment" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Consumption" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="Consumption" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@BookingQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="BookingQuantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@UnitPrice" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@AdditionalQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="AdditionalQuantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@OrderQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="OrderQuantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GenerationType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GenerationType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@WastagePercentage" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="WastagePercentage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingDetailsId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesBookingId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FabricColorId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FabricColorId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_FabricColorId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="FabricColorId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ConsumptionUnitId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ConsumptionUnitId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ConsumptionUnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ConsumptionUnitId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BookingUnitId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BookingUnitId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_BookingUnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BookingUnitId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SupplierId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_SupplierId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remarks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ConsumptionForPcs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ConsumptionForPcs" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ConsumptionForPcs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ConsumptionForPcs" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SLNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_SLNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SizeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SizeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_SizeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SizeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DestinationId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DestinationId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_DestinationId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DestinationId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PackType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PackType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ColorCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ColorCode" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ColorCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ColorCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SKU" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SKU" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SKU" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SKU" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsComplete" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsComplete" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsApproved" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsApproved" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsApproved" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CompleteOn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CompleteOn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_CompleteOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="CompleteOn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApprovedOn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApprovedOn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ApprovedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ApprovedOn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CompletedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CompletedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_CompletedBy" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CompletedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ApprovedBy" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ApprovedBy" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ApprovedBy" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemCode" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemCode" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OrderNO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderNO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_OrderNO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="OrderNO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_KimballNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KimballNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_KimballNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="KimballNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fabrication" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fabrication" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Fabrication" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Fabrication" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BuyerDepartment" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BuyerDepartment" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_BuyerDepartment" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="BuyerDepartment" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Consumption" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Consumption" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Consumption" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="Consumption" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BookingQuantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BookingQuantity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_BookingQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="BookingQuantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UnitPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_UnitPrice" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdditionalQuantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdditionalQuantity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_AdditionalQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="AdditionalQuantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OrderQuantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderQuantity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_OrderQuantity" Precision="18" ProviderType="Decimal" Scale="6" Size="0" SourceColumn="OrderQuantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GenerationType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GenerationType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GenerationType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GenerationType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WastagePercentage" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WastagePercentage" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_WastagePercentage" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="WastagePercentage" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="AccessoriesBookingDetailsId" ColumnName="AccessoriesBookingDetailsId" DataSourceName="[ncl-db].dbo.AccessoresBookingDetails" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="AccessoriesBookingDetailsId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccessoriesBookingDetailsId" DataSetColumn="AccessoriesBookingDetailsId" />
+              <Mapping SourceColumn="AccessoriesBookingId" DataSetColumn="AccessoriesBookingId" />
+              <Mapping SourceColumn="FabricColorId" DataSetColumn="FabricColorId" />
+              <Mapping SourceColumn="Consumption" DataSetColumn="Consumption" />
+              <Mapping SourceColumn="ConsumptionUnitId" DataSetColumn="ConsumptionUnitId" />
+              <Mapping SourceColumn="BookingUnitId" DataSetColumn="BookingUnitId" />
+              <Mapping SourceColumn="BookingQuantity" DataSetColumn="BookingQuantity" />
+              <Mapping SourceColumn="SupplierId" DataSetColumn="SupplierId" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="AccessoriesId" DataSetColumn="AccessoriesId" />
+              <Mapping SourceColumn="ConsumptionForPcs" DataSetColumn="ConsumptionForPcs" />
+              <Mapping SourceColumn="SLNo" DataSetColumn="SLNo" />
+              <Mapping SourceColumn="UnitPrice" DataSetColumn="UnitPrice" />
+              <Mapping SourceColumn="SizeId" DataSetColumn="SizeId" />
+              <Mapping SourceColumn="DestinationId" DataSetColumn="DestinationId" />
+              <Mapping SourceColumn="PackType" DataSetColumn="PackType" />
+              <Mapping SourceColumn="ItemId" DataSetColumn="ItemId" />
+              <Mapping SourceColumn="ColorCode" DataSetColumn="ColorCode" />
+              <Mapping SourceColumn="SKU" DataSetColumn="SKU" />
+              <Mapping SourceColumn="IsComplete" DataSetColumn="IsComplete" />
+              <Mapping SourceColumn="IsApproved" DataSetColumn="IsApproved" />
+              <Mapping SourceColumn="CompleteOn" DataSetColumn="CompleteOn" />
+              <Mapping SourceColumn="ApprovedOn" DataSetColumn="ApprovedOn" />
+              <Mapping SourceColumn="CompletedBy" DataSetColumn="CompletedBy" />
+              <Mapping SourceColumn="ApprovedBy" DataSetColumn="ApprovedBy" />
+              <Mapping SourceColumn="Picture" DataSetColumn="Picture" />
+              <Mapping SourceColumn="AdditionalQuantity" DataSetColumn="AdditionalQuantity" />
+              <Mapping SourceColumn="ItemCode" DataSetColumn="ItemCode" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="OrderNO" DataSetColumn="OrderNO" />
+              <Mapping SourceColumn="KimballNo" DataSetColumn="KimballNo" />
+              <Mapping SourceColumn="Fabrication" DataSetColumn="Fabrication" />
+              <Mapping SourceColumn="BuyerDepartment" DataSetColumn="BuyerDepartment" />
+              <Mapping SourceColumn="OrderQuantity" DataSetColumn="OrderQuantity" />
+              <Mapping SourceColumn="GenerationType" DataSetColumn="GenerationType" />
+              <Mapping SourceColumn="WastagePercentage" DataSetColumn="WastagePercentage" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccessoresBookingDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByAccBOMIdAndCompleted" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAccBOMIdAndCompleted" GeneratorSourceName="FillByAccBOMIdAndCompleted" GetMethodModifier="Public" GetMethodName="GetDataByAccBOMIdAndCompleted" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAccBOMIdAndCompleted" UserSourceName="FillByAccBOMIdAndCompleted">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccessoriesBookingDetailsId, AccessoriesBookingId, AccessoriesId, AdditionalQuantity, ApprovedBy, ApprovedOn, BookingQuantity, BookingUnitId, BuyerDepartment, ColorCode, CompleteOn, CompletedBy, Consumption, ConsumptionForPcs, ConsumptionUnitId, DestinationId, FabricColorId, Fabrication, GenerationType, IsApproved, IsComplete, ItemCode, ItemId, KimballNo, OrderNO, OrderQuantity, PO, PackType, Picture, Remarks, SKU, SLNo, SizeId, SupplierId, UnitPrice, WastagePercentage FROM AccessoresBookingDetails WHERE (AccessoriesBookingId = @AccBookingId) AND (IsComplete = 1) ORDER BY SLNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="AccBookingId" ColumnName="AccessoriesBookingId" DataSourceName="[ncl-db].dbo.AccessoresBookingDetails" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@AccBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccessoresBookingDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByAccBookingId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAccBookingId" GeneratorSourceName="FillByAccBookingId" GetMethodModifier="Public" GetMethodName="GetDataByAccBookingId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAccBookingId" UserSourceName="FillByAccBookingId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccessoriesBookingDetailsId, AccessoriesBookingId, AccessoriesId, AdditionalQuantity, ApprovedBy, ApprovedOn, BookingQuantity, BookingUnitId, BuyerDepartment, ColorCode, CompleteOn, CompletedBy, Consumption, ConsumptionForPcs, ConsumptionUnitId, DestinationId, FabricColorId, Fabrication, GenerationType, IsApproved, IsComplete, ItemCode, ItemId, KimballNo, OrderNO, OrderQuantity, PO, PackType, Picture, Remarks, SKU, SLNo, SizeId, SupplierId, UnitPrice, WastagePercentage FROM AccessoresBookingDetails WHERE (AccessoriesBookingId = @AccBookingId) ORDER BY SLNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="AccBookingId" ColumnName="AccessoriesBookingId" DataSourceName="[ncl-db].dbo.AccessoresBookingDetails" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@AccBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccessoresBookingDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByCompleteAndApprove" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCompleteAndApprove" GeneratorSourceName="FillByCompleteAndApprove" GetMethodModifier="Public" GetMethodName="GetDataByCompleteAndApprove" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCompleteAndApprove" UserSourceName="FillByCompleteAndApprove">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesBookingDetailsId, AccessoriesBookingId, AccessoriesId, AdditionalQuantity, ApprovedBy, ApprovedOn, BookingQuantity, BookingUnitId, BuyerDepartment, ColorCode, CompleteOn, CompletedBy, Consumption, 
+                         ConsumptionForPcs, ConsumptionUnitId, DestinationId, FabricColorId, Fabrication, GenerationType, IsApproved, IsComplete, ItemCode, ItemId, KimballNo, OrderNO, OrderQuantity, PO, PackType, Picture, Remarks, SKU, SLNo, 
+                         SizeId, SupplierId, UnitPrice, WastagePercentage
+FROM            AccessoresBookingDetails
+WHERE        (AccessoriesBookingId = @AccBookingId) AND (IsComplete = 1) AND (IsApproved = 1)
+ORDER BY SLNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="AccBookingId" ColumnName="AccessoriesBookingId" DataSourceName="[ncl-db].dbo.AccessoresBookingDetails" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@AccBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccessoriesBookingTableAdapter" GeneratorDataComponentClassName="AccessoriesBookingTableAdapter" Name="AccessoriesBooking" UserDataComponentName="AccessoriesBookingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccessoriesBooking" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [AccessoriesBooking] WHERE (([AccessoriesBookingId] = @Original_AccessoriesBookingId) AND ((@IsNull_OrderId = 1 AND [OrderId] IS NULL) OR ([OrderId] = @Original_OrderId)) AND ((@IsNull_BookingDate = 1 AND [BookingDate] IS NULL) OR ([BookingDate] = @Original_BookingDate)) AND ((@IsNull_AmendmentNo = 1 AND [AmendmentNo] IS NULL) OR ([AmendmentNo] = @Original_AmendmentNo)) AND ((@IsNull_AmendmentDate = 1 AND [AmendmentDate] IS NULL) OR ([AmendmentDate] = @Original_AmendmentDate)) AND ((@IsNull_Remarks = 1 AND [Remarks] IS NULL) OR ([Remarks] = @Original_Remarks)) AND ((@IsNull_IsComplete = 1 AND [IsComplete] IS NULL) OR ([IsComplete] = @Original_IsComplete)) AND ((@IsNull_UserId = 1 AND [UserId] IS NULL) OR ([UserId] = @Original_UserId)) AND ((@IsNull_ModifiedOn = 1 AND [ModifiedOn] IS NULL) OR ([ModifiedOn] = @Original_ModifiedOn)) AND ((@IsNull_GMQty = 1 AND [GMQty] IS NULL) OR ([GMQty] = @Original_GMQty)) AND ((@IsNull_Reference = 1 AND [Reference] IS NULL) OR ([Reference] = @Original_Reference)) AND ((@IsNull_IPAddress = 1 AND [IPAddress] IS NULL) OR ([IPAddress] = @Original_IPAddress)) AND ((@IsNull_RequireDate = 1 AND [RequireDate] IS NULL) OR ([RequireDate] = @Original_RequireDate)) AND ((@IsNull_AmendmentDetails = 1 AND [AmendmentDetails] IS NULL) OR ([AmendmentDetails] = @Original_AmendmentDetails)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OrderId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BookingDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BookingDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_BookingDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="BookingDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmendmentDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_AmendmentDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="AmendmentDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remarks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsComplete" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsComplete" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModifiedOn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMQty" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GMQty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMQty" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Reference" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Reference" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IPAddress" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IPAddress" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_IPAddress" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IPAddress" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequireDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequireDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_RequireDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequireDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmendmentDetails" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentDetails" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AmendmentDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AmendmentDetails" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [AccessoriesBooking] ([OrderId], [BookingDate], [AmendmentNo], [AmendmentDate], [Remarks], [IsComplete], [UserId], [ModifiedOn], [GMQty], [Reference], [IPAddress], [RequireDate], [AmendmentDetails]) VALUES (@OrderId, @BookingDate, @AmendmentNo, @AmendmentDate, @Remarks, @IsComplete, @UserId, @ModifiedOn, @GMQty, @Reference, @IPAddress, @RequireDate, @AmendmentDetails);
+SELECT AccessoriesBookingId, OrderId, BookingDate, AmendmentNo, AmendmentDate, Remarks, IsComplete, UserId, ModifiedOn, GMQty, Reference, IPAddress, RequireDate, AmendmentDetails FROM AccessoriesBooking WHERE (AccessoriesBookingId = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@BookingDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="BookingDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@AmendmentDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="AmendmentDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsComplete" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GMQty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMQty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Reference" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@IPAddress" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IPAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@RequireDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequireDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AmendmentDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AmendmentDetails" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesBookingId, OrderId, BookingDate, AmendmentNo, AmendmentDate, Remarks, IsComplete, UserId, ModifiedOn, GMQty, Reference, IPAddress, RequireDate, AmendmentDetails
+FROM            AccessoriesBooking</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [AccessoriesBooking] SET [OrderId] = @OrderId, [BookingDate] = @BookingDate, [AmendmentNo] = @AmendmentNo, [AmendmentDate] = @AmendmentDate, [Remarks] = @Remarks, [IsComplete] = @IsComplete, [UserId] = @UserId, [ModifiedOn] = @ModifiedOn, [GMQty] = @GMQty, [Reference] = @Reference, [IPAddress] = @IPAddress, [RequireDate] = @RequireDate, [AmendmentDetails] = @AmendmentDetails WHERE (([AccessoriesBookingId] = @Original_AccessoriesBookingId) AND ((@IsNull_OrderId = 1 AND [OrderId] IS NULL) OR ([OrderId] = @Original_OrderId)) AND ((@IsNull_BookingDate = 1 AND [BookingDate] IS NULL) OR ([BookingDate] = @Original_BookingDate)) AND ((@IsNull_AmendmentNo = 1 AND [AmendmentNo] IS NULL) OR ([AmendmentNo] = @Original_AmendmentNo)) AND ((@IsNull_AmendmentDate = 1 AND [AmendmentDate] IS NULL) OR ([AmendmentDate] = @Original_AmendmentDate)) AND ((@IsNull_Remarks = 1 AND [Remarks] IS NULL) OR ([Remarks] = @Original_Remarks)) AND ((@IsNull_IsComplete = 1 AND [IsComplete] IS NULL) OR ([IsComplete] = @Original_IsComplete)) AND ((@IsNull_UserId = 1 AND [UserId] IS NULL) OR ([UserId] = @Original_UserId)) AND ((@IsNull_ModifiedOn = 1 AND [ModifiedOn] IS NULL) OR ([ModifiedOn] = @Original_ModifiedOn)) AND ((@IsNull_GMQty = 1 AND [GMQty] IS NULL) OR ([GMQty] = @Original_GMQty)) AND ((@IsNull_Reference = 1 AND [Reference] IS NULL) OR ([Reference] = @Original_Reference)) AND ((@IsNull_IPAddress = 1 AND [IPAddress] IS NULL) OR ([IPAddress] = @Original_IPAddress)) AND ((@IsNull_RequireDate = 1 AND [RequireDate] IS NULL) OR ([RequireDate] = @Original_RequireDate)) AND ((@IsNull_AmendmentDetails = 1 AND [AmendmentDetails] IS NULL) OR ([AmendmentDetails] = @Original_AmendmentDetails)));
+SELECT AccessoriesBookingId, OrderId, BookingDate, AmendmentNo, AmendmentDate, Remarks, IsComplete, UserId, ModifiedOn, GMQty, Reference, IPAddress, RequireDate, AmendmentDetails FROM AccessoriesBooking WHERE (AccessoriesBookingId = @AccessoriesBookingId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@BookingDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="BookingDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@AmendmentDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="AmendmentDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsComplete" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GMQty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMQty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Reference" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@IPAddress" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IPAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@RequireDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequireDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AmendmentDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AmendmentDetails" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OrderId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BookingDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BookingDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_BookingDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="BookingDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmendmentDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_AmendmentDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="AmendmentDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remarks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsComplete" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsComplete" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsComplete" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModifiedOn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMQty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMQty" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GMQty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GMQty" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Reference" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Reference" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Reference" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IPAddress" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IPAddress" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_IPAddress" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IPAddress" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequireDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequireDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_RequireDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="RequireDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmendmentDetails" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentDetails" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AmendmentDetails" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AmendmentDetails" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="AccessoriesBookingId" ColumnName="AccessoriesBookingId" DataSourceName="[ncl-db].dbo.AccessoriesBooking" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccessoriesBookingId" DataSetColumn="AccessoriesBookingId" />
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="BookingDate" DataSetColumn="BookingDate" />
+              <Mapping SourceColumn="AmendmentNo" DataSetColumn="AmendmentNo" />
+              <Mapping SourceColumn="AmendmentDate" DataSetColumn="AmendmentDate" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="IsComplete" DataSetColumn="IsComplete" />
+              <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
+              <Mapping SourceColumn="ModifiedOn" DataSetColumn="ModifiedOn" />
+              <Mapping SourceColumn="GMQty" DataSetColumn="GMQty" />
+              <Mapping SourceColumn="Reference" DataSetColumn="Reference" />
+              <Mapping SourceColumn="IPAddress" DataSetColumn="IPAddress" />
+              <Mapping SourceColumn="RequireDate" DataSetColumn="RequireDate" />
+              <Mapping SourceColumn="AmendmentDetails" DataSetColumn="AmendmentDetails" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccessoriesBooking" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByAccBookingId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAccBookingId" GeneratorSourceName="FillByAccBookingId" GetMethodModifier="Public" GetMethodName="GetDataByAccBookingId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAccBookingId" UserSourceName="FillByAccBookingId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccessoriesBookingId, AmendmentDate, AmendmentDetails, AmendmentNo, BookingDate, GMQty, IPAddress, IsComplete, ModifiedOn, OrderId, Reference, Remarks, RequireDate, UserId FROM AccessoriesBooking WHERE (AccessoriesBookingId = @AccBookingId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="AccBookingId" ColumnName="AccessoriesBookingId" DataSourceName="[ncl-db].dbo.AccessoriesBooking" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@AccBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccessoriesBooking" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByOrderId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOrderId" GeneratorSourceName="FillByOrderId" GetMethodModifier="Public" GetMethodName="GetDataByOrderId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOrderId" UserSourceName="FillByOrderId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccessoriesBookingId, AmendmentDate, AmendmentDetails, AmendmentNo, BookingDate, GMQty, IPAddress, IsComplete, ModifiedOn, OrderId, Reference, Remarks, RequireDate, UserId FROM AccessoriesBooking WHERE (OrderId = @OrderId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="OrderId" ColumnName="OrderId" DataSourceName="[ncl-db].dbo.AccessoriesBooking" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccOrderLookupTableAdapter" GeneratorDataComponentClassName="AccOrderLookupTableAdapter" Name="AccOrderLookup" UserDataComponentName="AccOrderLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.AccBookingLookupNew" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesBookingId, OrderId, ProgramNo, UserId, IsComplete
+FROM            AccBookingLookupNew</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccessoriesBookingId" DataSetColumn="AccessoriesBookingId" />
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
+              <Mapping SourceColumn="IsComplete" DataSetColumn="IsComplete" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.AccBookingLookupNew" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByUserId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserId" GeneratorSourceName="FillByUserId" GetMethodModifier="Public" GetMethodName="GetDataByUserId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserId" UserSourceName="FillByUserId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesBookingId, OrderId, ProgramNo, UserId, IsComplete
+FROM            AccBookingLookupNew Where UserId=@UserId</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserId" ColumnName="UserId" DataSourceName="[fareast-data].dbo.AccBookingLookupNew" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccessoriesBookingCareLableTableAdapter" GeneratorDataComponentClassName="AccessoriesBookingCareLableTableAdapter" Name="AccessoriesBookingCareLable" UserDataComponentName="AccessoriesBookingCareLableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccessoriesBookingCareLable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [AccessoriesBookingCareLable] WHERE (([AccessoriesBookingCareLableId] = @Original_AccessoriesBookingCareLableId) AND ((@IsNull_AccessoriesBookingId = 1 AND [AccessoriesBookingId] IS NULL) OR ([AccessoriesBookingId] = @Original_AccessoriesBookingId)) AND ((@IsNull_Remarks = 1 AND [Remarks] IS NULL) OR ([Remarks] = @Original_Remarks)) AND ((@IsNull_SLNo = 1 AND [SLNo] IS NULL) OR ([SLNo] = @Original_SLNo)) AND ((@IsNull_AdditionalIns = 1 AND [AdditionalIns] IS NULL) OR ([AdditionalIns] = @Original_AdditionalIns)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingCareLableId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingCareLableId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesBookingId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remarks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SLNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SLNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdditionalIns" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdditionalIns" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdditionalIns" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdditionalIns" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [AccessoriesBookingCareLable] ([AccessoriesBookingId], [CareLable], [Remarks], [SLNo], [AdditionalIns]) VALUES (@AccessoriesBookingId, @CareLable, @Remarks, @SLNo, @AdditionalIns);
+SELECT AccessoriesBookingCareLableId, AccessoriesBookingId, CareLable, Remarks, SLNo, AdditionalIns FROM AccessoriesBookingCareLable WHERE (AccessoriesBookingCareLableId = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@CareLable" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="CareLable" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SLNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdditionalIns" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdditionalIns" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesBookingCareLableId, AccessoriesBookingId, CareLable, Remarks, SLNo, AdditionalIns
+FROM            AccessoriesBookingCareLable</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [AccessoriesBookingCareLable] SET [AccessoriesBookingId] = @AccessoriesBookingId, [CareLable] = @CareLable, [Remarks] = @Remarks, [SLNo] = @SLNo, [AdditionalIns] = @AdditionalIns WHERE (([AccessoriesBookingCareLableId] = @Original_AccessoriesBookingCareLableId) AND ((@IsNull_AccessoriesBookingId = 1 AND [AccessoriesBookingId] IS NULL) OR ([AccessoriesBookingId] = @Original_AccessoriesBookingId)) AND ((@IsNull_Remarks = 1 AND [Remarks] IS NULL) OR ([Remarks] = @Original_Remarks)) AND ((@IsNull_SLNo = 1 AND [SLNo] IS NULL) OR ([SLNo] = @Original_SLNo)) AND ((@IsNull_AdditionalIns = 1 AND [AdditionalIns] IS NULL) OR ([AdditionalIns] = @Original_AdditionalIns)));
+SELECT AccessoriesBookingCareLableId, AccessoriesBookingId, CareLable, Remarks, SLNo, AdditionalIns FROM AccessoriesBookingCareLable WHERE (AccessoriesBookingCareLableId = @AccessoriesBookingCareLableId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@CareLable" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="CareLable" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SLNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdditionalIns" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdditionalIns" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingCareLableId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingCareLableId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesBookingId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remarks" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Remarks" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Remarks" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SLNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SLNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SLNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdditionalIns" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdditionalIns" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdditionalIns" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdditionalIns" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="AccessoriesBookingCareLableId" ColumnName="AccessoriesBookingCareLableId" DataSourceName="[ncl-db].dbo.AccessoriesBookingCareLable" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingCareLableId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="AccessoriesBookingCareLableId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccessoriesBookingCareLableId" DataSetColumn="AccessoriesBookingCareLableId" />
+              <Mapping SourceColumn="AccessoriesBookingId" DataSetColumn="AccessoriesBookingId" />
+              <Mapping SourceColumn="CareLable" DataSetColumn="CareLable" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="SLNo" DataSetColumn="SLNo" />
+              <Mapping SourceColumn="AdditionalIns" DataSetColumn="AdditionalIns" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccessoriesBookingAmndDetailsTableAdapter" GeneratorDataComponentClassName="AccessoriesBookingAmndDetailsTableAdapter" Name="AccessoriesBookingAmndDetails" UserDataComponentName="AccessoriesBookingAmndDetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccessoriesBookingAmndDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [AccessoriesBookingAmndDetails] WHERE (([AccessoriesBookingAmndDetailsId] = @Original_AccessoriesBookingAmndDetailsId) AND ((@IsNull_AccessoriesBookingId = 1 AND [AccessoriesBookingId] IS NULL) OR ([AccessoriesBookingId] = @Original_AccessoriesBookingId)) AND ((@IsNull_AmndNo = 1 AND [AmndNo] IS NULL) OR ([AmndNo] = @Original_AmndNo)) AND ((@IsNull_AmndDate = 1 AND [AmndDate] IS NULL) OR ([AmndDate] = @Original_AmndDate)) AND ((@IsNull_Details = 1 AND [Details] IS NULL) OR ([Details] = @Original_Details)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingAmndDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingAmndDetailsId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesBookingId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmndNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmndNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AmndNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmndNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmndDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmndDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_AmndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="AmndDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Details" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Details" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Details" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Details" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [AccessoriesBookingAmndDetails] ([AccessoriesBookingId], [AmndNo], [AmndDate], [Details]) VALUES (@AccessoriesBookingId, @AmndNo, @AmndDate, @Details);
+SELECT AccessoriesBookingAmndDetailsId, AccessoriesBookingId, AmndNo, AmndDate, Details FROM AccessoriesBookingAmndDetails WHERE (AccessoriesBookingAmndDetailsId = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@AmndNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmndNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@AmndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="AmndDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Details" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Details" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesBookingAmndDetailsId, AccessoriesBookingId, AmndNo, AmndDate, Details
+FROM            AccessoriesBookingAmndDetails</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [AccessoriesBookingAmndDetails] SET [AccessoriesBookingId] = @AccessoriesBookingId, [AmndNo] = @AmndNo, [AmndDate] = @AmndDate, [Details] = @Details WHERE (([AccessoriesBookingAmndDetailsId] = @Original_AccessoriesBookingAmndDetailsId) AND ((@IsNull_AccessoriesBookingId = 1 AND [AccessoriesBookingId] IS NULL) OR ([AccessoriesBookingId] = @Original_AccessoriesBookingId)) AND ((@IsNull_AmndNo = 1 AND [AmndNo] IS NULL) OR ([AmndNo] = @Original_AmndNo)) AND ((@IsNull_AmndDate = 1 AND [AmndDate] IS NULL) OR ([AmndDate] = @Original_AmndDate)) AND ((@IsNull_Details = 1 AND [Details] IS NULL) OR ([Details] = @Original_Details)));
+SELECT AccessoriesBookingAmndDetailsId, AccessoriesBookingId, AmndNo, AmndDate, Details FROM AccessoriesBookingAmndDetails WHERE (AccessoriesBookingAmndDetailsId = @AccessoriesBookingAmndDetailsId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@AmndNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmndNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@AmndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="AmndDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Details" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Details" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingAmndDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingAmndDetailsId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesBookingId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmndNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmndNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AmndNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmndNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmndDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmndDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_AmndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="AmndDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Details" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Details" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Details" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Details" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="AccessoriesBookingAmndDetailsId" ColumnName="AccessoriesBookingAmndDetailsId" DataSourceName="[ncl-db].dbo.AccessoriesBookingAmndDetails" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingAmndDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="AccessoriesBookingAmndDetailsId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccessoriesBookingAmndDetailsId" DataSetColumn="AccessoriesBookingAmndDetailsId" />
+              <Mapping SourceColumn="AccessoriesBookingId" DataSetColumn="AccessoriesBookingId" />
+              <Mapping SourceColumn="AmndNo" DataSetColumn="AmndNo" />
+              <Mapping SourceColumn="AmndDate" DataSetColumn="AmndDate" />
+              <Mapping SourceColumn="Details" DataSetColumn="Details" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccessoriesBookingNewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AccessoriesBookingNewDataSet" msprop:Generator_UserDSName="AccessoriesBookingNewDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccessoresBookingDetails" msprop:Generator_UserTableName="AccessoresBookingDetails" msprop:Generator_RowEvArgName="AccessoresBookingDetailsRowChangeEvent" msprop:Generator_TableVarName="tableAccessoresBookingDetails" msprop:Generator_TablePropName="AccessoresBookingDetails" msprop:Generator_RowDeletingName="AccessoresBookingDetailsRowDeleting" msprop:Generator_RowChangingName="AccessoresBookingDetailsRowChanging" msprop:Generator_RowDeletedName="AccessoresBookingDetailsRowDeleted" msprop:Generator_RowEvHandlerName="AccessoresBookingDetailsRowChangeEventHandler" msprop:Generator_TableClassName="AccessoresBookingDetailsDataTable" msprop:Generator_RowChangedName="AccessoresBookingDetailsRowChanged" msprop:Generator_RowClassName="AccessoresBookingDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccessoriesBookingDetailsId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingDetailsId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingDetailsId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingDetailsIdColumn" msprop:Generator_UserColumnName="AccessoriesBookingDetailsId" type="xs:long" />
+              <xs:element name="AccessoriesBookingId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingIdColumn" msprop:Generator_UserColumnName="AccessoriesBookingId" type="xs:long" minOccurs="0" />
+              <xs:element name="FabricColorId" msprop:Generator_ColumnVarNameInTable="columnFabricColorId" msprop:Generator_ColumnPropNameInRow="FabricColorId" msprop:Generator_ColumnPropNameInTable="FabricColorIdColumn" msprop:Generator_UserColumnName="FabricColorId" type="xs:long" minOccurs="0" />
+              <xs:element name="Consumption" msprop:Generator_ColumnVarNameInTable="columnConsumption" msprop:Generator_ColumnPropNameInRow="Consumption" msprop:Generator_ColumnPropNameInTable="ConsumptionColumn" msprop:Generator_UserColumnName="Consumption" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ConsumptionUnitId" msprop:Generator_ColumnVarNameInTable="columnConsumptionUnitId" msprop:Generator_ColumnPropNameInRow="ConsumptionUnitId" msprop:Generator_ColumnPropNameInTable="ConsumptionUnitIdColumn" msprop:Generator_UserColumnName="ConsumptionUnitId" type="xs:long" minOccurs="0" />
+              <xs:element name="BookingUnitId" msprop:Generator_ColumnVarNameInTable="columnBookingUnitId" msprop:Generator_ColumnPropNameInRow="BookingUnitId" msprop:Generator_ColumnPropNameInTable="BookingUnitIdColumn" msprop:Generator_UserColumnName="BookingUnitId" type="xs:long" minOccurs="0" />
+              <xs:element name="BookingQuantity" msprop:Generator_ColumnVarNameInTable="columnBookingQuantity" msprop:Generator_ColumnPropNameInRow="BookingQuantity" msprop:Generator_ColumnPropNameInTable="BookingQuantityColumn" msprop:Generator_UserColumnName="BookingQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SupplierId" msprop:Generator_ColumnVarNameInTable="columnSupplierId" msprop:Generator_ColumnPropNameInRow="SupplierId" msprop:Generator_ColumnPropNameInTable="SupplierIdColumn" msprop:Generator_UserColumnName="SupplierId" type="xs:long" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccessoriesId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesId" msprop:Generator_ColumnPropNameInRow="AccessoriesId" msprop:Generator_ColumnPropNameInTable="AccessoriesIdColumn" msprop:Generator_UserColumnName="AccessoriesId" type="xs:long" minOccurs="0" />
+              <xs:element name="ItemStyle" msdata:ReadOnly="true" msdata:Expression="AccessoriesId" msprop:Generator_ColumnVarNameInTable="columnItemStyle" msprop:Generator_ColumnPropNameInRow="ItemStyle" msprop:Generator_ColumnPropNameInTable="ItemStyleColumn" msprop:Generator_UserColumnName="ItemStyle" type="xs:long" minOccurs="0" />
+              <xs:element name="ConsumptionForPcs" msprop:Generator_ColumnVarNameInTable="columnConsumptionForPcs" msprop:Generator_ColumnPropNameInRow="ConsumptionForPcs" msprop:Generator_ColumnPropNameInTable="ConsumptionForPcsColumn" msprop:Generator_UserColumnName="ConsumptionForPcs" type="xs:int" minOccurs="0" />
+              <xs:element name="SLNo" msprop:Generator_ColumnVarNameInTable="columnSLNo" msprop:Generator_ColumnPropNameInRow="SLNo" msprop:Generator_ColumnPropNameInTable="SLNoColumn" msprop:Generator_UserColumnName="SLNo" type="xs:int" minOccurs="0" />
+              <xs:element name="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" msprop:Generator_UserColumnName="UnitPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalPrice" msdata:ReadOnly="true" msdata:Expression="ISNULL(UnitPrice,0) * BookingQuantity" msprop:Generator_ColumnVarNameInTable="columnTotalPrice" msprop:Generator_ColumnPropNameInRow="TotalPrice" msprop:Generator_ColumnPropNameInTable="TotalPriceColumn" msprop:Generator_UserColumnName="TotalPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SizeId" msprop:Generator_ColumnVarNameInTable="columnSizeId" msprop:Generator_ColumnPropNameInRow="SizeId" msprop:Generator_ColumnPropNameInTable="SizeIdColumn" msprop:Generator_UserColumnName="SizeId" type="xs:long" minOccurs="0" />
+              <xs:element name="DestinationId" msprop:Generator_ColumnVarNameInTable="columnDestinationId" msprop:Generator_ColumnPropNameInRow="DestinationId" msprop:Generator_ColumnPropNameInTable="DestinationIdColumn" msprop:Generator_UserColumnName="DestinationId" type="xs:long" minOccurs="0" />
+              <xs:element name="PackType" msprop:Generator_ColumnVarNameInTable="columnPackType" msprop:Generator_ColumnPropNameInRow="PackType" msprop:Generator_ColumnPropNameInTable="PackTypeColumn" msprop:Generator_UserColumnName="PackType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsSelected" msprop:Generator_ColumnVarNameInTable="columnIsSelected" msprop:Generator_ColumnPropNameInRow="IsSelected" msprop:Generator_ColumnPropNameInTable="IsSelectedColumn" msprop:Generator_UserColumnName="IsSelected" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="ItemId" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" msprop:Generator_UserColumnName="ItemId" type="xs:long" minOccurs="0" />
+              <xs:element name="ColorCode" msprop:Generator_ColumnVarNameInTable="columnColorCode" msprop:Generator_ColumnPropNameInRow="ColorCode" msprop:Generator_ColumnPropNameInTable="ColorCodeColumn" msprop:Generator_UserColumnName="ColorCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SKU" msprop:Generator_ColumnVarNameInTable="columnSKU" msprop:Generator_ColumnPropNameInRow="SKU" msprop:Generator_ColumnPropNameInTable="SKUColumn" msprop:Generator_UserColumnName="SKU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsComplete" msprop:Generator_ColumnVarNameInTable="columnIsComplete" msprop:Generator_ColumnPropNameInRow="IsComplete" msprop:Generator_ColumnPropNameInTable="IsCompleteColumn" msprop:Generator_UserColumnName="IsComplete" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="IsApproved" msprop:Generator_ColumnVarNameInTable="columnIsApproved" msprop:Generator_ColumnPropNameInRow="IsApproved" msprop:Generator_ColumnPropNameInTable="IsApprovedColumn" msprop:Generator_UserColumnName="IsApproved" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="CompleteOn" msprop:Generator_ColumnVarNameInTable="columnCompleteOn" msprop:Generator_ColumnPropNameInRow="CompleteOn" msprop:Generator_ColumnPropNameInTable="CompleteOnColumn" msprop:Generator_UserColumnName="CompleteOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ApprovedOn" msprop:Generator_ColumnVarNameInTable="columnApprovedOn" msprop:Generator_ColumnPropNameInRow="ApprovedOn" msprop:Generator_ColumnPropNameInTable="ApprovedOnColumn" msprop:Generator_UserColumnName="ApprovedOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CompletedBy" msprop:Generator_ColumnVarNameInTable="columnCompletedBy" msprop:Generator_ColumnPropNameInRow="CompletedBy" msprop:Generator_ColumnPropNameInTable="CompletedByColumn" msprop:Generator_UserColumnName="CompletedBy" type="xs:long" minOccurs="0" />
+              <xs:element name="ApprovedBy" msprop:Generator_ColumnVarNameInTable="columnApprovedBy" msprop:Generator_ColumnPropNameInRow="ApprovedBy" msprop:Generator_ColumnPropNameInTable="ApprovedByColumn" msprop:Generator_UserColumnName="ApprovedBy" type="xs:long" minOccurs="0" />
+              <xs:element name="Picture" msprop:Generator_ColumnVarNameInTable="columnPicture" msprop:Generator_ColumnPropNameInRow="Picture" msprop:Generator_ColumnPropNameInTable="PictureColumn" msprop:Generator_UserColumnName="Picture" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="AdditionalQuantity" msprop:Generator_ColumnVarNameInTable="columnAdditionalQuantity" msprop:Generator_ColumnPropNameInRow="AdditionalQuantity" msprop:Generator_ColumnPropNameInTable="AdditionalQuantityColumn" msprop:Generator_UserColumnName="AdditionalQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ItemCode" msprop:Generator_ColumnVarNameInTable="columnItemCode" msprop:Generator_ColumnPropNameInRow="ItemCode" msprop:Generator_ColumnPropNameInTable="ItemCodeColumn" msprop:Generator_UserColumnName="ItemCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderNO" msprop:Generator_ColumnVarNameInTable="columnOrderNO" msprop:Generator_ColumnPropNameInRow="OrderNO" msprop:Generator_ColumnPropNameInTable="OrderNOColumn" msprop:Generator_UserColumnName="OrderNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KimballNo" msprop:Generator_ColumnVarNameInTable="columnKimballNo" msprop:Generator_ColumnPropNameInRow="KimballNo" msprop:Generator_ColumnPropNameInTable="KimballNoColumn" msprop:Generator_UserColumnName="KimballNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fabrication" msprop:Generator_ColumnVarNameInTable="columnFabrication" msprop:Generator_ColumnPropNameInRow="Fabrication" msprop:Generator_ColumnPropNameInTable="FabricationColumn" msprop:Generator_UserColumnName="Fabrication" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerDepartment" msprop:Generator_ColumnVarNameInTable="columnBuyerDepartment" msprop:Generator_ColumnPropNameInRow="BuyerDepartment" msprop:Generator_ColumnPropNameInTable="BuyerDepartmentColumn" msprop:Generator_UserColumnName="BuyerDepartment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderQuantity" msprop:Generator_ColumnVarNameInTable="columnOrderQuantity" msprop:Generator_ColumnPropNameInRow="OrderQuantity" msprop:Generator_ColumnPropNameInTable="OrderQuantityColumn" msprop:Generator_UserColumnName="OrderQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GenerationType" msprop:Generator_ColumnVarNameInTable="columnGenerationType" msprop:Generator_ColumnPropNameInRow="GenerationType" msprop:Generator_ColumnPropNameInTable="GenerationTypeColumn" msprop:Generator_UserColumnName="GenerationType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WastagePercentage" msprop:Generator_ColumnVarNameInTable="columnWastagePercentage" msprop:Generator_ColumnPropNameInRow="WastagePercentage" msprop:Generator_ColumnPropNameInTable="WastagePercentageColumn" msprop:Generator_UserColumnName="WastagePercentage" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccessoriesBooking" msprop:Generator_UserTableName="AccessoriesBooking" msprop:Generator_RowEvArgName="AccessoriesBookingRowChangeEvent" msprop:Generator_TableVarName="tableAccessoriesBooking" msprop:Generator_TablePropName="AccessoriesBooking" msprop:Generator_RowDeletingName="AccessoriesBookingRowDeleting" msprop:Generator_RowChangingName="AccessoriesBookingRowChanging" msprop:Generator_RowDeletedName="AccessoriesBookingRowDeleted" msprop:Generator_RowEvHandlerName="AccessoriesBookingRowChangeEventHandler" msprop:Generator_TableClassName="AccessoriesBookingDataTable" msprop:Generator_RowChangedName="AccessoriesBookingRowChanged" msprop:Generator_RowClassName="AccessoriesBookingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccessoriesBookingId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingIdColumn" msprop:Generator_UserColumnName="AccessoriesBookingId" type="xs:long" />
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" minOccurs="0" />
+              <xs:element name="BookingDate" msprop:Generator_ColumnVarNameInTable="columnBookingDate" msprop:Generator_ColumnPropNameInRow="BookingDate" msprop:Generator_ColumnPropNameInTable="BookingDateColumn" msprop:Generator_UserColumnName="BookingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnAmendmentNo" msprop:Generator_ColumnPropNameInRow="AmendmentNo" msprop:Generator_ColumnPropNameInTable="AmendmentNoColumn" msprop:Generator_UserColumnName="AmendmentNo" type="xs:int" minOccurs="0" />
+              <xs:element name="AmendmentDate" msprop:Generator_ColumnVarNameInTable="columnAmendmentDate" msprop:Generator_ColumnPropNameInRow="AmendmentDate" msprop:Generator_ColumnPropNameInTable="AmendmentDateColumn" msprop:Generator_UserColumnName="AmendmentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsSelected" msprop:Generator_ColumnVarNameInTable="columnIsSelected" msprop:Generator_ColumnPropNameInRow="IsSelected" msprop:Generator_ColumnPropNameInTable="IsSelectedColumn" msprop:Generator_UserColumnName="IsSelected" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="IsComplete" msprop:Generator_ColumnVarNameInTable="columnIsComplete" msprop:Generator_ColumnPropNameInRow="IsComplete" msprop:Generator_ColumnPropNameInTable="IsCompleteColumn" msprop:Generator_UserColumnName="IsComplete" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:long" minOccurs="0" />
+              <xs:element name="ModifiedOn" msprop:Generator_ColumnVarNameInTable="columnModifiedOn" msprop:Generator_ColumnPropNameInRow="ModifiedOn" msprop:Generator_ColumnPropNameInTable="ModifiedOnColumn" msprop:Generator_UserColumnName="ModifiedOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GMQty" msprop:Generator_ColumnVarNameInTable="columnGMQty" msprop:Generator_ColumnPropNameInRow="GMQty" msprop:Generator_ColumnPropNameInTable="GMQtyColumn" msprop:Generator_UserColumnName="GMQty" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Reference" msprop:Generator_ColumnVarNameInTable="columnReference" msprop:Generator_ColumnPropNameInRow="Reference" msprop:Generator_ColumnPropNameInTable="ReferenceColumn" msprop:Generator_UserColumnName="Reference" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPAddress" msprop:Generator_ColumnVarNameInTable="columnIPAddress" msprop:Generator_ColumnPropNameInRow="IPAddress" msprop:Generator_ColumnPropNameInTable="IPAddressColumn" msprop:Generator_UserColumnName="IPAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequireDate" msprop:Generator_ColumnVarNameInTable="columnRequireDate" msprop:Generator_ColumnPropNameInRow="RequireDate" msprop:Generator_ColumnPropNameInTable="RequireDateColumn" msprop:Generator_UserColumnName="RequireDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AmendmentDetails" msprop:Generator_ColumnVarNameInTable="columnAmendmentDetails" msprop:Generator_ColumnPropNameInRow="AmendmentDetails" msprop:Generator_ColumnPropNameInTable="AmendmentDetailsColumn" msprop:Generator_UserColumnName="AmendmentDetails" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccOrderLookup" msprop:Generator_UserTableName="AccOrderLookup" msprop:Generator_RowEvArgName="AccOrderLookupRowChangeEvent" msprop:Generator_TableVarName="tableAccOrderLookup" msprop:Generator_TablePropName="AccOrderLookup" msprop:Generator_RowDeletingName="AccOrderLookupRowDeleting" msprop:Generator_RowChangingName="AccOrderLookupRowChanging" msprop:Generator_RowDeletedName="AccOrderLookupRowDeleted" msprop:Generator_RowEvHandlerName="AccOrderLookupRowChangeEventHandler" msprop:Generator_TableClassName="AccOrderLookupDataTable" msprop:Generator_RowChangedName="AccOrderLookupRowChanged" msprop:Generator_RowClassName="AccOrderLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccessoriesBookingId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingIdColumn" msprop:Generator_UserColumnName="AccessoriesBookingId" type="xs:long" />
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:long" minOccurs="0" />
+              <xs:element name="IsComplete" msprop:Generator_ColumnVarNameInTable="columnIsComplete" msprop:Generator_ColumnPropNameInRow="IsComplete" msprop:Generator_ColumnPropNameInTable="IsCompleteColumn" msprop:Generator_UserColumnName="IsComplete" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccessoriesBookingCareLable" msprop:Generator_UserTableName="AccessoriesBookingCareLable" msprop:Generator_RowEvArgName="AccessoriesBookingCareLableRowChangeEvent" msprop:Generator_TableVarName="tableAccessoriesBookingCareLable" msprop:Generator_TablePropName="AccessoriesBookingCareLable" msprop:Generator_RowDeletingName="AccessoriesBookingCareLableRowDeleting" msprop:Generator_RowChangingName="AccessoriesBookingCareLableRowChanging" msprop:Generator_RowDeletedName="AccessoriesBookingCareLableRowDeleted" msprop:Generator_RowEvHandlerName="AccessoriesBookingCareLableRowChangeEventHandler" msprop:Generator_TableClassName="AccessoriesBookingCareLableDataTable" msprop:Generator_RowChangedName="AccessoriesBookingCareLableRowChanged" msprop:Generator_RowClassName="AccessoriesBookingCareLableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccessoriesBookingCareLableId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingCareLableId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingCareLableId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingCareLableIdColumn" msprop:Generator_UserColumnName="AccessoriesBookingCareLableId" type="xs:long" />
+              <xs:element name="AccessoriesBookingId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingIdColumn" msprop:Generator_UserColumnName="AccessoriesBookingId" type="xs:long" minOccurs="0" />
+              <xs:element name="CareLable" msprop:Generator_ColumnVarNameInTable="columnCareLable" msprop:Generator_ColumnPropNameInRow="CareLable" msprop:Generator_ColumnPropNameInTable="CareLableColumn" msprop:Generator_UserColumnName="CareLable" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SLNo" msprop:Generator_ColumnVarNameInTable="columnSLNo" msprop:Generator_ColumnPropNameInRow="SLNo" msprop:Generator_ColumnPropNameInTable="SLNoColumn" msprop:Generator_UserColumnName="SLNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AdditionalIns" msprop:Generator_ColumnVarNameInTable="columnAdditionalIns" msprop:Generator_ColumnPropNameInRow="AdditionalIns" msprop:Generator_ColumnPropNameInTable="AdditionalInsColumn" msprop:Generator_UserColumnName="AdditionalIns" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccessoriesBookingAmndDetails" msprop:Generator_TableClassName="AccessoriesBookingAmndDetailsDataTable" msprop:Generator_TableVarName="tableAccessoriesBookingAmndDetails" msprop:Generator_RowChangedName="AccessoriesBookingAmndDetailsRowChanged" msprop:Generator_TablePropName="AccessoriesBookingAmndDetails" msprop:Generator_RowDeletingName="AccessoriesBookingAmndDetailsRowDeleting" msprop:Generator_RowChangingName="AccessoriesBookingAmndDetailsRowChanging" msprop:Generator_RowEvHandlerName="AccessoriesBookingAmndDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="AccessoriesBookingAmndDetailsRowDeleted" msprop:Generator_RowClassName="AccessoriesBookingAmndDetailsRow" msprop:Generator_UserTableName="AccessoriesBookingAmndDetails" msprop:Generator_RowEvArgName="AccessoriesBookingAmndDetailsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccessoriesBookingAmndDetailsId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingAmndDetailsId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingAmndDetailsId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingAmndDetailsIdColumn" msprop:Generator_UserColumnName="AccessoriesBookingAmndDetailsId" type="xs:long" />
+              <xs:element name="AccessoriesBookingId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingIdColumn" msprop:Generator_UserColumnName="AccessoriesBookingId" type="xs:long" minOccurs="0" />
+              <xs:element name="AmndNo" msprop:Generator_ColumnVarNameInTable="columnAmndNo" msprop:Generator_ColumnPropNameInRow="AmndNo" msprop:Generator_ColumnPropNameInTable="AmndNoColumn" msprop:Generator_UserColumnName="AmndNo" type="xs:int" minOccurs="0" />
+              <xs:element name="AmndDate" msprop:Generator_ColumnVarNameInTable="columnAmndDate" msprop:Generator_ColumnPropNameInRow="AmndDate" msprop:Generator_ColumnPropNameInTable="AmndDateColumn" msprop:Generator_UserColumnName="AmndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Details" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AccessoresBookingDetails" />
+      <xs:field xpath="mstns:AccessoriesBookingDetailsId" />
+    </xs:unique>
+    <xs:unique name="AccessoriesBooking_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AccessoriesBooking" />
+      <xs:field xpath="mstns:AccessoriesBookingId" />
+    </xs:unique>
+    <xs:unique name="AccOrderLookup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AccOrderLookup" />
+      <xs:field xpath="mstns:AccessoriesBookingId" />
+    </xs:unique>
+    <xs:unique name="AccessoriesBookingCareLable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AccessoriesBookingCareLable" />
+      <xs:field xpath="mstns:AccessoriesBookingCareLableId" />
+    </xs:unique>
+    <xs:unique name="AccessoriesBookingAmndDetails_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AccessoriesBookingAmndDetails" />
+      <xs:field xpath="mstns:AccessoriesBookingAmndDetailsId" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="AccessoriesBooking_AccessoresBookingDetails" msdata:parent="AccessoriesBooking" msdata:child="AccessoresBookingDetails" msdata:parentkey="AccessoriesBookingId" msdata:childkey="AccessoriesBookingId" msprop:Generator_UserChildTable="AccessoresBookingDetails" msprop:Generator_ChildPropName="GetAccessoresBookingDetailsRows" msprop:Generator_UserRelationName="AccessoriesBooking_AccessoresBookingDetails" msprop:Generator_RelationVarName="relationAccessoriesBooking_AccessoresBookingDetails" msprop:Generator_UserParentTable="AccessoriesBooking" msprop:Generator_ParentPropName="AccessoriesBookingRow" />
+      <msdata:Relationship name="FK_AccessoriesBookingCareLable_AccessoriesBooking" msdata:parent="AccessoriesBooking" msdata:child="AccessoriesBookingCareLable" msdata:parentkey="AccessoriesBookingId" msdata:childkey="AccessoriesBookingId" msprop:Generator_UserChildTable="AccessoriesBookingCareLable" msprop:Generator_ChildPropName="GetAccessoriesBookingCareLableRows" msprop:Generator_UserRelationName="FK_AccessoriesBookingCareLable_AccessoriesBooking" msprop:Generator_RelationVarName="relationFK_AccessoriesBookingCareLable_AccessoriesBooking" msprop:Generator_UserParentTable="AccessoriesBooking" msprop:Generator_ParentPropName="AccessoriesBookingRow" />
+      <msdata:Relationship name="AccessoriesBooking_AccessoriesBookingAmndDetails" msdata:parent="AccessoriesBooking" msdata:child="AccessoriesBookingAmndDetails" msdata:parentkey="AccessoriesBookingId" msdata:childkey="AccessoriesBookingId" msprop:Generator_UserChildTable="AccessoriesBookingAmndDetails" msprop:Generator_ChildPropName="GetAccessoriesBookingAmndDetailsRows" msprop:Generator_UserRelationName="AccessoriesBooking_AccessoriesBookingAmndDetails" msprop:Generator_RelationVarName="relationAccessoriesBooking_AccessoriesBookingAmndDetails" msprop:Generator_UserParentTable="AccessoriesBooking" msprop:Generator_ParentPropName="AccessoriesBookingRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

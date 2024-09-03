@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SampleRequestLookupDataSet" targetNamespace="http://tempuri.org/SampleRequestLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/SampleRequestLookupDataSet.xsd" xmlns="http://tempuri.org/SampleRequestLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SampleRequestNoLookupTableAdapter" GeneratorDataComponentClassName="SampleRequestNoLookupTableAdapter" Name="SampleRequestNoLookup" UserDataComponentName="SampleRequestNoLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SampleRequestFinal.SampleRequestId, SampleRequestFinal.RequestNo, SampleRequestFinal.StyleId, Style.StyleName AS StyleNo, SampleRequestFinal.RequestDate, ISNULL(SampleFabricBooking.BookingNo, 'N/A') 
+                         AS BookingNo, Buyer.BuyerName
+FROM            SampleRequestFinal LEFT OUTER JOIN
+                         SampleFabricBooking ON SampleRequestFinal.SampleRequestId = SampleFabricBooking.SampleRequestId LEFT OUTER JOIN
+                         Buyer ON SampleRequestFinal.BuyerId = Buyer.BuyerId LEFT OUTER JOIN
+                         Style ON SampleRequestFinal.StyleId = Style.StyleId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SampleRequestId" DataSetColumn="SampleRequestId" />
+              <Mapping SourceColumn="RequestNo" DataSetColumn="RequestNo" />
+              <Mapping SourceColumn="StyleId" DataSetColumn="StyleId" />
+              <Mapping SourceColumn="StyleNo" DataSetColumn="StyleNo" />
+              <Mapping SourceColumn="RequestDate" DataSetColumn="RequestDate" />
+              <Mapping SourceColumn="BookingNo" DataSetColumn="BookingNo" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SRLookupByDivUserTableAdapter" GeneratorDataComponentClassName="SRLookupByDivUserTableAdapter" Name="SRLookupByDivUser" UserDataComponentName="SRLookupByDivUserTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.SRLookupByDivUser" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SRLookupByDivUser</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="19" ProviderType="BigInt" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SampleRequestId" DataSetColumn="SampleRequestId" />
+              <Mapping SourceColumn="RequestNo" DataSetColumn="RequestNo" />
+              <Mapping SourceColumn="RequestDate" DataSetColumn="RequestDate" />
+              <Mapping SourceColumn="DivisionName" DataSetColumn="DivisionName" />
+              <Mapping SourceColumn="Details" DataSetColumn="Details" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SRLookupByDivUserAndSFBPendingTableAdapter" GeneratorDataComponentClassName="SRLookupByDivUserAndSFBPendingTableAdapter" Name="SRLookupByDivUserAndSFBPending" UserDataComponentName="SRLookupByDivUserAndSFBPendingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.SRLookupByDivUserAndSFBPending" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SRLookupByDivUserAndSFBPending</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="19" ProviderType="BigInt" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SampleRequestId" DataSetColumn="SampleRequestId" />
+              <Mapping SourceColumn="RequestNo" DataSetColumn="RequestNo" />
+              <Mapping SourceColumn="RequestDate" DataSetColumn="RequestDate" />
+              <Mapping SourceColumn="DivisionName" DataSetColumn="DivisionName" />
+              <Mapping SourceColumn="Details" DataSetColumn="Details" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SampleRequestLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SampleRequestLookupDataSet" msprop:Generator_UserDSName="SampleRequestLookupDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SampleRequestNoLookup" msprop:Generator_UserTableName="SampleRequestNoLookup" msprop:Generator_RowEvArgName="SampleRequestNoLookupRowChangeEvent" msprop:Generator_TableVarName="tableSampleRequestNoLookup" msprop:Generator_TablePropName="SampleRequestNoLookup" msprop:Generator_RowDeletingName="SampleRequestNoLookupRowDeleting" msprop:Generator_RowChangingName="SampleRequestNoLookupRowChanging" msprop:Generator_RowDeletedName="SampleRequestNoLookupRowDeleted" msprop:Generator_RowEvHandlerName="SampleRequestNoLookupRowChangeEventHandler" msprop:Generator_TableClassName="SampleRequestNoLookupDataTable" msprop:Generator_RowChangedName="SampleRequestNoLookupRowChanged" msprop:Generator_RowClassName="SampleRequestNoLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SampleRequestId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSampleRequestId" msprop:Generator_ColumnPropNameInRow="SampleRequestId" msprop:Generator_ColumnPropNameInTable="SampleRequestIdColumn" msprop:Generator_UserColumnName="SampleRequestId" type="xs:long" />
+              <xs:element name="RequestNo" msprop:Generator_ColumnVarNameInTable="columnRequestNo" msprop:Generator_ColumnPropNameInRow="RequestNo" msprop:Generator_ColumnPropNameInTable="RequestNoColumn" msprop:Generator_UserColumnName="RequestNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleId" msprop:Generator_ColumnVarNameInTable="columnStyleId" msprop:Generator_ColumnPropNameInRow="StyleId" msprop:Generator_ColumnPropNameInTable="StyleIdColumn" msprop:Generator_UserColumnName="StyleId" type="xs:long" minOccurs="0" />
+              <xs:element name="StyleNo" msprop:Generator_ColumnVarNameInTable="columnStyleNo" msprop:Generator_ColumnPropNameInRow="StyleNo" msprop:Generator_ColumnPropNameInTable="StyleNoColumn" msprop:Generator_UserColumnName="StyleNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestNoAndStyleNo" msdata:ReadOnly="true" msdata:Expression="ISNULL(RequestNo,'N/A')  + ' :: ' +ISNULL( BookingNo,'N/A') + '::' + ISNULL(StyleNo,'N/A') + '::'+ ISNULL(BuyerName,'N/A')" msprop:Generator_ColumnVarNameInTable="columnRequestNoAndStyleNo" msprop:Generator_ColumnPropNameInRow="RequestNoAndStyleNo" msprop:Generator_ColumnPropNameInTable="RequestNoAndStyleNoColumn" msprop:Generator_UserColumnName="RequestNoAndStyleNo" type="xs:string" minOccurs="0" />
+              <xs:element name="RequestDate" msprop:Generator_ColumnVarNameInTable="columnRequestDate" msprop:Generator_ColumnPropNameInRow="RequestDate" msprop:Generator_ColumnPropNameInTable="RequestDateColumn" msprop:Generator_UserColumnName="RequestDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BookingNo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBookingNo" msprop:Generator_ColumnPropNameInRow="BookingNo" msprop:Generator_ColumnPropNameInTable="BookingNoColumn" msprop:Generator_UserColumnName="BookingNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SRLookupByDivUser" msprop:Generator_TableClassName="SRLookupByDivUserDataTable" msprop:Generator_TableVarName="tableSRLookupByDivUser" msprop:Generator_RowChangedName="SRLookupByDivUserRowChanged" msprop:Generator_TablePropName="SRLookupByDivUser" msprop:Generator_RowDeletingName="SRLookupByDivUserRowDeleting" msprop:Generator_RowChangingName="SRLookupByDivUserRowChanging" msprop:Generator_RowEvHandlerName="SRLookupByDivUserRowChangeEventHandler" msprop:Generator_RowDeletedName="SRLookupByDivUserRowDeleted" msprop:Generator_RowClassName="SRLookupByDivUserRow" msprop:Generator_UserTableName="SRLookupByDivUser" msprop:Generator_RowEvArgName="SRLookupByDivUserRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SampleRequestId" msprop:Generator_ColumnVarNameInTable="columnSampleRequestId" msprop:Generator_ColumnPropNameInRow="SampleRequestId" msprop:Generator_ColumnPropNameInTable="SampleRequestIdColumn" msprop:Generator_UserColumnName="SampleRequestId" type="xs:long" />
+              <xs:element name="RequestNo" msprop:Generator_ColumnVarNameInTable="columnRequestNo" msprop:Generator_ColumnPropNameInRow="RequestNo" msprop:Generator_ColumnPropNameInTable="RequestNoColumn" msprop:Generator_UserColumnName="RequestNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestDate" msprop:Generator_ColumnVarNameInTable="columnRequestDate" msprop:Generator_ColumnPropNameInRow="RequestDate" msprop:Generator_ColumnPropNameInTable="RequestDateColumn" msprop:Generator_UserColumnName="RequestDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DivisionName" msprop:Generator_ColumnVarNameInTable="columnDivisionName" msprop:Generator_ColumnPropNameInRow="DivisionName" msprop:Generator_ColumnPropNameInTable="DivisionNameColumn" msprop:Generator_UserColumnName="DivisionName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Details" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="304" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SRLookupByDivUserAndSFBPending" msprop:Generator_TableClassName="SRLookupByDivUserAndSFBPendingDataTable" msprop:Generator_TableVarName="tableSRLookupByDivUserAndSFBPending" msprop:Generator_TablePropName="SRLookupByDivUserAndSFBPending" msprop:Generator_RowDeletingName="SRLookupByDivUserAndSFBPendingRowDeleting" msprop:Generator_RowChangingName="SRLookupByDivUserAndSFBPendingRowChanging" msprop:Generator_RowEvHandlerName="SRLookupByDivUserAndSFBPendingRowChangeEventHandler" msprop:Generator_RowDeletedName="SRLookupByDivUserAndSFBPendingRowDeleted" msprop:Generator_UserTableName="SRLookupByDivUserAndSFBPending" msprop:Generator_RowChangedName="SRLookupByDivUserAndSFBPendingRowChanged" msprop:Generator_RowEvArgName="SRLookupByDivUserAndSFBPendingRowChangeEvent" msprop:Generator_RowClassName="SRLookupByDivUserAndSFBPendingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SampleRequestId" msprop:Generator_ColumnVarNameInTable="columnSampleRequestId" msprop:Generator_ColumnPropNameInRow="SampleRequestId" msprop:Generator_ColumnPropNameInTable="SampleRequestIdColumn" msprop:Generator_UserColumnName="SampleRequestId" type="xs:long" />
+              <xs:element name="RequestNo" msprop:Generator_ColumnVarNameInTable="columnRequestNo" msprop:Generator_ColumnPropNameInRow="RequestNo" msprop:Generator_ColumnPropNameInTable="RequestNoColumn" msprop:Generator_UserColumnName="RequestNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestDate" msprop:Generator_ColumnVarNameInTable="columnRequestDate" msprop:Generator_ColumnPropNameInRow="RequestDate" msprop:Generator_ColumnPropNameInTable="RequestDateColumn" msprop:Generator_UserColumnName="RequestDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DivisionName" msprop:Generator_ColumnVarNameInTable="columnDivisionName" msprop:Generator_ColumnPropNameInRow="DivisionName" msprop:Generator_ColumnPropNameInTable="DivisionNameColumn" msprop:Generator_UserColumnName="DivisionName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Details" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="304" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SampleRequestNoLookup" />
+      <xs:field xpath="mstns:SampleRequestId" />
+    </xs:unique>
+    <xs:unique name="SRLookupByDivUser_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SRLookupByDivUser" />
+      <xs:field xpath="mstns:SampleRequestId" />
+    </xs:unique>
+    <xs:unique name="SRLookupByDivUserAndSFBPending_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SRLookupByDivUserAndSFBPending" />
+      <xs:field xpath="mstns:SampleRequestId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

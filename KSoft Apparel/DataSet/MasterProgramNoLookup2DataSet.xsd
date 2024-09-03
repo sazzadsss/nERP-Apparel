@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MasterProgramNoLookup2DataSet" targetNamespace="http://tempuri.org/MasterProgramNoLookup2DataSet.xsd" xmlns:mstns="http://tempuri.org/MasterProgramNoLookup2DataSet.xsd" xmlns="http://tempuri.org/MasterProgramNoLookup2DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MasterOrderLookUpTableAdapter" GeneratorDataComponentClassName="MasterOrderLookUpTableAdapter" Name="MasterOrderLookUp" UserDataComponentName="MasterOrderLookUpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.MasterOrderLookUp" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MasterOrderId, MasterProgramNo, Buyer, StyleNo, Details
+FROM            MasterOrderLookUp</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MasterOrderId" DataSetColumn="MasterOrderId" />
+              <Mapping SourceColumn="MasterProgramNo" DataSetColumn="MasterProgramNo" />
+              <Mapping SourceColumn="Buyer" DataSetColumn="Buyer" />
+              <Mapping SourceColumn="StyleNo" DataSetColumn="StyleNo" />
+              <Mapping SourceColumn="Details" DataSetColumn="Details" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MasterProgramNoLookup2DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MasterProgramNoLookup2DataSet" msprop:Generator_UserDSName="MasterProgramNoLookup2DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MasterOrderLookUp" msprop:Generator_TableClassName="MasterOrderLookUpDataTable" msprop:Generator_TableVarName="tableMasterOrderLookUp" msprop:Generator_TablePropName="MasterOrderLookUp" msprop:Generator_RowDeletingName="MasterOrderLookUpRowDeleting" msprop:Generator_RowChangingName="MasterOrderLookUpRowChanging" msprop:Generator_RowEvHandlerName="MasterOrderLookUpRowChangeEventHandler" msprop:Generator_RowDeletedName="MasterOrderLookUpRowDeleted" msprop:Generator_UserTableName="MasterOrderLookUp" msprop:Generator_RowChangedName="MasterOrderLookUpRowChanged" msprop:Generator_RowEvArgName="MasterOrderLookUpRowChangeEvent" msprop:Generator_RowClassName="MasterOrderLookUpRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MasterOrderId" msprop:Generator_ColumnVarNameInTable="columnMasterOrderId" msprop:Generator_ColumnPropNameInRow="MasterOrderId" msprop:Generator_ColumnPropNameInTable="MasterOrderIdColumn" msprop:Generator_UserColumnName="MasterOrderId" type="xs:long" />
+              <xs:element name="MasterProgramNo" msprop:Generator_ColumnVarNameInTable="columnMasterProgramNo" msprop:Generator_ColumnPropNameInRow="MasterProgramNo" msprop:Generator_ColumnPropNameInTable="MasterProgramNoColumn" msprop:Generator_UserColumnName="MasterProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Buyer" msprop:Generator_ColumnVarNameInTable="columnBuyer" msprop:Generator_ColumnPropNameInRow="Buyer" msprop:Generator_ColumnPropNameInTable="BuyerColumn" msprop:Generator_UserColumnName="Buyer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleNo" msprop:Generator_ColumnVarNameInTable="columnStyleNo" msprop:Generator_ColumnPropNameInRow="StyleNo" msprop:Generator_ColumnPropNameInTable="StyleNoColumn" msprop:Generator_UserColumnName="StyleNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Details" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="305" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MasterOrderLookUp" />
+      <xs:field xpath="mstns:MasterOrderId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

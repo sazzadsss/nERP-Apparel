@@ -1,0 +1,64 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="playagain" Type="System.String" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LockOutTime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50000</Value>
+    </Setting>
+    <Setting Name="rptpath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Not Require</Value>
+    </Setting>
+    <Setting Name="DefaultBranchIdForCutting" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="AccDepartmentId" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="UserId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="IsRemember" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ftp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ftp://archive.ksoftslns.com/</Value>
+    </Setting>
+    <Setting Name="ResourcePerPage" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">16</Value>
+    </Setting>
+    <Setting Name="SSL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FromMail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">nerpsolutions@norbangroup.com</Value>
+    </Setting>
+    <Setting Name="Host" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mail.norbangroup.com</Value>
+    </Setting>
+    <Setting Name="MailPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">norban123</Value>
+    </Setting>
+    <Setting Name="Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="KSoft_ApparelConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.0.100,40000;Initial Catalog=ncl-db;Persist Security Info=True;User ID=sa;Password=NERP!@#$2020;Connect Timeout=0&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.0.100,40000;Initial Catalog=ncl-db;Persist Security Info=True;User ID=sa;Password=NERP!@#$2020;Connect Timeout=0</Value>
+    </Setting>
+    <Setting Name="KSoft_Doc_ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.0.100,40000;Initial Catalog=ncl-doc-db;Persist Security Info=True;User ID=sa;Password=NERP!@#$2020;Connect Timeout=0&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.0.100,40000;Initial Catalog=ncl-doc-db;Persist Security Info=True;User ID=sa;Password=NERP!@#$2020;Connect Timeout=0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

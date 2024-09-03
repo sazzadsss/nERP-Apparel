@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AdvProgramLookupDataSet" targetNamespace="http://tempuri.org/AdvProgramLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/AdvProgramLookupDataSet.xsd" xmlns="http://tempuri.org/AdvProgramLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AdvProgramLookupTableAdapter" GeneratorDataComponentClassName="AdvProgramLookupTableAdapter" Name="AdvProgramLookup" UserDataComponentName="AdvProgramLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AdvProgramLookup" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ProgramNo, BlockQuantity, ConfirmQuantity, BalanceQuantity
+FROM            AdvProgramLookup</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="BlockQuantity" DataSetColumn="BlockQuantity" />
+              <Mapping SourceColumn="ConfirmQuantity" DataSetColumn="ConfirmQuantity" />
+              <Mapping SourceColumn="BalanceQuantity" DataSetColumn="BalanceQuantity" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AdvProgramLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AdvProgramLookupDataSet" msprop:Generator_UserDSName="AdvProgramLookupDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AdvProgramLookup" msprop:Generator_TableClassName="AdvProgramLookupDataTable" msprop:Generator_TableVarName="tableAdvProgramLookup" msprop:Generator_TablePropName="AdvProgramLookup" msprop:Generator_RowDeletingName="AdvProgramLookupRowDeleting" msprop:Generator_RowChangingName="AdvProgramLookupRowChanging" msprop:Generator_RowEvHandlerName="AdvProgramLookupRowChangeEventHandler" msprop:Generator_RowDeletedName="AdvProgramLookupRowDeleted" msprop:Generator_UserTableName="AdvProgramLookup" msprop:Generator_RowChangedName="AdvProgramLookupRowChanged" msprop:Generator_RowEvArgName="AdvProgramLookupRowChangeEvent" msprop:Generator_RowClassName="AdvProgramLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BlockQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBlockQuantity" msprop:Generator_ColumnPropNameInRow="BlockQuantity" msprop:Generator_ColumnPropNameInTable="BlockQuantityColumn" msprop:Generator_UserColumnName="BlockQuantity" type="xs:long" minOccurs="0" />
+              <xs:element name="ConfirmQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnConfirmQuantity" msprop:Generator_ColumnPropNameInRow="ConfirmQuantity" msprop:Generator_ColumnPropNameInTable="ConfirmQuantityColumn" msprop:Generator_UserColumnName="ConfirmQuantity" type="xs:long" minOccurs="0" />
+              <xs:element name="BalanceQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBalanceQuantity" msprop:Generator_ColumnPropNameInRow="BalanceQuantity" msprop:Generator_ColumnPropNameInTable="BalanceQuantityColumn" msprop:Generator_UserColumnName="BalanceQuantity" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

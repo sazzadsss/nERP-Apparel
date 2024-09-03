@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProgramNoWtihStyleBuyerLookUpDataSet" targetNamespace="http://tempuri.org/ProgramNoWtihStyleBuyerLookUpDataSet.xsd" xmlns:mstns="http://tempuri.org/ProgramNoWtihStyleBuyerLookUpDataSet.xsd" xmlns="http://tempuri.org/ProgramNoWtihStyleBuyerLookUpDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProgramNoWithStyleBuyerLookUpTableAdapter" GeneratorDataComponentClassName="ProgramNoWithStyleBuyerLookUpTableAdapter" Name="ProgramNoWithStyleBuyerLookUp" UserDataComponentName="ProgramNoWithStyleBuyerLookUpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.ProgramNoWithStyleBuyerLookUp" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderId, ProgramNo, StyleName, BuyerName, Details, IsRunning
+FROM            ProgramNoWithStyleBuyerLookUp</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="Details" DataSetColumn="Details" />
+              <Mapping SourceColumn="IsRunning" DataSetColumn="IsRunning" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.ProgramNoWithStyleBuyerLookUp" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByCompleted" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCompleted" GeneratorSourceName="FillByCompleted" GetMethodModifier="Public" GetMethodName="GetDataByCompleted" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCompleted" UserSourceName="FillByCompleted">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderId, ProgramNo, StyleName, BuyerName, Details, IsRunning
+FROM            ProgramNoWithStyleBuyerLookUp
+WHERE        (IsRunning = 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.ProgramNoWithStyleBuyerLookUp" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByRunning" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByRunning" GeneratorSourceName="FillByRunning" GetMethodModifier="Public" GetMethodName="GetDataByRunning" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByRunning" UserSourceName="FillByRunning">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderId, ProgramNo, StyleName, BuyerName, Details, IsRunning
+FROM            ProgramNoWithStyleBuyerLookUp
+WHERE        (IsRunning = 1)
+ORDER BY ProgramNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProgramNoWtihStyleBuyerLookUpDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ProgramNoWtihStyleBuyerLookUpDataSet" msprop:Generator_UserDSName="ProgramNoWtihStyleBuyerLookUpDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ProgramNoWithStyleBuyerLookUp" msprop:Generator_TableClassName="ProgramNoWithStyleBuyerLookUpDataTable" msprop:Generator_TableVarName="tableProgramNoWithStyleBuyerLookUp" msprop:Generator_TablePropName="ProgramNoWithStyleBuyerLookUp" msprop:Generator_RowDeletingName="ProgramNoWithStyleBuyerLookUpRowDeleting" msprop:Generator_RowChangingName="ProgramNoWithStyleBuyerLookUpRowChanging" msprop:Generator_RowEvHandlerName="ProgramNoWithStyleBuyerLookUpRowChangeEventHandler" msprop:Generator_RowDeletedName="ProgramNoWithStyleBuyerLookUpRowDeleted" msprop:Generator_UserTableName="ProgramNoWithStyleBuyerLookUp" msprop:Generator_RowChangedName="ProgramNoWithStyleBuyerLookUpRowChanged" msprop:Generator_RowEvArgName="ProgramNoWithStyleBuyerLookUpRowChangeEvent" msprop:Generator_RowClassName="ProgramNoWithStyleBuyerLookUpRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Details" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="308" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsRunning" msprop:Generator_ColumnVarNameInTable="columnIsRunning" msprop:Generator_ColumnPropNameInRow="IsRunning" msprop:Generator_ColumnPropNameInTable="IsRunningColumn" msprop:Generator_UserColumnName="IsRunning" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProgramNoWithStyleBuyerLookUp" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

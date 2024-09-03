@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccessoriesWorkOrderDataSet" targetNamespace="http://tempuri.org/AccessoriesWorkOrderDataSet.xsd" xmlns:mstns="http://tempuri.org/AccessoriesWorkOrderDataSet.xsd" xmlns="http://tempuri.org/AccessoriesWorkOrderDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccessoriesWorkOrderTableAdapter" GeneratorDataComponentClassName="AccessoriesWorkOrderTableAdapter" Name="AccessoriesWorkOrder" UserDataComponentName="AccessoriesWorkOrderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesWorkOrder.AccessoriesWorkOrderId, AccessoriesWorkOrder.ProgramNo, AccessoriesWorkOrder.WorkOrderNo, AccessoriesWorkOrder.WorkOrderDate, 
+                         AccessoriesWorkOrder.Ammendement, AccessoriesWorkOrder.AmmendementDate, AccessoriesWorkOrder.Remarks, AccessoriesWorkOrderDetails.ItemQTY
+FROM            AccessoriesWorkOrder INNER JOIN
+                         AccessoriesWorkOrderDetails ON AccessoriesWorkOrder.AccessoriesWorkOrderId = AccessoriesWorkOrderDetails.AccessoriesWorkOrderId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccessoriesWorkOrderId" DataSetColumn="AccessoriesWorkOrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="WorkOrderNo" DataSetColumn="WorkOrderNo" />
+              <Mapping SourceColumn="WorkOrderDate" DataSetColumn="WorkOrderDate" />
+              <Mapping SourceColumn="Ammendement" DataSetColumn="Ammendement" />
+              <Mapping SourceColumn="AmmendementDate" DataSetColumn="AmmendementDate" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="ItemQTY" DataSetColumn="ItemQTY" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccessoriesWorkOrderDetailsTableAdapter" GeneratorDataComponentClassName="AccessoriesWorkOrderDetailsTableAdapter" Name="AccessoriesWorkOrderDetails" UserDataComponentName="AccessoriesWorkOrderDetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.AccessoriesWorkOrderDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[AccessoriesWorkOrderDetails] WHERE (([AccessoriesWorkOrderDetailsID] = @Original_AccessoriesWorkOrderDetailsID) AND ((@IsNull_AccessoriesWorkOrderId = 1 AND [AccessoriesWorkOrderId] IS NULL) OR ([AccessoriesWorkOrderId] = @Original_AccessoriesWorkOrderId)) AND ((@IsNull_AccessoriesBookingDetailsId = 1 AND [AccessoriesBookingDetailsId] IS NULL) OR ([AccessoriesBookingDetailsId] = @Original_AccessoriesBookingDetailsId)) AND ((@IsNull_ItemQTY = 1 AND [ItemQTY] IS NULL) OR ([ItemQTY] = @Original_ItemQTY)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesWorkOrderDetailsID" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesWorkOrderDetailsID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesWorkOrderId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesWorkOrderId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesWorkOrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesWorkOrderId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesBookingDetailsId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesBookingDetailsId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingDetailsId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemQTY" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemQTY" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_ItemQTY" Precision="18" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="ItemQTY" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[AccessoriesWorkOrderDetails] ([AccessoriesWorkOrderId], [AccessoriesBookingDetailsId], [ItemQTY]) VALUES (@AccessoriesWorkOrderId, @AccessoriesBookingDetailsId, @ItemQTY);
+SELECT AccessoriesWorkOrderDetailsID, AccessoriesWorkOrderId, AccessoriesBookingDetailsId, ItemQTY FROM AccessoriesWorkOrderDetails WHERE (AccessoriesWorkOrderDetailsID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesWorkOrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesWorkOrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingDetailsId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@ItemQTY" Precision="18" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="ItemQTY" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT AccessoriesWorkOrderDetailsID, AccessoriesWorkOrderId, AccessoriesBookingDetailsId, ItemQTY FROM dbo.AccessoriesWorkOrderDetails</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[AccessoriesWorkOrderDetails] SET [AccessoriesWorkOrderId] = @AccessoriesWorkOrderId, [AccessoriesBookingDetailsId] = @AccessoriesBookingDetailsId, [ItemQTY] = @ItemQTY WHERE (([AccessoriesWorkOrderDetailsID] = @Original_AccessoriesWorkOrderDetailsID) AND ((@IsNull_AccessoriesWorkOrderId = 1 AND [AccessoriesWorkOrderId] IS NULL) OR ([AccessoriesWorkOrderId] = @Original_AccessoriesWorkOrderId)) AND ((@IsNull_AccessoriesBookingDetailsId = 1 AND [AccessoriesBookingDetailsId] IS NULL) OR ([AccessoriesBookingDetailsId] = @Original_AccessoriesBookingDetailsId)) AND ((@IsNull_ItemQTY = 1 AND [ItemQTY] IS NULL) OR ([ItemQTY] = @Original_ItemQTY)));
+SELECT AccessoriesWorkOrderDetailsID, AccessoriesWorkOrderId, AccessoriesBookingDetailsId, ItemQTY FROM AccessoriesWorkOrderDetails WHERE (AccessoriesWorkOrderDetailsID = @AccessoriesWorkOrderDetailsID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesWorkOrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesWorkOrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesBookingDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingDetailsId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@ItemQTY" Precision="18" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="ItemQTY" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesWorkOrderDetailsID" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesWorkOrderDetailsID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesWorkOrderId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesWorkOrderId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesWorkOrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesWorkOrderId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesBookingDetailsId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesBookingDetailsId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesBookingDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesBookingDetailsId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemQTY" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemQTY" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_ItemQTY" Precision="18" ProviderType="Decimal" Scale="4" Size="0" SourceColumn="ItemQTY" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="AccessoriesWorkOrderDetailsID" ColumnName="AccessoriesWorkOrderDetailsID" DataSourceName="[fareast-data].dbo.AccessoriesWorkOrderDetails" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@AccessoriesWorkOrderDetailsID" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="AccessoriesWorkOrderDetailsID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccessoriesWorkOrderDetailsID" DataSetColumn="AccessoriesWorkOrderDetailsID" />
+              <Mapping SourceColumn="AccessoriesWorkOrderId" DataSetColumn="AccessoriesWorkOrderId" />
+              <Mapping SourceColumn="AccessoriesBookingDetailsId" DataSetColumn="AccessoriesBookingDetailsId" />
+              <Mapping SourceColumn="ItemQTY" DataSetColumn="ItemQTY" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccessoriesWorkOrderDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AccessoriesWorkOrderDataSet" msprop:Generator_DataSetName="AccessoriesWorkOrderDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccessoriesWorkOrder" msprop:Generator_UserTableName="AccessoriesWorkOrder" msprop:Generator_RowDeletedName="AccessoriesWorkOrderRowDeleted" msprop:Generator_RowChangedName="AccessoriesWorkOrderRowChanged" msprop:Generator_RowClassName="AccessoriesWorkOrderRow" msprop:Generator_RowChangingName="AccessoriesWorkOrderRowChanging" msprop:Generator_RowEvArgName="AccessoriesWorkOrderRowChangeEvent" msprop:Generator_RowEvHandlerName="AccessoriesWorkOrderRowChangeEventHandler" msprop:Generator_TableClassName="AccessoriesWorkOrderDataTable" msprop:Generator_TableVarName="tableAccessoriesWorkOrder" msprop:Generator_RowDeletingName="AccessoriesWorkOrderRowDeleting" msprop:Generator_TablePropName="AccessoriesWorkOrder">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccessoriesWorkOrderId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="AccessoriesWorkOrderId" msprop:Generator_ColumnPropNameInRow="AccessoriesWorkOrderId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesWorkOrderId" msprop:Generator_ColumnPropNameInTable="AccessoriesWorkOrderIdColumn" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WorkOrderNo" msprop:Generator_UserColumnName="WorkOrderNo" msprop:Generator_ColumnPropNameInRow="WorkOrderNo" msprop:Generator_ColumnVarNameInTable="columnWorkOrderNo" msprop:Generator_ColumnPropNameInTable="WorkOrderNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WorkOrderDate" msprop:Generator_UserColumnName="WorkOrderDate" msprop:Generator_ColumnPropNameInRow="WorkOrderDate" msprop:Generator_ColumnVarNameInTable="columnWorkOrderDate" msprop:Generator_ColumnPropNameInTable="WorkOrderDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Ammendement" msprop:Generator_UserColumnName="Ammendement" msprop:Generator_ColumnPropNameInRow="Ammendement" msprop:Generator_ColumnVarNameInTable="columnAmmendement" msprop:Generator_ColumnPropNameInTable="AmmendementColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AmmendementDate" msprop:Generator_UserColumnName="AmmendementDate" msprop:Generator_ColumnPropNameInRow="AmmendementDate" msprop:Generator_ColumnVarNameInTable="columnAmmendementDate" msprop:Generator_ColumnPropNameInTable="AmmendementDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_UserColumnName="Remarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemQTY" msprop:Generator_UserColumnName="ItemQTY" msprop:Generator_ColumnVarNameInTable="columnItemQTY" msprop:Generator_ColumnPropNameInRow="ItemQTY" msprop:Generator_ColumnPropNameInTable="ItemQTYColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccessoriesWorkOrderDetails" msprop:Generator_UserTableName="AccessoriesWorkOrderDetails" msprop:Generator_RowDeletedName="AccessoriesWorkOrderDetailsRowDeleted" msprop:Generator_RowChangedName="AccessoriesWorkOrderDetailsRowChanged" msprop:Generator_RowClassName="AccessoriesWorkOrderDetailsRow" msprop:Generator_RowChangingName="AccessoriesWorkOrderDetailsRowChanging" msprop:Generator_RowEvArgName="AccessoriesWorkOrderDetailsRowChangeEvent" msprop:Generator_RowEvHandlerName="AccessoriesWorkOrderDetailsRowChangeEventHandler" msprop:Generator_TableClassName="AccessoriesWorkOrderDetailsDataTable" msprop:Generator_TableVarName="tableAccessoriesWorkOrderDetails" msprop:Generator_RowDeletingName="AccessoriesWorkOrderDetailsRowDeleting" msprop:Generator_TablePropName="AccessoriesWorkOrderDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccessoriesWorkOrderDetailsID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="AccessoriesWorkOrderDetailsID" msprop:Generator_ColumnPropNameInRow="AccessoriesWorkOrderDetailsID" msprop:Generator_ColumnVarNameInTable="columnAccessoriesWorkOrderDetailsID" msprop:Generator_ColumnPropNameInTable="AccessoriesWorkOrderDetailsIDColumn" type="xs:long" />
+              <xs:element name="AccessoriesWorkOrderId" msprop:Generator_UserColumnName="AccessoriesWorkOrderId" msprop:Generator_ColumnPropNameInRow="AccessoriesWorkOrderId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesWorkOrderId" msprop:Generator_ColumnPropNameInTable="AccessoriesWorkOrderIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="AccessoriesBookingDetailsId" msprop:Generator_UserColumnName="AccessoriesBookingDetailsId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingDetailsId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingDetailsId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingDetailsIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="ItemQTY" msprop:Generator_UserColumnName="ItemQTY" msprop:Generator_ColumnPropNameInRow="ItemQTY" msprop:Generator_ColumnVarNameInTable="columnItemQTY" msprop:Generator_ColumnPropNameInTable="ItemQTYColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AccessoriesWorkOrder" />
+      <xs:field xpath="mstns:AccessoriesWorkOrderId" />
+    </xs:unique>
+    <xs:unique name="AccessoriesWorkOrderDetails_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AccessoriesWorkOrderDetails" />
+      <xs:field xpath="mstns:AccessoriesWorkOrderDetailsID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

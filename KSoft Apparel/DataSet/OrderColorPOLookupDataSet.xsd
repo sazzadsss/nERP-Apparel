@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OrderColorPOLookupDataSet" targetNamespace="http://tempuri.org/OrderColorPOLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/OrderColorPOLookupDataSet.xsd" xmlns="http://tempuri.org/OrderColorPOLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderColorPOLookupTableAdapter" GeneratorDataComponentClassName="OrderColorPOLookupTableAdapter" Name="OrderColorPOLookup" UserDataComponentName="OrderColorPOLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderDetails.OrderDetailsId, OrderDetails.PO, OrderDetails.FabricColorId, OrderDetails.EX, FabricColor.FabricColorName, ISNULL(OrderDetails.PO, 'NA') + '::' + ISNULL(FabricColor.FabricColorName,'N/A') AS Details
+FROM            OrderDetails LEFT OUTER JOIN
+                         FabricColor ON OrderDetails.FabricColorId = FabricColor.FabricColorId
+GROUP BY OrderDetails.OrderDetailsId, OrderDetails.PO, OrderDetails.FabricColorId, OrderDetails.EX, FabricColor.FabricColorName, ISNULL(OrderDetails.PO, 'NA') + '::' + FabricColor.FabricColorName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderDetailsId" DataSetColumn="OrderDetailsId" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="FabricColorId" DataSetColumn="FabricColorId" />
+              <Mapping SourceColumn="EX" DataSetColumn="EX" />
+              <Mapping SourceColumn="FabricColorName" DataSetColumn="FabricColorName" />
+              <Mapping SourceColumn="Details" DataSetColumn="Details" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderDetails.OrderDetailsId, OrderDetails.PO, OrderDetails.FabricColorId, OrderDetails.EX, FabricColor.FabricColorName, ISNULL(OrderDetails.PO, 'NA') + '::' + ISNULL(FabricColor.FabricColorName, 'N/A') AS Details
+FROM            OrderDetails LEFT OUTER JOIN
+                         FabricColor ON OrderDetails.FabricColorId = FabricColor.FabricColorId
+GROUP BY OrderDetails.OrderDetailsId, OrderDetails.PO, OrderDetails.FabricColorId, OrderDetails.EX, FabricColor.FabricColorName, ISNULL(OrderDetails.PO, 'NA') + '::' + FabricColor.FabricColorName
+HAVING        (OrderDetails.OrderDetailsId IN
+                             (SELECT        OrderDetails.OrderDetailsId
+                               FROM            [Order]
+                               WHERE        (OrderId = @OrderId))) AND (OrderDetails.FabricColorId = @FabricColorId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="FabricColorId" ColumnName="FabricColorId" DataSourceName="[ncl-db].dbo.OrderDetails" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@FabricColorId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="FabricColorId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="OrderId" ColumnName="" DataSourceName="" DataTypeServer="bigint" DbType="Int32" Direction="Input" ParameterName="@OrderId" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByOID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOID" GeneratorSourceName="FillByOID" GetMethodModifier="Public" GetMethodName="GetDataByOID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOID" UserSourceName="FillByOID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderDetails.OrderDetailsId, OrderDetails.PO, OrderDetails.FabricColorId, OrderDetails.EX, FabricColor.FabricColorName, ISNULL(OrderDetails.PO, 'NA') + '::' + FabricColor.FabricColorName AS Details, 
+                         OrderDetails.OrderId
+FROM            OrderDetails LEFT OUTER JOIN
+                         FabricColor ON OrderDetails.FabricColorId = FabricColor.FabricColorId
+GROUP BY OrderDetails.OrderDetailsId, OrderDetails.PO, OrderDetails.FabricColorId, OrderDetails.EX, FabricColor.FabricColorName, ISNULL(OrderDetails.PO, 'NA') + '::' + FabricColor.FabricColorName, OrderDetails.OrderId
+HAVING        (OrderDetails.OrderId = @OrderId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="OrderId" ColumnName="OrderId" DataSourceName="[ncl-db].dbo.OrderDetails" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderColorPOLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="OrderColorPOLookupDataSet" msprop:Generator_UserDSName="OrderColorPOLookupDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrderColorPOLookup" msprop:Generator_UserTableName="OrderColorPOLookup" msprop:Generator_RowEvArgName="OrderColorPOLookupRowChangeEvent" msprop:Generator_TableVarName="tableOrderColorPOLookup" msprop:Generator_TablePropName="OrderColorPOLookup" msprop:Generator_RowDeletingName="OrderColorPOLookupRowDeleting" msprop:Generator_RowChangingName="OrderColorPOLookupRowChanging" msprop:Generator_RowDeletedName="OrderColorPOLookupRowDeleted" msprop:Generator_RowEvHandlerName="OrderColorPOLookupRowChangeEventHandler" msprop:Generator_TableClassName="OrderColorPOLookupDataTable" msprop:Generator_RowChangedName="OrderColorPOLookupRowChanged" msprop:Generator_RowClassName="OrderColorPOLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderDetailsId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnOrderDetailsId" msprop:Generator_ColumnPropNameInRow="OrderDetailsId" msprop:Generator_ColumnPropNameInTable="OrderDetailsIdColumn" msprop:Generator_UserColumnName="OrderDetailsId" type="xs:long" />
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricColorId" msprop:Generator_ColumnVarNameInTable="columnFabricColorId" msprop:Generator_ColumnPropNameInRow="FabricColorId" msprop:Generator_ColumnPropNameInTable="FabricColorIdColumn" msprop:Generator_UserColumnName="FabricColorId" type="xs:long" minOccurs="0" />
+              <xs:element name="EX" msprop:Generator_ColumnVarNameInTable="columnEX" msprop:Generator_ColumnPropNameInRow="EX" msprop:Generator_ColumnPropNameInTable="EXColumn" msprop:Generator_UserColumnName="EX" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OrderQuantity" msprop:Generator_ColumnVarNameInTable="columnOrderQuantity" msprop:Generator_ColumnPropNameInRow="OrderQuantity" msprop:Generator_ColumnPropNameInTable="OrderQuantityColumn" msprop:Generator_UserColumnName="OrderQuantity" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="InputQuantity" msprop:Generator_ColumnVarNameInTable="columnInputQuantity" msprop:Generator_ColumnPropNameInRow="InputQuantity" msprop:Generator_ColumnPropNameInTable="InputQuantityColumn" msprop:Generator_UserColumnName="InputQuantity" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="Balance" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="FabricColorName" msprop:Generator_ColumnVarNameInTable="columnFabricColorName" msprop:Generator_ColumnPropNameInRow="FabricColorName" msprop:Generator_ColumnPropNameInTable="FabricColorNameColumn" msprop:Generator_UserColumnName="FabricColorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Details" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="252" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OrderColorPOLookup" />
+      <xs:field xpath="mstns:OrderDetailsId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

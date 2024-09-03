@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BalancePrintOrderLookupDataSet" targetNamespace="http://tempuri.org/BalancePrintOrderLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/BalancePrintOrderLookupDataSet.xsd" xmlns="http://tempuri.org/BalancePrintOrderLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BalancePrintOrderLookupTableAdapter" GeneratorDataComponentClassName="BalancePrintOrderLookupTableAdapter" Name="BalancePrintOrderLookup" UserDataComponentName="BalancePrintOrderLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  [Order].OrderId, PrintingOrder.OrderId AS PrintOrderId, [Order].ProgramNo, [Order].IsPrint
+FROM     [Order] LEFT OUTER JOIN
+               PrintingOrder ON [Order].OrderId = PrintingOrder.OrderId
+WHERE  ([Order].IsPrint = 1)
+ORDER BY [Order].ProgramNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="PrintOrderId" DataSetColumn="PrintOrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="IsPrint" DataSetColumn="IsPrint" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByNullValue" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByNullValue" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByNullValue">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  [Order].OrderId, PrintingOrder.OrderId AS PrintOrderId, [Order].ProgramNo, [Order].IsPrint
+FROM     [Order] LEFT OUTER JOIN
+               PrintingOrder ON [Order].OrderId = PrintingOrder.OrderId
+WHERE  ([Order].IsPrint = 1) AND (PrintingOrder.OrderId IS NULL)
+ORDER BY [Order].ProgramNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BalancePrintOrderLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="BalancePrintOrderLookupDataSet" msprop:Generator_DataSetName="BalancePrintOrderLookupDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BalancePrintOrderLookup" msprop:Generator_UserTableName="BalancePrintOrderLookup" msprop:Generator_RowDeletedName="BalancePrintOrderLookupRowDeleted" msprop:Generator_RowChangedName="BalancePrintOrderLookupRowChanged" msprop:Generator_RowClassName="BalancePrintOrderLookupRow" msprop:Generator_RowChangingName="BalancePrintOrderLookupRowChanging" msprop:Generator_RowEvArgName="BalancePrintOrderLookupRowChangeEvent" msprop:Generator_RowEvHandlerName="BalancePrintOrderLookupRowChangeEventHandler" msprop:Generator_TableClassName="BalancePrintOrderLookupDataTable" msprop:Generator_TableVarName="tableBalancePrintOrderLookup" msprop:Generator_RowDeletingName="BalancePrintOrderLookupRowDeleting" msprop:Generator_TablePropName="BalancePrintOrderLookup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="OrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" type="xs:long" />
+              <xs:element name="PrintOrderId" msprop:Generator_UserColumnName="PrintOrderId" msprop:Generator_ColumnPropNameInRow="PrintOrderId" msprop:Generator_ColumnVarNameInTable="columnPrintOrderId" msprop:Generator_ColumnPropNameInTable="PrintOrderIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" type="xs:decimal" />
+              <xs:element name="IsPrint" msprop:Generator_UserColumnName="IsPrint" msprop:Generator_ColumnPropNameInRow="IsPrint" msprop:Generator_ColumnVarNameInTable="columnIsPrint" msprop:Generator_ColumnPropNameInTable="IsPrintColumn" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BalancePrintOrderLookup" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ActivitiesViewDataSet" targetNamespace="http://tempuri.org/ActivitiesViewDataSet.xsd" xmlns:mstns="http://tempuri.org/ActivitiesViewDataSet.xsd" xmlns="http://tempuri.org/ActivitiesViewDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ActivitiesViewTableAdapter" GeneratorDataComponentClassName="ActivitiesViewTableAdapter" Name="ActivitiesView" UserDataComponentName="ActivitiesViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.ActivitiesView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ActivitiesId, OptimisticTime, MostLiklyTime, PessimisticTime, ExDuration, ExSDate, ExEDate, ASDate, AEDate, Remarks, ProgramNo, StyleId, StyleName, BuyerName, Description, LeftDay, ExDate, Status, SndASDate, TrdASDate, SndStatus, TrdStatus FROM dbo.ActivitiesView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ActivitiesId" DataSetColumn="ActivitiesId" />
+              <Mapping SourceColumn="OptimisticTime" DataSetColumn="OptimisticTime" />
+              <Mapping SourceColumn="MostLiklyTime" DataSetColumn="MostLiklyTime" />
+              <Mapping SourceColumn="PessimisticTime" DataSetColumn="PessimisticTime" />
+              <Mapping SourceColumn="ExDuration" DataSetColumn="ExDuration" />
+              <Mapping SourceColumn="ExSDate" DataSetColumn="ExSDate" />
+              <Mapping SourceColumn="ExEDate" DataSetColumn="ExEDate" />
+              <Mapping SourceColumn="ASDate" DataSetColumn="ASDate" />
+              <Mapping SourceColumn="AEDate" DataSetColumn="AEDate" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="StyleId" DataSetColumn="StyleId" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="LeftDay" DataSetColumn="LeftDay" />
+              <Mapping SourceColumn="ExDate" DataSetColumn="ExDate" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="SndASDate" DataSetColumn="SndASDate" />
+              <Mapping SourceColumn="TrdASDate" DataSetColumn="TrdASDate" />
+              <Mapping SourceColumn="SndStatus" DataSetColumn="SndStatus" />
+              <Mapping SourceColumn="TrdStatus" DataSetColumn="TrdStatus" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ActivitiesViewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ActivitiesViewDataSet" msprop:Generator_UserDSName="ActivitiesViewDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ActivitiesView" msprop:Generator_UserTableName="ActivitiesView" msprop:Generator_RowDeletedName="ActivitiesViewRowDeleted" msprop:Generator_TableClassName="ActivitiesViewDataTable" msprop:Generator_RowChangedName="ActivitiesViewRowChanged" msprop:Generator_RowClassName="ActivitiesViewRow" msprop:Generator_RowChangingName="ActivitiesViewRowChanging" msprop:Generator_RowEvArgName="ActivitiesViewRowChangeEvent" msprop:Generator_RowEvHandlerName="ActivitiesViewRowChangeEventHandler" msprop:Generator_TablePropName="ActivitiesView" msprop:Generator_TableVarName="tableActivitiesView" msprop:Generator_RowDeletingName="ActivitiesViewRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ActivitiesId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ActivitiesId" msprop:Generator_ColumnPropNameInRow="ActivitiesId" msprop:Generator_ColumnVarNameInTable="columnActivitiesId" msprop:Generator_ColumnPropNameInTable="ActivitiesIdColumn" type="xs:long" />
+              <xs:element name="OptimisticTime" msprop:Generator_UserColumnName="OptimisticTime" msprop:Generator_ColumnPropNameInRow="OptimisticTime" msprop:Generator_ColumnVarNameInTable="columnOptimisticTime" msprop:Generator_ColumnPropNameInTable="OptimisticTimeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MostLiklyTime" msprop:Generator_UserColumnName="MostLiklyTime" msprop:Generator_ColumnPropNameInRow="MostLiklyTime" msprop:Generator_ColumnVarNameInTable="columnMostLiklyTime" msprop:Generator_ColumnPropNameInTable="MostLiklyTimeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PessimisticTime" msprop:Generator_UserColumnName="PessimisticTime" msprop:Generator_ColumnPropNameInRow="PessimisticTime" msprop:Generator_ColumnVarNameInTable="columnPessimisticTime" msprop:Generator_ColumnPropNameInTable="PessimisticTimeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ExDuration" msprop:Generator_UserColumnName="ExDuration" msprop:Generator_ColumnPropNameInRow="ExDuration" msprop:Generator_ColumnVarNameInTable="columnExDuration" msprop:Generator_ColumnPropNameInTable="ExDurationColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ExSDate" msprop:Generator_UserColumnName="ExSDate" msprop:Generator_ColumnPropNameInRow="ExSDate" msprop:Generator_ColumnVarNameInTable="columnExSDate" msprop:Generator_ColumnPropNameInTable="ExSDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExEDate" msprop:Generator_UserColumnName="ExEDate" msprop:Generator_ColumnPropNameInRow="ExEDate" msprop:Generator_ColumnVarNameInTable="columnExEDate" msprop:Generator_ColumnPropNameInTable="ExEDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ASDate" msprop:Generator_UserColumnName="ASDate" msprop:Generator_ColumnPropNameInRow="ASDate" msprop:Generator_ColumnVarNameInTable="columnASDate" msprop:Generator_ColumnPropNameInTable="ASDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AEDate" msprop:Generator_UserColumnName="AEDate" msprop:Generator_ColumnPropNameInRow="AEDate" msprop:Generator_ColumnVarNameInTable="columnAEDate" msprop:Generator_ColumnPropNameInTable="AEDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_UserColumnName="Remarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleId" msprop:Generator_UserColumnName="StyleId" msprop:Generator_ColumnPropNameInRow="StyleId" msprop:Generator_ColumnVarNameInTable="columnStyleId" msprop:Generator_ColumnPropNameInTable="StyleIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="StyleName" msprop:Generator_UserColumnName="StyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerName" msprop:Generator_UserColumnName="BuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LeftDay" msprop:Generator_UserColumnName="LeftDay" msprop:Generator_ColumnPropNameInRow="LeftDay" msprop:Generator_ColumnVarNameInTable="columnLeftDay" msprop:Generator_ColumnPropNameInTable="LeftDayColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ExDate" msprop:Generator_UserColumnName="ExDate" msprop:Generator_ColumnPropNameInRow="ExDate" msprop:Generator_ColumnVarNameInTable="columnExDate" msprop:Generator_ColumnPropNameInTable="ExDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInTable="StatusColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SndASDate" msprop:Generator_UserColumnName="SndASDate" msprop:Generator_ColumnPropNameInRow="SndASDate" msprop:Generator_ColumnVarNameInTable="columnSndASDate" msprop:Generator_ColumnPropNameInTable="SndASDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TrdASDate" msprop:Generator_UserColumnName="TrdASDate" msprop:Generator_ColumnPropNameInRow="TrdASDate" msprop:Generator_ColumnVarNameInTable="columnTrdASDate" msprop:Generator_ColumnPropNameInTable="TrdASDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SndStatus" msprop:Generator_UserColumnName="SndStatus" msprop:Generator_ColumnPropNameInRow="SndStatus" msprop:Generator_ColumnVarNameInTable="columnSndStatus" msprop:Generator_ColumnPropNameInTable="SndStatusColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TrdStatus" msprop:Generator_UserColumnName="TrdStatus" msprop:Generator_ColumnPropNameInRow="TrdStatus" msprop:Generator_ColumnVarNameInTable="columnTrdStatus" msprop:Generator_ColumnPropNameInTable="TrdStatusColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ActivitiesView" />
+      <xs:field xpath="mstns:ActivitiesId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

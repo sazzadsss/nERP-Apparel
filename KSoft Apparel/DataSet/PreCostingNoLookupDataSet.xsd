@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PreCostingNoLookupDataSet" targetNamespace="http://tempuri.org/PreCostingNoLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/PreCostingNoLookupDataSet.xsd" xmlns="http://tempuri.org/PreCostingNoLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PreCostingNoLookupTableAdapter" GeneratorDataComponentClassName="PreCostingNoLookupTableAdapter" Name="PreCostingNoLookup" UserDataComponentName="PreCostingNoLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PreCostingMain.PreCostingId, PreCostingMain.PreCostingDate, Style.StyleName, PreCostingMain.AmendmentNo, [Order].ProgramNo, PreCostingMain.FabricColorName, PreCostingMain.StyleId, PreCostingMain.PreCostingNo, 
+                         Buyer.BuyerName
+FROM            Buyer RIGHT OUTER JOIN
+                         [Order] ON Buyer.BuyerId = [Order].BuyerId RIGHT OUTER JOIN
+                         PreCostingMain LEFT OUTER JOIN
+                         Style ON PreCostingMain.StyleId = Style.StyleId ON [Order].OrderId = PreCostingMain.OrderId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PreCostingId" DataSetColumn="PreCostingId" />
+              <Mapping SourceColumn="PreCostingDate" DataSetColumn="PreCostingDate" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="FabricColorName" DataSetColumn="FabricColorName" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="AmendmentNo" DataSetColumn="AmendmentNo" />
+              <Mapping SourceColumn="StyleId" DataSetColumn="StyleId" />
+              <Mapping SourceColumn="PreCostingNo" DataSetColumn="PreCostingNo" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByLatest" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLatest" GeneratorSourceName="FillByLatest" GetMethodModifier="Public" GetMethodName="GetDataByLatest" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLatest" UserSourceName="FillByLatest">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MAX(dbo.PreCostingMain.PreCostingId) AS PreCostingId, MAX(dbo.PreCostingMain.PreCostingDate) AS PreCostingDate, dbo.Style.StyleName, MAX(dbo.PreCostingMain.AmendmentNo) AS AmendmentNo, dbo.[Order].ProgramNo, 
+                         dbo.PreCostingMain.FabricColorName, dbo.PreCostingMain.StyleId, dbo.PreCostingMain.PreCostingNo, dbo.Buyer.BuyerName
+FROM            dbo.Buyer RIGHT OUTER JOIN
+                         dbo.[Order] ON dbo.Buyer.BuyerId = dbo.[Order].BuyerId RIGHT OUTER JOIN
+                         dbo.PreCostingMain LEFT OUTER JOIN
+                         dbo.Style ON dbo.PreCostingMain.StyleId = dbo.Style.StyleId ON dbo.[Order].OrderId = dbo.PreCostingMain.OrderId
+GROUP BY dbo.Style.StyleName, dbo.[Order].ProgramNo, dbo.PreCostingMain.FabricColorName, dbo.PreCostingMain.StyleId, dbo.PreCostingMain.PreCostingNo, dbo.Buyer.BuyerName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByLatestAndUser" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAndUser" GeneratorSourceName="FillByLatestAndUser" GetMethodModifier="Public" GetMethodName="GetDataByAndUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAndUser" UserSourceName="FillByLatestAndUser">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MAX(dbo.PreCostingMain.PreCostingId) AS PreCostingId, MAX(dbo.PreCostingMain.PreCostingDate) AS PreCostingDate, dbo.Style.StyleName, MAX(dbo.PreCostingMain.AmendmentNo) AS AmendmentNo, dbo.[Order].ProgramNo, 
+                         dbo.PreCostingMain.FabricColorName, dbo.PreCostingMain.StyleId, dbo.PreCostingMain.PreCostingNo, dbo.Buyer.BuyerName
+FROM            dbo.[Order] LEFT OUTER JOIN
+                         dbo.Buyer ON dbo.[Order].BuyerId = dbo.Buyer.BuyerId RIGHT OUTER JOIN
+                         dbo.PreCostingMain ON dbo.[Order].OrderId = dbo.PreCostingMain.OrderId LEFT OUTER JOIN
+                         dbo.Style ON dbo.PreCostingMain.StyleId = dbo.Style.StyleId
+GROUP BY dbo.Style.StyleName, dbo.[Order].ProgramNo, dbo.PreCostingMain.FabricColorName, dbo.PreCostingMain.StyleId, dbo.PreCostingMain.PreCostingNo, dbo.Buyer.BuyerName
+HAVING        (dbo.PreCostingMain.StyleId IN
+                             (SELECT        StyleId
+                               FROM            dbo.Style AS Style_1
+                               WHERE        (DivisionId IN
+                                                             (SELECT        DivisionId
+                                                               FROM            dbo.BuyerAsign
+                                                               WHERE        (UserId = @UserId) AND (BuyerId = Style_1.BuyerId)))))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="UserId" ColumnName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBySID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySID" GeneratorSourceName="FillBySID" GetMethodModifier="Public" GetMethodName="GetDataBySID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySID" UserSourceName="FillBySID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PreCostingMain.PreCostingId, PreCostingMain.PreCostingDate, Style.StyleName, PreCostingMain.AmendmentNo, [Order].ProgramNo, PreCostingMain.FabricColorName, PreCostingMain.StyleId, PreCostingMain.PreCostingNo, 
+                         Buyer.BuyerName
+FROM            Buyer RIGHT OUTER JOIN
+                         [Order] ON Buyer.BuyerId = [Order].BuyerId RIGHT OUTER JOIN
+                         PreCostingMain LEFT OUTER JOIN
+                         Style ON PreCostingMain.StyleId = Style.StyleId ON [Order].OrderId = PreCostingMain.OrderId
+WHERE        (PreCostingMain.StyleId = @SID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="SID" ColumnName="StyleId" DataSourceName="[ncl-db].dbo.PreCostingMain" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@SID" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByUser" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUser" GeneratorSourceName="FillByUser" GetMethodModifier="Public" GetMethodName="GetDataByUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUser" UserSourceName="FillByUser">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PreCostingMain.PreCostingId, PreCostingMain.PreCostingDate, Style.StyleName, PreCostingMain.AmendmentNo, [Order].ProgramNo, PreCostingMain.FabricColorName, PreCostingMain.StyleId, PreCostingMain.PreCostingNo, 
+                         Buyer.BuyerName
+FROM            [Order] LEFT OUTER JOIN
+                         Buyer ON [Order].BuyerId = Buyer.BuyerId RIGHT OUTER JOIN
+                         PreCostingMain ON [Order].OrderId = PreCostingMain.OrderId LEFT OUTER JOIN
+                         Style ON PreCostingMain.StyleId = Style.StyleId
+WHERE        (PreCostingMain.StyleId IN
+                             (SELECT        StyleId
+                               FROM            Style AS Style_1
+                               WHERE        (DivisionId IN
+                                                             (SELECT        DivisionId
+                                                               FROM            BuyerAsign
+                                                               WHERE        (UserId = @UserId) AND (BuyerId = Style_1.BuyerId)))))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="UserId" ColumnName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PreCostingAmndLookupTableAdapter" GeneratorDataComponentClassName="PreCostingAmndLookupTableAdapter" Name="PreCostingAmndLookup" UserDataComponentName="PreCostingAmndLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.PreCostingMain" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [PreCostingMain] WHERE (([PreCostingId] = @Original_PreCostingId) AND ((@IsNull_OrderId = 1 AND [OrderId] IS NULL) OR ([OrderId] = @Original_OrderId)) AND ((@IsNull_AmendmentNo = 1 AND [AmendmentNo] IS NULL) OR ([AmendmentNo] = @Original_AmendmentNo)) AND ((@IsNull_PreCostingNo = 1 AND [PreCostingNo] IS NULL) OR ([PreCostingNo] = @Original_PreCostingNo)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_PreCostingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PreCostingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OrderId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreCostingNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreCostingNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PreCostingNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PreCostingNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [PreCostingMain] ([OrderId], [AmendmentNo], [PreCostingNo]) VALUES (@OrderId, @AmendmentNo, @PreCostingNo);
+SELECT PreCostingId, OrderId, AmendmentNo, PreCostingNo FROM PreCostingMain WHERE (PreCostingId = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PreCostingNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PreCostingNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PreCostingId, OrderId, AmendmentNo, PreCostingNo
+FROM            PreCostingMain
+WHERE        (OrderId = @OrderId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="OrderId" ColumnName="OrderId" DataSourceName="[ncl-db].dbo.PreCostingMain" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [PreCostingMain] SET [OrderId] = @OrderId, [AmendmentNo] = @AmendmentNo, [PreCostingNo] = @PreCostingNo WHERE (([PreCostingId] = @Original_PreCostingId) AND ((@IsNull_OrderId = 1 AND [OrderId] IS NULL) OR ([OrderId] = @Original_OrderId)) AND ((@IsNull_AmendmentNo = 1 AND [AmendmentNo] IS NULL) OR ([AmendmentNo] = @Original_AmendmentNo)) AND ((@IsNull_PreCostingNo = 1 AND [PreCostingNo] IS NULL) OR ([PreCostingNo] = @Original_PreCostingNo)));
+SELECT PreCostingId, OrderId, AmendmentNo, PreCostingNo FROM PreCostingMain WHERE (PreCostingId = @PreCostingId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PreCostingNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PreCostingNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_PreCostingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PreCostingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OrderId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AmendmentNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreCostingNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreCostingNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PreCostingNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PreCostingNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="PreCostingId" ColumnName="PreCostingId" DataSourceName="[ncl-db].dbo.PreCostingMain" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@PreCostingId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="PreCostingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PreCostingId" DataSetColumn="PreCostingId" />
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="AmendmentNo" DataSetColumn="AmendmentNo" />
+              <Mapping SourceColumn="PreCostingNo" DataSetColumn="PreCostingNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PreCostingNoLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PreCostingNoLookupDataSet" msprop:Generator_UserDSName="PreCostingNoLookupDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PreCostingNoLookup" msprop:Generator_UserTableName="PreCostingNoLookup" msprop:Generator_RowEvArgName="PreCostingNoLookupRowChangeEvent" msprop:Generator_TableVarName="tablePreCostingNoLookup" msprop:Generator_TablePropName="PreCostingNoLookup" msprop:Generator_RowDeletingName="PreCostingNoLookupRowDeleting" msprop:Generator_RowChangingName="PreCostingNoLookupRowChanging" msprop:Generator_RowDeletedName="PreCostingNoLookupRowDeleted" msprop:Generator_RowEvHandlerName="PreCostingNoLookupRowChangeEventHandler" msprop:Generator_TableClassName="PreCostingNoLookupDataTable" msprop:Generator_RowChangedName="PreCostingNoLookupRowChanged" msprop:Generator_RowClassName="PreCostingNoLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PreCostingId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPreCostingId" msprop:Generator_ColumnPropNameInRow="PreCostingId" msprop:Generator_ColumnPropNameInTable="PreCostingIdColumn" msprop:Generator_UserColumnName="PreCostingId" type="xs:long" />
+              <xs:element name="PreCostingDate" msprop:Generator_ColumnVarNameInTable="columnPreCostingDate" msprop:Generator_ColumnPropNameInRow="PreCostingDate" msprop:Generator_ColumnPropNameInTable="PreCostingDateColumn" msprop:Generator_UserColumnName="PreCostingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricColorName" msprop:Generator_ColumnVarNameInTable="columnFabricColorName" msprop:Generator_ColumnPropNameInRow="FabricColorName" msprop:Generator_ColumnPropNameInTable="FabricColorNameColumn" msprop:Generator_UserColumnName="FabricColorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnAmendmentNo" msprop:Generator_ColumnPropNameInRow="AmendmentNo" msprop:Generator_ColumnPropNameInTable="AmendmentNoColumn" msprop:Generator_UserColumnName="AmendmentNo" type="xs:int" minOccurs="0" />
+              <xs:element name="Details" msdata:ReadOnly="true" msdata:Expression="ISNULL(ProgramNo,'N/A') +' :: '+ StyleName +'::'+BuyerName+'::'+ PreCostingNo+'::'+AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" type="xs:string" minOccurs="0" />
+              <xs:element name="StyleId" msprop:Generator_ColumnVarNameInTable="columnStyleId" msprop:Generator_ColumnPropNameInRow="StyleId" msprop:Generator_ColumnPropNameInTable="StyleIdColumn" msprop:Generator_UserColumnName="StyleId" type="xs:long" minOccurs="0" />
+              <xs:element name="PreCostingNo" msprop:Generator_ColumnVarNameInTable="columnPreCostingNo" msprop:Generator_ColumnPropNameInRow="PreCostingNo" msprop:Generator_ColumnPropNameInTable="PreCostingNoColumn" msprop:Generator_UserColumnName="PreCostingNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PreCostingAmndLookup" msprop:Generator_TableClassName="PreCostingAmndLookupDataTable" msprop:Generator_TableVarName="tablePreCostingAmndLookup" msprop:Generator_TablePropName="PreCostingAmndLookup" msprop:Generator_RowDeletingName="PreCostingAmndLookupRowDeleting" msprop:Generator_RowChangingName="PreCostingAmndLookupRowChanging" msprop:Generator_RowEvHandlerName="PreCostingAmndLookupRowChangeEventHandler" msprop:Generator_RowDeletedName="PreCostingAmndLookupRowDeleted" msprop:Generator_UserTableName="PreCostingAmndLookup" msprop:Generator_RowChangedName="PreCostingAmndLookupRowChanged" msprop:Generator_RowEvArgName="PreCostingAmndLookupRowChangeEvent" msprop:Generator_RowClassName="PreCostingAmndLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PreCostingId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPreCostingId" msprop:Generator_ColumnPropNameInRow="PreCostingId" msprop:Generator_ColumnPropNameInTable="PreCostingIdColumn" msprop:Generator_UserColumnName="PreCostingId" type="xs:long" />
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" minOccurs="0" />
+              <xs:element name="AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnAmendmentNo" msprop:Generator_ColumnPropNameInRow="AmendmentNo" msprop:Generator_ColumnPropNameInTable="AmendmentNoColumn" msprop:Generator_UserColumnName="AmendmentNo" type="xs:int" minOccurs="0" />
+              <xs:element name="PreCostingNo" msprop:Generator_ColumnVarNameInTable="columnPreCostingNo" msprop:Generator_ColumnPropNameInRow="PreCostingNo" msprop:Generator_ColumnPropNameInTable="PreCostingNoColumn" msprop:Generator_UserColumnName="PreCostingNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PreCostingNoLookup" />
+      <xs:field xpath="mstns:PreCostingId" />
+    </xs:unique>
+    <xs:unique name="PreCostingAmndLookup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PreCostingAmndLookup" />
+      <xs:field xpath="mstns:PreCostingId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

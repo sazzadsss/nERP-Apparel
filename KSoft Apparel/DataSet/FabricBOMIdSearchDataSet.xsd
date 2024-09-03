@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FabricBOMIdSearchDataSet" targetNamespace="http://tempuri.org/FabricBOMIdSearchDataSet.xsd" xmlns:mstns="http://tempuri.org/FabricBOMIdSearchDataSet.xsd" xmlns="http://tempuri.org/FabricBOMIdSearchDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FabricBOMIdSearchTableAdapter" GeneratorDataComponentClassName="FabricBOMIdSearchTableAdapter" Name="FabricBOMIdSearch" UserDataComponentName="FabricBOMIdSearchTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        FabricBOM.FabricBOMId, FabricBOM.OrderId, [Order].ProgramNo, FabricBOM.AmendmentNo, [Order].UserId, [Order].BuyerId, [Order].DivisionId, Style.StyleName, Buyer.BuyerName
+FROM            Buyer RIGHT OUTER JOIN
+                         [Order] ON Buyer.BuyerId = [Order].BuyerId LEFT OUTER JOIN
+                         Style ON [Order].StyleId = Style.StyleId RIGHT OUTER JOIN
+                         FabricBOM ON [Order].OrderId = FabricBOM.OrderId
+WHERE        (FabricBOM.OrderId IS NOT NULL)
+ORDER BY FabricBOM.OrderId, FabricBOM.AmendmentNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FabricBOMId" DataSetColumn="FabricBOMId" />
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="AmendmentNo" DataSetColumn="AmendmentNo" />
+              <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
+              <Mapping SourceColumn="BuyerId" DataSetColumn="BuyerId" />
+              <Mapping SourceColumn="DivisionId" DataSetColumn="DivisionId" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByBuyerAsign" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBuyerAsign" GeneratorSourceName="FillByBuyerAsign" GetMethodModifier="Public" GetMethodName="GetDataByBuyerAsign" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBuyerAsign" UserSourceName="FillByBuyerAsign">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        FabricBOM.FabricBOMId, FabricBOM.OrderId, [Order].ProgramNo, FabricBOM.AmendmentNo, [Order].UserId, [Order].BuyerId, [Order].DivisionId, Style.StyleName, Buyer.BuyerName
+FROM            Buyer RIGHT OUTER JOIN
+                         [Order] ON Buyer.BuyerId = [Order].BuyerId LEFT OUTER JOIN
+                         Style ON [Order].StyleId = Style.StyleId RIGHT OUTER JOIN
+                         FabricBOM ON [Order].OrderId = FabricBOM.OrderId
+WHERE        (FabricBOM.OrderId IS NOT NULL) AND ([Order].BuyerId IN
+                             (SELECT        BuyerId
+                               FROM            BuyerAsign
+                               WHERE        (UserId = @UserId))) AND ([Order].DivisionId IN
+                             (SELECT        GMDepartmentId
+                               FROM            BuyerAsign AS BuyerAsign_1
+                               WHERE        (UserId = @UserId)))
+ORDER BY FabricBOM.OrderId, FabricBOM.AmendmentNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="UserId" ColumnName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByUserId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserId" GeneratorSourceName="FillByUserId" GetMethodModifier="Public" GetMethodName="GetDataByUserId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserId" UserSourceName="FillByUserId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        FabricBOM.FabricBOMId, FabricBOM.OrderId, [Order].ProgramNo, FabricBOM.AmendmentNo, [Order].UserId, [Order].BuyerId, [Order].DivisionId, Style.StyleName, Buyer.BuyerName
+FROM            Buyer RIGHT OUTER JOIN
+                         [Order] ON Buyer.BuyerId = [Order].BuyerId LEFT OUTER JOIN
+                         Style ON [Order].StyleId = Style.StyleId RIGHT OUTER JOIN
+                         FabricBOM ON [Order].OrderId = FabricBOM.OrderId
+WHERE        (FabricBOM.OrderId IS NOT NULL) AND ([Order].UserId = @UserId)
+ORDER BY FabricBOM.OrderId</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserId" ColumnName="UserId" DataSourceName="[ncl-db].dbo.[Order]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FabricBOMIdSearchDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FabricBOMIdSearchDataSet" msprop:Generator_UserDSName="FabricBOMIdSearchDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FabricBOMIdSearch" msprop:Generator_UserTableName="FabricBOMIdSearch" msprop:Generator_RowEvArgName="FabricBOMIdSearchRowChangeEvent" msprop:Generator_TableVarName="tableFabricBOMIdSearch" msprop:Generator_TablePropName="FabricBOMIdSearch" msprop:Generator_RowDeletingName="FabricBOMIdSearchRowDeleting" msprop:Generator_RowChangingName="FabricBOMIdSearchRowChanging" msprop:Generator_RowDeletedName="FabricBOMIdSearchRowDeleted" msprop:Generator_RowEvHandlerName="FabricBOMIdSearchRowChangeEventHandler" msprop:Generator_TableClassName="FabricBOMIdSearchDataTable" msprop:Generator_RowChangedName="FabricBOMIdSearchRowChanged" msprop:Generator_RowClassName="FabricBOMIdSearchRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FabricBOMId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFabricBOMId" msprop:Generator_ColumnPropNameInRow="FabricBOMId" msprop:Generator_ColumnPropNameInTable="FabricBOMIdColumn" msprop:Generator_UserColumnName="FabricBOMId" type="xs:long" />
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnAmendmentNo" msprop:Generator_ColumnPropNameInRow="AmendmentNo" msprop:Generator_ColumnPropNameInTable="AmendmentNoColumn" msprop:Generator_UserColumnName="AmendmentNo" type="xs:int" />
+              <xs:element name="Details" msdata:ReadOnly="true" msdata:Expression="'BomID: '+ FabricBOMId+'/PG:'+ProgramNo + '/Amnd:' + AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" type="xs:string" minOccurs="0" />
+              <xs:element name="Details2" msdata:ReadOnly="true" msdata:Expression="ProgramNo + '/' + AmendmentNo +'::' + StyleName + '::' + BuyerName" msprop:Generator_ColumnVarNameInTable="columnDetails2" msprop:Generator_ColumnPropNameInRow="Details2" msprop:Generator_ColumnPropNameInTable="Details2Column" msprop:Generator_UserColumnName="Details2" type="xs:string" minOccurs="0" />
+              <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:long" minOccurs="0" />
+              <xs:element name="BuyerId" msprop:Generator_ColumnVarNameInTable="columnBuyerId" msprop:Generator_ColumnPropNameInRow="BuyerId" msprop:Generator_ColumnPropNameInTable="BuyerIdColumn" msprop:Generator_UserColumnName="BuyerId" type="xs:long" minOccurs="0" />
+              <xs:element name="DivisionId" msprop:Generator_ColumnVarNameInTable="columnDivisionId" msprop:Generator_ColumnPropNameInRow="DivisionId" msprop:Generator_ColumnPropNameInTable="DivisionIdColumn" msprop:Generator_UserColumnName="DivisionId" type="xs:long" minOccurs="0" />
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FabricBOMIdSearch" />
+      <xs:field xpath="mstns:FabricBOMId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

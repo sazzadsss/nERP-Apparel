@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FFBAmendmentPendingNewDataSet" targetNamespace="http://tempuri.org/FFBAmendmentPendingNewDataSet.xsd" xmlns:mstns="http://tempuri.org/FFBAmendmentPendingNewDataSet.xsd" xmlns="http://tempuri.org/FFBAmendmentPendingNewDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FFBAmendmentPendingNewTableAdapter" GeneratorDataComponentClassName="FFBAmendmentPendingNewTableAdapter" Name="FFBAmendmentPendingNew" UserDataComponentName="FFBAmendmentPendingNewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.FFBAmendmentPendingNew" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ProgramNo, FFBGAmndNo, AmendmentDate, FFBDAmndNo, FabricBookingDate, Procced, DyeingComments, FabricBOMId
+FROM            FFBAmendmentPendingNew</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="FFBGAmndNo" DataSetColumn="FFBGAmndNo" />
+              <Mapping SourceColumn="AmendmentDate" DataSetColumn="AmendmentDate" />
+              <Mapping SourceColumn="FFBDAmndNo" DataSetColumn="FFBDAmndNo" />
+              <Mapping SourceColumn="FabricBookingDate" DataSetColumn="FabricBookingDate" />
+              <Mapping SourceColumn="Procced" DataSetColumn="Procced" />
+              <Mapping SourceColumn="DyeingComments" DataSetColumn="DyeingComments" />
+              <Mapping SourceColumn="FabricBOMId" DataSetColumn="FabricBOMId" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FFBAmendmentPendingNewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="FFBAmendmentPendingNewDataSet" msprop:Generator_DataSetName="FFBAmendmentPendingNewDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FFBAmendmentPendingNew" msprop:Generator_UserTableName="FFBAmendmentPendingNew" msprop:Generator_RowDeletedName="FFBAmendmentPendingNewRowDeleted" msprop:Generator_RowChangedName="FFBAmendmentPendingNewRowChanged" msprop:Generator_RowClassName="FFBAmendmentPendingNewRow" msprop:Generator_RowChangingName="FFBAmendmentPendingNewRowChanging" msprop:Generator_RowEvArgName="FFBAmendmentPendingNewRowChangeEvent" msprop:Generator_RowEvHandlerName="FFBAmendmentPendingNewRowChangeEventHandler" msprop:Generator_TableClassName="FFBAmendmentPendingNewDataTable" msprop:Generator_TableVarName="tableFFBAmendmentPendingNew" msprop:Generator_RowDeletingName="FFBAmendmentPendingNewRowDeleting" msprop:Generator_TablePropName="FFBAmendmentPendingNew">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FFBGAmndNo" msprop:Generator_UserColumnName="FFBGAmndNo" msprop:Generator_ColumnVarNameInTable="columnFFBGAmndNo" msprop:Generator_ColumnPropNameInRow="FFBGAmndNo" msprop:Generator_ColumnPropNameInTable="FFBGAmndNoColumn" type="xs:int" />
+              <xs:element name="AmendmentDate" msprop:Generator_UserColumnName="AmendmentDate" msprop:Generator_ColumnVarNameInTable="columnAmendmentDate" msprop:Generator_ColumnPropNameInRow="AmendmentDate" msprop:Generator_ColumnPropNameInTable="AmendmentDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FFBDAmndNo" msprop:Generator_UserColumnName="FFBDAmndNo" msprop:Generator_ColumnVarNameInTable="columnFFBDAmndNo" msprop:Generator_ColumnPropNameInRow="FFBDAmndNo" msprop:Generator_ColumnPropNameInTable="FFBDAmndNoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FabricBookingDate" msprop:Generator_UserColumnName="FabricBookingDate" msprop:Generator_ColumnVarNameInTable="columnFabricBookingDate" msprop:Generator_ColumnPropNameInRow="FabricBookingDate" msprop:Generator_ColumnPropNameInTable="FabricBookingDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Procced" msprop:Generator_UserColumnName="Procced" msprop:Generator_ColumnPropNameInRow="Procced" msprop:Generator_ColumnVarNameInTable="columnProcced" msprop:Generator_ColumnPropNameInTable="ProccedColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DyeingComments" msprop:Generator_UserColumnName="DyeingComments" msprop:Generator_ColumnVarNameInTable="columnDyeingComments" msprop:Generator_ColumnPropNameInRow="DyeingComments" msprop:Generator_ColumnPropNameInTable="DyeingCommentsColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricBOMId" msprop:Generator_UserColumnName="FabricBOMId" msprop:Generator_ColumnPropNameInRow="FabricBOMId" msprop:Generator_ColumnVarNameInTable="columnFabricBOMId" msprop:Generator_ColumnPropNameInTable="FabricBOMIdColumn" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FFBAmendmentPendingNew" />
+      <xs:field xpath="mstns:FabricBOMId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

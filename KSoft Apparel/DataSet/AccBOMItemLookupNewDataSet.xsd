@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccBOMItemLookupNewDataSet" targetNamespace="http://tempuri.org/AccBOMItemLookupNewDataSet.xsd" xmlns:mstns="http://tempuri.org/AccBOMItemLookupNewDataSet.xsd" xmlns="http://tempuri.org/AccBOMItemLookupNewDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccBOMItemLookupNewTableAdapter" GeneratorDataComponentClassName="AccBOMItemLookupNewTableAdapter" Name="AccBOMItemLookupNew" UserDataComponentName="AccBOMItemLookupNewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.AccBOMItemLookupNew" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesBookingDetailsId, ItemName, AccessoriesBookingId, StyleName, ItemCode, ProgramNo, Details
+FROM            AccBOMItemLookupNew</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccessoriesBookingDetailsId" DataSetColumn="AccessoriesBookingDetailsId" />
+              <Mapping SourceColumn="ItemName" DataSetColumn="ItemName" />
+              <Mapping SourceColumn="AccessoriesBookingId" DataSetColumn="AccessoriesBookingId" />
+              <Mapping SourceColumn="Details" DataSetColumn="Details" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="ItemCode" DataSetColumn="ItemCode" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccBOMItemLookupNewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AccBOMItemLookupNewDataSet" msprop:Generator_UserDSName="AccBOMItemLookupNewDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccBOMItemLookupNew" msprop:Generator_UserTableName="AccBOMItemLookupNew" msprop:Generator_RowEvArgName="AccBOMItemLookupNewRowChangeEvent" msprop:Generator_TableVarName="tableAccBOMItemLookupNew" msprop:Generator_TablePropName="AccBOMItemLookupNew" msprop:Generator_RowDeletingName="AccBOMItemLookupNewRowDeleting" msprop:Generator_RowChangingName="AccBOMItemLookupNewRowChanging" msprop:Generator_RowDeletedName="AccBOMItemLookupNewRowDeleted" msprop:Generator_RowEvHandlerName="AccBOMItemLookupNewRowChangeEventHandler" msprop:Generator_TableClassName="AccBOMItemLookupNewDataTable" msprop:Generator_RowChangedName="AccBOMItemLookupNewRowChanged" msprop:Generator_RowClassName="AccBOMItemLookupNewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccessoriesBookingDetailsId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingDetailsId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingDetailsId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingDetailsIdColumn" msprop:Generator_UserColumnName="AccessoriesBookingDetailsId" type="xs:long" />
+              <xs:element name="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:Generator_UserColumnName="ItemName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccessoriesBookingId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingIdColumn" msprop:Generator_UserColumnName="AccessoriesBookingId" type="xs:long" minOccurs="0" />
+              <xs:element name="Details" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemCode" msprop:Generator_ColumnVarNameInTable="columnItemCode" msprop:Generator_ColumnPropNameInRow="ItemCode" msprop:Generator_ColumnPropNameInTable="ItemCodeColumn" msprop:Generator_UserColumnName="ItemCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

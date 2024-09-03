@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PreCostingApprovalDataSet" targetNamespace="http://tempuri.org/PreCostingApprovalDataSet.xsd" xmlns:mstns="http://tempuri.org/PreCostingApprovalDataSet.xsd" xmlns="http://tempuri.org/PreCostingApprovalDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CostingApprovalTableAdapter" GeneratorDataComponentClassName="CostingApprovalTableAdapter" Name="CostingApproval" UserDataComponentName="CostingApprovalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PreCostingMain.PreCostingId, PreCostingMain.PreCostingNo, PreCostingMain.PreCostingDate, Buyer.BuyerName, Style.StyleName, PreCostingMain.OrderId, [Order].ProgramNo, PreCostingMain.IsApproved, 
+                         PreCostingMain.TTLCost, PreCostingMain.OfferPrice0, PreCostingMain.ApprovedOn, PreCostingMain.CauseofCancel, PreCostingMain.OfferPrice, PreCostingMain.IsCancel, User_1.USER_NAME AS ApprovedBy, 
+                         PreCostingMain.IsComplete, [User].USER_NAME AS SubmittedBy, PreCostingMain.AmendmentNo, PreCostingMain.Comments, PreCostingMain.Remarks
+FROM            [Order] RIGHT OUTER JOIN
+                         PreCostingMain LEFT OUTER JOIN
+                         [User] ON PreCostingMain.UserId = [User].USER_ID LEFT OUTER JOIN
+                         [User] AS User_1 ON PreCostingMain.ApprovedBy = User_1.USER_ID ON [Order].OrderId = PreCostingMain.OrderId LEFT OUTER JOIN
+                         Style ON PreCostingMain.StyleId = Style.StyleId LEFT OUTER JOIN
+                         Buyer ON PreCostingMain.BuyerId = Buyer.BuyerId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PreCostingId" DataSetColumn="PreCostingId" />
+              <Mapping SourceColumn="PreCostingNo" DataSetColumn="PreCostingNo" />
+              <Mapping SourceColumn="PreCostingDate" DataSetColumn="PreCostingDate" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="IsApproved" DataSetColumn="IsApproved" />
+              <Mapping SourceColumn="TTLCost" DataSetColumn="TTLCost" />
+              <Mapping SourceColumn="OfferPrice0" DataSetColumn="OfferPrice0" />
+              <Mapping SourceColumn="ApprovedOn" DataSetColumn="ApprovedOn" />
+              <Mapping SourceColumn="CauseofCancel" DataSetColumn="CauseofCancel" />
+              <Mapping SourceColumn="OfferPrice" DataSetColumn="OfferPrice" />
+              <Mapping SourceColumn="IsCancel" DataSetColumn="IsCancel" />
+              <Mapping SourceColumn="IsComplete" DataSetColumn="IsComplete" />
+              <Mapping SourceColumn="ApprovedBy" DataSetColumn="ApprovedBy" />
+              <Mapping SourceColumn="SubmittedBy" DataSetColumn="SubmittedBy" />
+              <Mapping SourceColumn="AmendmentNo" DataSetColumn="AmendmentNo" />
+              <Mapping SourceColumn="Comments" DataSetColumn="Comments" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByApproved" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByApproved" GeneratorSourceName="FillByApproved" GetMethodModifier="Public" GetMethodName="GetDataByApproved" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByApproved" UserSourceName="FillByApproved">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PreCostingMain.PreCostingId, PreCostingMain.PreCostingNo, PreCostingMain.PreCostingDate, Buyer.BuyerName, Style.StyleName, PreCostingMain.OrderId, [Order].ProgramNo, ISNULL(PreCostingMain.IsApproved, 0) 
+                         AS IsApproved, PreCostingMain.TTLCost, PreCostingMain.OfferPrice0, PreCostingMain.ApprovedOn, PreCostingMain.CauseofCancel, PreCostingMain.OfferPrice, PreCostingMain.IsCancel, User_1.USER_NAME AS ApprovedBy, 
+                         PreCostingMain.IsComplete, [User].USER_NAME AS SubmittedBy, PreCostingMain.AmendmentNo, PreCostingMain.Remarks, PreCostingMain.Comments
+FROM            [Order] RIGHT OUTER JOIN
+                         PreCostingMain LEFT OUTER JOIN
+                         [User] ON PreCostingMain.UserId = [User].USER_ID LEFT OUTER JOIN
+                         [User] AS User_1 ON PreCostingMain.ApprovedBy = User_1.USER_ID ON [Order].OrderId = PreCostingMain.OrderId LEFT OUTER JOIN
+                         Style ON PreCostingMain.StyleId = Style.StyleId LEFT OUTER JOIN
+                         Buyer ON PreCostingMain.BuyerId = Buyer.BuyerId
+WHERE        (ISNULL(PreCostingMain.IsApproved, 0) = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByCancel" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCancel" GeneratorSourceName="FillByCancel" GetMethodModifier="Public" GetMethodName="GetDataByCancel" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCancel" UserSourceName="FillByCancel">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PreCostingMain.PreCostingId, PreCostingMain.PreCostingNo, PreCostingMain.PreCostingDate, Buyer.BuyerName, Style.StyleName, PreCostingMain.OrderId, [Order].ProgramNo, ISNULL(PreCostingMain.IsApproved, 0) 
+                         AS IsApproved, PreCostingMain.TTLCost, PreCostingMain.OfferPrice0, PreCostingMain.ApprovedOn, PreCostingMain.CauseofCancel, PreCostingMain.OfferPrice, PreCostingMain.IsCancel, User_1.USER_NAME AS ApprovedBy, 
+                         PreCostingMain.IsComplete, [User].USER_NAME AS SubmittedBy, PreCostingMain.AmendmentNo, PreCostingMain.Remarks, PreCostingMain.Comments
+FROM            [Order] RIGHT OUTER JOIN
+                         PreCostingMain LEFT OUTER JOIN
+                         [User] ON PreCostingMain.UserId = [User].USER_ID LEFT OUTER JOIN
+                         [User] AS User_1 ON PreCostingMain.ApprovedBy = User_1.USER_ID ON [Order].OrderId = PreCostingMain.OrderId LEFT OUTER JOIN
+                         Style ON PreCostingMain.StyleId = Style.StyleId LEFT OUTER JOIN
+                         Buyer ON PreCostingMain.BuyerId = Buyer.BuyerId
+WHERE        (PreCostingMain.IsCancel = 1)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByPending" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPending" GeneratorSourceName="FillByPending" GetMethodModifier="Public" GetMethodName="GetDataByPending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPending" UserSourceName="FillByPending">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PreCostingMain.PreCostingId, PreCostingMain.PreCostingNo, PreCostingMain.PreCostingDate, Buyer.BuyerName, Style.StyleName, PreCostingMain.OrderId, [Order].ProgramNo, ISNULL(PreCostingMain.IsApproved, 0) 
+                         AS IsApproved, PreCostingMain.TTLCost, PreCostingMain.OfferPrice0, PreCostingMain.ApprovedOn, PreCostingMain.CauseofCancel, PreCostingMain.OfferPrice, PreCostingMain.IsCancel, User_1.USER_NAME AS ApprovedBy, 
+                         PreCostingMain.IsComplete, [User].USER_NAME AS SubmittedBy, PreCostingMain.AmendmentNo, PreCostingMain.Remarks, PreCostingMain.Comments
+FROM            [Order] RIGHT OUTER JOIN
+                         PreCostingMain LEFT OUTER JOIN
+                         [User] ON PreCostingMain.UserId = [User].USER_ID LEFT OUTER JOIN
+                         [User] AS User_1 ON PreCostingMain.ApprovedBy = User_1.USER_ID ON [Order].OrderId = PreCostingMain.OrderId LEFT OUTER JOIN
+                         Style ON PreCostingMain.StyleId = Style.StyleId LEFT OUTER JOIN
+                         Buyer ON PreCostingMain.BuyerId = Buyer.BuyerId
+WHERE        (PreCostingMain.IsComplete = 1) AND (ISNULL(PreCostingMain.IsApproved, 0) = 0)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PreCostingApprovalDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PreCostingApprovalDataSet" msprop:Generator_UserDSName="PreCostingApprovalDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CostingApproval" msprop:Generator_TableClassName="CostingApprovalDataTable" msprop:Generator_TableVarName="tableCostingApproval" msprop:Generator_RowChangedName="CostingApprovalRowChanged" msprop:Generator_TablePropName="CostingApproval" msprop:Generator_RowDeletingName="CostingApprovalRowDeleting" msprop:Generator_RowChangingName="CostingApprovalRowChanging" msprop:Generator_RowEvHandlerName="CostingApprovalRowChangeEventHandler" msprop:Generator_RowDeletedName="CostingApprovalRowDeleted" msprop:Generator_RowClassName="CostingApprovalRow" msprop:Generator_UserTableName="CostingApproval" msprop:Generator_RowEvArgName="CostingApprovalRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PreCostingId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPreCostingId" msprop:Generator_ColumnPropNameInRow="PreCostingId" msprop:Generator_ColumnPropNameInTable="PreCostingIdColumn" msprop:Generator_UserColumnName="PreCostingId" type="xs:long" />
+              <xs:element name="PreCostingNo" msprop:Generator_ColumnVarNameInTable="columnPreCostingNo" msprop:Generator_ColumnPropNameInRow="PreCostingNo" msprop:Generator_ColumnPropNameInTable="PreCostingNoColumn" msprop:Generator_UserColumnName="PreCostingNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PreCostingDate" msprop:Generator_ColumnVarNameInTable="columnPreCostingDate" msprop:Generator_ColumnPropNameInRow="PreCostingDate" msprop:Generator_ColumnPropNameInTable="PreCostingDateColumn" msprop:Generator_UserColumnName="PreCostingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsApproved" msprop:Generator_ColumnVarNameInTable="columnIsApproved" msprop:Generator_ColumnPropNameInRow="IsApproved" msprop:Generator_ColumnPropNameInTable="IsApprovedColumn" msprop:Generator_UserColumnName="IsApproved" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TTLCost" msprop:Generator_ColumnVarNameInTable="columnTTLCost" msprop:Generator_ColumnPropNameInRow="TTLCost" msprop:Generator_ColumnPropNameInTable="TTLCostColumn" msprop:Generator_UserColumnName="TTLCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OfferPrice0" msprop:Generator_ColumnVarNameInTable="columnOfferPrice0" msprop:Generator_ColumnPropNameInRow="OfferPrice0" msprop:Generator_ColumnPropNameInTable="OfferPrice0Column" msprop:Generator_UserColumnName="OfferPrice0" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ApprovedOn" msprop:Generator_ColumnVarNameInTable="columnApprovedOn" msprop:Generator_ColumnPropNameInRow="ApprovedOn" msprop:Generator_ColumnPropNameInTable="ApprovedOnColumn" msprop:Generator_UserColumnName="ApprovedOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CauseofCancel" msprop:Generator_ColumnVarNameInTable="columnCauseofCancel" msprop:Generator_ColumnPropNameInRow="CauseofCancel" msprop:Generator_ColumnPropNameInTable="CauseofCancelColumn" msprop:Generator_UserColumnName="CauseofCancel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OfferPrice" msprop:Generator_ColumnVarNameInTable="columnOfferPrice" msprop:Generator_ColumnPropNameInRow="OfferPrice" msprop:Generator_ColumnPropNameInTable="OfferPriceColumn" msprop:Generator_UserColumnName="OfferPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IsCancel" msprop:Generator_ColumnVarNameInTable="columnIsCancel" msprop:Generator_ColumnPropNameInRow="IsCancel" msprop:Generator_ColumnPropNameInTable="IsCancelColumn" msprop:Generator_UserColumnName="IsCancel" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsComplete" msprop:Generator_ColumnVarNameInTable="columnIsComplete" msprop:Generator_ColumnPropNameInRow="IsComplete" msprop:Generator_ColumnPropNameInTable="IsCompleteColumn" msprop:Generator_UserColumnName="IsComplete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ApprovedBy" msprop:Generator_ColumnVarNameInTable="columnApprovedBy" msprop:Generator_ColumnPropNameInRow="ApprovedBy" msprop:Generator_ColumnPropNameInTable="ApprovedByColumn" msprop:Generator_UserColumnName="ApprovedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubmittedBy" msprop:Generator_ColumnVarNameInTable="columnSubmittedBy" msprop:Generator_ColumnPropNameInRow="SubmittedBy" msprop:Generator_ColumnPropNameInTable="SubmittedByColumn" msprop:Generator_UserColumnName="SubmittedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnAmendmentNo" msprop:Generator_ColumnPropNameInRow="AmendmentNo" msprop:Generator_ColumnPropNameInTable="AmendmentNoColumn" msprop:Generator_UserColumnName="AmendmentNo" type="xs:int" minOccurs="0" />
+              <xs:element name="Comments" msprop:Generator_ColumnVarNameInTable="columnComments" msprop:Generator_ColumnPropNameInRow="Comments" msprop:Generator_ColumnPropNameInTable="CommentsColumn" msprop:Generator_UserColumnName="Comments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CostingApproval" />
+      <xs:field xpath="mstns:PreCostingId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

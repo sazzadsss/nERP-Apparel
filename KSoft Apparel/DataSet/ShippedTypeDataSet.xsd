@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ShippedTypeDataSet" targetNamespace="http://tempuri.org/ShippedTypeDataSet.xsd" xmlns:mstns="http://tempuri.org/ShippedTypeDataSet.xsd" xmlns="http://tempuri.org/ShippedTypeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ShippedTypeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ShippedTypeDataSet" msprop:Generator_DataSetName="ShippedTypeDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ShippedType" msprop:Generator_UserTableName="ShippedType" msprop:Generator_RowDeletedName="ShippedTypeRowDeleted" msprop:Generator_TableClassName="ShippedTypeDataTable" msprop:Generator_RowChangedName="ShippedTypeRowChanged" msprop:Generator_RowClassName="ShippedTypeRow" msprop:Generator_RowChangingName="ShippedTypeRowChanging" msprop:Generator_RowEvArgName="ShippedTypeRowChangeEvent" msprop:Generator_RowEvHandlerName="ShippedTypeRowChangeEventHandler" msprop:Generator_TablePropName="ShippedType" msprop:Generator_TableVarName="tableShippedType" msprop:Generator_RowDeletingName="ShippedTypeRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShippedTypeCode" msprop:Generator_UserColumnName="ShippedTypeCode" msprop:Generator_ColumnPropNameInRow="ShippedTypeCode" msprop:Generator_ColumnVarNameInTable="columnShippedTypeCode" msprop:Generator_ColumnPropNameInTable="ShippedTypeCodeColumn" type="xs:string" />
+              <xs:element name="ShippedType" msprop:Generator_UserColumnName="ShippedType" msprop:Generator_ColumnPropNameInRow="ShippedType" msprop:Generator_ColumnVarNameInTable="columnShippedType" msprop:Generator_ColumnPropNameInTable="ShippedTypeColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ShippedType" />
+      <xs:field xpath="mstns:ShippedTypeCode" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

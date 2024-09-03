@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SewingOutputBalance_POwiseDataSet" targetNamespace="http://tempuri.org/SewingOutputBalance_POwiseDataSet.xsd" xmlns:mstns="http://tempuri.org/SewingOutputBalance_POwiseDataSet.xsd" xmlns="http://tempuri.org/SewingOutputBalance_POwiseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SewingOutputBalance_POwiseTableAdapter" GeneratorDataComponentClassName="SewingOutputBalance_POwiseTableAdapter" Name="SewingOutputBalance_POwise" UserDataComponentName="SewingOutputBalance_POwiseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.SewingOutputBalance_POwise" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EX AS Ex, OrderId, BuyerName, StyleName, ProgramNo, OrderQuantity, CuttingQuantity, InputQuantity, OutputQuantity, PlanningQuantity, ProgramClose, YR, TotalTargetQuantity, StartDate, EndDate, ProgramClose2, MH, 
+                         StyleType, SewingPercentage, SewingRequireQuantity, SewingBalance, PO, FabricColorName, ShipmentBalance
+FROM            SewingOutputBalance_POwise
+WHERE        (ProgramClose = 0) AND (ProgramClose2 = 0) AND (YR &gt;= 2018)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="OrderQuantity" DataSetColumn="OrderQuantity" />
+              <Mapping SourceColumn="CuttingQuantity" DataSetColumn="CuttingQuantity" />
+              <Mapping SourceColumn="InputQuantity" DataSetColumn="InputQuantity" />
+              <Mapping SourceColumn="OutputQuantity" DataSetColumn="OutputQuantity" />
+              <Mapping SourceColumn="ProgramClose" DataSetColumn="ProgramClose" />
+              <Mapping SourceColumn="YR" DataSetColumn="YR" />
+              <Mapping SourceColumn="TotalTargetQuantity" DataSetColumn="TotalTargetQuantity" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="EndDate" DataSetColumn="EndDate" />
+              <Mapping SourceColumn="ProgramClose2" DataSetColumn="ProgramClose2" />
+              <Mapping SourceColumn="MH" DataSetColumn="MH" />
+              <Mapping SourceColumn="StyleType" DataSetColumn="StyleType" />
+              <Mapping SourceColumn="SewingPercentage" DataSetColumn="SewingPercentage" />
+              <Mapping SourceColumn="SewingRequireQuantity" DataSetColumn="SewingRequireQuantity" />
+              <Mapping SourceColumn="Ex" DataSetColumn="Ex" />
+              <Mapping SourceColumn="SewingBalance" DataSetColumn="SewingBalance" />
+              <Mapping SourceColumn="PlanningQuantity" DataSetColumn="PlanningQuantity" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="FabricColorName" DataSetColumn="FabricColorName" />
+              <Mapping SourceColumn="ShipmentBalance" DataSetColumn="ShipmentBalance" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.SewingOutputBalance_POwise" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByOID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOID" GeneratorSourceName="FillByOID" GetMethodModifier="Public" GetMethodName="GetDataByOID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOID" UserSourceName="FillByOID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EX, OrderId, BuyerName, StyleName, ProgramNo, SUM(OrderQuantity) AS OrderQuantity, SUM(CuttingQuantity) AS CuttingQuantity, SUM(InputQuantity) AS InputQuantity, SUM(OutputQuantity) AS OutputQuantity, 
+                         SUM(PlanningQuantity) AS PlanningQuantity, ProgramClose, SUM(PlanningBalance) AS PlanningBalance, MIN(YR) AS YR, AVG(TotalTargetQuantity) AS TotalTargetQuantity, StartDate, EndDate, ProgramClose2, SUM(MH) AS MH, 
+                         StyleType, AVG(SewingPercentage) AS SewingPercentage, SUM(SewingRequireQuantity) AS SewingRequireQuantity, SewingBalance, FabricColorName, PO, ShipmentBalance
+FROM            SewingOutputBalance_POwise
+WHERE        (ProgramClose = 0) AND (ProgramClose2 = 0)
+GROUP BY EX, OrderId, BuyerName, StyleName, ProgramNo, StartDate, EndDate, StyleType, ProgramClose, ProgramClose2, SewingBalance, FabricColorName, PO, ShipmentBalance
+HAVING        (MIN(YR) &gt;= 2018) AND (SUM(PlanningBalance) &gt; 0) OR
+                         (OrderId = @OrderId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="OrderId" ColumnName="OrderId" DataSourceName="[ncl-db].dbo.SewingOutputBalance_POwise" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SewingOutputBalance_POwiseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SewingOutputBalance_POwiseDataSet" msprop:Generator_UserDSName="SewingOutputBalance_POwiseDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SewingOutputBalance_POwise" msprop:Generator_UserTableName="SewingOutputBalance_POwise" msprop:Generator_RowEvArgName="SewingOutputBalance_POwiseRowChangeEvent" msprop:Generator_TableVarName="tableSewingOutputBalance_POwise" msprop:Generator_TablePropName="SewingOutputBalance_POwise" msprop:Generator_RowDeletingName="SewingOutputBalance_POwiseRowDeleting" msprop:Generator_RowChangingName="SewingOutputBalance_POwiseRowChanging" msprop:Generator_RowDeletedName="SewingOutputBalance_POwiseRowDeleted" msprop:Generator_RowEvHandlerName="SewingOutputBalance_POwiseRowChangeEventHandler" msprop:Generator_TableClassName="SewingOutputBalance_POwiseDataTable" msprop:Generator_RowChangedName="SewingOutputBalance_POwiseRowChanged" msprop:Generator_RowClassName="SewingOutputBalance_POwiseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" />
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderQuantity" msprop:Generator_ColumnVarNameInTable="columnOrderQuantity" msprop:Generator_ColumnPropNameInRow="OrderQuantity" msprop:Generator_ColumnPropNameInTable="OrderQuantityColumn" msprop:Generator_UserColumnName="OrderQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CuttingQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCuttingQuantity" msprop:Generator_ColumnPropNameInRow="CuttingQuantity" msprop:Generator_ColumnPropNameInTable="CuttingQuantityColumn" msprop:Generator_UserColumnName="CuttingQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="InputQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnInputQuantity" msprop:Generator_ColumnPropNameInRow="InputQuantity" msprop:Generator_ColumnPropNameInTable="InputQuantityColumn" msprop:Generator_UserColumnName="InputQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OutputQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOutputQuantity" msprop:Generator_ColumnPropNameInRow="OutputQuantity" msprop:Generator_ColumnPropNameInTable="OutputQuantityColumn" msprop:Generator_UserColumnName="OutputQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ProgramClose" msprop:Generator_ColumnVarNameInTable="columnProgramClose" msprop:Generator_ColumnPropNameInRow="ProgramClose" msprop:Generator_ColumnPropNameInTable="ProgramCloseColumn" msprop:Generator_UserColumnName="ProgramClose" type="xs:boolean" />
+              <xs:element name="YR" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYR" msprop:Generator_ColumnPropNameInRow="YR" msprop:Generator_ColumnPropNameInTable="YRColumn" msprop:Generator_UserColumnName="YR" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalTargetQuantity" msprop:Generator_ColumnVarNameInTable="columnTotalTargetQuantity" msprop:Generator_ColumnPropNameInRow="TotalTargetQuantity" msprop:Generator_ColumnPropNameInTable="TotalTargetQuantityColumn" msprop:Generator_UserColumnName="TotalTargetQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" msprop:Generator_UserColumnName="EndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ProgramClose2" msprop:Generator_ColumnVarNameInTable="columnProgramClose2" msprop:Generator_ColumnPropNameInRow="ProgramClose2" msprop:Generator_ColumnPropNameInTable="ProgramClose2Column" msprop:Generator_UserColumnName="ProgramClose2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MH" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMH" msprop:Generator_ColumnPropNameInRow="MH" msprop:Generator_ColumnPropNameInTable="MHColumn" msprop:Generator_UserColumnName="MH" type="xs:int" minOccurs="0" />
+              <xs:element name="StyleType" msprop:Generator_ColumnVarNameInTable="columnStyleType" msprop:Generator_ColumnPropNameInRow="StyleType" msprop:Generator_ColumnPropNameInTable="StyleTypeColumn" msprop:Generator_UserColumnName="StyleType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SewingPercentage" msprop:Generator_ColumnVarNameInTable="columnSewingPercentage" msprop:Generator_ColumnPropNameInRow="SewingPercentage" msprop:Generator_ColumnPropNameInTable="SewingPercentageColumn" msprop:Generator_UserColumnName="SewingPercentage" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Select" msprop:Generator_ColumnVarNameInTable="columnSelect" msprop:Generator_ColumnPropNameInRow="_Select" msprop:Generator_ColumnPropNameInTable="SelectColumn" msprop:Generator_UserColumnName="Select" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="SewingRequireQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSewingRequireQuantity" msprop:Generator_ColumnPropNameInRow="SewingRequireQuantity" msprop:Generator_ColumnPropNameInTable="SewingRequireQuantityColumn" msprop:Generator_UserColumnName="SewingRequireQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="Ex" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEx" msprop:Generator_ColumnPropNameInRow="Ex" msprop:Generator_ColumnPropNameInTable="ExColumn" msprop:Generator_UserColumnName="Ex" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SewingBalance" msprop:Generator_ColumnVarNameInTable="columnSewingBalance" msprop:Generator_ColumnPropNameInRow="SewingBalance" msprop:Generator_ColumnPropNameInTable="SewingBalanceColumn" msprop:Generator_UserColumnName="SewingBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PlanningQuantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPlanningQuantity" msprop:Generator_ColumnPropNameInRow="PlanningQuantity" msprop:Generator_ColumnPropNameInTable="PlanningQuantityColumn" msprop:Generator_UserColumnName="PlanningQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricColorName" msprop:Generator_ColumnVarNameInTable="columnFabricColorName" msprop:Generator_ColumnPropNameInRow="FabricColorName" msprop:Generator_ColumnPropNameInTable="FabricColorNameColumn" msprop:Generator_UserColumnName="FabricColorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipmentBalance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShipmentBalance" msprop:Generator_ColumnPropNameInRow="ShipmentBalance" msprop:Generator_ColumnPropNameInTable="ShipmentBalanceColumn" msprop:Generator_UserColumnName="ShipmentBalance" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SewingOutputBalance_POwise" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

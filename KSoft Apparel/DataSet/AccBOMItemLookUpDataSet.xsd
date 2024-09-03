@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccBOMItemLookUpDataSet" targetNamespace="http://tempuri.org/AccBOMItemLookUpDataSet.xsd" xmlns:mstns="http://tempuri.org/AccBOMItemLookUpDataSet.xsd" xmlns="http://tempuri.org/AccBOMItemLookUpDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccBOMItemLookUpTableAdapter" GeneratorDataComponentClassName="AccBOMItemLookUpTableAdapter" Name="AccBOMItemLookUp" UserDataComponentName="AccBOMItemLookUpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.AccBOMItemLookUp" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesBookingDetailsId, AccessoriesName
+FROM            AccBOMItemLookUp</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccessoriesName" DataSetColumn="AccessoriesName" />
+              <Mapping SourceColumn="AccessoriesBookingDetailsId" DataSetColumn="AccessoriesBookingDetailsId" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccBOMItemLookUpNewTableAdapter" GeneratorDataComponentClassName="AccBOMItemLookUpNewTableAdapter" Name="AccBOMItemLookUpNew" UserDataComponentName="AccBOMItemLookUpNewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.AccBOMItemLookUp" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AccessoriesBookingDetailsId, AccessoriesName, ItemStyle, AccItemDetails
+FROM            AccBOMItemLookUp</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccessoriesBookingDetailsId" DataSetColumn="AccessoriesBookingDetailsId" />
+              <Mapping SourceColumn="AccessoriesName" DataSetColumn="AccessoriesName" />
+              <Mapping SourceColumn="ItemStyle" DataSetColumn="ItemStyle" />
+              <Mapping SourceColumn="AccItemDetails" DataSetColumn="AccItemDetails" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccBOMItemLookUpDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AccBOMItemLookUpDataSet" msprop:Generator_DataSetName="AccBOMItemLookUpDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccBOMItemLookUp" msprop:Generator_UserTableName="AccBOMItemLookUp" msprop:Generator_RowDeletedName="AccBOMItemLookUpRowDeleted" msprop:Generator_RowChangedName="AccBOMItemLookUpRowChanged" msprop:Generator_RowClassName="AccBOMItemLookUpRow" msprop:Generator_RowChangingName="AccBOMItemLookUpRowChanging" msprop:Generator_RowEvArgName="AccBOMItemLookUpRowChangeEvent" msprop:Generator_RowEvHandlerName="AccBOMItemLookUpRowChangeEventHandler" msprop:Generator_TableClassName="AccBOMItemLookUpDataTable" msprop:Generator_TableVarName="tableAccBOMItemLookUp" msprop:Generator_RowDeletingName="AccBOMItemLookUpRowDeleting" msprop:Generator_TablePropName="AccBOMItemLookUp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccessoriesName" msdata:ReadOnly="true" msprop:Generator_UserColumnName="AccessoriesName" msprop:Generator_ColumnVarNameInTable="columnAccessoriesName" msprop:Generator_ColumnPropNameInRow="AccessoriesName" msprop:Generator_ColumnPropNameInTable="AccessoriesNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccessoriesBookingDetailsId" msprop:Generator_UserColumnName="AccessoriesBookingDetailsId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingDetailsId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingDetailsId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingDetailsIdColumn" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccBOMItemLookUpNew" msprop:Generator_UserTableName="AccBOMItemLookUpNew" msprop:Generator_RowDeletedName="AccBOMItemLookUpNewRowDeleted" msprop:Generator_RowChangedName="AccBOMItemLookUpNewRowChanged" msprop:Generator_RowClassName="AccBOMItemLookUpNewRow" msprop:Generator_RowChangingName="AccBOMItemLookUpNewRowChanging" msprop:Generator_RowEvArgName="AccBOMItemLookUpNewRowChangeEvent" msprop:Generator_RowEvHandlerName="AccBOMItemLookUpNewRowChangeEventHandler" msprop:Generator_TableClassName="AccBOMItemLookUpNewDataTable" msprop:Generator_TableVarName="tableAccBOMItemLookUpNew" msprop:Generator_RowDeletingName="AccBOMItemLookUpNewRowDeleting" msprop:Generator_TablePropName="AccBOMItemLookUpNew">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccessoriesBookingDetailsId" msprop:Generator_UserColumnName="AccessoriesBookingDetailsId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesBookingDetailsId" msprop:Generator_ColumnPropNameInRow="AccessoriesBookingDetailsId" msprop:Generator_ColumnPropNameInTable="AccessoriesBookingDetailsIdColumn" type="xs:long" />
+              <xs:element name="AccessoriesName" msprop:Generator_UserColumnName="AccessoriesName" msprop:Generator_ColumnVarNameInTable="columnAccessoriesName" msprop:Generator_ColumnPropNameInRow="AccessoriesName" msprop:Generator_ColumnPropNameInTable="AccessoriesNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemStyle" msprop:Generator_UserColumnName="ItemStyle" msprop:Generator_ColumnVarNameInTable="columnItemStyle" msprop:Generator_ColumnPropNameInRow="ItemStyle" msprop:Generator_ColumnPropNameInTable="ItemStyleColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccItemDetails" msdata:ReadOnly="true" msprop:Generator_UserColumnName="AccItemDetails" msprop:Generator_ColumnVarNameInTable="columnAccItemDetails" msprop:Generator_ColumnPropNameInRow="AccItemDetails" msprop:Generator_ColumnPropNameInTable="AccItemDetailsColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AccBOMItemLookUp" />
+      <xs:field xpath="mstns:AccessoriesBookingDetailsId" />
+    </xs:unique>
+    <xs:unique name="AccBOMItemLookUpNew_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AccBOMItemLookUpNew" />
+      <xs:field xpath="mstns:AccessoriesBookingDetailsId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MasterDetailsProgramLookUpDataSet" targetNamespace="http://tempuri.org/MasterDetailsProgramLookUpDataSet.xsd" xmlns:mstns="http://tempuri.org/MasterDetailsProgramLookUpDataSet.xsd" xmlns="http://tempuri.org/MasterDetailsProgramLookUpDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MasterDetailsProgramLookUpTableAdapter" GeneratorDataComponentClassName="MasterDetailsProgramLookUpTableAdapter" Name="MasterDetailsProgramLookUp" UserDataComponentName="MasterDetailsProgramLookUpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.MasterDetailsProgramLookUp" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MasterOrderDetailsId, ProgramNo, PO, StyleName, BuyerName, FabricColorName, GMTBrandName, Details
+FROM            MasterDetailsProgramLookUp</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MasterOrderDetailsId" DataSetColumn="MasterOrderDetailsId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="FabricColorName" DataSetColumn="FabricColorName" />
+              <Mapping SourceColumn="GMTBrandName" DataSetColumn="GMTBrandName" />
+              <Mapping SourceColumn="Details" DataSetColumn="Details" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MasterDetailsProgramLookUpDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="MasterDetailsProgramLookUpDataSet" msprop:Generator_DataSetName="MasterDetailsProgramLookUpDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MasterDetailsProgramLookUp" msprop:Generator_UserTableName="MasterDetailsProgramLookUp" msprop:Generator_RowDeletedName="MasterDetailsProgramLookUpRowDeleted" msprop:Generator_RowChangedName="MasterDetailsProgramLookUpRowChanged" msprop:Generator_RowClassName="MasterDetailsProgramLookUpRow" msprop:Generator_RowChangingName="MasterDetailsProgramLookUpRowChanging" msprop:Generator_RowEvArgName="MasterDetailsProgramLookUpRowChangeEvent" msprop:Generator_RowEvHandlerName="MasterDetailsProgramLookUpRowChangeEventHandler" msprop:Generator_TableClassName="MasterDetailsProgramLookUpDataTable" msprop:Generator_TableVarName="tableMasterDetailsProgramLookUp" msprop:Generator_RowDeletingName="MasterDetailsProgramLookUpRowDeleting" msprop:Generator_TablePropName="MasterDetailsProgramLookUp">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MasterOrderDetailsId" msprop:Generator_UserColumnName="MasterOrderDetailsId" msprop:Generator_ColumnVarNameInTable="columnMasterOrderDetailsId" msprop:Generator_ColumnPropNameInRow="MasterOrderDetailsId" msprop:Generator_ColumnPropNameInTable="MasterOrderDetailsIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO" msprop:Generator_UserColumnName="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_UserColumnName="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerName" msprop:Generator_UserColumnName="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricColorName" msprop:Generator_UserColumnName="FabricColorName" msprop:Generator_ColumnVarNameInTable="columnFabricColorName" msprop:Generator_ColumnPropNameInRow="FabricColorName" msprop:Generator_ColumnPropNameInTable="FabricColorNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GMTBrandName" msprop:Generator_UserColumnName="GMTBrandName" msprop:Generator_ColumnVarNameInTable="columnGMTBrandName" msprop:Generator_ColumnPropNameInRow="GMTBrandName" msprop:Generator_ColumnPropNameInTable="GMTBrandNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Details" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Details" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInTable="DetailsColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="620" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

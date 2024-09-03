@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BTBReporterDataSet" targetNamespace="http://tempuri.org/BTBReporterDataSet.xsd" xmlns:mstns="http://tempuri.org/BTBReporterDataSet.xsd" xmlns="http://tempuri.org/BTBReporterDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BTBReporterTableAdapter" GeneratorDataComponentClassName="BTBReporterTableAdapter" Name="BTBReporter" UserDataComponentName="BTBReporterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.BTBReporter" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MLCNO, MLCDate, BTBLCNo, BTBLCDate, SupplierName, AmountUSD, AmountBDT, IFDBC, DueDate, PaymentAmount, PaymentDate, Remarks, MaterialType, BTBYear, BTBMonth
+FROM            BTBReporter</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MLCNO" DataSetColumn="MLCNO" />
+              <Mapping SourceColumn="MLCDate" DataSetColumn="MLCDate" />
+              <Mapping SourceColumn="BTBLCNo" DataSetColumn="BTBLCNo" />
+              <Mapping SourceColumn="BTBLCDate" DataSetColumn="BTBLCDate" />
+              <Mapping SourceColumn="SupplierName" DataSetColumn="SupplierName" />
+              <Mapping SourceColumn="AmountUSD" DataSetColumn="AmountUSD" />
+              <Mapping SourceColumn="AmountBDT" DataSetColumn="AmountBDT" />
+              <Mapping SourceColumn="IFDBC" DataSetColumn="IFDBC" />
+              <Mapping SourceColumn="DueDate" DataSetColumn="DueDate" />
+              <Mapping SourceColumn="PaymentAmount" DataSetColumn="PaymentAmount" />
+              <Mapping SourceColumn="PaymentDate" DataSetColumn="PaymentDate" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="MaterialType" DataSetColumn="MaterialType" />
+              <Mapping SourceColumn="BTBYear" DataSetColumn="BTBYear" />
+              <Mapping SourceColumn="BTBMonth" DataSetColumn="BTBMonth" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BTBReporterDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="BTBReporterDataSet" msprop:Generator_DataSetName="BTBReporterDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BTBReporter" msprop:Generator_UserTableName="BTBReporter" msprop:Generator_RowDeletedName="BTBReporterRowDeleted" msprop:Generator_RowChangedName="BTBReporterRowChanged" msprop:Generator_RowClassName="BTBReporterRow" msprop:Generator_RowChangingName="BTBReporterRowChanging" msprop:Generator_RowEvArgName="BTBReporterRowChangeEvent" msprop:Generator_RowEvHandlerName="BTBReporterRowChangeEventHandler" msprop:Generator_TableClassName="BTBReporterDataTable" msprop:Generator_TableVarName="tableBTBReporter" msprop:Generator_RowDeletingName="BTBReporterRowDeleting" msprop:Generator_TablePropName="BTBReporter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MLCNO" msprop:Generator_UserColumnName="MLCNO" msprop:Generator_ColumnPropNameInRow="MLCNO" msprop:Generator_ColumnVarNameInTable="columnMLCNO" msprop:Generator_ColumnPropNameInTable="MLCNOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MLCDate" msprop:Generator_UserColumnName="MLCDate" msprop:Generator_ColumnPropNameInRow="MLCDate" msprop:Generator_ColumnVarNameInTable="columnMLCDate" msprop:Generator_ColumnPropNameInTable="MLCDateColumn" type="xs:dateTime" />
+              <xs:element name="BTBLCNo" msprop:Generator_UserColumnName="BTBLCNo" msprop:Generator_ColumnPropNameInRow="BTBLCNo" msprop:Generator_ColumnVarNameInTable="columnBTBLCNo" msprop:Generator_ColumnPropNameInTable="BTBLCNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BTBLCDate" msprop:Generator_UserColumnName="BTBLCDate" msprop:Generator_ColumnPropNameInRow="BTBLCDate" msprop:Generator_ColumnVarNameInTable="columnBTBLCDate" msprop:Generator_ColumnPropNameInTable="BTBLCDateColumn" type="xs:dateTime" />
+              <xs:element name="SupplierName" msprop:Generator_UserColumnName="SupplierName" msprop:Generator_ColumnPropNameInRow="SupplierName" msprop:Generator_ColumnVarNameInTable="columnSupplierName" msprop:Generator_ColumnPropNameInTable="SupplierNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AmountUSD" msprop:Generator_UserColumnName="AmountUSD" msprop:Generator_ColumnPropNameInRow="AmountUSD" msprop:Generator_ColumnVarNameInTable="columnAmountUSD" msprop:Generator_ColumnPropNameInTable="AmountUSDColumn" type="xs:decimal" />
+              <xs:element name="AmountBDT" msprop:Generator_UserColumnName="AmountBDT" msprop:Generator_ColumnPropNameInRow="AmountBDT" msprop:Generator_ColumnVarNameInTable="columnAmountBDT" msprop:Generator_ColumnPropNameInTable="AmountBDTColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IFDBC" msprop:Generator_UserColumnName="IFDBC" msprop:Generator_ColumnPropNameInRow="IFDBC" msprop:Generator_ColumnVarNameInTable="columnIFDBC" msprop:Generator_ColumnPropNameInTable="IFDBCColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DueDate" msprop:Generator_UserColumnName="DueDate" msprop:Generator_ColumnPropNameInRow="DueDate" msprop:Generator_ColumnVarNameInTable="columnDueDate" msprop:Generator_ColumnPropNameInTable="DueDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PaymentAmount" msprop:Generator_UserColumnName="PaymentAmount" msprop:Generator_ColumnPropNameInRow="PaymentAmount" msprop:Generator_ColumnVarNameInTable="columnPaymentAmount" msprop:Generator_ColumnPropNameInTable="PaymentAmountColumn" type="xs:decimal" />
+              <xs:element name="PaymentDate" msprop:Generator_UserColumnName="PaymentDate" msprop:Generator_ColumnPropNameInRow="PaymentDate" msprop:Generator_ColumnVarNameInTable="columnPaymentDate" msprop:Generator_ColumnPropNameInTable="PaymentDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_UserColumnName="Remarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaterialType" msprop:Generator_UserColumnName="MaterialType" msprop:Generator_ColumnPropNameInRow="MaterialType" msprop:Generator_ColumnVarNameInTable="columnMaterialType" msprop:Generator_ColumnPropNameInTable="MaterialTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BTBYear" msdata:ReadOnly="true" msprop:Generator_UserColumnName="BTBYear" msprop:Generator_ColumnVarNameInTable="columnBTBYear" msprop:Generator_ColumnPropNameInRow="BTBYear" msprop:Generator_ColumnPropNameInTable="BTBYearColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="BTBMonth" msdata:ReadOnly="true" msprop:Generator_UserColumnName="BTBMonth" msprop:Generator_ColumnVarNameInTable="columnBTBMonth" msprop:Generator_ColumnPropNameInRow="BTBMonth" msprop:Generator_ColumnPropNameInTable="BTBMonthColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

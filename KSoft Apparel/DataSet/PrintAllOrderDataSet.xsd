@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PrintAllOrderDataSet" targetNamespace="http://tempuri.org/PrintAllOrderDataSet.xsd" xmlns:mstns="http://tempuri.org/PrintAllOrderDataSet.xsd" xmlns="http://tempuri.org/PrintAllOrderDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PrintAllOrderLookupTableAdapter" GeneratorDataComponentClassName="PrintAllOrderLookupTableAdapter" Name="PrintAllOrderLookup" UserDataComponentName="PrintAllOrderLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT PrintOrder.OrderId, [Order].ProgramNo, PrintOrder.ProgramNo AS ProgramNo2
+FROM            PrintOrder LEFT OUTER JOIN
+                         [Order] ON PrintOrder.OrderId = [Order].OrderId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="ProgramNo2" DataSetColumn="ProgramNo2" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PrintAllOrderDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PrintAllOrderDataSet" msprop:Generator_DataSetName="PrintAllOrderDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PrintAllOrderLookup" msprop:Generator_UserTableName="PrintAllOrderLookup" msprop:Generator_RowDeletedName="PrintAllOrderLookupRowDeleted" msprop:Generator_RowChangedName="PrintAllOrderLookupRowChanged" msprop:Generator_RowClassName="PrintAllOrderLookupRow" msprop:Generator_RowChangingName="PrintAllOrderLookupRowChanging" msprop:Generator_RowEvArgName="PrintAllOrderLookupRowChangeEvent" msprop:Generator_RowEvHandlerName="PrintAllOrderLookupRowChangeEventHandler" msprop:Generator_TableClassName="PrintAllOrderLookupDataTable" msprop:Generator_TableVarName="tablePrintAllOrderLookup" msprop:Generator_RowDeletingName="PrintAllOrderLookupRowDeleting" msprop:Generator_TablePropName="PrintAllOrderLookup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msprop:Generator_UserColumnName="OrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgramNo2" msprop:Generator_UserColumnName="ProgramNo2" msprop:Generator_ColumnPropNameInRow="ProgramNo2" msprop:Generator_ColumnVarNameInTable="columnProgramNo2" msprop:Generator_ColumnPropNameInTable="ProgramNo2Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

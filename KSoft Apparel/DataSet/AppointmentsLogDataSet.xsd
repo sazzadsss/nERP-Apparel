@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AppointmentsLogDataSet" targetNamespace="http://tempuri.org/AppointmentsLogDataSet.xsd" xmlns:mstns="http://tempuri.org/AppointmentsLogDataSet.xsd" xmlns="http://tempuri.org/AppointmentsLogDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AppointmentsLogTableAdapter" GeneratorDataComponentClassName="AppointmentsLogTableAdapter" Name="AppointmentsLog" UserDataComponentName="AppointmentsLogTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Appointments.AppointmentId, [Order].ProgramNo, Line.Line, Appointments.Subject, Style.StyleName, Appointments.CreatedOn, Appointments.StartDate, Appointments.EndDate, Appointments.PlanningQuantity, 
+                         OrderQuantitySummeryBySID.OrderQuantity, OrderQuantitySummeryBySID.MinEX, OrderQuantitySummeryBySID.MaxEX
+FROM            Line RIGHT OUTER JOIN
+                         Appointments LEFT OUTER JOIN
+                         OrderQuantitySummeryBySID INNER JOIN
+                         Style ON OrderQuantitySummeryBySID.StyleId = Style.StyleId ON Appointments.OrderId = OrderQuantitySummeryBySID.OrderId AND Appointments.StyleId = OrderQuantitySummeryBySID.StyleId LEFT OUTER JOIN
+                         [Order] ON Appointments.OrderId = [Order].OrderId ON Line.LineId = Appointments.LineId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AppointmentId" DataSetColumn="AppointmentId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="Subject" DataSetColumn="Subject" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="CreatedOn" DataSetColumn="CreatedOn" />
+              <Mapping SourceColumn="Line" DataSetColumn="Line" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="EndDate" DataSetColumn="EndDate" />
+              <Mapping SourceColumn="PlanningQuantity" DataSetColumn="PlanningQuantity" />
+              <Mapping SourceColumn="OrderQuantity" DataSetColumn="OrderQuantity" />
+              <Mapping SourceColumn="MinEX" DataSetColumn="MinEX" />
+              <Mapping SourceColumn="MaxEX" DataSetColumn="MaxEX" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AppointmentsLogDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AppointmentsLogDataSet" msprop:Generator_UserDSName="AppointmentsLogDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AppointmentsLog" msprop:Generator_TableClassName="AppointmentsLogDataTable" msprop:Generator_TableVarName="tableAppointmentsLog" msprop:Generator_RowChangedName="AppointmentsLogRowChanged" msprop:Generator_TablePropName="AppointmentsLog" msprop:Generator_RowDeletingName="AppointmentsLogRowDeleting" msprop:Generator_RowChangingName="AppointmentsLogRowChanging" msprop:Generator_RowEvHandlerName="AppointmentsLogRowChangeEventHandler" msprop:Generator_RowDeletedName="AppointmentsLogRowDeleted" msprop:Generator_RowClassName="AppointmentsLogRow" msprop:Generator_UserTableName="AppointmentsLog" msprop:Generator_RowEvArgName="AppointmentsLogRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AppointmentId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAppointmentId" msprop:Generator_ColumnPropNameInRow="AppointmentId" msprop:Generator_ColumnPropNameInTable="AppointmentIdColumn" msprop:Generator_UserColumnName="AppointmentId" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Subject" msprop:Generator_ColumnVarNameInTable="columnSubject" msprop:Generator_ColumnPropNameInRow="Subject" msprop:Generator_ColumnPropNameInTable="SubjectColumn" msprop:Generator_UserColumnName="Subject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedOn" msprop:Generator_ColumnVarNameInTable="columnCreatedOn" msprop:Generator_ColumnPropNameInRow="CreatedOn" msprop:Generator_ColumnPropNameInTable="CreatedOnColumn" msprop:Generator_UserColumnName="CreatedOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Line" msprop:Generator_ColumnVarNameInTable="columnLine" msprop:Generator_ColumnPropNameInRow="Line" msprop:Generator_ColumnPropNameInTable="LineColumn" msprop:Generator_UserColumnName="Line" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" msprop:Generator_UserColumnName="EndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PlanningQuantity" msprop:Generator_ColumnVarNameInTable="columnPlanningQuantity" msprop:Generator_ColumnPropNameInRow="PlanningQuantity" msprop:Generator_ColumnPropNameInTable="PlanningQuantityColumn" msprop:Generator_UserColumnName="PlanningQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OrderQuantity" msprop:Generator_ColumnVarNameInTable="columnOrderQuantity" msprop:Generator_ColumnPropNameInRow="OrderQuantity" msprop:Generator_ColumnPropNameInTable="OrderQuantityColumn" msprop:Generator_UserColumnName="OrderQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="MinEX" msprop:Generator_ColumnVarNameInTable="columnMinEX" msprop:Generator_ColumnPropNameInRow="MinEX" msprop:Generator_ColumnPropNameInTable="MinEXColumn" msprop:Generator_UserColumnName="MinEX" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MaxEX" msprop:Generator_ColumnVarNameInTable="columnMaxEX" msprop:Generator_ColumnPropNameInRow="MaxEX" msprop:Generator_ColumnPropNameInTable="MaxEXColumn" msprop:Generator_UserColumnName="MaxEX" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AppointmentsLog" />
+      <xs:field xpath="mstns:AppointmentId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

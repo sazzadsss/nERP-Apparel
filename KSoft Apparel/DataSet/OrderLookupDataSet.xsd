@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OrderLookupDataSet" targetNamespace="http://tempuri.org/OrderLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/OrderLookupDataSet.xsd" xmlns="http://tempuri.org/OrderLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_ApparelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_ApparelConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Apparel.My.MySettings.GlobalReference.Default.KSoft_ApparelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderLookupTableAdapter" GeneratorDataComponentClassName="OrderLookupTableAdapter" Name="OrderLookup" UserDataComponentName="OrderLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Order].OrderId, [Order].ProgramNo, [Order].IsPrint, [Order].UserId, [Order].IsMultiPart, Style.StyleName, Buyer.BuyerCode, [Order].IsWash, WashTypeMst.WashType, [Order].IsRunning, [Order].IsEmbroidery
+FROM            [Order] INNER JOIN
+                         Style ON [Order].StyleId = Style.StyleId LEFT OUTER JOIN
+                         Buyer ON [Order].BuyerId = Buyer.BuyerId LEFT OUTER JOIN
+                         WashTypeMst ON [Order].WashTypeId = WashTypeMst.WashTypeId
+ORDER BY [Order].ProgramNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="IsPrint" DataSetColumn="IsPrint" />
+              <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
+              <Mapping SourceColumn="IsMultiPart" DataSetColumn="IsMultiPart" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="BuyerCode" DataSetColumn="BuyerCode" />
+              <Mapping SourceColumn="IsWash" DataSetColumn="IsWash" />
+              <Mapping SourceColumn="WashType" DataSetColumn="WashType" />
+              <Mapping SourceColumn="IsRunning" DataSetColumn="IsRunning" />
+              <Mapping SourceColumn="IsEmbroidery" DataSetColumn="IsEmbroidery" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByDivAsign" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAsign" GeneratorSourceName="FillByDivAsign" GetMethodModifier="Public" GetMethodName="GetDataByAsign" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAsign" UserSourceName="FillByDivAsign">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Order].OrderId, [Order].ProgramNo, [Order].IsPrint, [Order].UserId, [Order].IsMultiPart, Style.StyleName, Buyer.BuyerCode, [Order].IsWash, WashTypeMst.WashType, [Order].IsRunning, [Order].DivisionId, [Order].BuyerId
+FROM            [Order] INNER JOIN
+                         Style ON [Order].StyleId = Style.StyleId LEFT OUTER JOIN
+                         Buyer ON [Order].BuyerId = Buyer.BuyerId LEFT OUTER JOIN
+                         WashTypeMst ON [Order].WashTypeId = WashTypeMst.WashTypeId
+WHERE        ([Order].DivisionId IN
+                             (SELECT        DivisionId
+                               FROM            BuyerAsign
+                               WHERE        (UserId = @UserId))) AND ([Order].BuyerId IN
+                             (SELECT        BuyerId
+                               FROM            BuyerAsign AS BuyerAsign_1
+                               WHERE        (UserId = @UserId)))
+ORDER BY [Order].ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="UserId" ColumnName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByFabricBOMId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFabricBOMId" GeneratorSourceName="FillByFabricBOMId" GetMethodModifier="Public" GetMethodName="GetDataByFabricBOMId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFabricBOMId" UserSourceName="FillByFabricBOMId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderId, ProgramNo, IsPrint, UserId, IsMultiPart, BuyerId, DivisionId
+FROM            [Order]
+WHERE        (OrderId =
+                             (SELECT        OrderId
+                               FROM            FabricBOM
+                               WHERE        (FabricBOMId = @FabricBOMId)))
+ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="FabricBOMId" ColumnName="" DataSourceName="" DataTypeServer="bigint" DbType="Int32" Direction="Input" ParameterName="@FabricBOMId" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByIsWash" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByIsWash" GeneratorSourceName="FillByIsWash" GetMethodModifier="Public" GetMethodName="GetDataByIsWash" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByIsWash" UserSourceName="FillByIsWash">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Order].OrderId, [Order].ProgramNo, [Order].IsPrint, [Order].UserId, [Order].IsMultiPart, Style.StyleName, Buyer.BuyerCode, [Order].IsWash, WashTypeMst.WashType, [Order].IsRunning, [Order].IsEmbroidery
+FROM            [Order] INNER JOIN
+                         Style ON [Order].StyleId = Style.StyleId LEFT OUTER JOIN
+                         Buyer ON [Order].BuyerId = Buyer.BuyerId LEFT OUTER JOIN
+                         WashTypeMst ON [Order].WashTypeId = WashTypeMst.WashTypeId
+WHERE        ([Order].IsWash = @IsWash)
+ORDER BY [Order].ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IsWash" ColumnName="IsWash" DataSourceName="[ncl-db].dbo.[Order]" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@IsWash" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="IsWash" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByParticularUser" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByParticularUser" GeneratorSourceName="FillByParticularUser" GetMethodModifier="Public" GetMethodName="GetDataByParticularUser" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByParticularUser" UserSourceName="FillByParticularUser">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Order].OrderId, [Order].ProgramNo, [Order].IsPrint, [Order].UserId, [Order].IsMultiPart, Style.StyleName
+FROM            [Order] INNER JOIN
+                         Style ON [Order].StyleId = Style.StyleId
+WHERE        ([Order].UserId = @UserId)
+ORDER BY [Order].ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserId" ColumnName="UserId" DataSourceName="[fareast-data].dbo.[Order]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPrint" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPrint" GeneratorSourceName="FillByPrint" GetMethodModifier="Public" GetMethodName="GetDataByPrint" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPrint" UserSourceName="FillByPrint">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IsMultiPart, IsPrint, OrderId, ProgramNo, UserId, IsRunning
+FROM            [Order]
+WHERE        (IsPrint = 1)
+ORDER BY ProgramNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByProgramNoContain" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByProgramNoContain" GeneratorSourceName="FillByProgramNoContain" GetMethodModifier="Public" GetMethodName="GetDataByProgramNoContain" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByProgramNoContain" UserSourceName="FillByProgramNoContain">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderId, ProgramNo, IsPrint, UserId, IsMultiPart
+FROM            [Order]
+WHERE        (ProgramNo LIKE '%' + @ProgramNo + '%')
+ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ProgramNo" ColumnName="ProgramNo" DataSourceName="[fareast-data].dbo.[Order]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@ProgramNo" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="ProgramNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByRunning" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByRunning" GeneratorSourceName="FillByRunning" GetMethodModifier="Public" GetMethodName="GetDataByRunning" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByRunning" UserSourceName="FillByRunning">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Order].OrderId, [Order].ProgramNo, [Order].IsPrint, [Order].UserId, [Order].IsMultiPart, Style.StyleName, Buyer.BuyerCode, [Order].IsWash, WashTypeMst.WashType, [Order].IsRunning, [Order].BuyerId, [Order].DivisionId
+FROM            [Order] INNER JOIN
+                         Style ON [Order].StyleId = Style.StyleId LEFT OUTER JOIN
+                         Buyer ON [Order].BuyerId = Buyer.BuyerId LEFT OUTER JOIN
+                         WashTypeMst ON [Order].WashTypeId = WashTypeMst.WashTypeId
+WHERE        ([Order].IsRunning = 1)
+ORDER BY [Order].ProgramNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUserId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserId" GeneratorSourceName="FillByUserId" GetMethodModifier="Public" GetMethodName="GetDataByUserId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserId" UserSourceName="FillByUserId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IsMultiPart, IsPrint, OrderId, ProgramNo, UserId, BuyerId, DivisionId
+FROM            [Order]
+WHERE        (UserId = @UserId) AND (NOT EXISTS
+                             (SELECT        OrderId
+                               FROM            FabricBOM AS fb
+                               WHERE        (OrderId = [Order].OrderId)))
+ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserId" ColumnName="UserId" DataSourceName="[ncl-db].dbo.[Order]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUserIdAndAcc" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserIdAndAcc" GeneratorSourceName="FillByUserIdAndAcc" GetMethodModifier="Public" GetMethodName="GetDataByUserIdAndAcc" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserIdAndAcc" UserSourceName="FillByUserIdAndAcc">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IsMultiPart, IsPrint, OrderId, ProgramNo, UserId
+FROM            [Order]
+WHERE          (DivisionId IN
+                             (SELECT        DivisionId
+                               FROM            BuyerAsign
+                               WHERE        (UserId = @UserId)))
+ AND (NOT EXISTS
+                             (SELECT        OrderId
+                               FROM            AccessoriesBooking AS AB
+                               WHERE        (OrderId = [Order].OrderId)))
+ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserId" ColumnName="UserId" DataSourceName="[fareast-data].dbo.[Order]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderLookup1TableAdapter" GeneratorDataComponentClassName="OrderLookup1TableAdapter" Name="OrderLookup1" UserDataComponentName="OrderLookup1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Order] WHERE (([OrderId] = @Original_OrderId) AND ([ProgramNo] = @Original_ProgramNo) AND ([IsPrint] = @Original_IsPrint) AND ((@IsNull_UserId = 1 AND [UserId] IS NULL) OR ([UserId] = @Original_UserId)) AND ((@IsNull_IsMultiPart = 1 AND [IsMultiPart] IS NULL) OR ([IsMultiPart] = @Original_IsMultiPart)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ProgramNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProgramNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPrint" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsMultiPart" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsMultiPart" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsMultiPart" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsMultiPart" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        OrderId, ProgramNo, IsPrint, UserId, IsMultiPart
+FROM            [Order]
+ORDER BY ProgramNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Order] SET [ProgramNo] = @ProgramNo, [IsPrint] = @IsPrint, [UserId] = @UserId, [IsMultiPart] = @IsMultiPart WHERE (([OrderId] = @Original_OrderId) AND ([ProgramNo] = @Original_ProgramNo) AND ([IsPrint] = @Original_IsPrint) AND ((@IsNull_UserId = 1 AND [UserId] IS NULL) OR ([UserId] = @Original_UserId)) AND ((@IsNull_IsMultiPart = 1 AND [IsMultiPart] IS NULL) OR ([IsMultiPart] = @Original_IsMultiPart)));
+SELECT OrderId, ProgramNo, IsPrint, UserId, IsMultiPart FROM [Order] WHERE (OrderId = @OrderId) ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ProgramNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProgramNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsPrint" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsMultiPart" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsMultiPart" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ProgramNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProgramNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPrint" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsMultiPart" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsMultiPart" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsMultiPart" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsMultiPart" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="OrderId" ColumnName="OrderId" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="IsPrint" DataSetColumn="IsPrint" />
+              <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
+              <Mapping SourceColumn="IsMultiPart" DataSetColumn="IsMultiPart" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByAccBOMPending" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAccBOMPending" GeneratorSourceName="FillByAccBOMPending" GetMethodModifier="Public" GetMethodName="GetDataByAccBOMPending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAccBOMPending" UserSourceName="FillByAccBOMPending">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderId, ProgramNo,(Select DivisionName From Division Where DivisionId=[Order].DivisionId) As Division,IsPrint, UserId, IsMultiPart
+FROM            [Order] 
+WHERE      (BuyerId IN
+                             (SELECT        BuyerId
+                               FROM            BuyerAsign
+                               WHERE        (UserId = @UserId)))
+                               
+                               AND (DivisionId IN
+                             (SELECT        DivisionId
+                               FROM            BuyerAsign
+                               WHERE        (UserId = @UserId))) AND   (NOT EXISTS
+                             (SELECT        OrderId
+                               FROM            AccessoriesBooking AS AB
+                               WHERE        ([Order].OrderId = OrderId)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="UserId" ColumnName="UserId" DataSourceName="[fareast-data].dbo.[Order]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPrint" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPrint" GeneratorSourceName="FillByPrint" GetMethodModifier="Public" GetMethodName="GetDataByPrint" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPrint" UserSourceName="FillByPrint">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IsMultiPart, IsPrint, OrderId, ProgramNo, UserId FROM [Order] WHERE (IsPrint = 1) ORDER BY ProgramNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByProgramNoContain" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByProgramNoContain" GeneratorSourceName="FillByProgramNoContain" GetMethodModifier="Public" GetMethodName="GetDataByProgramNoContain" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByProgramNoContain" UserSourceName="FillByProgramNoContain">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IsMultiPart, IsPrint, OrderId, ProgramNo, UserId FROM [Order] WHERE (ProgramNo LIKE '%' + @ProgramNo + '%') ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ProgramNo" ColumnName="ProgramNo" DataSourceName="" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@ProgramNo" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="ProgramNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUserId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserId" GeneratorSourceName="FillByUserId" GetMethodModifier="Public" GetMethodName="GetDataByUserId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserId" UserSourceName="FillByUserId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IsMultiPart, IsPrint, OrderId, ProgramNo, UserId FROM [Order] WHERE (UserId = @UserId) ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserId" ColumnName="UserId" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUserIdAndAcc" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserIdAndAcc" GeneratorSourceName="FillByUserIdAndAcc" GetMethodModifier="Public" GetMethodName="GetDataByUserIdAndAcc" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserIdAndAcc" UserSourceName="FillByUserIdAndAcc">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ProgramNo, IsMultiPart, IsPrint, OrderId, UserId
+FROM            [Order]
+WHERE        (BuyerId IN
+                             (SELECT        BuyerId
+                               FROM            BuyerAsign
+                               WHERE        (UserId = @UserId)))
+                               
+                               AND  (DivisionId IN
+                             (SELECT        DivisionId
+                               FROM            BuyerAsign
+                               WHERE        (UserId = @UserId))) AND (NOT EXISTS
+                             (SELECT        OrderId
+                               FROM            AccessoriesBooking AS AB
+                               WHERE        (OrderId = [Order].OrderId)))
+ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="UserId" ColumnName="UserId" DataSourceName="[fareast-data].dbo.[Order]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderLookupByStyleTableAdapter" GeneratorDataComponentClassName="OrderLookupByStyleTableAdapter" Name="OrderLookupByStyle" UserDataComponentName="OrderLookupByStyleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByStyleId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStyleId" GeneratorSourceName="FillByStyleId" GetMethodModifier="Public" GetMethodName="GetDataByStyleId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStyleId" UserSourceName="FillByStyleId">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Order] WHERE (([OrderId] = @Original_OrderId) AND ([ProgramNo] = @Original_ProgramNo) AND ([IsPrint] = @Original_IsPrint) AND ([StyleId] = @Original_StyleId) AND ((@IsNull_PreCostingId = 1 AND [PreCostingId] IS NULL) OR ([PreCostingId] = @Original_PreCostingId)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ProgramNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProgramNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPrint" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreCostingId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreCostingId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_PreCostingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PreCostingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderId, ProgramNo, IsPrint, StyleId, PreCostingId
+FROM            [Order]
+WHERE        (StyleId = @StyleId)
+ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="StyleId" ColumnName="StyleId" DataSourceName="[ncl-db].dbo.[Order]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Order] SET [ProgramNo] = @ProgramNo, [IsPrint] = @IsPrint, [StyleId] = @StyleId, [PreCostingId] = @PreCostingId WHERE (([OrderId] = @Original_OrderId) AND ([ProgramNo] = @Original_ProgramNo) AND ([IsPrint] = @Original_IsPrint) AND ([StyleId] = @Original_StyleId) AND ((@IsNull_PreCostingId = 1 AND [PreCostingId] IS NULL) OR ([PreCostingId] = @Original_PreCostingId)));
+SELECT OrderId, ProgramNo, IsPrint, StyleId, PreCostingId FROM [Order] WHERE (OrderId = @OrderId) ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ProgramNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProgramNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsPrint" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@PreCostingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PreCostingId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ProgramNo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ProgramNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsPrint" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsPrint" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreCostingId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreCostingId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_PreCostingId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PreCostingId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="OrderId" ColumnName="OrderId" DataSourceName="[ncl-db].dbo.[Order]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@OrderId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="OrderId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="IsPrint" DataSetColumn="IsPrint" />
+              <Mapping SourceColumn="StyleId" DataSetColumn="StyleId" />
+              <Mapping SourceColumn="PreCostingId" DataSetColumn="PreCostingId" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByNotAssgined" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNotAssigned" GeneratorSourceName="FillByNotAssgined" GetMethodModifier="Public" GetMethodName="GetDataByNotAssigned" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNotAssigned" UserSourceName="FillByNotAssgined">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Order].IsPrint, [Order].OrderId, PreCostingMain.PreCostingId, [Order].ProgramNo, [Order].StyleId
+FROM            [Order] LEFT OUTER JOIN
+                         PreCostingMain ON [Order].OrderId = PreCostingMain.OrderId
+WHERE        (PreCostingMain.PreCostingId IS NULL) AND ([Order].StyleId = @StyleId)
+ORDER BY [Order].ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="StyleId" ColumnName="StyleId" DataSourceName="[ncl-db].dbo.[Order]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByStyleIdAndBudgetPending" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStyleIdAndBudgetPending" GeneratorSourceName="FillByStyleIdAndBudgetPending" GetMethodModifier="Public" GetMethodName="GetDataByStyleIdAndBudgetPending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStyleIdAndBudgetPending" UserSourceName="FillByStyleIdAndBudgetPending">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderId, ProgramNo, IsPrint, StyleId, PreCostingId
+FROM            [Order]
+WHERE StyleId =@StyleId AND  NOT EXISTS(Select OrderId From PreCostingMain Where [PreCostingMain].OrderId=[Order].OrderId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="StyleId" ColumnName="StyleId" DataSourceName="[ncl-db].dbo.[Order]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProgramNoLookupByDivUserTableAdapter" GeneratorDataComponentClassName="ProgramNoLookupByDivUserTableAdapter" Name="ProgramNoLookupByDivUser" UserDataComponentName="ProgramNoLookupByDivUserTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.ProgramNoLookupByDivUser" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.ProgramNoLookupByDivUser</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="19" ProviderType="BigInt" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectName="[fareast-data].dbo.ProgramNoLookupByDivUserPending" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillByAccBOMPending" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAccBOMPending" GeneratorSourceName="FillByAccBOMPending" GetMethodModifier="Public" GetMethodName="GetDataByAccBOMPending" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAccBOMPending" UserSourceName="FillByAccBOMPending">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.ProgramNoLookupByDivUserPending</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="19" ProviderType="BigInt" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderLookupBySubStyleTableAdapter" GeneratorDataComponentClassName="OrderLookupBySubStyleTableAdapter" Name="OrderLookupBySubStyle" UserDataComponentName="OrderLookupBySubStyleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Style.StyleName, [Order].ProgramNo, [Order].OrderId, OrderDetails.StyleId, Buyer.BuyerName
+FROM            [Order] INNER JOIN
+                         OrderDetails ON [Order].OrderId = OrderDetails.OrderId INNER JOIN
+                         Style ON OrderDetails.StyleId = Style.StyleId LEFT OUTER JOIN
+                         Buyer ON [Order].BuyerId = Buyer.BuyerId
+GROUP BY Style.StyleName, [Order].ProgramNo, [Order].OrderId, OrderDetails.StyleId, Buyer.BuyerName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="StyleId" DataSetColumn="StyleId" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_ApparelConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByStyleId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStyleId" GeneratorSourceName="FillByStyleId" GetMethodModifier="Public" GetMethodName="GetDataByStyleId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStyleId" UserSourceName="FillByStyleId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Style.StyleName, [Order].ProgramNo, [Order].OrderId, OrderDetails.StyleId, Buyer.BuyerName
+FROM            [Order] INNER JOIN
+                         OrderDetails ON [Order].OrderId = OrderDetails.OrderId INNER JOIN
+                         Style ON OrderDetails.StyleId = Style.StyleId LEFT OUTER JOIN
+                         Buyer ON [Order].BuyerId = Buyer.BuyerId
+GROUP BY Style.StyleName, [Order].ProgramNo, [Order].OrderId, OrderDetails.StyleId, Buyer.BuyerName
+HAVING        (OrderDetails.StyleId = @StyleId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="StyleId" ColumnName="StyleId" DataSourceName="[ncl-db].dbo.OrderDetails" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@StyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="StyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="OrderLookupDataSet" msprop:Generator_UserDSName="OrderLookupDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrderLookup" msprop:Generator_UserTableName="OrderLookup" msprop:Generator_RowEvArgName="OrderLookupRowChangeEvent" msprop:Generator_TableVarName="tableOrderLookup" msprop:Generator_TablePropName="OrderLookup" msprop:Generator_RowDeletingName="OrderLookupRowDeleting" msprop:Generator_RowChangingName="OrderLookupRowChanging" msprop:Generator_RowDeletedName="OrderLookupRowDeleted" msprop:Generator_RowEvHandlerName="OrderLookupRowChangeEventHandler" msprop:Generator_TableClassName="OrderLookupDataTable" msprop:Generator_RowChangedName="OrderLookupRowChanged" msprop:Generator_RowClassName="OrderLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsPrint" msprop:Generator_ColumnVarNameInTable="columnIsPrint" msprop:Generator_ColumnPropNameInRow="IsPrint" msprop:Generator_ColumnPropNameInTable="IsPrintColumn" msprop:Generator_UserColumnName="IsPrint" type="xs:boolean" />
+              <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:long" minOccurs="0" />
+              <xs:element name="IsMultiPart" msprop:Generator_ColumnVarNameInTable="columnIsMultiPart" msprop:Generator_ColumnPropNameInRow="IsMultiPart" msprop:Generator_ColumnPropNameInTable="IsMultiPartColumn" msprop:Generator_UserColumnName="IsMultiPart" type="xs:boolean" minOccurs="0" />
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Details" msdata:ReadOnly="true" msdata:Expression="ProgramNo + ' :: ' +  ISNULL(StyleName,'N/A') + '::' + ISNULL(BuyerCode,'N/A')" msprop:Generator_ColumnVarNameInTable="columnDetails" msprop:Generator_ColumnPropNameInRow="Details" msprop:Generator_ColumnPropNameInTable="DetailsColumn" msprop:Generator_UserColumnName="Details" type="xs:string" minOccurs="0" />
+              <xs:element name="BuyerCode" msprop:Generator_ColumnVarNameInTable="columnBuyerCode" msprop:Generator_ColumnPropNameInRow="BuyerCode" msprop:Generator_ColumnPropNameInTable="BuyerCodeColumn" msprop:Generator_UserColumnName="BuyerCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsWash" msprop:Generator_ColumnVarNameInTable="columnIsWash" msprop:Generator_ColumnPropNameInRow="IsWash" msprop:Generator_ColumnPropNameInTable="IsWashColumn" msprop:Generator_UserColumnName="IsWash" type="xs:boolean" minOccurs="0" />
+              <xs:element name="WashType" msprop:Generator_ColumnVarNameInTable="columnWashType" msprop:Generator_ColumnPropNameInRow="WashType" msprop:Generator_ColumnPropNameInTable="WashTypeColumn" msprop:Generator_UserColumnName="WashType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsRunning" msprop:Generator_ColumnVarNameInTable="columnIsRunning" msprop:Generator_ColumnPropNameInRow="IsRunning" msprop:Generator_ColumnPropNameInTable="IsRunningColumn" msprop:Generator_UserColumnName="IsRunning" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsEmbroidery" msprop:Generator_ColumnVarNameInTable="columnIsEmbroidery" msprop:Generator_ColumnPropNameInRow="IsEmbroidery" msprop:Generator_ColumnPropNameInTable="IsEmbroideryColumn" msprop:Generator_UserColumnName="IsEmbroidery" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderLookup1" msprop:Generator_UserTableName="OrderLookup1" msprop:Generator_RowEvArgName="OrderLookup1RowChangeEvent" msprop:Generator_TableVarName="tableOrderLookup1" msprop:Generator_TablePropName="OrderLookup1" msprop:Generator_RowDeletingName="OrderLookup1RowDeleting" msprop:Generator_RowChangingName="OrderLookup1RowChanging" msprop:Generator_RowDeletedName="OrderLookup1RowDeleted" msprop:Generator_RowEvHandlerName="OrderLookup1RowChangeEventHandler" msprop:Generator_TableClassName="OrderLookup1DataTable" msprop:Generator_RowChangedName="OrderLookup1RowChanged" msprop:Generator_RowClassName="OrderLookup1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsPrint" msprop:Generator_ColumnVarNameInTable="columnIsPrint" msprop:Generator_ColumnPropNameInRow="IsPrint" msprop:Generator_ColumnPropNameInTable="IsPrintColumn" msprop:Generator_UserColumnName="IsPrint" type="xs:boolean" />
+              <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:long" minOccurs="0" />
+              <xs:element name="IsMultiPart" msprop:Generator_ColumnVarNameInTable="columnIsMultiPart" msprop:Generator_ColumnPropNameInRow="IsMultiPart" msprop:Generator_ColumnPropNameInTable="IsMultiPartColumn" msprop:Generator_UserColumnName="IsMultiPart" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderLookupByStyle" msprop:Generator_UserTableName="OrderLookupByStyle" msprop:Generator_RowEvArgName="OrderLookupByStyleRowChangeEvent" msprop:Generator_TableVarName="tableOrderLookupByStyle" msprop:Generator_TablePropName="OrderLookupByStyle" msprop:Generator_RowDeletingName="OrderLookupByStyleRowDeleting" msprop:Generator_RowChangingName="OrderLookupByStyleRowChanging" msprop:Generator_RowDeletedName="OrderLookupByStyleRowDeleted" msprop:Generator_RowEvHandlerName="OrderLookupByStyleRowChangeEventHandler" msprop:Generator_TableClassName="OrderLookupByStyleDataTable" msprop:Generator_RowChangedName="OrderLookupByStyleRowChanged" msprop:Generator_RowClassName="OrderLookupByStyleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsPrint" msprop:Generator_ColumnVarNameInTable="columnIsPrint" msprop:Generator_ColumnPropNameInRow="IsPrint" msprop:Generator_ColumnPropNameInTable="IsPrintColumn" msprop:Generator_UserColumnName="IsPrint" type="xs:boolean" />
+              <xs:element name="StyleId" msprop:Generator_ColumnVarNameInTable="columnStyleId" msprop:Generator_ColumnPropNameInRow="StyleId" msprop:Generator_ColumnPropNameInTable="StyleIdColumn" msprop:Generator_UserColumnName="StyleId" type="xs:long" />
+              <xs:element name="PreCostingId" msprop:Generator_ColumnVarNameInTable="columnPreCostingId" msprop:Generator_ColumnPropNameInRow="PreCostingId" msprop:Generator_ColumnPropNameInTable="PreCostingIdColumn" msprop:Generator_UserColumnName="PreCostingId" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProgramNoLookupByDivUser" msprop:Generator_UserTableName="ProgramNoLookupByDivUser" msprop:Generator_RowEvArgName="ProgramNoLookupByDivUserRowChangeEvent" msprop:Generator_TableVarName="tableProgramNoLookupByDivUser" msprop:Generator_TablePropName="ProgramNoLookupByDivUser" msprop:Generator_RowDeletingName="ProgramNoLookupByDivUserRowDeleting" msprop:Generator_RowChangingName="ProgramNoLookupByDivUserRowChanging" msprop:Generator_RowDeletedName="ProgramNoLookupByDivUserRowDeleted" msprop:Generator_RowEvHandlerName="ProgramNoLookupByDivUserRowChangeEventHandler" msprop:Generator_TableClassName="ProgramNoLookupByDivUserDataTable" msprop:Generator_RowChangedName="ProgramNoLookupByDivUserRowChanged" msprop:Generator_RowClassName="ProgramNoLookupByDivUserRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderLookupBySubStyle" msprop:Generator_TableClassName="OrderLookupBySubStyleDataTable" msprop:Generator_TableVarName="tableOrderLookupBySubStyle" msprop:Generator_RowChangedName="OrderLookupBySubStyleRowChanged" msprop:Generator_TablePropName="OrderLookupBySubStyle" msprop:Generator_RowDeletingName="OrderLookupBySubStyleRowDeleting" msprop:Generator_RowChangingName="OrderLookupBySubStyleRowChanging" msprop:Generator_RowEvHandlerName="OrderLookupBySubStyleRowChangeEventHandler" msprop:Generator_RowDeletedName="OrderLookupBySubStyleRowDeleted" msprop:Generator_RowClassName="OrderLookupBySubStyleRow" msprop:Generator_UserTableName="OrderLookupBySubStyle" msprop:Generator_RowEvArgName="OrderLookupBySubStyleRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" msprop:Generator_UserColumnName="ProgramNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:long" />
+              <xs:element name="StyleId" msprop:Generator_ColumnVarNameInTable="columnStyleId" msprop:Generator_ColumnPropNameInRow="StyleId" msprop:Generator_ColumnPropNameInTable="StyleIdColumn" msprop:Generator_UserColumnName="StyleId" type="xs:long" minOccurs="0" />
+              <xs:element name="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" msprop:Generator_UserColumnName="BuyerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OrderLookup" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+    <xs:unique name="OrderLookup1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OrderLookup1" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+    <xs:unique name="OrderLookupByStyleKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OrderLookupByStyle" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+    <xs:unique name="ProgramNoLookupByDivUser_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProgramNoLookupByDivUser" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+    <xs:unique name="OrderLookupBySubStyle_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OrderLookupBySubStyle" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
