@@ -12,7 +12,6 @@
         Private Sub MyApplication_Startup(ByVal sender As Object, ByVal e As Microsoft.VisualBasic.ApplicationServices.StartupEventArgs) Handles Me.Startup
 
             ''System.Threading.Thread.Sleep(5000)
-            Dim
 
         End Sub
 

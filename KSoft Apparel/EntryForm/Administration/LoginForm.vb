@@ -21,13 +21,13 @@ Public Class LoginForm
         'DevExpress.UserSkins.BonusSkins.Register()
         'DevExpress.Skins.SkinManager.EnableFormSkins()
 
-        Dim CC As String = ReadStringData("Select CompanyCode From Company Where CompanyId=1", cnn)
+        'Dim CC As String = ReadStringData("Select CompanyCode From Company Where CompanyId=1", cnn)
 
-        If CC <> "NCL" Then
-            'Me.BackgroundImage = Global.KSoft_Apparel.My.Resources.Resources.CompanyName256
-            'Me.BackgroundImageLayout = ImageLayout.Center
-            Label1.Text = "KSoft Apparel Log in "
-        End If
+        'If CC <> "NCL" Then
+        '    'Me.BackgroundImage = Global.KSoft_Apparel.My.Resources.Resources.CompanyName256
+        '    'Me.BackgroundImageLayout = ImageLayout.Center
+        '    Label1.Text = "KSoft Apparel Log in "
+        'End If
 
         If My.Settings.IsRemember = "True" Then
             Me.RememberCheckBox.Checked = True

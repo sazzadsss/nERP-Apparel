@@ -121,9 +121,7 @@
   <data name="EchoInformationAnimation1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EchoInformationAnimation1.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NCL_APPAREL_NEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\NCL_APPAREL_NEW.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  
   <data name="background-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

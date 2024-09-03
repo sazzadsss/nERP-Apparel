@@ -226,7 +226,7 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.100,40000;Initial Catalog=ncl-db;Persist Security Info=True"& _ 
-            ";User ID=sa;Password=NERP!@#$2020;Connect Timeout=0")>  _
+            ";User ID=sa;Password=NCL!@#$2020;Connect Timeout=0")>  _
         Public ReadOnly Property KSoft_ApparelConnectionString() As String
             Get
                 Return CType(Me("KSoft_ApparelConnectionString"),String)
@@ -237,7 +237,7 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.100,40000;Initial Catalog=ncl-doc-db;Persist Security Info="& _ 
-            "True;User ID=sa;Password=NERP!@#$2020;Connect Timeout=0")>  _
+            "True;User ID=sa;Password=NCL!@#$2020;Connect Timeout=0")>  _
         Public ReadOnly Property KSoft_Doc_ConnectionString() As String
             Get
                 Return CType(Me("KSoft_Doc_ConnectionString"),String)
