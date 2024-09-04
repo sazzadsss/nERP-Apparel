@@ -113,7 +113,15 @@ Public Class frmMain
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
 
+        Dim sessionManager As New SessionManager()
+        Dim userId As Integer = My.Settings.UserId
 
+        If sessionManager.IsUserLoggedIn(userId) = False Then
+            'MessageBox.Show("User is already logged in.")
+            Dim loginForm As New LoginForm()
+            loginForm.ShowDialog()
+            ' Proceed to the login form or other actions
+        End If
         ''AddHandler System.Windows.Forms.Application.Idle, AddressOf Application_Idle
         'Dim CC As String = ReadStringData("Select CompanyCode From Company Where CompanyId=1", cnn)
 
@@ -123,6 +131,8 @@ Public Class frmMain
         '    Me.Text = "KSoft Apparel Solutions"
         '    PictureBox1.BackgroundImage = Global.KSoft_Apparel.My.Resources.Resources.CompanyNameVert
         'End If
+
+
 
 
         QueryString = "SELECT DepartmentName FROM DEPARTMENT WHERE (DepartmentId=" & DepartmentId & ")"
@@ -251,10 +261,8 @@ Public Class frmMain
 
         sessionManager.DeleteSession(UserId)
 
-        Me.Close()
-
-
-        LoginForm.Show()
+        Dim loginForm As New LoginForm()
+        loginForm.ShowDialog()
 
     End Sub
     'Checking user right for ToolStripMenuItem

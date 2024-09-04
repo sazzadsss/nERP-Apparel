@@ -183,7 +183,7 @@ Partial Class LoginForm
         Me.Label1.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
         Me.Label1.Size = New System.Drawing.Size(477, 54)
         Me.Label1.TabIndex = 17
-        Me.Label1.Text = "nERP Apparel Log in ..."
+        Me.Label1.Text = "nERP Solutions Log in ..."
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'RememberCheckBox
