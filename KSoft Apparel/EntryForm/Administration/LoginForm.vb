@@ -13,6 +13,7 @@ Public Class LoginForm
 
     Dim loc As Point
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
+        frmMain.Close()
         Me.Close()
     End Sub
 

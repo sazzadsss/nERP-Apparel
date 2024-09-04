@@ -47,18 +47,18 @@
     <Setting Name="KSoft_ApparelConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=192.168.0.100,4000;Initial Catalog=ncl-db;Persist Security Info=True;User ID=sa;Password=NCL!@#$2020;Connect Timeout=0&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.0.100,40000;Initial Catalog=ncl-db;Persist Security Info=True;User ID=sa;Password=NERP!@#$2020;Connect Timeout=0&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=192.168.0.100,4000;Initial Catalog=ncl-db;Persist Security Info=True;User ID=sa;Password=NCL!@#$2020;Connect Timeout=0</Value>
+      <Value Profile="(Default)">Data Source=192.168.0.100,40000;Initial Catalog=ncl-db;Persist Security Info=True;User ID=sa;Password=NERP!@#$2020;Connect Timeout=0</Value>
     </Setting>
     <Setting Name="KSoft_Doc_ConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=192.168.0.100,4000;Initial Catalog=ncl-doc-db;Persist Security Info=True;User ID=sa;Password=NCL!@#$2020;Connect Timeout=0&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.0.100,40000;Initial Catalog=ncl-doc-db;Persist Security Info=True;User ID=sa;Password=NERP!@#$2020;Connect Timeout=0&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=192.168.0.100,4000;Initial Catalog=ncl-doc-db;Persist Security Info=True;User ID=sa;Password=NCL!@#$2020;Connect Timeout=0</Value>
+      <Value Profile="(Default)">Data Source=192.168.0.100,40000;Initial Catalog=ncl-doc-db;Persist Security Info=True;User ID=sa;Password=NERP!@#$2020;Connect Timeout=0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

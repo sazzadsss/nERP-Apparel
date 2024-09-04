@@ -75,6 +75,11 @@ Public Class frmMain
 
         'Protect Accidental Closing 
         If MessageBox.Show("Are you sure to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+
+            Dim sessionManager As New SessionManager
+
+            sessionManager.DeleteSession(My.Settings.UserId)
+
             e.Cancel = False
         Else
             e.Cancel = True
@@ -118,8 +123,11 @@ Public Class frmMain
 
         If sessionManager.IsUserLoggedIn(userId) = False Then
             'MessageBox.Show("User is already logged in.")
+            MenuStrip.Visible = False
             Dim loginForm As New LoginForm()
+
             loginForm.ShowDialog()
+
             ' Proceed to the login form or other actions
         End If
         ''AddHandler System.Windows.Forms.Application.Idle, AddressOf Application_Idle
@@ -133,7 +141,7 @@ Public Class frmMain
         'End If
 
 
-
+        MenuStrip.Visible = True
 
         QueryString = "SELECT DepartmentName FROM DEPARTMENT WHERE (DepartmentId=" & DepartmentId & ")"
         Dim DepartmentName As String = ReadStringData(QueryString, cnn)
@@ -259,8 +267,8 @@ Public Class frmMain
 
         Dim sessionManager As New SessionManager
 
-        sessionManager.DeleteSession(UserId)
-
+        sessionManager.DeleteSession(My.Settings.UserId)
+        MenuStrip.Visible = False
         Dim loginForm As New LoginForm()
         loginForm.ShowDialog()
 

@@ -472,13 +472,13 @@ Partial Class frmMain
         'NERPDyeingToolStripMenuItem
         '
         Me.NERPDyeingToolStripMenuItem.Name = "NERPDyeingToolStripMenuItem"
-        Me.NERPDyeingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NERPDyeingToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.NERPDyeingToolStripMenuItem.Text = "nERP Dyeing"
         '
         'NERPInventoryToolStripMenuItem
         '
         Me.NERPInventoryToolStripMenuItem.Name = "NERPInventoryToolStripMenuItem"
-        Me.NERPInventoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NERPInventoryToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
         Me.NERPInventoryToolStripMenuItem.Text = "nERP Inventory"
         '
         'ToolsMenu
@@ -2633,6 +2633,7 @@ Partial Class frmMain
         Me.ToolStrip2.Size = New System.Drawing.Size(1298, 25)
         Me.ToolStrip2.TabIndex = 17
         Me.ToolStrip2.Text = "ToolStrip2"
+        Me.ToolStrip2.Visible = False
         '
         'ToolStripLabel1
         '
@@ -2766,7 +2767,7 @@ Partial Class frmMain
         Me.ToolStripButton6.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
         Me.ToolStripButton6.Name = "ToolStripButton6"
         Me.ToolStripButton6.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.ToolStripButton6.Size = New System.Drawing.Size(140, 22)
+        Me.ToolStripButton6.Size = New System.Drawing.Size(140, 19)
         Me.ToolStripButton6.Text = "Order Tracking Sheet"
         '
         'frmMain

@@ -53,7 +53,7 @@ Public Class SessionManager
             connection.Open()
 
             ' SQL query to delete the session for the user
-            Dim query As String = "DELETE FROM UserSessions WHERE UserId = @userId AND IsActive = 1"
+            Dim query As String = "DELETE FROM UserSessions WHERE UserId = @userId"
 
             Using command As New SqlCommand(query, connection)
                 command.Parameters.AddWithValue("@userId", userId)

@@ -117,7 +117,7 @@ Partial Class LoginForm
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(83, 40)
         Me.Cancel.TabIndex = 5
-        Me.Cancel.Text = "&Cancel"
+        Me.Cancel.Text = "&Close"
         '
         'UserBindingSource
         '
@@ -183,7 +183,7 @@ Partial Class LoginForm
         Me.Label1.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
         Me.Label1.Size = New System.Drawing.Size(477, 54)
         Me.Label1.TabIndex = 17
-        Me.Label1.Text = "nERP Solutions Log in ..."
+        Me.Label1.Text = "nERP Solutions Log In.."
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'RememberCheckBox
@@ -228,7 +228,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.UsernameTextBox)
         Me.Controls.Add(Me.PasswordLabel)
         Me.Controls.Add(Me.UsernameLabel)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.LookAndFeel.SkinMaskColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(228, Byte), Integer))
         Me.LookAndFeel.SkinName = "DevExpress Dark Style"
