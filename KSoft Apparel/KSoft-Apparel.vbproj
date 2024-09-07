@@ -7174,6 +7174,7 @@
     <EmbeddedResource Include="MasterReportForm\frmYarnReceive_mrf.resx">
       <DependentUpon>frmYarnReceive_mrf.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="ReportForm\frmAccessoriesBookingStatusReport.resx">
       <DependentUpon>frmAccessoriesBookingStatusReport.vb</DependentUpon>
     </EmbeddedResource>

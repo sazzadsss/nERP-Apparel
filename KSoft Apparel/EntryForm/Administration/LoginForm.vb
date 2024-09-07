@@ -115,6 +115,7 @@ Public Class LoginForm
 
                 'Me.PasswordTextBox.Text = ""
                 Me.Hide()
+                frmMain.MenuStrip.Visible = True
                 frmMain.Show()
 
             ElseIf RowCount > 1 Then
