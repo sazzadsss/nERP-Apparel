@@ -130,6 +130,7 @@ Public Class frmMain
 
             ' Proceed to the login form or other actions
         End If
+
         ''AddHandler System.Windows.Forms.Application.Idle, AddressOf Application_Idle
         'Dim CC As String = ReadStringData("Select CompanyCode From Company Where CompanyId=1", cnn)
 
