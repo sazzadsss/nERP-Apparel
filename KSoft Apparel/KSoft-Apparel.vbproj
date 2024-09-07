@@ -19,10 +19,10 @@
     <OptionInfer>On</OptionInfer>
     <ApplicationIcon>KSoftIcon2.ico</ApplicationIcon>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <ManifestCertificateThumbprint>82B660E5618BF5B03E31E39ACCD48DF66D77E85A</ManifestCertificateThumbprint>
-    <ManifestKeyFile>KSoft-Apparel_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestCertificateThumbprint>DDB0FC5477822255665D2EADF3CBFF7EAF22ED1C</ManifestCertificateThumbprint>
+    <ManifestKeyFile>KSoft-Apparel_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
     <TargetZone>LocalIntranet</TargetZone>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
     <SignAssembly>false</SignAssembly>
@@ -33,7 +33,7 @@
     <OldToolsVersion>3.5</OldToolsVersion>
     <TargetFrameworkProfile />
     <PublishUrl>D:\Published Files\nERP Apparel\</PublishUrl>
-    <Install>true</Install>
+    <Install>false</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Background</UpdateMode>
@@ -49,7 +49,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>default.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>5.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -6868,6 +6868,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WashTypeDataSet.xsd</DependentUpon>
     </Compile>
+    <None Include="KSoft-Apparel_TemporaryKey.pfx" />
     <None Include="ProgramNoLookUpWashingDataSet.xsc">
       <DependentUpon>ProgramNoLookUpWashingDataSet.xsd</DependentUpon>
     </None>
