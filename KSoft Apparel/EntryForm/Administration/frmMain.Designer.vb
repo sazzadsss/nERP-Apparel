@@ -565,6 +565,7 @@ Partial Class frmMain
         Me.MenuStrip.Size = New System.Drawing.Size(1344, 29)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
+        Me.MenuStrip.Visible = False
         '
         'AdministratorToolStripMenuItem
         '
@@ -2616,9 +2617,9 @@ Partial Class frmMain
         Me.PictureBox1.BackgroundImage = Global.KSoft_Apparel.My.Resources.Resources.nERP_L_Logo
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PictureBox1.Location = New System.Drawing.Point(1298, 29)
+        Me.PictureBox1.Location = New System.Drawing.Point(1298, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(46, 678)
+        Me.PictureBox1.Size = New System.Drawing.Size(46, 707)
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
         '
@@ -2767,14 +2768,14 @@ Partial Class frmMain
         Me.ToolStripButton6.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
         Me.ToolStripButton6.Name = "ToolStripButton6"
         Me.ToolStripButton6.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.ToolStripButton6.Size = New System.Drawing.Size(140, 19)
+        Me.ToolStripButton6.Size = New System.Drawing.Size(140, 22)
         Me.ToolStripButton6.Text = "Order Tracking Sheet"
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Black
+        Me.BackColor = System.Drawing.Color.DimGray
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1344, 729)
         Me.Controls.Add(Me.ToolStrip2)
